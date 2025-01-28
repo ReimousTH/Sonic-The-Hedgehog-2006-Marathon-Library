@@ -240,7 +240,7 @@
 				EnableIntrinsicFunctions="true"
 				FavorSizeOrSpeed="2"
 				AdditionalIncludeDirectories="src\"
-				PreprocessorDefinitions="NDEBUG;_XBOX;_LIB"
+				PreprocessorDefinitions="_XBOX;XBOX;_XENON;_WIN32;_LIB"
 				StringPooling="true"
 				ExceptionHandling="0"
 				RuntimeLibrary="0"
@@ -551,19 +551,19 @@
 			>
 		</File>
 		<File
-			RelativePath=".\src\Makefile"
-			>
-		</File>
-		<File
 			RelativePath=".\src\lib\Makefile"
 			>
 		</File>
 		<File
-			RelativePath=".\src\README"
+			RelativePath=".\src\Makefile"
 			>
 		</File>
 		<File
 			RelativePath=".\src\lib\README"
+			>
+		</File>
+		<File
+			RelativePath=".\src\README"
 			>
 		</File>
 	</Files>

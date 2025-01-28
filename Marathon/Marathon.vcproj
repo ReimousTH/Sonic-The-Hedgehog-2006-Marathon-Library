@@ -235,7 +235,7 @@
 				Optimization="3"
 				FavorSizeOrSpeed="2"
 				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost"
-				PreprocessorDefinitions="NDEBUG;_XBOX"
+				PreprocessorDefinitions="_RELEASE;_XBOX;XBOX;_XENON;_WIN32;BOOST_DISABLE_THREADS"
 				StringPooling="true"
 				ExceptionHandling="1"
 				RuntimeLibrary="0"
@@ -338,7 +338,7 @@
 	<References>
 		<ProjectReference
 			ReferencedProjectIdentifier="{24CAEC08-5ADD-4CAB-ADF1-7DF0BA63D1D6}"
-			RelativePathToProject="..\Lua\LUA.vcproj"
+			RelativePathToProject=".\Sonic-The-Hedgehog-2006-Marathon-Library\Lua\LUA.vcproj"
 		/>
 	</References>
 	<Files>
