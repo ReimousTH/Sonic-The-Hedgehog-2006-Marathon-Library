@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../../../TypeBasics.h"
-
 
 
 namespace Sonicteam{
@@ -20,4 +18,3 @@ namespace Sonicteam{
 }
 
 
-MFTCype(IStepable,Sonicteam::Player::IStepable);

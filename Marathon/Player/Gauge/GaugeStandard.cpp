@@ -54,7 +54,7 @@ float GaugeStandard::GetGaugePoint()
 }
 void GaugeStandard::AddGaugeValue(float value) //Same by C++ but different in asm (
 {
-	ShowXenonMessage(L"MSG","my");
+	
 	if (this->c_s_max >=  value + this->GaugeValue )
 		this->GaugeValue+=value;
 	else

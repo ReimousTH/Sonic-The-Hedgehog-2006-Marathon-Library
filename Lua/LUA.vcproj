@@ -42,6 +42,7 @@
 			<Tool
 				Name="VCCLX360CompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories=".\src"
 				PreprocessorDefinitions="_DEBUG;_XBOX;_LIB"
 				MinimalRebuild="true"
 				ExceptionHandling="0"
@@ -550,19 +551,19 @@
 			>
 		</File>
 		<File
-			RelativePath=".\src\lib\Makefile"
-			>
-		</File>
-		<File
 			RelativePath=".\src\Makefile"
 			>
 		</File>
 		<File
-			RelativePath=".\src\lib\README"
+			RelativePath=".\src\lib\Makefile"
 			>
 		</File>
 		<File
 			RelativePath=".\src\README"
+			>
+		</File>
+		<File
+			RelativePath=".\src\lib\README"
 			>
 		</File>
 	</Files>

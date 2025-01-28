@@ -1,8 +1,6 @@
 #pragma once
 
 
-
-
 #include <Player/State/Object2.h>
 #include "IMachine.h"
 #include "IContext.h"

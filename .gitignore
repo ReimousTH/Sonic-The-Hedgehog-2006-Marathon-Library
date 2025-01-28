@@ -1,0 +1,11 @@
+*.suo
+*.ncp
+*.lib
+*.pdb
+*.map
+*.idb
+*.obj
+*.dll
+*.exp
+*.xex
+bin
