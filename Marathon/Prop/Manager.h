@@ -36,7 +36,7 @@ namespace Sonicteam { class GameImp; namespace Prop {
 		char Flag2; //pad?
 		char Flag3; //pad?
 		char Flag4; //pad?
-		LinkSoxNode<int> NodeLink; // 0x8-0x10, No iDea
+		LinkSoxNode<Sonicteam::Prop::Scene> SceneLink; // 0x8-0x10, No iDea
 		LinkSoxNode<Sonicteam::Prop::GenerateArea> GenerateAreaLink; // 0x14-0x1C
 		std::vector<boost::weak_ptr<Sonicteam::Prop::Scene>> ManagerPropScenes; // ?? unknown typwe //0x20-0x2C // Sonicteam::Prop::Scene //0x20 , why weak_ptr cuz  //824618AC
 		std::map<std::string,int> unk0x30; //unsigned int* type_82619550; // 82619550 (unnamed-types) template seems because 824BAFE0 (std::list ???) cuz 823EB2C0 //0x30

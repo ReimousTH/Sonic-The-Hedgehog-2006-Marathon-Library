@@ -1,4 +1,9 @@
-#pragma once
+#ifndef SONICTEAM__SOX__DRAWABLE
+#define SONICTEAM__SOX__DRAWABLE
+
+#include "Defs.h"
+
+
 
 #include <xtl.h>
 #include <SoX/RefCountObject.h>
@@ -75,3 +80,4 @@ namespace Sonicteam{
 		}
 	}
 }
+#endif

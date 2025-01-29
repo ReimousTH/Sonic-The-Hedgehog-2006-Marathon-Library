@@ -12,6 +12,8 @@
 #include "SceneData.h"
 #include "EntityHandle.h"
 
+#include <Sox/Scenery/SPWorld.h>
+
 #include <Sox/Misc/LinkSoxNode.h>
 #include <boost/shared_ptr.hpp>
 #include <string>
@@ -63,6 +65,9 @@ namespace Sonicteam { namespace Prop {
 		unsigned int unk0x9C;
 
 		unsigned int unk0xA0; //RefCountObject Already
+
+		REF_TYPE(Sonicteam::SoX::Scenery::SPWorld) PropSceneWorld;
+
 
 
 

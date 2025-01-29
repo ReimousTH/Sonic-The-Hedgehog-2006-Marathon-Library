@@ -1,6 +1,11 @@
-#pragma once
+#ifndef SONICTEAM__SOX__CAMERAEVENTCALLBACK
+#define SONICTEAM__SOX__CAMERAEVENTCALLBACK
 
+
+#include "Defs.h"
 #include <xtl.h>
+
+
 #include <SoX/RefCountObject.h>
 #include <Sox/Memory/IDestructible.h>
 
@@ -27,3 +32,4 @@ namespace Sonicteam{
 		}
 	}
 }
+#endif

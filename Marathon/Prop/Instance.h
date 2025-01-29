@@ -76,7 +76,7 @@ namespace Sonicteam { namespace Prop {
 
 
 	public:
-		Instance();
+		Instance(Sonicteam::Prop::Scene* InstancePropScene,Sonicteam::Prop::InstanceSetData* PropInstanceSetData,REF_TYPE(Sonicteam::Prop::Class) PropClass);
 		~Instance();
 
 		virtual void DestroyObject(unsigned int flag) override;

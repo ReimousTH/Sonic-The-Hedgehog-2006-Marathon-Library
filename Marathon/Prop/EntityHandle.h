@@ -16,6 +16,9 @@ namespace Sonicteam { namespace Prop {
 
 	class EntityHandle:public Sonicteam::SoX::RefCountObject{ 
 	public:
+		EntityHandle(Sonicteam::Prop::Scene* PropScene,unsigned int ID);
+		EntityHandle();
+		~EntityHandle();
 		Sonicteam::Prop::Scene* PropScene; //0x8
 		unsigned int ID; //0xC
 		unsigned int unk0x10; //0x10

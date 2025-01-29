@@ -1,9 +1,12 @@
 #include "Instance.h"
 
 
-Sonicteam::Prop::Instance::Instance()
-{
 
+Sonicteam::Prop::Instance::Instance(Sonicteam::Prop::Scene* InstancePropScene,Sonicteam::Prop::InstanceSetData* PropInstanceSetData,REF_TYPE(Sonicteam::Prop::Class) PropClass):
+InstanceSetData(PropInstanceSetData),
+InstanceClass(PropClass)
+{
+	this->PropScene = InstancePropScene;
 }
 
 Sonicteam::Prop::Instance::~Instance()

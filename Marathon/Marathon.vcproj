@@ -209,7 +209,7 @@
 		<Configuration
 			Name="Release|Xbox 360"
 			OutputDirectory="..\bin\Build\$(ConfigurationName)\$(RootNameSpace)"
-			IntermediateDirectory="..\bin\Build\$(ConfigurationName)\$(RootNameSpace)"
+			IntermediateDirectory="..\bin\Cache\$(ConfigurationName)\$(RootNameSpace)"
 			ConfigurationType="4"
 			UseOfMFC="-1"
 			UseOfATL="0"
@@ -1193,11 +1193,31 @@
 					>
 				</File>
 				<File
+					RelativePath=".\Sox\Scenery\Defs.h"
+					>
+				</File>
+				<File
 					RelativePath=".\Sox\Scenery\Drawable.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\Sox\Scenery\Drawable.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Scenery\SPAabbTree.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Scenery\SPAabbTree.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Scenery\SPWorld.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Scenery\SPWorld.h"
 					>
 				</File>
 			</Filter>

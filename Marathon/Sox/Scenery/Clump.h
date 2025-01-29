@@ -1,4 +1,8 @@
-#pragma once
+#ifndef SONICTEAM__SOX__CLUMP
+#define SONICTEAM__SOX__CLUMP
+
+
+#include "Defs.h"
 
 #include <xtl.h>
 #include <SoX/RefCountObject.h>
@@ -38,3 +42,4 @@ namespace Sonicteam{
 		}
 	}
 }
+#endif

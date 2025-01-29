@@ -75,14 +75,25 @@ namespace Sonicteam{
 			virtual void DestroyObject(unsigned int flag);
 
 		
+	
+			// Assignment operator, do not copy reference count
+			RefCountObject& operator=(const RefCountObject& other){
+				referenceCount = 0;
+				 return *this; 
+			}
+			RefCountObject(const RefCountObject& other){
+				 referenceCount = 0; // No copying of reference count
+			}
+
 
 			//not sure, my custom for easier 
 			template <typename T>
 			T* GetObject();
 
 
-		private:
-			RefCountObject(const RefCountObject&);
+
+		
+			
 
 
 		protected:
