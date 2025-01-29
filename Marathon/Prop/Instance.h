@@ -59,7 +59,7 @@ namespace Sonicteam { namespace Prop {
 		float ObjectUnkFloat3; //=0
 		float ObjectUnkFloat4; //=0
 		XMFLOAT3 Position;
-		float ObjectUnkFloat5; //40000
+		float DrawDistance; //40000
 		XMFLOAT4 Rotation;
 
 		unsigned int ParamsCount;

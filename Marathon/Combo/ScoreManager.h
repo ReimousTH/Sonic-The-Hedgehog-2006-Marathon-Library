@@ -1,25 +1,35 @@
-#pragma once
+#ifndef SONICTEAM__COMBO__SCOREMANAGER
+#define SONICTEAM__COMBO__SCOREMANAGER
+
+#include "Defs.h"
+#include <Sox/RefCountObject.h>
+#include <GameImp.h>
+
 
 #include <cstdlib>
 #include <iostream>
-
-#include <boost/array.hpp>
-#include <boost/bind.hpp>
-#include <boost/enable_shared_from_this.hpp>
-#include <boost/noncopyable.hpp>
-#include <boost/shared_ptr.hpp>
-
+#include <boost/weak_ptr.hpp>
 
 
 namespace Sonicteam{
 	namespace Combo{
 
-		//size = 0x24 , there somewhere boost but it idk
-		class ScoreManager 
+	
+		class ScoreManager:public Sonicteam::SoX::RefCountObject
 		{
 		public:
 			ScoreManager(void);
-			virtual ~ScoreManager(void);
+			ScoreManager(boost::weak_ptr<Sonicteam::GameImp> GameImp,unsigned ActorID);
+			~ScoreManager(void);
+			boost::weak_ptr<Sonicteam::GameImp> GameImp;
+			unsigned int PlayerActorID;
+			float unk0x14; //0x14;
+			float unk0x18; //0x18;
+			float unk0x1C; //0x1C;
+			float unk0x20; //0x20;
+
+
+			virtual void DestroyObject(unsigned int flag) override;
 
 		};
 
@@ -27,3 +37,5 @@ namespace Sonicteam{
 
 	}
 }
+
+#endif

@@ -418,6 +418,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Combo\Defs.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Combo\ScoreManager.cpp"
 				>
 			</File>
@@ -551,6 +555,14 @@
 			</File>
 			<File
 				RelativePath=".\Player\ModelNode.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\ObjectPlayer.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\ObjectPlayer.h"
 				>
 			</File>
 			<File

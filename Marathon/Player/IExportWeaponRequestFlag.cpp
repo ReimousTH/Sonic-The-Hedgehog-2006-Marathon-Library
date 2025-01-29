@@ -1,9 +1,11 @@
 #include "IExportWeaponRequestFlag.h"
 
-IExportWeaponRequestFlag::IExportWeaponRequestFlag(void)
+Sonicteam::Player::IExportWeaponRequestFlag::IExportWeaponRequestFlag(void)
 {
+
 }
 
-IExportWeaponRequestFlag::~IExportWeaponRequestFlag(void)
+Sonicteam::Player::IExportWeaponRequestFlag::~IExportWeaponRequestFlag(void)
 {
+
 }

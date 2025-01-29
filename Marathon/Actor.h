@@ -24,7 +24,7 @@ namespace Sonicteam{
 			 Actor(Sonicteam::Actor* other, boost::weak_ptr<unsigned int>& gameimp);
 
 			boost::weak_ptr<unsigned int> GameImp; //0x4C-0x50
-			unsigned int ActorID;
+			unsigned int ActorID; //0x54
 
 		
 			virtual void DestroyObject(unsigned int flag);

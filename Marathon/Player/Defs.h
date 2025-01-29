@@ -6,6 +6,8 @@
 namespace Sonicteam{
 	namespace Player{
 		class ModelNode;
+		class ObjectPlayerCreationData;
+		class ObjectPlayer;
 	}
 	
 }

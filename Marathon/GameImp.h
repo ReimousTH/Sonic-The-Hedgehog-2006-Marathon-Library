@@ -1,9 +1,4 @@
 
-
-
-
-
-
 #ifndef Sonicteam_GameImp
 #define Sonicteam_GameImp
 
@@ -76,7 +71,10 @@ namespace Sonicteam{
 		XMVECTOR character_restart_position; //not working
 
 		XMMATRIX character_old_matrix_1;
-		unsigned int character_old_flags; //Usually First Byte
+		char ShouldSpawnWithRings; //Usually First Byte (821748C8, SpawnWithRingsFlag)
+		char _pad_2;
+		char _pad_3;
+		char _pad_4;
 		XMFLOAT3 character_old_data_1;
 		XMVECTOR character_old_data_2;
 		XMVECTOR character_old_data_3;
@@ -385,7 +383,7 @@ namespace Sonicteam{
 			unsigned int unk0x48; //0x48
 			unsigned int unk0x4C; //0x4c
 			unsigned int unk0x50; //0x50
-			std::string unk0x54;
+			std::string unk0x54; // Result TOWN??
 		} unk0x1850; // 0x1850 -0x10
 		unsigned int unk0x18C0; // 0x18C0
 		unsigned int unk0x18C4; // 0x18C4

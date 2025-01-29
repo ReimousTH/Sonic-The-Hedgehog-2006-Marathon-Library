@@ -2,10 +2,16 @@
 
 #include <xtl.h>
 
-class IExportWeaponRequestFlag
-{
-public:
-	IExportWeaponRequestFlag(void);
-	virtual ~IExportWeaponRequestFlag(void);
-	virtual DWORD IEWRFExportFlag(void)  = 0;
-};
+namespace Sonicteam {
+	namespace Player{
+		class IExportWeaponRequestFlag
+		{
+		public:
+			IExportWeaponRequestFlag(void);
+			~IExportWeaponRequestFlag(void);
+			virtual DWORD IEWRFExportFlag(void)  = 0;
+		};
+
+	}
+}
+
