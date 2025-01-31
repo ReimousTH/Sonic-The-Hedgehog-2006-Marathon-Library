@@ -20,7 +20,9 @@ namespace Sonicteam{
 		{
 		public:
 		//	LuaNodeImp(lua_State*,char*);	
-			virtual ~LuaNode(void);
+			~LuaNode(void);
+
+			virtual void DestroyObject(unsigned int Flag);
 		//	
 			//vft (all Extern "C" )
 			virtual boost::shared_ptr<LuaNodeImp> LuaNodeGetFixedCopy() = 0;

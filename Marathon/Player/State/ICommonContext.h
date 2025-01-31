@@ -16,7 +16,7 @@ namespace Sonicteam{
 
 				///IDynamicLink
 				// normal call
-				virtual void OnLink(Sonicteam::Player::IPlugIn*& plugin) override  {};
+				virtual void OnLink(DynContainer(Sonicteam::Player::IPlugIn) plugin) override  {};
 				///
 
 				///IVarible
@@ -49,9 +49,9 @@ namespace Sonicteam{
 				//all pure_calls should be
 				virtual void ICCIF_01(float,float,float) override;
 				virtual void ICCIF_02(float,float,float,float) override;
-				virtual void ICCIF_03() override = 0;
-				virtual void ICCIF_04() override = 0;
-				virtual void ICCIF_05() override = 0;
+				virtual unsigned int ICCIFGetFlag() override = 0;
+				virtual unsigned int ICCIFGetFlag2() override = 0;
+				virtual unsigned int ICCIFGetFlag3() override = 0;
 				virtual float GetTotalSpeedY() override;
 				virtual float GetTotalSpeedZ() override;
 				///

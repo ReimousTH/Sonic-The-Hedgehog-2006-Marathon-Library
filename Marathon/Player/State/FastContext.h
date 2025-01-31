@@ -33,9 +33,9 @@ namespace Sonicteam{
 				FastContext(void);
 				~FastContext(void);
 				virtual void OnVarible(LuaSystem**) override;
-				virtual void ICCIF_03() override;
-				virtual void ICCIF_04() override;
-				virtual void ICCIF_05() override;
+				virtual unsigned int ICCIFGetFlag() override;
+				virtual unsigned int ICCIFGetFlag2() override;
+				virtual unsigned int ICCIFGetFlag3() override;
 
 
 				////VFT_table
@@ -49,7 +49,7 @@ namespace Sonicteam{
 		
 
 				///IDynamicLink(0x24)
-				virtual void OnLink(Sonicteam::Player::IPlugIn*& plugin) override;
+				virtual void OnLink(DynContainer(Sonicteam::Player::IPlugIn) plugin) override;
 
 				//fields
 				int ICommonContextIFUnkFlags0x94;

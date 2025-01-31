@@ -39,19 +39,19 @@ void FastContext::OnVarible(Sonicteam::LuaSystem** t)
 
 }
 
-void FastContext::ICCIF_03()
+unsigned int FastContext::ICCIFGetFlag()
 {
-
+	return 0;
 }
 
-void FastContext::ICCIF_04()
+unsigned int FastContext::ICCIFGetFlag2()
 {
-
+	return 0;
 }
 
-void FastContext::ICCIF_05()
+unsigned int FastContext::ICCIFGetFlag3()
 {
-
+	return 0;
 }
 
 //CharacterControls
@@ -92,7 +92,7 @@ DWORD FastContext::IEPRFExportFlag(void)
 }
 
 
-void FastContext::OnLink(Sonicteam::Player::IPlugIn*& plugin)
+void FastContext::OnLink(DynContainer(Sonicteam::Player::IPlugIn) plugin)
 {
 
 }

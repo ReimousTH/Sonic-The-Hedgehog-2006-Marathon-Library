@@ -7,3 +7,8 @@ LuaNode::~LuaNode(void)
 {
 
 }
+
+void Sonicteam::LuaNode::DestroyObject(unsigned int Flag)
+{
+
+}

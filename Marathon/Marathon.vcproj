@@ -454,6 +454,22 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Player\IEventer.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IEventer.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IEventerListener.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IEventerListener.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Player\IExportExternalFlag.cpp"
 				>
 			</File>
@@ -483,6 +499,14 @@
 			</File>
 			<File
 				RelativePath=".\Player\IFlagCommunicator.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IImportAnimation.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IImportAnimation.h"
 				>
 			</File>
 			<File
@@ -1182,6 +1206,10 @@
 				</File>
 				<File
 					RelativePath=".\Sox\Misc\SimpleNode.inl"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Misc\VectorExtension.h"
 					>
 				</File>
 			</Filter>

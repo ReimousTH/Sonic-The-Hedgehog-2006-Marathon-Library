@@ -1,23 +1,29 @@
 #pragma once
 
+#ifndef SONICTEAM__PLAYER__SCORE
+#define SONICTEAM__PLAYER__SCORE
+
+
+#include "Defs.h"
 #include "IPlugIn.h"
 #include "IVariable.h"
 #include "IStepable/IStepable.h"
 #include "IScore.h"
 #include <xtl.h> //replace to xbox math soon
 
+#include <Player/ObjectPlayer.h>
 
 namespace Sonicteam{
 	namespace Player{
 
-		
+
 		class Score:IScore
 		{
 		public:
 			Score(int*,int*,int,int*);
 			~Score(void);
-		
-			
+
+
 
 
 
@@ -28,7 +34,7 @@ namespace Sonicteam{
 			int ScoreCount; //0x2C ????? (Rings PR Count)
 
 			int PtrRootFrame; //0x30
-			int PtrObjectPlayer; //0x34
+			Sonicteam::Player::ObjectPlayer* PtrObjectPlayer; //0x34
 
 			int unk0x38; // 0x38
 			int unk0x3C; // 0x3C
@@ -67,3 +73,6 @@ namespace Sonicteam{
 	}
 }
 
+
+
+#endif

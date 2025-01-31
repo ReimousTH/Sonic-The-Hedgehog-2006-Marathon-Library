@@ -14,8 +14,9 @@ namespace Sonicteam{
 	{
 	public:
 		LuaNodeImp(lua_State*,char*);	
-		virtual ~LuaNodeImp(void);
+		~LuaNodeImp(void);
 
+		virtual void DestroyObject(unsigned int Flag) override;
 
 
 

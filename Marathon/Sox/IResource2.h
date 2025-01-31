@@ -10,6 +10,7 @@ namespace Sonicteam{
 		public:	
 			//size0x60
 			IResource2(void);
+			~IResource2();
 		//	virtual ~IResource2(void);
 
 	
@@ -19,6 +20,11 @@ namespace Sonicteam{
 
 		};
 
+		template<typename T,typename Y>
+		Sonicteam::SoX::IResource2<T, Y>::~IResource2()
+		{
+
+		}
 
 	
 

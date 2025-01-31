@@ -75,20 +75,23 @@ void CommonContext::OnVarible(Sonicteam::LuaSystem** t)
 
 }
 
-void CommonContext::ICCIF_03()
+unsigned int CommonContext::ICCIFGetFlag()
 {
-
+	return this->ContextIFFlag;
 }
 
-void CommonContext::ICCIF_04()
+unsigned int Sonicteam::Player::State::CommonContext::ICCIFGetFlag2()
 {
-
+	return this->ContextIFFlag2;
 }
 
-void CommonContext::ICCIF_05()
-{
 
+unsigned int Sonicteam::Player::State::CommonContext::ICCIFGetFlag3()
+{
+	return this->ContextIFFlag3;
 }
+
+
 
 //CharacterControls
 void CommonContext::ICOnPostInputTick(void)
@@ -188,7 +191,7 @@ void CommonContext::ICOnInputTick(float delta)
 	this->UnknownFlags0xD0 = 0;
 	this->UnknownFlags0xD4 = 0;
 	this->FreeUnknownFlagsDC  = 0;
-	this->UnknownFlags01 = 0;
+	this->ContextIFFlag = 0;
 	if (v6){
 		this->IsBarrier = 1;
 	}
@@ -233,7 +236,7 @@ void CommonContext::ICOnInputTick(float delta)
 	this->ExportWeaponRequestFlag = 0;
 	this->ExportPostureRequestFlag = 0;
 	v17 = (v14 ? 0 : 2) | ((v16 & 0x20) == 0);
-	this->ContextFlags = v17;
+	this->ContextIFFlag2 = v17;
 	if ( v15
 		|| this->IsInvulnerable2
 		|| this->IsInvulnerableItemBox
@@ -276,10 +279,12 @@ DWORD CommonContext::IEWRFExportFlag(void)
 	return this->ExportWeaponRequestFlag;
 }
 
-void CommonContext::OnLink(Sonicteam::Player::IPlugIn*& plugin)
+void CommonContext::OnLink(DynContainer(Sonicteam::Player::IPlugIn) plugin)
 {
 
 }
+
+
 
 void Sonicteam::Player::State::CommonContext::SetAnimation(int num)
 {

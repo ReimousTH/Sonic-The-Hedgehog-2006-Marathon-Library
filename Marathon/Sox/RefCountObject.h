@@ -2,6 +2,7 @@
 #include <SoX/Memory/IDestructible.h>
 
 #define REF_TYPE(Type) Sonicteam::SoX::RefCountObjContainer<Type>
+//#define REF_TYPE(Type) Type* // Use To Compile FOR IDB IMport
 
 namespace Sonicteam{
 	namespace SoX{

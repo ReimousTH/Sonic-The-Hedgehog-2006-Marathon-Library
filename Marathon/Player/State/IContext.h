@@ -20,7 +20,7 @@ namespace Sonicteam{
 			public:
 				IContext(char*);
 				~IContext(void);
-				virtual void OnLink(Sonicteam::Player::IPlugIn*& plugin) override {};
+				virtual void OnLink(DynContainer(Sonicteam::Player::IPlugIn) plugin) override {};
 				virtual void OnVarible(LuaSystem**) override = 0;
 
 				//Original IContxext 0x0 Vfttable

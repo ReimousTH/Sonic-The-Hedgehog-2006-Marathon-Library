@@ -18,7 +18,7 @@ namespace Sonicteam { namespace Prop {
 	
 	//0x28
 	struct ActorCreatorCreationData{
-		ActorCreatorCreationData(Sonicteam::SoX::RefCountObjContainer<Sonicteam::Prop::Instance> CreationInstance, Sonicteam::SoX::RefCountObjContainer<Sonicteam::Prop::EntityHandle> CreationEntityHandle,unsigned int CreationFlag, std::string CreationName);
+		ActorCreatorCreationData(REF_TYPE(Sonicteam::Prop::Instance) CreationInstance, REF_TYPE(Sonicteam::Prop::EntityHandle) CreationEntityHandle,unsigned int CreationFlag, std::string CreationName);
 		~ActorCreatorCreationData();
 
 		std::string CreationName;

@@ -57,9 +57,9 @@ namespace Sonicteam{
 				CommonContext(void);
 				~CommonContext(void);
 				virtual void OnVarible(LuaSystem**) override;
-				virtual void ICCIF_03() override;
-				virtual void ICCIF_04() override;
-				virtual void ICCIF_05() override;
+				virtual unsigned int ICCIFGetFlag() override;
+				virtual unsigned int ICCIFGetFlag2() override;
+				virtual unsigned int ICCIFGetFlag3() override;
 
 
 				////VFT_table
@@ -75,13 +75,13 @@ namespace Sonicteam{
 
 
 				///IDynamicLink(0x24)
-				virtual void OnLink(Sonicteam::Player::IPlugIn*& plugin) override;
+				virtual void OnLink(DynContainer(Sonicteam::Player::IPlugIn) plugin) override;
 
 				//fields
 				int PComboAttackManager;
-				int UnknownFlags01;
-				unsigned int unkA0;
-				unsigned int ContextFlags; //Export //0xA4
+				int ContextIFFlag; //0x9C
+				unsigned int ContextIFFlag3;
+				unsigned int ContextIFFlag2; //Export //0xA4
 				unsigned int ExportPostureRequestFlag;  //0xA8
 				unsigned int ExportWeaponRequestFlag; //0xAC
 				float DamageInvincibleTime;

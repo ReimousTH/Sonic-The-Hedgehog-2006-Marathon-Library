@@ -17,10 +17,14 @@
 #include <Player/IExportExternalFlag.h>
 #include <Player/IExportPostureRequestFlag.h>
 #include <Player/IExportWeaponRequestFlag.h>
+#include <Player/IImportAnimation.h>
+
 //#include <Player/IImportAnimation>
 #include <Player/INotification.h>
 #include <Player/AI/IBase.h>
 #include <Combo/AttackManager.h>
+
+#include <Player/IEventer.h>
 
 #include <xtl.h>
 
@@ -38,17 +42,7 @@ namespace Sonicteam{
 				
 		}
 
-		class IPostureControl; 
-		class IImpulseManager;
-		class Path;
-		class PathGuide;
-		class PathCollision;
-		class PathLightDash;
-		class GameMasterCommunicator;
-		class IEventer;
-		class PostureRodeo;
-		class PathWaterSlider;
-		class IImportAnimation;
+	
 
 		struct ObjectPlayerCreationData{
 			const char *PlayerName;
@@ -65,15 +59,40 @@ namespace Sonicteam{
 			void *player_based_on;
 			char player_unk_flag2;
 		};
-		struct ObjectPlayerUnk1C8{
-			unsigned int Flag1;
-			unsigned int Flag2;
+		struct ObjectPlayerUpgrade{
+			unsigned int UpgradeFlag1;
+			unsigned int UpgradeFlag2;
 		};
+
+		#define RegisterPluginMatcher(Type) \
+			bool operator()(const boost::shared_ptr<Type>& ptr) const { \
+			Sonicteam::Player::IPlugIn* plugin = dynamic_cast<Sonicteam::Player::IPlugIn*>(ptr.get()); \
+			return plugin != NULL && plugin->PluginName == PlugName; \
+		}
+
+		struct PluginMatcher {
+			std::string PlugName;
+			PluginMatcher(const std::string& plugName) : PlugName(plugName) {}	
+			RegisterPluginMatcher(Sonicteam::Player::IPlugIn);
+			RegisterPluginMatcher(Sonicteam::Player::IVariable);
+			RegisterPluginMatcher(Sonicteam::Player::IDynamicLink);
+			RegisterPluginMatcher(Sonicteam::Player::IFlagCommunicator);
+			RegisterPluginMatcher(Sonicteam::Player::IStepable);
+			RegisterPluginMatcher(Sonicteam::Player::IExportExternalFlag);
+			RegisterPluginMatcher(Sonicteam::Player::IExportPostureRequestFlag);
+			RegisterPluginMatcher(Sonicteam::Player::IExportWeaponRequestFlag);
+			RegisterPluginMatcher(Sonicteam::Player::IImportAnimation);
+			RegisterPluginMatcher(Sonicteam::Player::INotification);
+			RegisterPluginMatcher(Sonicteam::Player::IEventerListener);
+			//		ModelMatcherOP(int);
+		};
+
 		
 
 		class ObjectPlayer:Sonicteam::Actor{
 
 
+		public:
 			ObjectPlayer(Sonicteam::SoX::Engine::Task* NamedTask,ObjectPlayerCreationData* CreationData);
 
 			virtual int OnMessageRecieved(Sonicteam::SoX::Message*) override;
@@ -112,13 +131,12 @@ namespace Sonicteam{
 			boost::shared_ptr<Sonicteam::Player::IGauge> PlayerGauge; //0x104
 			unsigned int unk0x10C; //0x10C
 			unsigned int unk0x110; //0x110
-			std::vector<boost::shared_ptr<Sonicteam::Player::IPlugIn>>* PlayerPlugins; //0x114
-			
+			std::vector<boost::shared_ptr<Sonicteam::Player::IPlugIn>> PlayerPlugins; //0x114
 			boost::shared_ptr<Sonicteam::Player::Path> PlayerPath; //0x124
 			boost::shared_ptr<Sonicteam::Player::PathGuide> PlayerPathGuide; //0x12C
 			boost::shared_ptr<Sonicteam::Player::PathCollision> PlayerPathCollision; //0x134
 			boost::shared_ptr<Sonicteam::Player::PathLightDash> PlayerPathLightDash; //0x13C
-			boost::shared_ptr<Sonicteam::Player::Score> PlayerScore; //0x144
+			boost::shared_ptr<Sonicteam::Player::Score> PlayerScore; //0x144 , WeakPTR?
 			boost::shared_ptr<Sonicteam::Player::GameMasterCommunicator> PlayerGameMaster; //0x14C
 			boost::shared_ptr<Sonicteam::Player::Load> PlayerLoad; //0x154
 			boost::shared_ptr<Sonicteam::Player::IEventer> PlayerEventer; //0x15C
@@ -134,19 +152,18 @@ namespace Sonicteam{
 			char unk1C6; //0x1C6
 			char unk1C7; //0x1C7
 
-			std::vector<Sonicteam::Player::ObjectPlayerUnk1C8> ObjectPlayerUnk1C8; //0x1C8
+			std::vector<Sonicteam::Player::ObjectPlayerUpgrade> ObjectPlayerUpgradeTable; //0x1C8
 			std::string PlayerName; //0x1D8
 
 			unsigned int unk0x1F4; //0x1F4
 			unsigned int unk0x1F8; //0x1F4 == -1
 			unsigned int unk0x1FC; //0x1F4 == -1
-			ObjectPlayerCreationData* PlayerSpawnData; //0x200, removes after init i think
-			unsigned int PlayerExportFlag1; //0x204 i think
+			unsigned long long PlayerExternalFlag; //0x200, removes after init i think
 			unsigned int unk0x208; //0x208
-			unsigned int unk0x20C; //0x20C
-			unsigned int unk0x210; //0x210
+			unsigned int PlayerPostureFlag; //0x20C
+			unsigned int PlayerUpgradeFlag; //0x210
 			unsigned int PlayerExportFlag2; //0x214
-			unsigned int unk0x218; //0x218
+			unsigned int PlayerCurrentGem; //0x218
 
 			std::vector<boost::shared_ptr<Sonicteam::Player::IVariable>> PlayerIVarible; //0x21C
 			std::vector<boost::shared_ptr<Sonicteam::Player::IDynamicLink>> PlayerIDynamicLink; //0x22C
@@ -158,7 +175,7 @@ namespace Sonicteam{
 			std::vector<boost::shared_ptr<Sonicteam::Player::IStepable>> PlayerIStepable4; //0x27C
 		
 			std::vector<boost::shared_ptr<Sonicteam::Player::IExportExternalFlag>> PlayerIExportExternalFlag; //0x28C;
-			std::vector<boost::shared_ptr<int>> PlayerUnk0x29C; //0x29C (not used)
+			std::vector<boost::shared_ptr<void*>> PlayerIExportVehicleFlag; //0x29C (not used) // IExportVehicleFla
 
 			std::vector<boost::shared_ptr<Sonicteam::Player::IExportPostureRequestFlag>> PlayerIExportPostureRequestFlag; //0x2AC
 			std::vector<boost::shared_ptr<Sonicteam::Player::IExportWeaponRequestFlag>> PlayerIExportWeaponRequestFlag; //0x2BC
@@ -168,13 +185,21 @@ namespace Sonicteam{
 
 			boost::shared_ptr<Sonicteam::Player::AI::IBase> PlayerAIAmigo; //0x2EC
 			unsigned int unk0x2F4;
-			unsigned int unk0x2F8;
+			unsigned int unk0x2F8; //ref count objs (82195CFC )
 			REF_TYPE(Sonicteam::Combo::AttackManager) PlayerComboAttackManager; //0x2FC
 			unsigned int unk0x300;
 			unsigned int unk0x304;
 			unsigned int unk0x308;
 			unsigned int unk0x30C;
 			 
+
+
+
+
+			//custom functions
+
+
+			void RemovePlugin(std::string plugin);
 	
 
 		};

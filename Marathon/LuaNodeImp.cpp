@@ -13,3 +13,8 @@ LuaNodeImp::~LuaNodeImp(void)
 {
 
 }
+
+void Sonicteam::LuaNodeImp::DestroyObject(unsigned int Flag)
+{
+
+}

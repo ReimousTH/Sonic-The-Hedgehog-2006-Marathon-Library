@@ -8,7 +8,13 @@ IDynamicLink::IDynamicLink(void)
 IDynamicLink::~IDynamicLink(void)
 {
 }
-void Sonicteam::Player::IDynamicLink::OnLink(Sonicteam::Player::IPlugIn*& plugin)
+
+void Sonicteam::Player::IDynamicLink::DestroyObject(unsigned int flag)
+{
+
+}
+
+void Sonicteam::Player::IDynamicLink::OnLink(DynContainer(Sonicteam::Player::IPlugIn) plugin)
 {
 
 }
