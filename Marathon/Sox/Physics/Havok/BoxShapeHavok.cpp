@@ -8,9 +8,9 @@ void Sonicteam::SoX::Physics::Havok::BoxShapeHavok::ShapeProceedUnk01(__out XMFL
 	
 }
 
-int Sonicteam::SoX::Physics::Havok::BoxShapeHavok::ShapeProceedUnk02()
+void Sonicteam::SoX::Physics::Havok::BoxShapeHavok::ShapeInitVolume()
 {
-	return 0;
+	return;
 }
 
 //TODO

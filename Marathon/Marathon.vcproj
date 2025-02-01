@@ -234,7 +234,7 @@
 				Name="VCCLX360CompilerTool"
 				Optimization="3"
 				FavorSizeOrSpeed="2"
-				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost"
+				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost;..\Havok\Source"
 				PreprocessorDefinitions="_RELEASE;_XBOX;XBOX;_XENON;_WIN32;BOOST_DISABLE_THREADS"
 				StringPooling="true"
 				ExceptionHandling="1"
@@ -470,6 +470,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Player\IEventerSharedWork.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IEventerSharedWork.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Player\IExportExternalFlag.cpp"
 				>
 			</File>
@@ -542,6 +550,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Player\IPosturePlugIn.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IPosturePlugIn.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Player\IScore.cpp"
 				>
 			</File>
@@ -590,6 +606,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Player\OtherParameter.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\OtherParameter.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Player\PhantomEnterListener.cpp"
 				>
 			</File>
@@ -603,6 +627,14 @@
 			</File>
 			<File
 				RelativePath=".\Player\RootFrame.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\RotationGravityAxis.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\RotationGravityAxis.h"
 				>
 			</File>
 			<File
@@ -1173,6 +1205,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\Sox\Memory\Destruction.h"
+					>
+				</File>
+				<File
 					RelativePath=".\Sox\Memory\IDestructible.cpp"
 					>
 				</File>
@@ -1501,6 +1537,10 @@
 		</File>
 		<File
 			RelativePath=".\CsdObject.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Defs.h"
 			>
 		</File>
 		<File

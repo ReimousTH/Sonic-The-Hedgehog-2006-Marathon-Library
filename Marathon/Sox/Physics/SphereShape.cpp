@@ -29,7 +29,7 @@ void Sonicteam::SoX::Physics::SphereShape::ShapeProceedUnk01(__out XMFLOAT4*& u1
 	
 }
 
-int Sonicteam::SoX::Physics::SphereShape::ShapeProceedUnk02()
+void Sonicteam::SoX::Physics::SphereShape::ShapeInitVolume()
 {
-	return 1;
+	return;
 }

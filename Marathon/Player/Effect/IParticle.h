@@ -10,7 +10,7 @@
 namespace Sonicteam{
 	namespace Player{
 		namespace Effect{
-		typedef class IParticle;
+
 		
 		//Complete Size : 0x2C;
 		class IParticle

@@ -2,9 +2,8 @@
 #ifndef __MARATHON_ACTORMANAGER__
 #define __MARATHON_ACTORMANAGER__
 
+#include "Defs.h"
 #include "Actor.h"
-
-
 #include <vector>
 #include <xmath.h>
 #include <Sox/Memory/IDestructible.h>

@@ -23,7 +23,7 @@ namespace Sonicteam{
 				virtual void DestroyObject(unsigned int flag) override;
 
 				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2) override = 0;
-				virtual int ShapeProceedUnk02() override; // i guess
+				virtual void ShapeInitVolume() override; // i guess
 
 
 

@@ -1,8 +1,7 @@
-
 #ifndef _PropClass_
 #define _PropClass_
 
-namespace Sonicteam { 	class GameImp; namespace Prop {
+namespace Sonicteam { namespace Prop {
 
 
 

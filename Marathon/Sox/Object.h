@@ -16,8 +16,8 @@
 
 namespace Sonicteam{
 	namespace SoX{
-		typedef class Object;
-		typedef class IObject;
+		class Object;
+		class IObject;
 		
 
 

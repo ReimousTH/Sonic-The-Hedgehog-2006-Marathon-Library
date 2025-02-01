@@ -10,7 +10,7 @@ namespace Sonicteam{
 	namespace Player{
 
 		
-		class RootFrame:Sonicteam::SoX::Graphics::Frame,Sonicteam::Player::IPlugIn,Sonicteam::Player::IExportExternalFlag
+		class RootFrame:public Sonicteam::SoX::Graphics::Frame,Sonicteam::Player::IPlugIn,Sonicteam::Player::IExportExternalFlag
 		{
 		public:
 			RootFrame(void);

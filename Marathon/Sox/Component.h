@@ -11,7 +11,7 @@ namespace Sonicteam{
 
 		
 	
-		typedef class Component;
+		class Component;
 
 		struct IOComponent{
 		public:

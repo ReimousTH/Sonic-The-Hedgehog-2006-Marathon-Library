@@ -152,3 +152,17 @@ void Sonicteam::Player::ObjectPlayer::RemovePlugin(std::string plugin)
 	}
 
 }
+
+
+
+
+
+
+boost::shared_ptr<Sonicteam::Player::IPlugIn> Sonicteam::Player::ObjectPlayer::FindPluginLast(std::string plugin) {
+	for (std::vector<boost::shared_ptr<Sonicteam::Player::IPlugIn>>::reverse_iterator it = this->PlayerPlugins.rbegin(); it != this->PlayerPlugins.rend(); ++it) {
+		if (PluginMatcher(plugin)(*it)) {
+			return *it; // Return the last matching plugin
+		}
+	}
+	return boost::shared_ptr<Sonicteam::Player::IPlugIn>((Sonicteam::Player::IPlugIn*)(0)); // Return nullptr if no matching plugin is found
+}

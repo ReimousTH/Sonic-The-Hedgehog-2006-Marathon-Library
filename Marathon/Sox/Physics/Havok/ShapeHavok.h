@@ -5,6 +5,12 @@
 #include <Sox/Memory/IDestructible.h>
 
 
+
+
+#include <Common/Base/System/hkBaseSystem.h> // include for hkBaseSystem
+#include <Common/Base/Memory/Memory/Pool/hkPoolMemory.h> // hkPoolMemory
+
+
 namespace Sonicteam{
 	namespace SoX{	
 		namespace Physics{

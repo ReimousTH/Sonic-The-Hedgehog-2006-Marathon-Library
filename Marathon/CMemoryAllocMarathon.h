@@ -1,4 +1,7 @@
-	#pragma once
+#ifndef SONICTEAM__CMEMORYALLOCMARATHON
+#define SONICTEAM__CMEMORYALLOCMARATHON
+
+#include "Defs.h"
 #include <ICMemoryAllocMarathon.h>
 
 
@@ -33,3 +36,4 @@ namespace Sonicteam{
 			static CMemoryAllocMarathon** InstanceMarathon;
 	};
 };
+#endif

@@ -3,9 +3,9 @@
 
 namespace Sonicteam{
 	namespace Player{
-		typedef struct AIMArray;
-		typedef struct AnimIDMap;
-		typedef struct UACSATIndexTable;
+		struct AIMArray;
+		struct AnimIDMap;
+		struct UACSATIndexTable;
 
 
 		template <typename T>

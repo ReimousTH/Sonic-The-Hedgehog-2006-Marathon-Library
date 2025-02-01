@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SONICTEAM__SOX__APPLICATIONXENON
+#define SONICTEAM__SOX__APPLICATIONXENON
+
 
 #include <Sox/Object.h>
 #include <xtl.h>
@@ -8,6 +10,7 @@
 namespace Sonicteam{
 	class DocMarathonImp;
 	namespace SoX{
+		//Sonicteam::SoX::Engine::Application
 		class ApplicationXenon:Sonicteam::SoX::Object,Sonicteam::SoX::IOObject
 		{
 		public:
@@ -133,3 +136,5 @@ namespace Sonicteam{
 		};
 	}
 }
+
+#endif

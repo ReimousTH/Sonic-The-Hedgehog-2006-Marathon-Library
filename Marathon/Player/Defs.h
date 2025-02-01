@@ -13,6 +13,8 @@ namespace Sonicteam{
 		class IModel;
 
 		class Score;
+		
+		class OtherParameter;
 
 		class IPostureControl; 
 		class IImpulseManager;

@@ -5,7 +5,9 @@ using namespace Sonicteam::SoX;
 
 //FINALY SAME CONSTRUCTORS, until i change LINK NODE AGAIN :(
 Component::Component(Component* component):LastComponent(component),LinkedComponent(this),LComponentList()
-{	
+{
+
+
 
 	Sonicteam::SoX::LinkNode<Component>* link =  &this->LinkedComponent;
 

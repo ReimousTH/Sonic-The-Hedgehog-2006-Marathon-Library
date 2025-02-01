@@ -1,5 +1,6 @@
-#pragma once
-
+#ifndef SONICTEAM__LUANODE
+#define SONICTEAM__LUANODE
+#include "Defs.h"
 #include <string>
 
 extern "C" {
@@ -14,7 +15,7 @@ extern "C" {
 
 namespace Sonicteam{
 
-		typedef class LuaNodeImp;
+		class LuaNodeImp;
  
 		class LuaNode // : LuaNode + (again hided in destructors omg)
 		{
@@ -62,3 +63,5 @@ namespace Sonicteam{
 		};
 
 }
+
+#endif

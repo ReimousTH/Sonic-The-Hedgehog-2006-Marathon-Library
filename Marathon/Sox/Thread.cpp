@@ -14,8 +14,9 @@ DWORD WINAPI SonicTeamSOXThreadProcFunc( LPVOID lpParameter )
 
 }
 
-Sonicteam::SoX::Thread::Thread(const char* ThreadName,int Priority,int Flag):Link(this)
+Sonicteam::SoX::Thread::Thread(const char* ThreadName,int Priority,int Flag)
 {
+	this->Link.TThread = this;
 //	this->m_Field1 = 0;
 //	this->m_Field2 = 0;
 //	this->instance = this;

@@ -57,7 +57,7 @@ void Sonicteam::SoX::Physics::Havok::CapsuleShapeHavok::ShapeProceedUnk01(__out 
 	
 }
 
-int Sonicteam::SoX::Physics::Havok::CapsuleShapeHavok::ShapeProceedUnk02()
+void Sonicteam::SoX::Physics::Havok::CapsuleShapeHavok::ShapeInitVolume()
 {
-	return 0;
+	
 }

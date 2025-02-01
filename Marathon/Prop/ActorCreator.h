@@ -1,5 +1,3 @@
-
-
 #ifndef Sonicteam_Prop_ActorCreator
 #define Sonicteam_Prop_ActorCreator
 

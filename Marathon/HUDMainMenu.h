@@ -1,4 +1,8 @@
-#pragma once
+
+#ifndef SONICTEAM__HUDMAINMENU
+#define SONICTEAM__HUDMAINMENU
+#include "Defs.h"
+
 #include <Sox/Engine/Task.h>
 #include <MenuListener.h>
 #include <boost/weak_ptr.hpp>
@@ -111,3 +115,5 @@ namespace Sonicteam{
 
 	};
 };
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SONICTEAM__CSDOBJECT
+#define SONICTEAM__CSDOBJECT
+#include "Defs.h"
 
 
 #include <Sox/Memory/IDestructible.h>
@@ -68,3 +70,5 @@ namespace Sonicteam{
 	};
 
 };
+
+#endif

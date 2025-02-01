@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SONICTEAM__LUANODEIMP
+#define SONICTEAM__LUANODEIMP
+#include "Defs.h"
 
 #include <string>
 #include "LuaNode.h"
@@ -32,3 +34,4 @@ namespace Sonicteam{
 	};
 
 }
+#endif

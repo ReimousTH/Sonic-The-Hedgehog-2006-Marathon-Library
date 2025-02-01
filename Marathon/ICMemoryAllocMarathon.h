@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SONICTEAM__ICMEMORYALLOCMARATOHN
+#define SONICTEAM__ICMEMORYALLOCMARATOHN
+#include "Defs.h"
 
 #include <sox/Memory/IDestructible.h>
 
@@ -37,3 +39,5 @@ namespace Sonicteam{
 
 	};
 };
+
+#endif

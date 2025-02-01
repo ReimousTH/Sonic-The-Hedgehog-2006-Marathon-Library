@@ -2,12 +2,15 @@
 #define SONICTEAM__PLAYER__OBJECTPLAYER
 
 #include "Defs.h"
+
+
 #include <Actor.h>
 #include <Sox/Engine/Task.h>
 #include <Player/RootFrame.h>
 #include <Player/IModel.h>
 #include <Player/State/IMachine.h>
 #include <boost/shared_ptr.hpp>
+#include <boost/weak_ptr.hpp>
 #include <Player/Gauge/IGauge.h>
 #include <Player/Score.h>
 #include <Player/Load.h>
@@ -18,6 +21,7 @@
 #include <Player/IExportPostureRequestFlag.h>
 #include <Player/IExportWeaponRequestFlag.h>
 #include <Player/IImportAnimation.h>
+#include <Player/OtherParameter.h>
 
 //#include <Player/IImportAnimation>
 #include <Player/INotification.h>
@@ -60,8 +64,8 @@ namespace Sonicteam{
 			char player_unk_flag2;
 		};
 		struct ObjectPlayerUpgrade{
-			unsigned int UpgradeFlag1;
-			unsigned int UpgradeFlag2;
+			unsigned int global_flag;
+			unsigned int equip_flag;
 		};
 
 		#define RegisterPluginMatcher(Type) \
@@ -84,12 +88,15 @@ namespace Sonicteam{
 			RegisterPluginMatcher(Sonicteam::Player::IImportAnimation);
 			RegisterPluginMatcher(Sonicteam::Player::INotification);
 			RegisterPluginMatcher(Sonicteam::Player::IEventerListener);
+
+		
+
 			//		ModelMatcherOP(int);
 		};
 
 		
 
-		class ObjectPlayer:Sonicteam::Actor{
+		class ObjectPlayer:public Sonicteam::Actor{
 
 
 		public:
@@ -126,8 +133,8 @@ namespace Sonicteam{
 			boost::shared_ptr<Sonicteam::Player::State::IMachine> PlayerMachine; // 0xE4
 			boost::shared_ptr<Sonicteam::Player::State::Gravity> PlayerGravity; // 0xEC
 			boost::shared_ptr<Sonicteam::Player::IImpulseManager> PlayerImpulse; // 0xF4
-			unsigned int NextSetupModuleIndex; //0xFC
-			unsigned int LastSetupModuleIndex; //0x100
+			unsigned int LastSetupModuleIndex; //0xFC
+			unsigned int NextSetupModuleIndex; //0x100
 			boost::shared_ptr<Sonicteam::Player::IGauge> PlayerGauge; //0x104
 			unsigned int unk0x10C; //0x10C
 			unsigned int unk0x110; //0x110
@@ -136,7 +143,7 @@ namespace Sonicteam{
 			boost::shared_ptr<Sonicteam::Player::PathGuide> PlayerPathGuide; //0x12C
 			boost::shared_ptr<Sonicteam::Player::PathCollision> PlayerPathCollision; //0x134
 			boost::shared_ptr<Sonicteam::Player::PathLightDash> PlayerPathLightDash; //0x13C
-			boost::shared_ptr<Sonicteam::Player::Score> PlayerScore; //0x144 , WeakPTR?
+			boost::shared_ptr<Sonicteam::Player::Score> PlayerScore; //0x144 , WeakPTR? (82195BC8 . lock called why?)
 			boost::shared_ptr<Sonicteam::Player::GameMasterCommunicator> PlayerGameMaster; //0x14C
 			boost::shared_ptr<Sonicteam::Player::Load> PlayerLoad; //0x154
 			boost::shared_ptr<Sonicteam::Player::IEventer> PlayerEventer; //0x15C
@@ -200,6 +207,7 @@ namespace Sonicteam{
 
 
 			void RemovePlugin(std::string plugin);
+			boost::shared_ptr<Sonicteam::Player::IPlugIn> FindPluginLast(std::string plugin);
 	
 
 		};

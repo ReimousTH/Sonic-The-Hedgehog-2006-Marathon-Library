@@ -6,7 +6,8 @@
 #include "PropClass.h"
 #include <boost/shared_ptr.hpp>
 #include <boost/weak_ptr.hpp>
-#include <Actor.h> // Sonicteam::NamedActor
+
+#include <Defs.h>
 
 
 
@@ -21,7 +22,7 @@ namespace Sonicteam { namespace Prop {
 		IActorCreator();
 		~IActorCreator();
 
-		virtual void DestroyObject(unsigned int flag) = 0;
+		virtual void DestroyObject(unsigned int flag);
 		virtual Sonicteam::Actor* CreateActor(Sonicteam::Actor* NamedActor,boost::weak_ptr<Sonicteam::GameImp>* GameImp,void* ObjectCreationData) = 0;
 
 	};

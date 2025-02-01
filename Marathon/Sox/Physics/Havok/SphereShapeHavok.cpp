@@ -37,7 +37,7 @@ void Sonicteam::SoX::Physics::Havok::SphereShapeHavok::ShapeProceedUnk01(__out X
 	
 }
 
-int Sonicteam::SoX::Physics::Havok::SphereShapeHavok::ShapeProceedUnk02()
+void Sonicteam::SoX::Physics::Havok::SphereShapeHavok::ShapeInitVolume()
 {
-	return 0;
+	return;
 }

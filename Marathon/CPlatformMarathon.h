@@ -1,4 +1,7 @@
-#pragma once
+#ifndef SONICTEAM__CPLATFORMMARATHON
+#define SONICTEAM__CPLATFORMMARATHON
+#include "Defs.h"
+
 
 #include <Sox/RefCountObject.h>
 #include <sox/IResource.h>
@@ -54,3 +57,5 @@ namespace Sonicteam{
 
 	};
 };
+
+#endif

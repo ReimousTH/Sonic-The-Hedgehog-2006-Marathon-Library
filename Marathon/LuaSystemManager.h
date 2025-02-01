@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SONICTEAM__LUASYSTEMMANAGER
+#define SONICTEAM__LUASYSTEMMANAGER
+#include "Defs.h"
 
 #include <string>
 
@@ -20,3 +22,4 @@ namespace Sonicteam{
 		};
 
 }
+#endif

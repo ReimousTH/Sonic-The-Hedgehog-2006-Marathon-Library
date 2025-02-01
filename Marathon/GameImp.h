@@ -2,11 +2,10 @@
 #ifndef Sonicteam_GameImp
 #define Sonicteam_GameImp
 
-
+#include "Defs.h"
 
 #include <vector>
 #include <xmath.h>
-
 #include <string>
 
 
@@ -450,7 +449,7 @@ namespace Sonicteam{
 		virtual Sonicteam::DocMarathonImp* GetDocMarathon();
 		virtual boost::shared_ptr<Sonicteam::ActorManager> GetActorManager();
 		virtual bool IsGameKyWorldDef();
-		virtual Sonicteam::SoX::RefCountObjContainer<Sonicteam::SoX::RefCountObject> GetWorldHavok();
+		virtual REF_TYPE(Sonicteam::SoX::RefCountObject) GetWorldHavok();
 		virtual unsigned int CollisionFilterFunc01(unsigned int);
 		virtual unsigned int GetGameObjInfoMgr();
 		virtual void GameActivateProp(Sonicteam::SoX::RefCountObject**);

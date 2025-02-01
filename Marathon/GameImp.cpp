@@ -44,7 +44,7 @@ bool Sonicteam::GameImp::IsGameKyWorldDef()
 	return this->GameKyWorldDef;
 }
 
-Sonicteam::SoX::RefCountObjContainer<Sonicteam::SoX::RefCountObject> Sonicteam::GameImp::GetWorldHavok()
+REF_TYPE(Sonicteam::SoX::RefCountObject) Sonicteam::GameImp::GetWorldHavok()
 {
 	return this->GameWorldHavok;
 }

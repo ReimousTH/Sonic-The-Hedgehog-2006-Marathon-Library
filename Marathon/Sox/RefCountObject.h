@@ -10,7 +10,7 @@ namespace Sonicteam{
 
 		
 
-		typedef class RefCountObject;
+		class RefCountObject;
 
 		template <typename T>
 		struct RefCountObjContainer {

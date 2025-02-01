@@ -23,7 +23,7 @@ namespace Sonicteam{
 
 				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2) override;
 
-				virtual int ShapeProceedUnk02() override;
+				virtual void ShapeInitVolume() override;
 
 
 

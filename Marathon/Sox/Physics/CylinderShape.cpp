@@ -22,7 +22,6 @@ void Sonicteam::SoX::Physics::CylinderShape::DestroyObject(unsigned int flag)
 	
 }
 
-int Sonicteam::SoX::Physics::CylinderShape::ShapeProceedUnk02()
+void Sonicteam::SoX::Physics::CylinderShape::ShapeInitVolume()
 {
-return 0;	
 }

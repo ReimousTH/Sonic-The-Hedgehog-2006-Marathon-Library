@@ -23,7 +23,7 @@ void Sonicteam::SoX::Physics::CapsuleShape::DestroyObject(unsigned int flag)
 	
 }
 
- int  Sonicteam::SoX::Physics::CapsuleShape::ShapeProceedUnk02()
+void  Sonicteam::SoX::Physics::CapsuleShape::ShapeInitVolume()
 {
-	return 0;
+	
 }

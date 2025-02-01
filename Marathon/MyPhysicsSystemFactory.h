@@ -1,4 +1,7 @@
-#pragma once
+#ifndef SONICTEAM__MYPHYSICSSYSTEMFACTORY
+#define SONICTEAM__MYPHYSICSSYSTEMFACTORY
+#include "Defs.h"
+
 #include <DocMarathonImp.h>
 #include <sox/Memory/IDestructible.h>
 #include <Sox/Engine/Task.h>
@@ -71,3 +74,5 @@ namespace Sonicteam{
 			static MyPhysicsSystemFactory** MyPhysicsSystemFactoryInstanceMarathon;
 	};
 };
+
+#endif

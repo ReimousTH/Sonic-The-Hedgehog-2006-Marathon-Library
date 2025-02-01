@@ -1,4 +1,9 @@
-#pragma once
+#ifndef SONICTEAM__DOCMARATHONIMP
+#define SONICTEAM__DOCMARATHONIMP
+#include "Defs.h"
+
+
+
 #include <vector>
 #include <Sox/Engine/Doc.h>
 #include <Sox/Graphics/FrameSynchronizer.h>
@@ -240,3 +245,5 @@ namespace Sonicteam{
 
 	};
 };
+
+#endif

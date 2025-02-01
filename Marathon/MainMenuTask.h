@@ -1,4 +1,7 @@
-#pragma once
+#ifndef SONICTEAM__MAINMENUTASK
+#define SONICTEAM__MAINMENUTASK
+#include "Defs.h"
+
 #include <Sox/Engine/Task.h>
 #include <MenuListener.h>
 #include <boost/weak_ptr.hpp>
@@ -75,14 +78,14 @@ namespace Sonicteam{
 			unsigned int MMTuint0xDC;
 			unsigned int MMTuint0xE0;
 			unsigned int MMTuint0xE4;
-			unsigned float EngineSoundVolume1;
-			unsigned float EngineSoundVolume2;
+			float EngineSoundVolume1;
+			float EngineSoundVolume2;
 			unsigned int MMTuint0xF0;
 			unsigned int MMTuint0xF4;
 			unsigned int MMTuint0xF8;
 			unsigned int MMTuint0xFC;
-			unsigned float MMTfloat0x100;
-			unsigned float MMTfloat0x104;
+			float MMTfloat0x100;
+			float MMTfloat0x104;
 			unsigned int MMTuint0x108;
 			unsigned int MMTuint0x10C;
 			unsigned int MMTuint0x110;
@@ -189,3 +192,5 @@ namespace Sonicteam{
 
 	};
 };
+
+#endif

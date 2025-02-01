@@ -18,7 +18,7 @@ void Sonicteam::SoX::Physics::Shape::DestroyObject(unsigned int flag)
 
 }
 
-int Sonicteam::SoX::Physics::Shape::ShapeProceedUnk02()
+void Sonicteam::SoX::Physics::Shape::ShapeInitVolume()
 {
-return 0;
+	return;
 }

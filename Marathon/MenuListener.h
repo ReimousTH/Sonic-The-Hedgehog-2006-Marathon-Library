@@ -1,4 +1,7 @@
-#pragma once
+#ifndef SONICTEAM__MENULISTENER
+#define SONICTEAM__MENULISTENER
+#include "Defs.h"
+
 #include <DocMarathonImp.h>
 #include <Sox/Engine/Task.h>
 #include <boost/weak_ptr.hpp>
@@ -31,10 +34,11 @@ namespace Sonicteam{
 			unsigned int MLuint0x20; //==9 
 			unsigned int MLuint0x24; //==2
 			unsigned int MLOutputInput; //==0
-			unsigned float MLStickHoldFixTime; // 0.34999999; ,0.35 - delta -> untill 0 then it allow to change select in menu
-			unsigned float MLuint0x30; // 0.050000001;
+			float MLStickHoldFixTime; // 0.34999999; ,0.35 - delta -> untill 0 then it allow to change select in menu
+			float MLuint0x30; // 0.050000001;
 
 
 
 	};
 };
+#endif

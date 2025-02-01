@@ -18,7 +18,7 @@ namespace Sonicteam{
 		namespace Engine{
 
 			
-			typedef class Task;
+			class Task;
 			
 			namespace{
 			//Place 3 of them as anymoyus name space and use in class idk how

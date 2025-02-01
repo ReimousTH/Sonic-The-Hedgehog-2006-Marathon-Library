@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SONICTEAM__LUASYSTEM
+#define SONICTEAM__LUASYSTEM
+#include "Defs.h"
 
 #include <string>
 #include "SoX/IResource2.h"
@@ -35,3 +37,4 @@ namespace Sonicteam{
 		};
 
 }
+#endif

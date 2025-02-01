@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include <xtl.h>x
+#include <xtl.h>
 #include <Sox/Memory/IDestructible.h>
 
 namespace Sonicteam{
