@@ -10,7 +10,3 @@ Sonicteam::Prop::IActorCreator::~IActorCreator()
 
 }
 
-void Sonicteam::Prop::IActorCreator::DestroyObject(unsigned int flag)
-{
-
-}

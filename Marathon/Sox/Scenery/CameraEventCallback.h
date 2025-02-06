@@ -21,7 +21,7 @@ namespace Sonicteam{
 				CameraEventCallback();
 				~CameraEventCallback();
 
-				virtual void DestroyObject(unsigned int flag);
+				DESTRUCTION_H;
 				virtual void CEC01() = 0;
 				virtual void CEC02() = 0;
 				virtual void CEC03() = 0;

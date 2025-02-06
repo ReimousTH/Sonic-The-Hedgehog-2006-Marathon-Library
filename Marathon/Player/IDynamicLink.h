@@ -15,7 +15,7 @@ namespace Sonicteam{
 			IDynamicLink(void);
 			~IDynamicLink(void);
 
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 			virtual void OnLink(DynContainer(Sonicteam::Player::IPlugIn) plugin);
 		};
 	}

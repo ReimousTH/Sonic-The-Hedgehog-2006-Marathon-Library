@@ -1,0 +1,4 @@
+#ifndef SONICTEAM_PLAYER__UNIT_DEFS
+#define SONICTEAM_PLAYER__UNIT_DEFS
+class ITestCase;
+#endif

@@ -17,10 +17,7 @@ Sonicteam::SoX::Physics::SphereShape::~SphereShape(void)
 
 }
 
-void Sonicteam::SoX::Physics::SphereShape::DestroyObject(unsigned int flag)
-{
-	
-}
+DESTRUCTION_CPP(SphereShape);
 
 
 

@@ -20,7 +20,7 @@ namespace Chao{
 			CResourceBase(void);
 			~CResourceBase(void);
 
-			virtual void DestroyObject(unsigned int flag);	
+			void DestroyObject(unsigned int flag);	
 			virtual void CResourceBase0x4(void*) = 0;
 
 			//https://github.com/blueskythlikesclouds/BlueBlur/blob/master/CSD/Manager/csdmResourceBase.h

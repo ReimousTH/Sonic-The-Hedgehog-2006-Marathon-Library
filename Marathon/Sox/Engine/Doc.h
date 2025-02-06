@@ -46,15 +46,17 @@ namespace Sonicteam{
 
 	
 
-			class Doc:Sonicteam::SoX::RefCountObject
+			class Doc
 		{
 
-		public:
+		public:	
 			~Doc(void);
+
+			DESTRUCTION_H;
 			virtual void EngineDocOnUpdate(float); //delta
 			virtual void EngineDocDomeSome(); //CriticalNoIdea?s
 
-		//s	unsigned int Duint0x4; //sems always 0x4 (refobjectcound)
+			unsigned int Duint0x4; //NOT REF OBJECT
 			unsigned int DocCurrentMode; //CurrentMode (GameMode,MainMode)
 			RootTask* RTask;
 			RootGTask* RGTask;

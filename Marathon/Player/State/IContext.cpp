@@ -9,9 +9,4 @@ IContext::~IContext(void){
 	
 }
 
-void Sonicteam::Player::State::IContext::DestroyObject(unsigned int flag)
-{
-	IContext::~IContext();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
-
+DESTRUCTION_CPP(IContext);

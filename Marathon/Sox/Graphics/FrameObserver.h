@@ -7,6 +7,9 @@
 #include <Sox/Misc/List.h>
 #include <Sox/Memory/IDestructible.h>
 #include <Sox/Memory/DEFINITIONS.hpp>
+
+#include <Sox/Memory/Destruction.h>
+#include <Sox/Misc/LinkSoxNode.h>
 #include "Defs.h"
 
 
@@ -27,11 +30,12 @@ namespace Sonicteam{
 				~FrameObserver(void);
 
 				virtual void ObserveFrameStep(double a1) = 0;
-				virtual void DestroyObject(unsigned int flag);
+
+				DESTRUCTION_H;
 
 
-				Sonicteam::SoX::LinkNode<FrameObserver> RNodeH;
-				unsigned int UFOFlag0x10;
+				LinkSoxNode<FrameObserver> LinkNode;
+				unsigned int FrameObserverFlag;
 	
 
 				void OnRNodeHClear(); //

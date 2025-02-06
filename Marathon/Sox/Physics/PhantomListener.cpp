@@ -13,7 +13,4 @@ Sonicteam::SoX::Physics::PhantomListener::~PhantomListener(void)
 
 }
 
-void Sonicteam::SoX::Physics::PhantomListener::DestroyObject(unsigned int flag)
-{
-
-}
+DESTRUCTION_CPP(PhantomListener);

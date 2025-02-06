@@ -16,10 +16,8 @@ void Sonicteam::SoX::Graphics::FrameObserver::ObserveFrameStep(double a1)
 
 }
 
-void Sonicteam::SoX::Graphics::FrameObserver::DestroyObject(unsigned int flag)
-{
+DESTRUCTION_CPP(FrameObserver);
 
-}
 
 void Sonicteam::SoX::Graphics::FrameObserver::OnRNodeHClear()
 {

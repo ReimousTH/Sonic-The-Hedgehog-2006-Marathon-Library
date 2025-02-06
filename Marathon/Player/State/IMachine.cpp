@@ -9,7 +9,3 @@ IMachine::~IMachine(void){
 	
 }
 
-void Sonicteam::Player::State::IMachine::DestroyObject(unsigned int flag)
-{
-	
-}

@@ -10,7 +10,7 @@ namespace Sonicteam{
 			IEventerListener(void);
 			~IEventerListener(void);
 
-			virtual void DestroyObject(unsigned int Flag);
+			DESTRUCTION_H;
 
 			virtual void IEventerListener01();
 			virtual void IEventerListener02(unsigned int flag);

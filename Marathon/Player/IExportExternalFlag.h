@@ -13,7 +13,7 @@ namespace Sonicteam{
 		public:
 			IExportExternalFlag(void);
 			~IExportExternalFlag(void);
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 			virtual unsigned long long ExportExternalFlag(void) = 0;
 		
 

@@ -12,9 +12,5 @@ IPlugIn::~IPlugIn(void)
 	this->PluginName.clear();
 }
 
-void Sonicteam::Player::IPlugIn::DestroyObject(unsigned int flag)
-{
-	IPlugIn::~IPlugIn();	
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
-	
+DESTRUCTION_CPP(IPlugIn);
+

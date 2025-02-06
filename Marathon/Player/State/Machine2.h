@@ -32,7 +32,7 @@ namespace Sonicteam{
 				~Machine2(void);
 
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 				///IMachine
 				virtual void OnMashineTick(float)  override;

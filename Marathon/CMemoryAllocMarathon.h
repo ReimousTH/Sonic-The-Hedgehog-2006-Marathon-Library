@@ -14,7 +14,6 @@ namespace Sonicteam{
 	//Or SonicTeamSoxComponent
 	class CMemoryAllocMarathon:public ICMemoryAllocMarathon
 		{
-
 		protected:
 
 			virtual void* AllocMemory(size_t size);

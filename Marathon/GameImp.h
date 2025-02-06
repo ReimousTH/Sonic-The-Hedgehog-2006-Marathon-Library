@@ -441,7 +441,7 @@ namespace Sonicteam{
 
 
 
-		virtual void DestroyObject(unsigned int flag);
+		DESTRUCTION_H;
 		virtual int OnMessageRecieved(Sonicteam::SoX::Message*);
 
 

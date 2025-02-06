@@ -13,8 +13,4 @@ IScore::~IScore(void)
 
 }
 
-void Sonicteam::Player::IScore::DestroyObject(unsigned int flag)
-{
-	
-}
 

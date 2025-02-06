@@ -36,7 +36,7 @@ namespace Sonicteam { namespace Prop {
 		//0x88
 
 
-		virtual void DestroyObject(unsigned int flag) override;
+		DESTRUCTION_H override;
 
 
 

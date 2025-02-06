@@ -29,7 +29,7 @@ namespace Sonicteam{
 			float unk0x20; //0x20;
 
 
-			virtual void DestroyObject(unsigned int flag) override;
+			DESTRUCTION_H;
 
 		};
 

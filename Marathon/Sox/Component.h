@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Object.h"
-#include "Sox/Misc/List.h"
+#include <Sox/Misc/LinkSoxNode.h>
+#include <Sox/Memory/Destruction.h>
+
 
 namespace Sonicteam{
 	namespace SoX{
@@ -9,17 +11,6 @@ namespace Sonicteam{
 	
 
 
-		
-	
-		class Component;
-
-		struct IOComponent{
-		public:
-		
-		
-			
-			
-		};
 
 
 		class Component:public Object
@@ -27,17 +18,19 @@ namespace Sonicteam{
 		public:
 			Component(Component*);
 			~Component(void);
-
 			Component* LastComponent; //0x4
-			Sonicteam::SoX::LinkNode<Component> LinkedComponent; //0x8,0xC,0x10
-			Sonicteam::SoX::LinkNodeList<Component> LComponentList; //0x14,0x18,0x1C
+
+
+			LinkSoxNode<Component> LinkComponent; //0x8,0xC,0x10
+			LinkSoxNode<Component> ListComponent; //0x14,0x18,0x1C
 
 		
 			//0x20...
 
 
 			virtual char* GetObjectType() override; 
-			virtual void DestroyObject(unsigned int flag) override;
+			DESTRUCTION_H;
+
 
 		
 			

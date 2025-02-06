@@ -14,10 +14,12 @@ Chao::CSD::CScene::~CScene(void)
 
 }
 
-void Chao::CSD::CScene::DestroyObject(unsigned int flag)
+void* Chao::CSD::CScene::DestroyObject(unsigned int flag)
 {
 	if ( (flag & 1) != 0){
 		Sonicteam::CMemoryAllocMarathon::GetInstance()->FFreeMemoryA((void*)this);
 	}
+	return this;
+
 
 }

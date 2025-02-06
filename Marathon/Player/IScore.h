@@ -23,7 +23,7 @@ namespace Sonicteam{
 			virtual void SetRings(int) = 0;
 			virtual void SetUnknownVector(XMFLOAT4*) = 0; //have no idea
 
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 
 
 

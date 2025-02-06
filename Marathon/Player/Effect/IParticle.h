@@ -28,7 +28,7 @@ namespace Sonicteam{
 			//Fields
 
 
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 
 			Sonicteam::Player::IPlugIn* PlayerLoad; //Load_Player_Sonicteam 82007C24 (Or IPlugin)
 			std::string BufferParticleName;

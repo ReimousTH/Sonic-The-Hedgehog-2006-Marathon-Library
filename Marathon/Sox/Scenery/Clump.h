@@ -18,7 +18,7 @@ namespace Sonicteam{
 				Clump();
 				~Clump();
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H override;
 
 				virtual void SSSD01() override; //0x4
 				virtual void SSSD02(unsigned int*) override; //0x8

@@ -38,7 +38,7 @@ namespace Sonicteam { namespace Prop {
 	public:
 		Class(ClassPropParamData* ClassPropData,REF_TYPE(Sonicteam::Prop::AllocatedData) ClassPropAllocatedData );
 		~Class();
-		virtual void DestroyObject(unsigned int flag) override;
+		DESTRUCTION_H override;
 		ClassPropParamData* ClassPropData; // 0x8
 		REF_TYPE(Sonicteam::Prop::AllocatedData) ClassPropAllocatedData; //0xC
 	};

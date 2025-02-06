@@ -18,11 +18,7 @@ Sonicteam::SoX::Physics::CapsuleShape::~CapsuleShape(void)
 
 }
 
-void Sonicteam::SoX::Physics::CapsuleShape::DestroyObject(unsigned int flag)
-{
-	
-}
-
+DESTRUCTION_CPP(CapsuleShape);
 void  Sonicteam::SoX::Physics::CapsuleShape::ShapeInitVolume()
 {
 	

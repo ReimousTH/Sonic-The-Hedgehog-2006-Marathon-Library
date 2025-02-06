@@ -1,5 +1,6 @@
 #pragma once				
 #include <SoX/Memory/IDestructible.h>
+#include <Sox/Memory/Destruction.h>
 
 #define REF_TYPE(Type) Sonicteam::SoX::RefCountObjContainer<Type>
 //#define REF_TYPE(Type) Type* // Use To Compile FOR IDB IMport
@@ -68,12 +69,11 @@ namespace Sonicteam{
 		class RefCountObject {
 		public:
 			RefCountObject() : referenceCount(0) {}
-
 			~RefCountObject() {}
 
 			void AddReference();
 			void Release();
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 
 		
 	

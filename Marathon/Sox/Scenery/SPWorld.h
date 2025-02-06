@@ -29,7 +29,7 @@ namespace Sonicteam{
 				//0x40 Size
 
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 			};
 

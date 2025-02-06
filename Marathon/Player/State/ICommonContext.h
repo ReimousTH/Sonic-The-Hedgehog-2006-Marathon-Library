@@ -4,6 +4,8 @@
 #include "ICommonContextIF.h"
 #include <vector>
 
+#include <Sox/Memory/Destruction.h>
+
 namespace Sonicteam{
 
 	namespace Player{
@@ -101,7 +103,7 @@ namespace Sonicteam{
 				ICommonContext(void);
 				~ICommonContext(void);
 
-				void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 			};
 
 		}

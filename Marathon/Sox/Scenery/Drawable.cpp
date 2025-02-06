@@ -13,11 +13,7 @@ Sonicteam::SoX::Scenery::Drawable::~Drawable()
 
 }
 
-void Sonicteam::SoX::Scenery::Drawable::DestroyObject(unsigned int flag)
-{
-
-}
-
+DESTRUCTION_CPP(Drawable);
 
 void Sonicteam::SoX::Scenery::Drawable::CEC02()
 {
@@ -93,10 +89,8 @@ void Sonicteam::SoX::Scenery::Drawable::frameObserver::ObserveFrameStep(double a
 
 }
 
-void Sonicteam::SoX::Scenery::Drawable::frameObserver::DestroyObject(unsigned int flag)
-{
 
-}
+
 
 Sonicteam::SoX::Scenery::Drawable::frameObserver::frameObserver()
 {

@@ -2,13 +2,22 @@
 
 #include <xtl.h>
 #include <Sox/RefCountObject.h>
-#include <Sox/Memory/IDestructible.h>
+#include <Sox/Memory/Destruction.h>
+
+
+#ifdef _HAVOK
+#include <Physics/Collide/Shape/hkpShape.h>
+#include <Physics/Collide/Shape/Convex/Box/hkpBoxShape.h>
+#define HAVOK_SHAPE_TYPE hkpShape
+#define HAVOK_SHAPE_BOX_CREATEDYNAMIC(width,height,length) new hkpBoxShape(hkVector4(width,height,length))
+
+#else
+#define HAVOK_SHAPE_TYPE void
+#define HAVOK_SHAPE_BOX_CREATEDYNAMIC(width,height,length) malloc(4)
+#endif
 
 
 
-
-#include <Common/Base/System/hkBaseSystem.h> // include for hkBaseSystem
-#include <Common/Base/Memory/Memory/Pool/hkPoolMemory.h> // hkPoolMemory
 
 
 namespace Sonicteam{
@@ -22,10 +31,12 @@ namespace Sonicteam{
 				ShapeHavok(void);
 				~ShapeHavok(void);
 
-				unsigned int* MhkBaseObject; // Marathon no name left ((( off_8207ED80 0x20
+				HAVOK_SHAPE_TYPE* HavokShape;
+
+			
 				
 
-				virtual void DestroyObject(unsigned int flag);
+				DESTRUCTION_H;
 
 			};
 			};

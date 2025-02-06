@@ -12,14 +12,10 @@ void Sonicteam::SoX::RefCountObject::AddReference()
 void Sonicteam::SoX::RefCountObject::Release()
 {
 	if (--referenceCount == 0) {
-		DestroyObject(1);
+		this->DestroyObject(1);
 	}
 }
 
-void Sonicteam::SoX::RefCountObject::DestroyObject(unsigned int flag)
-{
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
-
+DESTRUCTION_CPP(RefCountObject);
 
 

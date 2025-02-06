@@ -15,7 +15,7 @@ namespace Sonicteam{
 			{
 			public:
 				StateMashine(void) {};
-				virtual void DestroyObject(unsigned int flag);
+				DESTRUCTION_HPP(StateMashine);
 			//	
 				
 				virtual void OnStateChange(boost::shared_ptr<Sonicteam::SoX::AI::State<T>>& NextState,T* context); // For now nothing
@@ -46,12 +46,7 @@ namespace Sonicteam{
 			}
 		
 
-			template<typename T>
-			void Sonicteam::SoX::AI::StateMashine<T>::DestroyObject(unsigned int flag)
-			{
-
-			}
-
+		
 			template<typename T>
 			void Sonicteam::SoX::AI::StateMashine<T>::OnStateChange(boost::shared_ptr<Sonicteam::SoX::AI::State<T>>& NextState,T* context) //IContext
 			{

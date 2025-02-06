@@ -14,7 +14,7 @@ namespace Sonicteam{
 			IPlugIn(char*);
 			~IPlugIn(void);
 
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 
 			std::string PluginName;
 

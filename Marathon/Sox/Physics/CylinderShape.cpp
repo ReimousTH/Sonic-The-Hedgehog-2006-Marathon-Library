@@ -17,10 +17,7 @@ Sonicteam::SoX::Physics::CylinderShape::~CylinderShape(void)
 
 }
 
-void Sonicteam::SoX::Physics::CylinderShape::DestroyObject(unsigned int flag)
-{
-	
-}
+DESTRUCTION_CPP(CylinderShape);
 
 void Sonicteam::SoX::Physics::CylinderShape::ShapeInitVolume()
 {

@@ -9,10 +9,7 @@ int Sonicteam::SoX::Physics::Entity::OnMessageRecieved(Sonicteam::SoX::Message*)
 return 0;	
 }
 
-void Sonicteam::SoX::Physics::Entity::DestroyObject(unsigned int flag)
-{
-
-}
+DESTRUCTION_CPP(Entity);
 
 Sonicteam::SoX::Physics::Entity::Entity(unsigned int Flag1,unsigned int Flag2)
 {

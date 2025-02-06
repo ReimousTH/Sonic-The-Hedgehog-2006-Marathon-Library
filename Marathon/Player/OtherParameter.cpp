@@ -19,7 +19,4 @@ Sonicteam::Player::OtherParameter::~OtherParameter(void)
 
 }
 
-void Sonicteam::Player::OtherParameter::DestroyObject(unsigned int flag)
-{
-
-}
+DESTRUCTION_CPP(OtherParameter);

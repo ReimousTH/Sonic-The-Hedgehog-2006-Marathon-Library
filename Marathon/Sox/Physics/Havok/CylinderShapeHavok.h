@@ -19,7 +19,7 @@ namespace Sonicteam{
 				CylinderShapeHavok(double radius,double height);
 				~CylinderShapeHavok(void);
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H override;
 
 				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2) override;
 

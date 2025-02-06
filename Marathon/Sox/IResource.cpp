@@ -24,7 +24,4 @@ int IResource::ResourceUnk04()
 	return 1;
 }
 
-void Sonicteam::SoX::IResource::DestroyObject(unsigned int flag)
-{
-
-}
+DESTRUCTION_CPP(IResource);

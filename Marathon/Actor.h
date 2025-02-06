@@ -34,7 +34,7 @@ namespace Sonicteam{
 			unsigned int ActorID; //0x54
 
 		
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 
 
 

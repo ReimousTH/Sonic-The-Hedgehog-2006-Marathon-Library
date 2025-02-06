@@ -1,6 +1,6 @@
 #include "Library.h"
 
-
+using namespace Sonicteam::Prop;
 
 
 
@@ -14,7 +14,5 @@ Sonicteam::Prop::Library::~Library()
 
 }
 
-void Sonicteam::Prop::Library::DestroyObject(unsigned int flag)
-{
+DESTRUCTION_CPP(Library);
 
-}

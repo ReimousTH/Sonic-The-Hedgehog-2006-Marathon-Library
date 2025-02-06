@@ -1,6 +1,7 @@
 #pragma once
 #include "..\RefCountObject.h"
 #include <xtl.h>
+#include <Sox/Memory/Destruction.h>
 
 namespace Sonicteam{
 	namespace SoX{
@@ -17,7 +18,7 @@ namespace Sonicteam{
 
 				
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2) = 0;
 				virtual void ShapeInitVolume(); // i guess
 

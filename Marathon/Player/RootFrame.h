@@ -16,7 +16,7 @@ namespace Sonicteam{
 			RootFrame(void);
 			~RootFrame(void);
 
-			virtual void DestroyObject(unsigned int flag) override;
+			DESTRUCTION_H;
 
 			virtual XMMATRIX FrameGetTransformMatrix1();
 
@@ -46,6 +46,8 @@ namespace Sonicteam{
 
 			XMMATRIX RFTransformMatrix0xB0;
 
+
+			//RFTransformMatrix0xF0 ()
 			XMFLOAT4 RFPosition0xF0; //Position 0xF0
 			XMFLOAT4 RFPosition0x100; //Position 0xF0
 

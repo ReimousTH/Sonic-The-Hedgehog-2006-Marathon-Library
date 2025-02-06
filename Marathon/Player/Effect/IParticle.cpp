@@ -21,7 +21,3 @@ Sonicteam::Player::Effect::IParticle::~IParticle(void)
 
 }
 
-void Sonicteam::Player::Effect::IParticle::DestroyObject(unsigned int flag)
-{
-
-}

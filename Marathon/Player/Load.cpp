@@ -23,10 +23,7 @@ Sonicteam::Player::Load::~Load(void)
 }
 
 
-void Sonicteam::Player::Load::DestroyObject(unsigned int flag)
-{
-	throw std::logic_error("The method or operation is not implemented.");
-}
+DESTRUCTION_CPP(Load);
 
 Sonicteam::SoX::RefCountObject Sonicteam::Player::Load::LoadPackage(std::string* package_path)
 {

@@ -7,56 +7,39 @@ static void ClearTaskFunc(Task* task){
 	*(int*)task = 0;
 };
 
-Task::Task(Sonicteam::SoX::Engine::Doc* doc):Component(0),SimpleLinkNode<Task>()
+Task::Task(Sonicteam::SoX::Engine::Doc* doc):Component(0)
 {
-
-	this->Tuint0x24 = 0;
-	this->Tuint0x28 = 0;
-	this->Prev = this;	
+	this->Parent = 0;
+	this->Child = this;
+	this->DependencyIn = 0;
+	this->DependencyOut = 0;
 	this->TaskEngineDoc = doc;
-	this->TaskList = Sonicteam::SoX::LinkNodeList<Task>(0);
+	this->TaskList.InitLink();
 }
 
 
-Sonicteam::SoX::Engine::Task::Task(Sonicteam::SoX::Engine::Task* task) :Component(task),IO_TASK(),SimpleLinkNode<Task>()
+Sonicteam::SoX::Engine::Task::Task(Sonicteam::SoX::Engine::Task* task) :Component(task)
 {
+	this->Flag = 0;
+	this->custom = 0;
+		
+	this->DependencyIn = task; 
+	this->DependencyOut = 0;
+	this->TaskList.InitLink();
 
-	this->Parent = task;	
-	this->TaskEngineDoc = 0;
-	this->TaskList = Sonicteam::SoX::LinkNodeList<Task>(0);
-	Sonicteam::SoX::Engine::Task* v4 = this->Parent;
-	if ( v4 )
-	{
-		Sonicteam::SoX::Engine::Task* ActiveTask = v4->Active;
-		if ( ActiveTask )
-		{
-			Sonicteam::SoX::Engine::Task* v6 = ActiveTask->Prev;
-			this->Next = 0;
-			this->Prev = v6;
-			ActiveTask->Prev->Next = this;
-			ActiveTask->Prev = this;
-		}
-		else
-		{
-			this->Prev = this;
-			v4->Active = this;
-			this->Next = 0;
-		}
-		this->TaskEngineDoc = task->TaskEngineDoc;
-	}
-	else
-	{
-		this->Prev = this;
-		this->Next = 0;
-	}
+	this->InitDependencyIn();
+	if (this->DependencyIn) this->TaskEngineDoc = task->TaskEngineDoc;
+
+
 }
 
 
 Task::~Task(void)
 {
-	this->Empty(this);
-	this->EmptyParent(this);
-	this->TaskList.ForEach(ClearTaskFunc);
+	this->CleanupOutgoingDependencies();
+	this->HandleIncomingDependency();
+
+	//TaskList, ForEach()
 	this->TaskList.Empty();
 }
 
@@ -75,13 +58,4 @@ void Sonicteam::SoX::Engine::Task::OnTaskUpdate(float)
 
 }
 
-void Sonicteam::SoX::Engine::Task::DestroyObject(unsigned int flag)
-{
-	Sonicteam::SoX::Engine::Task::~Task();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
-
-Sonicteam::SoX::Engine::IO_TASK::IO_TASK()
-{
-	this->Tuint0x24 = 0;
-}
+DESTRUCTION_CPP(Task);

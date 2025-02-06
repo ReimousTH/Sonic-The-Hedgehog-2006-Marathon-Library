@@ -13,10 +13,7 @@ Sonicteam::SoX::Physics::Shape::~Shape(void)
 
 }
 
-void Sonicteam::SoX::Physics::Shape::DestroyObject(unsigned int flag)
-{
-
-}
+DESTRUCTION_CPP(Shape);
 
 void Sonicteam::SoX::Physics::Shape::ShapeInitVolume()
 {

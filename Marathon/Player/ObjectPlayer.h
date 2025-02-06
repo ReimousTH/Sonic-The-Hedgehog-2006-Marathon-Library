@@ -207,10 +207,45 @@ namespace Sonicteam{
 
 
 			void RemovePlugin(std::string plugin);
+
+			template <typename T>
+			void RemovePlugin(boost::shared_ptr<T> plugin);
+
 			boost::shared_ptr<Sonicteam::Player::IPlugIn> FindPluginLast(std::string plugin);
 	
 
 		};
+
+		#define RemovePluginDef(Vector, PlugType, OtherPlug, OtherPlugType) \
+		for (typename std::vector<boost::shared_ptr<PlugType>>::iterator it = Vector.begin(); \
+		it != Vector.end(); ) { \
+		if (boost::dynamic_pointer_cast<OtherPlugType>(*it).get() == OtherPlug.get()) { \
+		it = Vector.erase(it); \
+		} else { \
+		it++; \
+		} \
+		}
+
+
+		template <typename T>
+		void Sonicteam::Player::ObjectPlayer::RemovePlugin(boost::shared_ptr<T> plugin)
+		{
+			RemovePluginDef(this->PlayerPlugins,Sonicteam::Player::IPlugIn,plugin,T);
+			RemovePluginDef(this->PlayerIVarible,Sonicteam::Player::IVariable,plugin,T);
+			RemovePluginDef(this->PlayerIDynamicLink,Sonicteam::Player::IDynamicLink,plugin,T);
+			RemovePluginDef(this->PlayerIFlagCommunicator,Sonicteam::Player::IFlagCommunicator,plugin,T);
+			RemovePluginDef(this->PlayerIStepable1,Sonicteam::Player::IStepable,plugin,T);
+			RemovePluginDef(this->PlayerIStepable2,Sonicteam::Player::IStepable,plugin,T);
+			RemovePluginDef(this->PlayerIStepable3,Sonicteam::Player::IStepable,plugin,T);
+			RemovePluginDef(this->PlayerIStepable4,Sonicteam::Player::IStepable,plugin,T);
+			RemovePluginDef(this->PlayerIExportExternalFlag,Sonicteam::Player::IExportExternalFlag,plugin,T);
+			RemovePluginDef(this->PlayerIExportPostureRequestFlag,Sonicteam::Player::IExportPostureRequestFlag,plugin,T);
+			RemovePluginDef(this->PlayerIExportWeaponRequestFlag,Sonicteam::Player::IExportWeaponRequestFlag,plugin,T);
+			RemovePluginDef(this->PlayerIImportAnimation,Sonicteam::Player::IImportAnimation,plugin,T);
+			RemovePluginDef(this->PlayerINotification,Sonicteam::Player::INotification,plugin,T);
+			RemovePluginDef(this->PlayerEventer->EventerListener,Sonicteam::Player::IEventerListener,plugin,T);
+
+		}
 
 	}
 }

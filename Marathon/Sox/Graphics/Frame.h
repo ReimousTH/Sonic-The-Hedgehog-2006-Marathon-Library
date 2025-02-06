@@ -39,7 +39,7 @@ namespace Sonicteam{
 				Frame();
 				~Frame();
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H override;
 
 
 				//Virtual Methods

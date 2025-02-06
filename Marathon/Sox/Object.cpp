@@ -22,12 +22,9 @@ Object::Object(void)
 	
 }
 
-void Sonicteam::SoX::Object::DestroyObject(unsigned int flag)
-{
 
-	Sonicteam::SoX::Object::~Object();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
+DESTRUCTION_CPP(Object);
+
 
 Sonicteam::SoX::ObjectRework::ObjectRework(void)
 {

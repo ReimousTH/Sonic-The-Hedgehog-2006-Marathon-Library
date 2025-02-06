@@ -69,7 +69,7 @@ namespace Sonicteam { namespace Prop {
 
 		GenerateArea();
 		~GenerateArea();
-		virtual void DestroyObject(unsigned int flag);
+		DESTRUCTION_H;
 	};
 
 }}

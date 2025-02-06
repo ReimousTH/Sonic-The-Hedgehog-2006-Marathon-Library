@@ -1,8 +1,8 @@
 #pragma once
 
 #include <string>
-
 #include <Sox/RefCountObject.h>
+#include <Sox/Memory/Destruction.h>
 
 namespace Sonicteam{
 	namespace SoX{
@@ -13,7 +13,7 @@ namespace Sonicteam{
 			IResource(void);
 			~IResource();
 			//virtual ~IResource(void);
-			virtual void DestroyObject(unsigned int flag) override;
+			DESTRUCTION_H;
 
 
 

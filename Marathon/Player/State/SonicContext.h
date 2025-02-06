@@ -65,7 +65,7 @@ namespace Sonicteam{
 				float c_scale_jump_speed;
 				float c_scale_jump_block;
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 
 

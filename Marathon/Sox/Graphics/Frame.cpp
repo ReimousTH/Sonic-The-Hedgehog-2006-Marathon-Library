@@ -33,7 +33,4 @@ Sonicteam::SoX::Graphics::Frame::~Frame()
 
 }
 
-void Sonicteam::SoX::Graphics::Frame::DestroyObject(unsigned int flag)
-{
-
-}
+DESTRUCTION_CPP(Frame);

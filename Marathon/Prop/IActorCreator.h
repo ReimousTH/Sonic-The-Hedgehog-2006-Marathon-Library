@@ -22,7 +22,7 @@ namespace Sonicteam { namespace Prop {
 		IActorCreator();
 		~IActorCreator();
 
-		virtual void DestroyObject(unsigned int flag);
+		DESTRUCTION_H;
 		virtual Sonicteam::Actor* CreateActor(Sonicteam::Actor* NamedActor,boost::weak_ptr<Sonicteam::GameImp>* GameImp,void* ObjectCreationData) = 0;
 
 	};

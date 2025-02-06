@@ -3,10 +3,8 @@
 
 using namespace Sonicteam;
 
-void Sonicteam::GameImp::DestroyObject(unsigned int flag)
-{
-	Sonicteam::GameImp::~GameImp();
-}
+
+DESTRUCTION_CPP(GameImp);
 
 int Sonicteam::GameImp::OnMessageRecieved(Sonicteam::SoX::Message*)
 {

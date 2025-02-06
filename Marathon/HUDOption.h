@@ -142,7 +142,7 @@ namespace Sonicteam{
 	public:
 		Sonicteam::SoX::Engine::Doc* GetCurrentDoc();
 
-//		virtual void DestroyObject(unsigned int flag) override;
+//		DESTRUCTION_H override;
 
 
 

@@ -1,7 +1,7 @@
 #include "Object.h"
 
 
-using namespace Sonicteam;
+using namespace Sonicteam::Stage;
 
 
 
@@ -40,8 +40,5 @@ Sonicteam::Stage::Object::Object()
 
 }
 
-void Sonicteam::Stage::Object::DestroyObject(unsigned int flag)
-{
-	Sonicteam::Stage::Object::~Object();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
+
+DESTRUCTION_CPP(Object);

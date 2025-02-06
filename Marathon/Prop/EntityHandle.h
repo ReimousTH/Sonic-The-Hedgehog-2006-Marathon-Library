@@ -24,7 +24,7 @@ namespace Sonicteam { namespace Prop {
 		unsigned int unk0x10; //0x10
 		unsigned int unk0x14; //0x14
 		REF_TYPE(Sonicteam::Prop::Instance) PropInstance;
-		virtual void DestroyObject(unsigned int flag) override;
+		DESTRUCTION_H;
 
 	};
 

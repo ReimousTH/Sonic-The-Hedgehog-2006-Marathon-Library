@@ -90,9 +90,4 @@ unsigned int Sonicteam::Player::State::CommonObject::Object2Update(float)
 	return 0;
 }
 
-void Sonicteam::Player::State::CommonObject::DestroyObject(unsigned int flag)
-{
-	Sonicteam::Player::State::CommonObject::~CommonObject();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
-
+DESTRUCTION_CPP(CommonObject);

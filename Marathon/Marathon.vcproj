@@ -334,6 +334,71 @@
 			<DebuggerTool
 			/>
 		</Configuration>
+		<Configuration
+			Name="ReleaseHavok|Xbox 360"
+			OutputDirectory="..\bin\Build\$(ConfigurationName)\$(RootNameSpace)"
+			IntermediateDirectory="..\bin\Cache\$(ConfigurationName)\$(RootNameSpace)"
+			ConfigurationType="4"
+			UseOfMFC="-1"
+			UseOfATL="0"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				Optimization="3"
+				FavorSizeOrSpeed="2"
+				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost;..\Havok\Source"
+				PreprocessorDefinitions="_RELEASE;_XBOX;XBOX;_XENON;_WIN32;BOOST_DISABLE_THREADS;_HAVOK"
+				StringPooling="true"
+				ExceptionHandling="1"
+				RuntimeLibrary="0"
+				BufferSecurityCheck="false"
+				EnableFunctionLevelLinking="true"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile="$(OutDir)/$(ProjectName).pch"
+				WarningLevel="0"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				LinkLibraryDependencies="false"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+			<DebuggerTool
+			/>
+		</Configuration>
 	</Configurations>
 	<References>
 		<ProjectReference
@@ -547,6 +612,14 @@
 			</File>
 			<File
 				RelativePath=".\Player\IPlugIn.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IPostureControl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IPostureControl.h"
 				>
 			</File>
 			<File
@@ -874,6 +947,22 @@
 				</File>
 				<File
 					RelativePath=".\Player\Weapon\SonicWeapons.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Unit"
+				>
+				<File
+					RelativePath=".\Player\Unit\Defs.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Player\Unit\ITestCase.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Player\Unit\ITestCase.h"
 					>
 				</File>
 			</Filter>
@@ -1462,6 +1551,15 @@
 				</FileConfiguration>
 				<FileConfiguration
 					Name="Release_LTCG|Xbox 360"
+					>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="ReleaseHavok|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"

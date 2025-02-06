@@ -4,10 +4,7 @@
 using namespace Sonicteam::SoX::Scenery;
 
 
-void Sonicteam::SoX::Scenery::Clump::DestroyObject(unsigned int flag)
-{
-	throw std::logic_error("The method or operation is not implemented.");
-}
+DESTRUCTION_CPP(Clump)
 
 void Sonicteam::SoX::Scenery::Clump::SSSD01()
 {

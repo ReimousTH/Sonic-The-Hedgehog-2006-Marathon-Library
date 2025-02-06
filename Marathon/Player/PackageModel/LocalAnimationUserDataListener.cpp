@@ -1,13 +1,10 @@
 #include "LocalAnimationUserDataListener.h"
 
-using namespace Sonicteam::Player;
+using namespace Sonicteam::Player::PackageModel;
 
 
-void Sonicteam::Player::PackageModel::LocalAnimationUserDataListener::DestroyObject(unsigned int flag)
-{
-	Sonicteam::Player::PackageModel::LocalAnimationUserDataListener::~LocalAnimationUserDataListener();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
+DESTRUCTION_CPP(LocalAnimationUserDataListener);
+
 
 void Sonicteam::Player::PackageModel::LocalAnimationUserDataListener::ProcessFunc(Sonicteam::SoX::Physics::Entity*& phantom)
 {

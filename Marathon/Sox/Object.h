@@ -45,7 +45,7 @@ namespace Sonicteam{
 			Object(void);
 			~Object(void);
 			virtual char* GetObjectType(); 
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 			
 
 	

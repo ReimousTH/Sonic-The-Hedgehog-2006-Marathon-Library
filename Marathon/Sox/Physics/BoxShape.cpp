@@ -18,10 +18,7 @@ Sonicteam::SoX::Physics::BoxShape::~BoxShape(void)
 
 }
 
-void Sonicteam::SoX::Physics::BoxShape::DestroyObject(unsigned int flag)
-{
-	
-}
+DESTRUCTION_CPP(BoxShape);
 
 void Sonicteam::SoX::Physics::BoxShape::ShapeInitVolume()
 {

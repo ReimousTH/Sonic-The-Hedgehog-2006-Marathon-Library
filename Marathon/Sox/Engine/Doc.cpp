@@ -3,6 +3,10 @@
 
 using namespace Sonicteam::SoX::Engine;
 
+
+
+DESTRUCTION_CPP(Doc);
+
 Doc::~Doc(void)
 {
 

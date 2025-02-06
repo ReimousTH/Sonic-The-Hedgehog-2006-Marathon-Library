@@ -29,7 +29,7 @@ namespace Sonicteam{
 				FrameSynchronizer(unsigned int); //Frame Count
 				~FrameSynchronizer(void);
 
-				virtual void DestroyObject(unsigned int flag);
+				DESTRUCTION_H;
 
 				Sonicteam::SoX::LinkNodeListA<Sonicteam::SoX::Graphics::Frame> LFrame;
 				//	unsigned int FSuint0x4; //self

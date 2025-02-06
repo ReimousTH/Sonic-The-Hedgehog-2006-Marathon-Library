@@ -3,10 +3,7 @@
 
 using namespace Sonicteam::SoX::Scenery;
 
-void Sonicteam::SoX::Scenery::SPAabbTree::DestroyObject(unsigned int flag)
-{
-	
-}
+
 
 Sonicteam::SoX::Scenery::SPAabbTree::SPAabbTree():
 AABBObjects(0),

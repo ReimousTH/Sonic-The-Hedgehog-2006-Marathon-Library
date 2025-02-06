@@ -34,7 +34,7 @@ namespace Sonicteam{
 				virtual void Object2PreUpdateCmn(float) override;	
 				virtual void Object2PostUpdateCmn(float) override;	
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 
 

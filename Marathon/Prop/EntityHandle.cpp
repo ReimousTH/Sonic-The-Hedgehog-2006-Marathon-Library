@@ -1,9 +1,8 @@
 #include "EntityHandle.h"
 
-void Sonicteam::Prop::EntityHandle::DestroyObject(unsigned int flag)
-{
-	
-}
+using namespace Sonicteam::Prop;
+
+
 
 Sonicteam::Prop::EntityHandle::EntityHandle(Sonicteam::Prop::Scene* PropScene,unsigned int ID):
 PropScene(PropScene),
@@ -18,3 +17,10 @@ Sonicteam::Prop::EntityHandle::EntityHandle()
 {
 
 }
+
+Sonicteam::Prop::EntityHandle::~EntityHandle()
+{
+
+}
+
+DESTRUCTION_CPP(EntityHandle);

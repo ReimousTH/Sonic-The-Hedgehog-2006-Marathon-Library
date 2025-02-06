@@ -51,7 +51,7 @@ namespace Sonicteam{
 			float unk0x64;
 
 
-			virtual void DestroyObject(unsigned int flag) override;
+			DESTRUCTION_H ;
 
 		};
 	}

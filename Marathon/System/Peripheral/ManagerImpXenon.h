@@ -78,7 +78,7 @@ namespace Sonicteam{
 				_XINPUT_CAPABILITIES GAMEPAD_CAPABILITIES[4];
 
 
-				virtual void DestroyObject(unsigned int flag);
+				DESTRUCTION_H;
 				virtual void ManagerUnk01();
 				virtual int ManagerGetMaxInputCount();
 				virtual int MangerProcessInput(XINPUT_GAMEPAD_STATE* _buffer_,int _buffer_count);

@@ -1,5 +1,6 @@
 #include "CsdLink.h"
 
+using namespace Sonicteam;
 Sonicteam::CsdLink::CsdLink(void)
 {
 	this->FCsdLink0x4 = 0;
@@ -14,7 +15,5 @@ Sonicteam::CsdLink::~CsdLink(void)
 
 }
 
-void Sonicteam::CsdLink::DestroyObject(unsigned int flag)
-{
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
+DESTRUCTION_CPP(CsdLink);
+

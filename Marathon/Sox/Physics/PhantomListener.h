@@ -34,7 +34,7 @@ namespace Sonicteam{
 				virtual void PhLsProcessMessage2(PLMessage&) {};
 				virtual void PhLsProcessMessage3(PLMessage&) {};
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 		
 

@@ -20,7 +20,7 @@ namespace Sonicteam{
 				float Length; //0x18
 				
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2) override = 0;
 				virtual void ShapeInitVolume() override; // i guess

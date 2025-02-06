@@ -229,7 +229,7 @@ namespace Sonicteam{
 
 				void SetAnimation(int);
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 
 

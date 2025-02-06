@@ -35,7 +35,7 @@ namespace Sonicteam { namespace Prop {
 		boost::weak_ptr<Sonicteam::Prop::ClassRegistry> ClassRegistry; //0x78 - 0x7C
 		//0x80
 
-		virtual void DestroyObject(unsigned int flag) override;
+		DESTRUCTION_H override;
 
 	};
 

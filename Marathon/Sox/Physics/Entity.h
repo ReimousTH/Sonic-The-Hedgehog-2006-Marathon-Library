@@ -38,7 +38,7 @@ namespace Sonicteam{
 
 
 				virtual int OnMessageRecieved(Sonicteam::SoX::Message*) override;
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H override;
 
 
 		

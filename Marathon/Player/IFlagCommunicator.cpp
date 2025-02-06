@@ -9,7 +9,3 @@ IFlagCommunicator::~IFlagCommunicator(void)
 {
 }
 
-void Sonicteam::Player::IFlagCommunicator::DestroyObject(unsigned int flag)
-{
-
-}

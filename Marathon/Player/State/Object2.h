@@ -21,7 +21,7 @@ namespace Sonicteam{
 				Object2(IMachine*);
 				~Object2(void);
 				
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 	
 
 

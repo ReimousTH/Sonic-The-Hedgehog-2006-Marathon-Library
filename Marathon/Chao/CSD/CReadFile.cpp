@@ -14,7 +14,4 @@ Chao::CSD::CReadFile::~CReadFile(void)
 
 }
 
-void Chao::CSD::CReadFile::DestroyObject(unsigned int flag)
-{
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
+DESTRUCTION_CPP(CReadFile);

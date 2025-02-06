@@ -1,10 +1,7 @@
 #include "CsdObject.h"
+using namespace Sonicteam;
 
-void Sonicteam::CsdObject::DestroyObject(unsigned int flag)
-{
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-
-}
+DESTRUCTION_CPP(CsdObject);
 
 void Sonicteam::CsdObject::CsdLink0x4()
 {
@@ -70,3 +67,5 @@ void Sonicteam::CsdObject::SetFlag0x20(int flag)
 {
 	this->FCsdObject0x20 = flag;
 }
+
+

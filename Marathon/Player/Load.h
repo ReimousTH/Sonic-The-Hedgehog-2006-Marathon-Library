@@ -48,7 +48,7 @@ namespace Sonicteam{
 
 
 			//YES IT IS  std::_Tree<std::_Tmap_traits< match 
-			virtual void DestroyObject(unsigned int flag) override;
+			DESTRUCTION_H override;
 
 			std::map<std::string,PLoadBodyPackage*> PackageBody;
 			std::map<std::string,PLoadHeadPackage*> PackageHead; //not sure

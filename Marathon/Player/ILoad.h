@@ -19,7 +19,7 @@ namespace Sonicteam{
 			ILoad(void);
 			~ILoad(void);
 
-			virtual void DestroyObject(unsigned int flag) override;
+			DESTRUCTION_H;
 			//r3 = RefCountObj r4 = this, r5 = std::string (player/select_sonic.pkg)
 
 			virtual Sonicteam::SoX::RefCountObject LoadPackage(std::string* package_path) = 0; 

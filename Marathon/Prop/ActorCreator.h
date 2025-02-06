@@ -33,7 +33,7 @@ namespace Sonicteam { namespace Prop {
 		ActorCreator();
 		~ActorCreator();
 
-		virtual void DestroyObject(unsigned int flag) override;
+		DESTRUCTION_H override;
 		virtual Sonicteam::Actor* CreateActor(Sonicteam::Actor* NamedActor,boost::weak_ptr<Sonicteam::GameImp>* GameImp,void* ObjectCreationData) override;
 
 	};

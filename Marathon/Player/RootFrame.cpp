@@ -3,12 +3,7 @@
 using namespace Sonicteam::Player;
 
 
-void Sonicteam::Player::RootFrame::DestroyObject(unsigned int flag)
-{
-	Sonicteam::Player::RootFrame::~RootFrame();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
-
+DESTRUCTION_CPP(RootFrame);
 
 //Have no idea why 06 Compiled this with Vector function but maybe optimization flag or some
 XMMATRIX Sonicteam::Player::RootFrame::FrameGetTransformMatrix1()

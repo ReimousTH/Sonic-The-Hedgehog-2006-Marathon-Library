@@ -14,10 +14,10 @@ Chao::CSD::CPlatform::~CPlatform(void)
 
 }
 
-void Chao::CSD::CPlatform::DestroyObject(unsigned int flag)
+void* Chao::CSD::CPlatform::DestroyObject(unsigned int flag)
 {
 	if ( (flag & 1) != 0){
 		Sonicteam::CMemoryAllocMarathon::GetInstance()->FFreeMemoryA((void*)this);
 	}
-
+	return this;
 }

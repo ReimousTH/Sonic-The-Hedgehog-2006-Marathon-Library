@@ -19,8 +19,4 @@ Sonicteam::Player::Effect::ParticleScript::~ParticleScript(void)
 
 }
 
-void Sonicteam::Player::Effect::ParticleScript::DestroyObject(unsigned int flag)
-{
-
-}
-
+DESTRUCTION_CPP(ParticleScript);

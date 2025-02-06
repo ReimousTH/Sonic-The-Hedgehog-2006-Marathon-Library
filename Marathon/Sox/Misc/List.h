@@ -36,7 +36,6 @@ namespace Sonicteam{
 					do 
 					{
 						nextNode = current->Next;
-
 						current->Parent = 0;
 						current->Prev = 0;
 						current->Next = 0;
@@ -116,6 +115,8 @@ LABEL_12:
 		};
 
 
+		
+		
 		template <typename T>
 		struct LinkNodeBase {
 			T* NThread;

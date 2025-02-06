@@ -37,7 +37,7 @@ namespace Sonicteam{
 				virtual void AddGaugeValue(float) override; 
 				virtual void AddMaturityValue() override; //Not Sure About That One, but i keep it, always fixed (
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H override;
 
 
 

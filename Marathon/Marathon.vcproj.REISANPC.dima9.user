@@ -175,5 +175,39 @@
 				RemoteMachine="$(DefaultConsole)"
 			/>
 		</Configuration>
+		<Configuration
+			Name="ReleaseHavok|Xbox 360"
+			>
+			<DebugSettings
+				Command=""
+				WorkingDirectory=""
+				CommandArguments=""
+				Attach="false"
+				DebuggerType="3"
+				Remote="1"
+				RemoteMachine="$(DefaultConsole)"
+				RemoteCommand=""
+				HttpUrl=""
+				PDBPath=""
+				SQLDebugging=""
+				Environment=""
+				EnvironmentMerge="true"
+				DebuggerFlavor=""
+				MPIRunCommand=""
+				MPIRunArguments=""
+				MPIRunWorkingDirectory=""
+				ApplicationCommand=""
+				ApplicationArguments=""
+				ShimCommand=""
+				MPIAcceptMode=""
+				MPIAcceptFilter=""
+			/>
+			<DebuggerTool
+				Command=""
+				CommandArguments=""
+				MapDVDDrive="false"
+				RemoteMachine="$(DefaultConsole)"
+			/>
+		</Configuration>
 	</Configurations>
 </VisualStudioUserFile>

@@ -18,7 +18,7 @@ namespace Sonicteam{
 			AttackManager(void);
 			~AttackManager(void);
 
-			virtual void DestroyObject(unsigned int flag) override; 
+			DESTRUCTION_H; 
 
 			REF_TYPE(Sonicteam::Combo::ScoreManager) ScoreManager; //0x8
 			std::vector<void*> unk_vec;

@@ -35,7 +35,7 @@ namespace Sonicteam{
 
 
 				//YES IT IS  std::_Tree<std::_Tmap_traits< match 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 				virtual void ProcessFunc(Sonicteam::SoX::Physics::Entity*&);
 

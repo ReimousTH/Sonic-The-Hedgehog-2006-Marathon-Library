@@ -26,7 +26,7 @@ namespace Sonicteam{
 					~frameObserver();
 
 					virtual void ObserveFrameStep(double a1) override;
-					virtual void DestroyObject(unsigned int flag) override;
+					DESTRUCTION_H override;
 
 					unsigned int unk0x34;
 					unsigned int unk0x38;
@@ -48,7 +48,7 @@ namespace Sonicteam{
 				Drawable();
 				~Drawable();
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H override;
 
 				virtual void SSSD01() = 0;
 				virtual void SSSD02(unsigned int*); //Vector Maybe, or XMAttric or Hybrid Struct

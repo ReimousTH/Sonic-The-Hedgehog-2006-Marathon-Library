@@ -21,7 +21,7 @@ namespace Chao{
 
 
 		public:
-			virtual void DestroyObject(unsigned int flag); //0x0 + 0x10
+			DESTRUCTION_H;
 			virtual void DebugMessageA(LPCSTR  lpOutputString) = 0;
 			virtual int GetCPlatform0x4() = 0;
 			virtual void CPDrawPrimiteCache0x8(unsigned int) = 0;

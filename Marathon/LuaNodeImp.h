@@ -9,6 +9,8 @@
 #include <boost/weak_ptr.hpp>
 #include <boost/shared_ptr.hpp>
 
+#include <Sox/Memory/Destruction.h>
+
 namespace Sonicteam{
  
 	//Do implementation later :)
@@ -18,7 +20,7 @@ namespace Sonicteam{
 		LuaNodeImp(lua_State*,char*);	
 		~LuaNodeImp(void);
 
-		virtual void DestroyObject(unsigned int Flag) override;
+		DESTRUCTION_H;
 
 
 

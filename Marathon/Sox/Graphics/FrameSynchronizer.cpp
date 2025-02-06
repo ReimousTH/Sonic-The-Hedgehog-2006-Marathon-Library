@@ -19,7 +19,4 @@ Sonicteam::SoX::Graphics::FrameSynchronizer::FrameSynchronizer(unsigned int)
 
 }
 
-void Sonicteam::SoX::Graphics::FrameSynchronizer::DestroyObject(unsigned int flag)
-{
-
-}
+DESTRUCTION_CPP(FrameSynchronizer);

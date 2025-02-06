@@ -1,5 +1,7 @@
 #pragma once
 
+#include <Sox/Memory/Destruction.h>
+
 namespace Sonicteam{
 	namespace SoX{
 		
@@ -41,7 +43,7 @@ namespace Sonicteam{
 			MessageReceiver(void);
 			~MessageReceiver(void);
 
-			virtual void DestroyObject(unsigned int flag) ;
+			DESTRUCTION_H
 			virtual int OnMessageRecieved(Message*) = 0;
 		};
 	};

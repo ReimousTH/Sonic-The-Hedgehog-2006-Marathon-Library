@@ -22,7 +22,7 @@ namespace Sonicteam{
 				~IMachine(void);
 
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 				virtual void OnMashineTick(float) = 0; //delta (origin = 8221EBE8)
 				virtual boost::shared_ptr<IContext> GetMashineContext() = 0;
 				virtual unsigned int ChangeMashineState(int) = 0; // StateI

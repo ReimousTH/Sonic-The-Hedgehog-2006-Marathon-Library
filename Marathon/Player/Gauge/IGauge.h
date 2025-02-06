@@ -4,7 +4,7 @@
 #include "..\IVariable.h"
 #include "..\IStepable\IStepable.h"
 
-
+#include <Sox/Memory/Destruction.h>
 
 
 namespace Sonicteam{
@@ -25,7 +25,7 @@ namespace Sonicteam{
 			virtual void AddGaugeValue(float) = 0; 
 			virtual void AddMaturityValue() = 0; //Not Sure About That One, but i keep it, always fixed (
 
-			void DestroyObject(unsigned int flag) override;
+			DESTRUCTION_H;
 
 		
 		};

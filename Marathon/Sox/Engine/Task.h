@@ -3,22 +3,20 @@
 #include "../MessageReceiver.h"
 #include "../Component.h"
 #include "Engine.h"
+#include <Sox/Misc/SimpleNode.h>
+
+
 
 namespace Sonicteam{
 	namespace SoX{
 		namespace Engine{
 
-			struct IO_TASK{
-				//Fields
-				unsigned int Tuint0x24; //Flag?
-				unsigned int Tuint0x28; //Flag  // ????????
-			public: IO_TASK();
-			};
 
-			class Task:public Sonicteam::SoX::Component,MessageReceiver,public IO_TASK,public SimpleLinkNode<Task>
+
+			class Task:public Sonicteam::SoX::Component,MessageReceiver,public SimpleNode<Task>
 		{
 		public:
-			friend class SimpleLinkNode<Task>;
+		
 			friend class IO_TASK;
 
 			Task(Sonicteam::SoX::Engine::Doc*); //no idea THRERE TWO OF THEM
@@ -31,8 +29,9 @@ namespace Sonicteam{
 
 			virtual char* GetObjectType();
 			virtual void OnTaskUpdate(float) ; // pure_call
-			virtual void DestroyObject(unsigned int flag) override;
 
+			DESTRUCTION_H;
+	
 
 
 /*
@@ -44,7 +43,7 @@ namespace Sonicteam{
 		
 	
 			Sonicteam::SoX::Engine::Doc* TaskEngineDoc; // Sonicteam::SoX::Engine::Doc ,0x3C
-			Sonicteam::SoX::LinkNodeList<Task> TaskList; //0x40 //0x44 //0x48
+			LinkSoxNode<Task> TaskList; //0x40 //0x44 //0x48
 
 
 		};

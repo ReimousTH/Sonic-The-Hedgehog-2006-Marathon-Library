@@ -11,7 +11,3 @@ Sonicteam::Player::IEventerListener::~IEventerListener(void)
 
 }
 
-void Sonicteam::Player::IEventerListener::DestroyObject(unsigned int Flag)
-{
-
-}

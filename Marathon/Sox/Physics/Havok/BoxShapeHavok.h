@@ -7,6 +7,7 @@
 #include <Sox/Physics/BoxShape.h>
 #include <Sox/Physics/Havok/ShapeHavok.h>
 
+#include <Sox/Memory/Destruction.h>
 
 namespace Sonicteam{
 	namespace SoX{
@@ -19,10 +20,9 @@ namespace Sonicteam{
 				BoxShapeHavok(double width,double height,double length);
 				~BoxShapeHavok(void);
 
-				virtual void DestroyObject(unsigned int flag) override;
+				DESTRUCTION_H;
 
 				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2);
-
 				virtual void ShapeInitVolume();
 
 			};

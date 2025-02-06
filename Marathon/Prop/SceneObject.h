@@ -23,7 +23,7 @@ namespace Sonicteam { namespace Prop {
 		SceneObject();
 		~SceneObject();
 
-		virtual void DestroyObject(unsigned int flag) override;
+		DESTRUCTION_H;
 		Sonicteam::Prop::Scene* PropScene;
 
 

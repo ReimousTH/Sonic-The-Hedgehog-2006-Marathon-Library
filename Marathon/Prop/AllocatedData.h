@@ -21,7 +21,7 @@ namespace Sonicteam { namespace Prop {
 
 		AllocatedData();
 		~AllocatedData();
-		virtual void DestroyObject(unsigned int flag) override;
+		DESTRUCTION_H;
 
 
 		void* PlacementSetFile;

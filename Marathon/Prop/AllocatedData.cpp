@@ -1,12 +1,7 @@
 #include "AllocatedData.h"
 
-void Sonicteam::Prop::AllocatedData::DestroyObject(unsigned int flag)
-{
-	Sonicteam::Prop::AllocatedData::~AllocatedData();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-
-}
-
+using namespace Sonicteam::Prop;
+DESTRUCTION_CPP(AllocatedData);
 Sonicteam::Prop::AllocatedData::AllocatedData()
 {
 

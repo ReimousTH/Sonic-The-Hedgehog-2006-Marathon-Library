@@ -1,10 +1,7 @@
 #include "ManagerImpXenon.h"
 using namespace Sonicteam::System::Peripheral;
 
-void Sonicteam::System::Peripheral::ManagerImpXenon::DestroyObject(unsigned int flag)
-{
-
-}
+DESTRUCTION_CPP(ManagerImpXenon);
 
 void Sonicteam::System::Peripheral::ManagerImpXenon::ManagerUnk01()
 {
@@ -45,9 +42,6 @@ int Sonicteam::System::Peripheral::ManagerImpXenon::MangerProcessInput(XINPUT_GA
 				for (int j = 0; j < 0xE; j++) {
 					if ((Sonicteam::System::Peripheral::XINPUT_GAMEPAD_BUTTONS_REMAP_TABLE[j].From & _buffer_state.Gamepad.wButtons) != 0) {
 						wbuttons |= Sonicteam::System::Peripheral::XINPUT_GAMEPAD_BUTTONS_REMAP_TABLE[j].To;
-						if (wbuttons != 0){
-
-						}
 					}
 				}
 
@@ -86,8 +80,8 @@ int Sonicteam::System::Peripheral::ManagerImpXenon::MangerProcessInput(XINPUT_GA
 
 int Sonicteam::System::Peripheral::ManagerImpXenon::ManagerGetThumbstickValues(unsigned int index,short* buffer)
 {
-	buffer[0] = 0x21F1;
-	buffer[1] = 0x21F1;
+	buffer[0] = XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE;
+	buffer[1] = XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE;
 	buffer[2] = 0x5E0E;
 	buffer[3] = 0x5E0E;
 	return 1;

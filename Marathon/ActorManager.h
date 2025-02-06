@@ -27,7 +27,7 @@ namespace Sonicteam{
 			unsigned int LastActorIndex; // Count-1, 39 is actually, but 38 here	
 
 		
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 
 			//other
 			static const unsigned int MaxID = 0xFFFFFFFF;

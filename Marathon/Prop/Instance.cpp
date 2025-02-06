@@ -1,6 +1,6 @@
 #include "Instance.h"
 
-
+using namespace Sonicteam::Prop;
 
 Sonicteam::Prop::Instance::Instance(Sonicteam::Prop::Scene* InstancePropScene,Sonicteam::Prop::InstanceSetData* PropInstanceSetData,REF_TYPE(Sonicteam::Prop::Class) PropClass):
 InstanceSetData(PropInstanceSetData),
@@ -14,10 +14,8 @@ Sonicteam::Prop::Instance::~Instance()
 
 }
 
-void Sonicteam::Prop::Instance::DestroyObject(unsigned int flag)
-{
 
-}
+DESTRUCTION_CPP(Instance);
 
 void Sonicteam::Prop::InstanceSetDataParams::SetTValue(bool value)
 {

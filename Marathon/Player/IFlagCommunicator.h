@@ -12,7 +12,7 @@ namespace Sonicteam{
 		public:
 			IFlagCommunicator(void);
 			~IFlagCommunicator(void);
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 
 			virtual void SetFlag01(DWORD flag_value){}; // ContextFlags????// (ImportContextFlags) 0
 			virtual void SetFlag02(DWORD flag_value){}; //Set GroundAirData Flag (ImportPostureFlags) 4

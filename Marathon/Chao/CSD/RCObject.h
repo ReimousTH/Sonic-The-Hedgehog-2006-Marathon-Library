@@ -27,7 +27,7 @@ namespace Chao{
 
 
 		public:
-			virtual void DestroyObject(unsigned int flag); //0x0 + 0x10
+			void DestroyObject(unsigned int flag); 
 
 		protected:
 			CType* CObject;

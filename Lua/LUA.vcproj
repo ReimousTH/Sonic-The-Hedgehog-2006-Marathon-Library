@@ -211,8 +211,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Xbox 360"
-			OutputDirectory="Release"
-			IntermediateDirectory="Release"
+			OutputDirectory="..\bin\Build\$(ConfigurationName)\$(RootNameSpace)"
+			IntermediateDirectory="..\bin\Cache\$(ConfigurationName)\$(RootNameSpace)"
 			ConfigurationType="4"
 			UseOfMFC="-1"
 			UseOfATL="0"
@@ -551,19 +551,19 @@
 			>
 		</File>
 		<File
-			RelativePath=".\src\lib\Makefile"
-			>
-		</File>
-		<File
 			RelativePath=".\src\Makefile"
 			>
 		</File>
 		<File
-			RelativePath=".\src\lib\README"
+			RelativePath=".\src\lib\Makefile"
 			>
 		</File>
 		<File
 			RelativePath=".\src\README"
+			>
+		</File>
+		<File
+			RelativePath=".\src\lib\README"
 			>
 		</File>
 	</Files>

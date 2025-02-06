@@ -26,7 +26,7 @@ namespace Chao{
 
 			virtual void CReadFile0x0() = 0;
 			virtual void CReadFile0x4() = 0;
-			virtual void DestroyObject(unsigned int flag); //0x0 + 0x10
+			DESTRUCTION_H; //0x0 + 0x10
 
 		protected:
 			std::string CFileName;	

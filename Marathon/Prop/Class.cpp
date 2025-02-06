@@ -1,11 +1,9 @@
 #include "Class.h"
 
-void Sonicteam::Prop::Class::DestroyObject(unsigned int flag)
-{
-	Sonicteam::Prop::Class::~Class();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
+using namespace Sonicteam::Prop;
 
-}
+DESTRUCTION_CPP(Class);
+
 
 Sonicteam::Prop::Class::~Class()
 {

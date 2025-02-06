@@ -22,7 +22,7 @@ namespace Sonicteam{
 			//Fields
 
 
-			virtual void DestroyObject(unsigned int flag);
+			DESTRUCTION_H;
 			Sonicteam::LuaSystem* LSScript;
 
 

@@ -57,8 +57,6 @@ void ICommonContext::ICOnInputTick(float a2)
 
 }
 
-void Sonicteam::Player::State::ICommonContext::DestroyObject(unsigned int flag)
-{
-	ICommonContext::~ICommonContext();
-	Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-}
+
+
+DESTRUCTION_CPP(ICommonContext);

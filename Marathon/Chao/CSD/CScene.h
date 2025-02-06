@@ -23,7 +23,7 @@ namespace Chao{
 
 
 		public:
-			virtual void DestroyObject(unsigned int flag); //0x0 + 0x10
+			DESTRUCTION_H; //0x0 + 0x10
 
 
 	};

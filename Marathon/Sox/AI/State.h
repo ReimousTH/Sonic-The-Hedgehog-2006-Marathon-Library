@@ -13,7 +13,9 @@ namespace Sonicteam{
 			public:
 	
 				~State(void);
-				virtual void DestroyObject(unsigned int flag);
+				 DESTRUCTION_HPP(State);
+
+
 				virtual unsigned int* StateConstant() = 0; // idk what real name 
 				virtual void OnStateStart(IContextType*) = 0; //OnStateStart
 				virtual void OnStateUpdate(float) = 0; //OnStateUpdate
@@ -26,12 +28,7 @@ namespace Sonicteam{
 
 			};
 
-			template <typename IContextType>
-			void Sonicteam::SoX::AI::State<IContextType>::DestroyObject(unsigned int flag)
-			{
-				Sonicteam::SoX::AI::State<IContextType>::~State();
-				Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-			}
+	
 
 			template <typename IContextType>
 			Sonicteam::SoX::AI::State<IContextType>::~State(void)
