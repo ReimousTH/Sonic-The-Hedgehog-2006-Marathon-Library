@@ -9,13 +9,14 @@ namespace Sonicteam{
 
 			namespace Havok{
 
-				class WorldHavok:Sonicteam::SoX::Physics::World
+				class WorldHavok:public Sonicteam::SoX::Physics::World
 			{
 			public:
 				//size0x60
 				WorldHavok(void);
 				~WorldHavok(void);
 
+				DESTRUCTION_H;
 				virtual void PhysicsWorldUnk01(XMFLOAT4*);
 
 				virtual XMFLOAT4 PhysicsWorldUnk02();

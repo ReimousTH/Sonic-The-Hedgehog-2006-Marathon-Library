@@ -23,8 +23,8 @@ namespace Sonicteam{
 
 			unsigned int ActorID[0xFFFF];
 			Sonicteam::SoX::Engine::Task* Actor[0xFFFF]; //Actor class
-			unsigned int LastActorID; // guess, correct 
-			unsigned int LastActorIndex; // Count-1, 39 is actually, but 38 here	
+			unsigned int LastActorID; //        guess, correct 
+			unsigned int LastActorIndex; //       Count-1, 39 is actually, but 38 here	
 
 		
 			DESTRUCTION_H;

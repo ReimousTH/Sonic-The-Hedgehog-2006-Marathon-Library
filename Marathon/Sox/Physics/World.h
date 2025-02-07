@@ -5,7 +5,7 @@
 namespace Sonicteam{
 	namespace SoX{
 		namespace Physics{
-			class World:Sonicteam::SoX::RefCountObject
+			class World:public Sonicteam::SoX::RefCountObject
 			{
 			public:
 				//size0x60
@@ -20,7 +20,7 @@ namespace Sonicteam{
 				virtual void PhysicsWorldUnk07(unsigned int) = 0; // no idea
 				virtual void PhysicsWorldUnk08(unsigned int) = 0; // no idea
 				virtual void PhysicsWorldUnk09(unsigned int) = 0; // no idea
-
+				DESTRUCTION_H;
 
 			};
 		};

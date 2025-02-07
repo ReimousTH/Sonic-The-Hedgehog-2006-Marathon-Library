@@ -12,3 +12,5 @@ Sonicteam::SoX::Physics::World::~World(void)
 {
 
 }
+
+DESTRUCTION_CPP(World);

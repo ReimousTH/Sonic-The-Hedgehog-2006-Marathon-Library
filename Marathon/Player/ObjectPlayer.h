@@ -40,12 +40,8 @@ namespace Sonicteam{
 
 
 	namespace Player{
-		
-		namespace State{
-				class Gravity;
-				
-		}
 
+		class Gravity;
 	
 
 		struct ObjectPlayerCreationData{
@@ -131,7 +127,7 @@ namespace Sonicteam{
 			boost::shared_ptr<Sonicteam::Player::IModel> PlayerModel; //0xD4, either just Model, Replace Later 
 			boost::shared_ptr<Sonicteam::Player::IPostureControl> PlayerPosture; // 0xDC
 			boost::shared_ptr<Sonicteam::Player::State::IMachine> PlayerMachine; // 0xE4
-			boost::shared_ptr<Sonicteam::Player::State::Gravity> PlayerGravity; // 0xEC
+			boost::shared_ptr<Sonicteam::Player::Gravity> PlayerGravity; // 0xEC
 			boost::shared_ptr<Sonicteam::Player::IImpulseManager> PlayerImpulse; // 0xF4
 			unsigned int LastSetupModuleIndex; //0xFC
 			unsigned int NextSetupModuleIndex; //0x100

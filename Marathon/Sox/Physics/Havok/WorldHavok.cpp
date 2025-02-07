@@ -3,6 +3,9 @@
 
 using namespace Sonicteam::SoX::Physics::Havok;
 
+
+DESTRUCTION_CPP(WorldHavok);
+
 void Sonicteam::SoX::Physics::Havok::WorldHavok::PhysicsWorldUnk01(XMFLOAT4*)
 {
 	

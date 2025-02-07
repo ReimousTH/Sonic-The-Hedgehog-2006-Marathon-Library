@@ -15,7 +15,7 @@ namespace Sonicteam{
 			RotationGravityAxis(void);
 			~RotationGravityAxis(void);
 			DESTRUCTION_H;
-			XMVECTOR GravityVector;
+			XMVECTOR GravityVector; //821FB8EC (where it stores)
 			
 
 		};
