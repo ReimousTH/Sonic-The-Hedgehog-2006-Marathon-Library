@@ -3,7 +3,7 @@
 using namespace Sonicteam::Player;
 
 
-int Sonicteam::Player::ObjectPlayer::OnMessageRecieved(Sonicteam::SoX::Message*)
+int Sonicteam::Player::ObjectPlayer::OnMessageRecieved(SoXMessageType)
 {
 	return 0;
 }

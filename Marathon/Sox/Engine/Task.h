@@ -25,7 +25,7 @@ namespace Sonicteam{
 
 
 
-			virtual int OnMessageRecieved(Sonicteam::SoX::Message*) override; //_pure_call
+			virtual int OnMessageRecieved(SoXMessageType) override; //_pure_call
 
 			virtual char* GetObjectType();
 			virtual void OnTaskUpdate(float) ; // pure_call

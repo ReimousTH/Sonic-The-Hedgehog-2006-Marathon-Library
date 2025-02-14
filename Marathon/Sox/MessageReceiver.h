@@ -1,42 +1,57 @@
-#pragma once
-
+#ifndef SONICTEAM__SOX__MESSAGE_RECEIVER
+#define SONICTEAM__SOX__MESSAGE_RECEIVER
 #include <Sox/Memory/Destruction.h>
+
+#define SoXMessageType void*
+
 
 namespace Sonicteam{
 	namespace SoX{
-		
-		struct Message{
-			unsigned int MessageInfo; // (just number)
-			unsigned int MessageInfo2; // send message back  (here example 82206070)
-			unsigned int MessageInfo3; // send message back  (here example 82206070)
 
-			unsigned int MessageInfo4; // send message back  (here example 82206070)
-			unsigned int MessageInfo5; // send message back  (here example 82206070)
-			unsigned int MessageInfo6; // send message back  (here example 82206070)
-			Message(unsigned int a1,unsigned int a2,unsigned int a3){
-				this->MessageInfo =a1;
-				this->MessageInfo2 =a2;
-				this->MessageInfo3 =a3;
-			};
-			Message(unsigned int a1,unsigned int a2,unsigned int a3,unsigned int a4){
-				
-				this->MessageInfo =a1;
-				this->MessageInfo2 =a2;
-				this->MessageInfo3 =a3;
-				this->MessageInfo4 =a4;
-			}
-			Message(unsigned int a1,unsigned int a2,unsigned int a3,unsigned int a4,unsigned int a5){
 
-				this->MessageInfo =a1;
-				this->MessageInfo2 =a2;
-				this->MessageInfo3 =a3;
-				this->MessageInfo4 =a4;
-				this->MessageInfo5 =a5;
+		
+		template <unsigned int T>
+		struct MessageTemplate {
+			unsigned int MessageID; // (just number)
+			//since ,start from 0x4, padded struct :)
+			char MessageData[T];
+			MessageTemplate(){}
+			MessageTemplate(unsigned int messageID) : MessageID(messageID) {}
+
+			template <typename Y>
+			inline void SetValueAt(unsigned int pos, const Y& Value) {
+				*reinterpret_cast<Y*>(&MessageData[pos]) = Value; // 
 			}
-		
-		
+			template <typename Y>
+			inline Y GetValueAt(unsigned int pos) const {
+				return *(Y*)(&MessageData[pos]); //
+			}
+			template <typename Y>
+			inline Y* GetValueAtRef(unsigned int pos) const {
+				return (Y*)(&MessageData[pos]); //
+			}
 
 		};
+
+		struct Message : MessageTemplate<20> {
+			Message() {}
+
+			Message(unsigned int messageID) : MessageTemplate<20>(messageID) {}
+
+			Message(unsigned int messageID, unsigned int data1);
+
+			Message(unsigned int messageID, unsigned int data1, unsigned int data2);
+
+			Message(unsigned int messageID, unsigned int data1, unsigned int data2,unsigned int data3);
+
+			Message(unsigned int messageID, unsigned int data1, unsigned int data2,unsigned int data3,unsigned int data4);
+			Message(unsigned int messageID, unsigned int data1, unsigned int data2,unsigned int data3,unsigned int data4,unsigned int data5);
+
+		};
+
+
+
+
 		class MessageReceiver
 		{
 		public:
@@ -44,7 +59,9 @@ namespace Sonicteam{
 			~MessageReceiver(void);
 
 			DESTRUCTION_H
-			virtual int OnMessageRecieved(Message*) = 0;
+			virtual int OnMessageRecieved(SoXMessageType) = 0;
 		};
 	};
 };
+
+#endif

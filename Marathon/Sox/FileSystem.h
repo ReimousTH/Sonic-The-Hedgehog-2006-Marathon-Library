@@ -1,15 +1,20 @@
-#pragma once
+#ifndef SONICTEAM__SOX__FILESYSTEM
+#define SONICTEAM__SOX__FILESYSTEM
+
+
 
 #include <string>
 #include <list>
-
-
 #include <deque>
 #include <vector>
+#include <fstream>
 
 #define XenonFolder 0
 #define Win32Folder 1
 #define CommonFolder 1
+
+
+
 
 //STATIC CLASS
 
@@ -22,32 +27,26 @@ namespace Sonicteam{
 		class FileSystem
 		{
 
-		private:
-			FileSystem(void);
-			// Prevent copying of the Singleton instance
-			//FileSystem(const FileSystem&) = delete;
-//			FileSystem& operator=(const FileSystem&) = delete;
-
 		public:	
-			virtual std::string FileSystemGetFullPath(std::string& InputPath,int folder);
-			//For Example (game:/win32/scripts/ -  lub) 
-			virtual unsigned int FileSystemIsExistsSpecificFiles(unsigned int unkptr,std::string& InputFolder,std::string& extension);
-			virtual unsigned int FileSystemIsFileExist(std::string& InputFile);
-	
+			FileSystem();
+			~FileSystem();
 
-			static FileSystem& getInstance() {
-				// Create the instance if it doesn't exist yet
-				// This ensures only one instance is ever created
-				static FileSystem instance;
-				return instance;
-			}	
-			unsigned int FSuint0x4;
-			std::vector<std::string*> _FSVector;
+
+			virtual std::string FileSystemGetFullPath(std::string& InputPath,int folder) = 0;
+			//For Example (game:/win32/scripts/ -  lub) 
+			virtual unsigned int FileSystemIsExistsSpecificFiles(unsigned int unkptr,std::string& InputFolder,std::string& extension) = 0;
+			virtual unsigned int FileSystemIsFileExist(std::string& InputFile) = 0;
+			DESTRUCTION_H;
+
+			std::vector<std::string> FileSystemFolder; // game:\xenon\ ...
+
 			//fields
 
 
 	
 		};
+
+
 		//static FileSystem &06FileSystem = *(FileSystem *)0x82D35EAC;
 
 
@@ -55,3 +54,4 @@ namespace Sonicteam{
 	
 	}
 }
+#endif

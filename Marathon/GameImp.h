@@ -442,7 +442,7 @@ namespace Sonicteam{
 
 
 		DESTRUCTION_H;
-		virtual int OnMessageRecieved(Sonicteam::SoX::Message*);
+		virtual int OnMessageRecieved(SoXMessageType);
 
 
 		virtual bool IsPrevDestroyAll();

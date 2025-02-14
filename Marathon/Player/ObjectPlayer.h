@@ -98,7 +98,7 @@ namespace Sonicteam{
 		public:
 			ObjectPlayer(Sonicteam::SoX::Engine::Task* NamedTask,ObjectPlayerCreationData* CreationData);
 
-			virtual int OnMessageRecieved(Sonicteam::SoX::Message*) override;
+			virtual int OnMessageRecieved(SoXMessageType) override;
 
 			virtual char* GetObjectType() override;
 

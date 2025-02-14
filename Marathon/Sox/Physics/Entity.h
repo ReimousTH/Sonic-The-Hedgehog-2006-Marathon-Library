@@ -37,7 +37,7 @@ namespace Sonicteam{
 				unsigned int UEuint0x24;
 
 
-				virtual int OnMessageRecieved(Sonicteam::SoX::Message*) override;
+				virtual int OnMessageRecieved(SoXMessageType) override;
 				DESTRUCTION_H override;
 
 

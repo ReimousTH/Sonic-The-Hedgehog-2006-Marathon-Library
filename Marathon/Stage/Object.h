@@ -31,7 +31,7 @@ namespace Sonicteam{
 
 			DESTRUCTION_H;
 			virtual char* GetObjectType(); 
-			virtual int OnMessageRecieved(Sonicteam::SoX::Message*);
+			virtual int OnMessageRecieved(SoXMessageType);
 
 
 

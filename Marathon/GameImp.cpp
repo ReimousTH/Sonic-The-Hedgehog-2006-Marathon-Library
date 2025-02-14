@@ -6,7 +6,7 @@ using namespace Sonicteam;
 
 DESTRUCTION_CPP(GameImp);
 
-int Sonicteam::GameImp::OnMessageRecieved(Sonicteam::SoX::Message*)
+int Sonicteam::GameImp::OnMessageRecieved(SoXMessageType)
 {
 	throw std::logic_error("The method or operation is not implemented.");
 }

@@ -16,7 +16,14 @@
 #include <Player/Input/IListener.h>
 #include <Player/AI/IBase.h>
 #include <Player/State/IContext.h>
+#include <Player/State/ICommonContextIF.h>
 
+
+#include <Player/ObjectPlayer.h>
+
+#include <Sox/Misc/VectorExtension.h>
+
+#include <D3d9types.h>
 
 
 namespace Sonicteam{
@@ -38,8 +45,9 @@ namespace Sonicteam{
 		class IPostureControl:public Sonicteam::Player::IVariable,public Sonicteam::Player::IDynamicLink,public Sonicteam::Player::Unit::ITestCase,public Sonicteam::Player::IFlagCommunicator
 		{
 		public:
-			IPostureControl(void);
+			IPostureControl(REF_TYPE(Sonicteam::Player::RootFrame) RootFrame,REF_TYPE(Sonicteam::SoX::Physics::Havok::WorldHavok) WorldHavok);
 			~IPostureControl(void);
+
 
 			REF_TYPE(Sonicteam::Player::RootFrame) RootFrame; //0x10
 			XMVECTOR RotationFixed; //0x20 (cuz padding) (not editable)
@@ -47,10 +55,10 @@ namespace Sonicteam{
 			REF_TYPE(Sonicteam::SoX::Physics::Havok::WorldHavok) WorldHavok; //0x40
 			boost::shared_ptr<Sonicteam::Player::Gravity> Gravity; //0x44
 			boost::shared_ptr<Sonicteam::Player::Input::IListener> InputListener; //0x4C
-			boost::shared_ptr<Sonicteam::Player::AI::IBase> AmigoAI; //0x54
-			boost::shared_ptr<Sonicteam::Player::State::IContext> IContext; //0x5C
+			boost::shared_ptr<Sonicteam::Player::Input::IListener> AmigoListener; //0x54
+			boost::shared_ptr<Sonicteam::Player::State::ICommonContextIF> IContextIF; //0x5C
 			boost::shared_ptr<Sonicteam::ActorManager> ActorManager; //0x64
-			Sonicteam::Player::ObjectPlayer* ObjectPlayer; //0x6C
+			Sonicteam::SoX::Engine::Task* PostureTask; //0x6C , since  821F1B38, send message, i think there should be MoreLike PostureComponent, since :| but for later :)
 			boost::shared_ptr<Sonicteam::Player::IPosturePlugIn> IPosturePlugIn; // either weak_ptr or just PTR Path() no idea how to figure name (crash 0x821F15A8, snowboard can) //0x70
 			//next is guess (0x78)
 			XMVECTOR GravityDirection; /// I think since 0,-1,0,1 (0x80 since padding) (821F1FBC where it stores) (can be changed only from gravity modulke)
@@ -59,18 +67,13 @@ namespace Sonicteam{
 			XMVECTOR Position; //0xB0
 			XMVECTOR Rotation; //0xC0
 			XMVECTOR unk0xD0; //0xD0
-			XMVECTOR unk0xE0; //maybe Vector Or NO
-			
+			XMVECTOR unk0xE0; //maybe Vector Or NO	
 			unsigned int ImpulseFlag; //0xF0
 			unsigned int ImpulseZX; //0xF4
 			unsigned int ImpulseY; //0xF8
 			//0x100
 			XMVECTOR ImpulseVectorUP; // 821FDFEC (here where it stores) 0x100
-
 			//INFO
-
-
-
 			unsigned int PostureFlag0x110; //0x110
 			//01 00 00 00 default or stand
 			//01 00 00 80 default + run
@@ -93,8 +96,13 @@ namespace Sonicteam{
 		
 		
 
+			virtual void IPostureControlOn();// -- unk?>
+			virtual void IPostureControlStep(double); 
+			virtual void IPostureControlImport(XMVECTOR,double) = 0;
 
 
+
+			XMVECTOR PlayerGetTransformData();
 	
 			DESTRUCTION_H ;
 

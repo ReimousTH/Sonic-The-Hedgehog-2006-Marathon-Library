@@ -22,7 +22,7 @@ namespace Sonicteam{
 
 				DESTRUCTION_H;
 
-				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2);
+				virtual void ShapeProceedUnk01(__out XMFLOAT4* u1,__out XMFLOAT4* u2);
 				virtual void ShapeInitVolume();
 
 			};

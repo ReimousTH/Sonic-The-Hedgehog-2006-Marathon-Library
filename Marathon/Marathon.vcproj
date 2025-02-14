@@ -1115,6 +1115,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Sox\ExFileSystem.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\ExFileSystem.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Sox\FileSystem.cpp"
 				>
 			</File>
@@ -1176,6 +1184,14 @@
 			</File>
 			<File
 				RelativePath=".\Sox\RefCountObject.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\ResourceManager.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\ResourceManager.h"
 				>
 			</File>
 			<File
@@ -1323,6 +1339,10 @@
 				</File>
 				<File
 					RelativePath=".\Sox\Misc\List.inl"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Misc\MapExtension.h"
 					>
 				</File>
 				<File
@@ -1576,6 +1596,22 @@
 		<Filter
 			Name="System"
 			>
+			<File
+				RelativePath=".\System\CreateStatic.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\System\CreateStatic.h"
+				>
+			</File>
+			<File
+				RelativePath=".\System\Singleton.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\System\Singleton.h"
+				>
+			</File>
 			<Filter
 				Name="Peripheral"
 				>

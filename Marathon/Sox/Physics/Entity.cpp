@@ -4,7 +4,7 @@
 using namespace Sonicteam::SoX::Physics;
 
 
-int Sonicteam::SoX::Physics::Entity::OnMessageRecieved(Sonicteam::SoX::Message*)
+int Sonicteam::SoX::Physics::Entity::OnMessageRecieved(SoXMessageType)
 {
 return 0;	
 }

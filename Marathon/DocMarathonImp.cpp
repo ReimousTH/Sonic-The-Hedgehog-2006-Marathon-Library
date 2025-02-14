@@ -34,7 +34,7 @@ Sonicteam::SoX::Graphics::FrameSynchronizer* Sonicteam::DocMarathonImp::DocGetFr
 return 0;
 }
 
-boost::shared_ptr<unsigned int> Sonicteam::DocMarathonImp::DocDoUnkAction01(unsigned int,unsigned int)
+boost::shared_ptr<void*> Sonicteam::DocMarathonImp::DocDoUnkAction01(unsigned int,unsigned int)
 {
 return DocAudioPlayerImp;
 }
@@ -114,9 +114,9 @@ unsigned int Sonicteam::DocMarathonImp::DocGetCurrentMessage()
 	return 0;
 }
 
-boost::shared_ptr<unsigned int> Sonicteam::DocMarathonImp::DocGetAudioPlayerImp()
+boost::shared_ptr<void*> Sonicteam::DocMarathonImp::DocGetAudioPlayerImp()
 {
-return this->DocAudioPlayerImp;
+	return this->DocAudioPlayerImp;
 }
 
 unsigned int Sonicteam::DocMarathonImp::DocSetCurrentMode(unsigned int)

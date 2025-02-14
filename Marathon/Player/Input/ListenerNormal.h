@@ -48,13 +48,13 @@ namespace Sonicteam{
 
 				virtual void ListenerOnUpdate(int,float);
 
-				virtual XMFLOAT4* ListenerGetStickVector4();
+				virtual XMVECTOR* ListenerGetStickVector4(double delta,int flag);
 
 				virtual float ListenerGetStickPower();
 
 				virtual unsigned int ListenerGetResult();
 
-				virtual int Listener5();
+				virtual int IsListenerEnabled();
 
 				virtual void OnVarible(LuaSystem**);
 

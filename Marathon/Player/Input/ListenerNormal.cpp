@@ -46,7 +46,7 @@ void Input::ListenerNormal::ListenerOnUpdate(int,float)
 	
 }
 
-XMFLOAT4* Input::ListenerNormal::ListenerGetStickVector4()
+XMVECTOR* Input::ListenerNormal::ListenerGetStickVector4(double delta,int flag)
 {
 return 0;	
 }
@@ -61,7 +61,7 @@ unsigned int Input::ListenerNormal::ListenerGetResult()
 	return 0;
 }
 
-int Input::ListenerNormal::Listener5()
+int Input::ListenerNormal::IsListenerEnabled()
 {
 	return 0;
 }

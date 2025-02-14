@@ -21,7 +21,7 @@ namespace Sonicteam{
 
 				DESTRUCTION_H override;
 
-				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2) override;
+				virtual void ShapeProceedUnk01(__out XMFLOAT4* u1,__out XMFLOAT4* u2) override;
 
 				virtual void ShapeInitVolume() override;
 

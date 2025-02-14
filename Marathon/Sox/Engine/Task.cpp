@@ -43,7 +43,7 @@ Task::~Task(void)
 	this->TaskList.Empty();
 }
 
-int Task::OnMessageRecieved(Sonicteam::SoX::Message*)
+int Task::OnMessageRecieved(SoXMessageType)
 {
 	return 0;
 }

@@ -22,7 +22,7 @@ namespace Sonicteam{
 			ActorManager();
 
 			unsigned int ActorID[0xFFFF];
-			Sonicteam::SoX::Engine::Task* Actor[0xFFFF]; //Actor class
+			Sonicteam::Actor* Actor[0xFFFF]; //Actor class
 			unsigned int LastActorID; //        guess, correct 
 			unsigned int LastActorIndex; //       Count-1, 39 is actually, but 38 here	
 
@@ -31,7 +31,7 @@ namespace Sonicteam{
 
 			//other
 			static const unsigned int MaxID = 0xFFFFFFFF;
-			Sonicteam::SoX::Engine::Task* SearchActorByID(unsigned int& ID);
+			Sonicteam::Actor* SearchActorByID(unsigned int& ID);
 
 		
 

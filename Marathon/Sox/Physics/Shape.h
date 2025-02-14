@@ -13,13 +13,13 @@ namespace Sonicteam{
 				Shape(void);
 				~Shape(void);
 
-				unsigned int SFlag; //Shape Type
+				unsigned int SFlag; //Shape Type 
 				unsigned int SVolume; // w*h*l * FLT_MIN //0xC
 
 				
 
 				DESTRUCTION_H;
-				virtual void ShapeProceedUnk01(__out XMFLOAT4*& u1,__out XMFLOAT4*& u2) = 0;
+				virtual void ShapeProceedUnk01(__out XMFLOAT4* u1,__out XMFLOAT4* u2) = 0;
 				virtual void ShapeInitVolume(); // i guess
 
 

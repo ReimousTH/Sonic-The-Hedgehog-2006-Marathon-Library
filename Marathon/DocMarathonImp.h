@@ -11,6 +11,7 @@
 #include <boost/weak_ptr.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/scoped_ptr.hpp>
+#include <Sox/IResource.h>
 
 
 namespace Sonicteam{
@@ -46,7 +47,7 @@ namespace Sonicteam{
 			virtual void EngineDocDomeSome();
 			virtual unsigned int DocGetMyGraphicDevice();
 			virtual Sonicteam::SoX::Graphics::FrameSynchronizer* DocGetFrameSynchronizer();
-			virtual boost::shared_ptr<unsigned int> DocDoUnkAction01(unsigned int,unsigned int); //8204ACD8
+			virtual boost::shared_ptr<void*> DocDoUnkAction01(unsigned int,unsigned int); //8204ACD8
 			virtual boost::shared_ptr<unsigned int> DocDoculistAction01(unsigned int); //8204ACDC Doculist
 			virtual std::vector<unsigned int>* DocGetDoculist(); //8204ACE0 Doculist
 			virtual unsigned int DocDoUnkAction02(unsigned int); //8204ACD8 (Get Boot)
@@ -61,7 +62,7 @@ namespace Sonicteam{
 			virtual unsigned int DocGetImageFilterCollection(); //need complete struct ,index
 			virtual unsigned int DocGetPostprocessController(); //need complete struct ,index
 			virtual unsigned int DocGetCurrentMessage(); //need complete struct ,index
-			virtual boost::shared_ptr<unsigned int> DocGetAudioPlayerImp(); //need complete struct ,index
+			virtual boost::shared_ptr<void*> DocGetAudioPlayerImp(); //need complete struct ,index
 			virtual unsigned int DocSetCurrentMode(unsigned int); //need complete struct ,index
 			virtual unsigned int DocGetDebug3DFont(); //need complete struct ,index
 			virtual unsigned int DocGetSceneParamManager(); //need complete struct ,index
@@ -143,14 +144,15 @@ namespace Sonicteam{
 			unsigned int Docuint0x78;
 			unsigned int Docuint0x7C;
 			//and soo onnn later
-			Sonicteam::SoX::Graphics::FrameSynchronizer DocFrameSynchronizer;
+			Sonicteam::SoX::Graphics::FrameSynchronizer DocFrameSynchronizer; //0x80
 
-			boost::shared_ptr<unsigned int>* DocMarathonPlayerInputBostArray; // maybe boost???!
+			unsigned int Docuint0x9C;
+			boost::shared_ptr<unsigned int>* DocMarathonPlayerInputBostArray; // maybe boost???! A0
 			unsigned int Docuint0xA4;
 			unsigned int Docuint0xA8;
 			Sonicteam::SoX::Engine::View DocEngineView;
 			DocMarathonImpVecFlags DocImpFlag; //0xB8
-			boost::shared_ptr<unsigned int> DocAudioPlayerImp; //PTR
+			boost::shared_ptr<void*> DocAudioPlayerImp; //PTR
 			unsigned char IsVFrameEnabled; //Frame skip
 			unsigned char Docuint0xD1; //unknown param (Freeze game?????)
 			unsigned char NotUseParticle; //Frame skip  D2
@@ -226,6 +228,13 @@ namespace Sonicteam{
 			unsigned int DocPlayer2ControllerIndex2; //0x55C2c
 			unsigned int DocPlayer3ControllerIndex2; //0x55C30
 			unsigned int DocPlayer4ControllerIndex2; //0x55C34	
+			unsigned int Unk0x55C38; //0x55C38 ,  index?
+			REF_TYPE(Sonicteam::SoX::IResource) ShaderArcHandle;
+			std::vector<REF_TYPE(Sonicteam::SoX::IResource)> ArcVector1;
+			void* PackageBinary;
+
+
+
 	
 
 			//not complete

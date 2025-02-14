@@ -38,6 +38,7 @@ namespace Sonicteam{
 
 
 
+				//IContext* either ICommonContext
 				//IContext* CObjContext;
 				//FILEDS
 				CommonContext* CObjContext;

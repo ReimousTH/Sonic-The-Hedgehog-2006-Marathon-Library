@@ -5,9 +5,11 @@ using namespace Sonicteam::Stage;
 
 
 
-int Sonicteam::Stage::Object::OnMessageRecieved(Sonicteam::SoX::Message* a2)
+int Sonicteam::Stage::Object::OnMessageRecieved(SoXMessageType a2)
 {
 	int result; // r3
+
+	/*
 
 	switch ( a2->MessageInfo )
 	{
@@ -22,6 +24,7 @@ int Sonicteam::Stage::Object::OnMessageRecieved(Sonicteam::SoX::Message* a2)
 	default:
 		return 0;
 	}
+	*/
 	return 1;
 }
 
