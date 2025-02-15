@@ -4,12 +4,14 @@
 
 
 
+#include <Sox/Scenery/World.h>
 #include <vector>
 #include <Sox/Engine/Doc.h>
 #include <Sox/Graphics/FrameSynchronizer.h>
 #include <Sox/Engine/View.h>
 #include <boost/weak_ptr.hpp>
 #include <boost/shared_ptr.hpp>
+#include <boost/weak_ptr.hpp>
 #include <boost/scoped_ptr.hpp>
 #include <Sox/IResource.h>
 
@@ -48,7 +50,7 @@ namespace Sonicteam{
 			virtual unsigned int DocGetMyGraphicDevice();
 			virtual Sonicteam::SoX::Graphics::FrameSynchronizer* DocGetFrameSynchronizer();
 			virtual boost::shared_ptr<void*> DocDoUnkAction01(unsigned int,unsigned int); //8204ACD8
-			virtual boost::shared_ptr<unsigned int> DocDoculistAction01(unsigned int); //8204ACDC Doculist
+			virtual boost::shared_ptr<Sonicteam::SoX::Scenery::World> DocGetWorld(unsigned int); //8204ACDC Doculist
 			virtual std::vector<unsigned int>* DocGetDoculist(); //8204ACE0 Doculist
 			virtual unsigned int DocDoUnkAction02(unsigned int); //8204ACD8 (Get Boot)
 			virtual unsigned int DocDoUnkModules(); //8204ACD8 (Get Boot)
@@ -137,7 +139,7 @@ namespace Sonicteam{
 			Sonicteam::SoX::Engine::Task* DocCurrentDocMode; //MainMode (0x5C) But ... StateGamemode ..... (DocMode)
 			unsigned int DocMyGraphicDevice; //0x60
 			unsigned int DocSceneParamManager; //0x64
-			std::vector<unsigned int>* Doculist; //0x68;
+			std::vector<boost::weak_ptr<Sonicteam::SoX::Scenery::World>>* World; //0x68;
 			unsigned int DocSceneCollection; //0x6c;
 			unsigned int Docuint0x70;
 			unsigned int Docuint0x74;

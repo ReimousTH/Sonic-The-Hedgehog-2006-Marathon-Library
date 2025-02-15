@@ -13,6 +13,9 @@ namespace Sonicteam{
 			struct SPAabbNodeVector;
 			class SPAabbTree;
 			class SPWorld;
+			class World;
+			class WorldImp; 
+			class Camera;
 		}
 	}
 }

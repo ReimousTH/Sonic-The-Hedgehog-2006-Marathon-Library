@@ -44,7 +44,7 @@ bool Sonicteam::GameImp::IsGameKyWorldDef()
 
 REF_TYPE(Sonicteam::SoX::RefCountObject) Sonicteam::GameImp::GetWorldHavok()
 {
-	return this->GameWorldHavok;
+	return REF_TYPE(Sonicteam::SoX::RefCountObject)(this->GameWorldHavok);
 }
 
 unsigned int Sonicteam::GameImp::CollisionFilterFunc01(unsigned int)

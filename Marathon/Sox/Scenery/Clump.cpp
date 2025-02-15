@@ -41,7 +41,7 @@ std::string Sonicteam::SoX::Scenery::Clump::SSSDGetDrawableName()
 	throw std::logic_error("The method or operation is not implemented.");
 }
 
-void Sonicteam::SoX::Scenery::Clump::SSSD08()
+void Sonicteam::SoX::Scenery::Clump::ClearDrawable()
 {
 	throw std::logic_error("The method or operation is not implemented.");
 }

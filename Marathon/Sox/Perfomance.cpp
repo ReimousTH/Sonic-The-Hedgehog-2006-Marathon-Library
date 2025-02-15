@@ -10,7 +10,6 @@ Sonicteam::SoX::PerformanceFrequency::PerformanceFrequency()
 
 LARGE_INTEGER Sonicteam::SoX::PerformanceFrequency::GetPerformanceFrequency()
 {
-
 	return	this->PerformanceFrequencyOutput;
 }
 

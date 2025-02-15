@@ -28,6 +28,8 @@ namespace Sonicteam{
 		class PathWaterSlider;
 		class IImportAnimation;
 
+		class OmegaLaser;
+		class LockOn;
 
 	}
 	

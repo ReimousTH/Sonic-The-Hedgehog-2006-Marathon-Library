@@ -1,9 +1,17 @@
-#pragma once
+#ifndef SONICTEAM__SOX__PHYSICS__ENTITY
+#define SONICTEAM__SOX__PHYSICS__ENTITY
+
+#include <Sox/Misc/LinkSoxNode.h>
+
 #include <Sox/MessageReceiver.h>
 #include <Sox/RefCountObject.h>
 
-#include <Sox/Misc/List.h>
+#include <Actor.h>
 #include <xtl.h>
+
+#include <Sox/Physics/Shape.h>
+
+
 
 namespace Sonicteam{
 	namespace SoX{
@@ -12,32 +20,28 @@ namespace Sonicteam{
 
 
 
-
-
 			class Entity:Sonicteam::SoX::MessageReceiver,Sonicteam::SoX::RefCountObject
 			{
 			public:
 				//size0x60
-				Entity(unsigned int Flag1,unsigned int Flag2);
+				Entity(unsigned int EntityFlag,Sonicteam::SoX::MessageReceiver* EntityReceiver);
 				~Entity	(void);
 
 
-				unsigned int Flag1; //0xC
+				unsigned int EntityFlag; //0xC
+				LinkSoxNode<Entity> LinkEntity; //0x10,0x14,0x18
 
 
-				
-
-				Sonicteam::SoX::LinkedNodeListB<Sonicteam::SoX::RNodeF<Entity>> ULLC0x10;
-
-
-				unsigned int UEuint0x18;
-				unsigned int UEuint0x1C;
-
-				unsigned int Flag2;	//0x20 ACTOR , PropFixture
-				unsigned int UEuint0x24;
+				REF_TYPE(Sonicteam::SoX::RefCountObject) EntityRefObject; //0x1C
+				Sonicteam::SoX::MessageReceiver* EntityReceiver; //0x20
+				REF_TYPE(Sonicteam::SoX::Physics::Shape) EntityShape; //0x24
 
 
 				virtual int OnMessageRecieved(SoXMessageType) override;
+
+				//IMPLEMENT A LOT VIRTUAK METHODS :)
+
+
 				DESTRUCTION_H override;
 
 
@@ -48,3 +52,4 @@ namespace Sonicteam{
 		};
 	}
 }
+#endif

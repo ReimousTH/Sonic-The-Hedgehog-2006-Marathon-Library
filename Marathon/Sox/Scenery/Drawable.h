@@ -11,12 +11,15 @@
 #include "CameraEventCallback.h"
 #include <Sox/Graphics/FrameObserver.h>
 #include <string>
-
+#include <Sox/Misc/LinkSoxNode.h>
+#include <Sox/Graphics/Frame.h>
+#include <Sox/Scenery/Drawable.h>
 
 namespace Sonicteam{
 	namespace SoX{
 		namespace Scenery{
-			class Drawable:Sonicteam::SoX::RefCountObject,public CameraEventCallback{
+
+			class Drawable:public Sonicteam::SoX::RefCountObject,public CameraEventCallback{
 			public:
 				class frameObserver:Sonicteam::SoX::Graphics::FrameObserver{
 
@@ -25,14 +28,12 @@ namespace Sonicteam{
 					frameObserver();
 					~frameObserver();
 
-					virtual void ObserveFrameStep(double a1) override;
+					virtual void ObserveFrameStep(FrameObserverStepType) override;
 					DESTRUCTION_H override;
 
-					unsigned int unk0x34;
-					unsigned int unk0x38;
-					unsigned int unk0x3C;
-					unsigned int unk0x40;
-					unsigned int unk0x44;
+					LinkSoxNode<frameObserver> ObserverLink;  //0x34,0x38,0x3C
+					Sonicteam::SoX::Graphics::Frame* ObserverFrame; // or FrameGP //0x40
+					Sonicteam::SoX::Scenery::Drawable* ObserverDrawable; // or FrameGP //0x44
 					unsigned int unk0x48;
 					unsigned int unk0x4C;
 					unsigned int unk0x50;
@@ -57,7 +58,7 @@ namespace Sonicteam{
 				virtual void SSSD05();
 				virtual void SSSD06();
 				virtual std::string SSSDGetDrawableName();
-				virtual void SSSD08();
+				virtual void ClearDrawable();
 				virtual void SSSD09();
 
 
@@ -67,12 +68,12 @@ namespace Sonicteam{
 				virtual void CEC04() override;
 				virtual void CEC05() override;
 
-				unsigned int unk0xC;
-				unsigned int unk0x10;
-				unsigned int unk0x14;
-				unsigned int unk0x18;
-				unsigned int unk0x1C;
-				frameObserver DrawableObserver;
+				Sonicteam::SoX::Scenery::WorldImp*  WorldImp; //0xC
+				unsigned int Index0Pre; //0x10 (0xFFFFFFFF) - possible (mostly they both same)
+				unsigned int Index0Post; //0x14 (0x0000FFFF0 - why tho?
+				unsigned int Index1; //No Idea //0x18
+				unsigned int Index2; //0x1C
+				frameObserver DrawableObserver; //0x20
 			};
 
 

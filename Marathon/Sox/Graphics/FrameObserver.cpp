@@ -11,7 +11,7 @@ Sonicteam::SoX::Graphics::FrameObserver::~FrameObserver(void)
 
 }
 
-void Sonicteam::SoX::Graphics::FrameObserver::ObserveFrameStep(double a1)
+void Sonicteam::SoX::Graphics::FrameObserver::ObserveFrameStep(FrameObserverStepType)
 {
 
 }

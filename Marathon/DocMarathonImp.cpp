@@ -39,10 +39,9 @@ boost::shared_ptr<void*> Sonicteam::DocMarathonImp::DocDoUnkAction01(unsigned in
 return DocAudioPlayerImp;
 }
 
-boost::shared_ptr<unsigned int> Sonicteam::DocMarathonImp::DocDoculistAction01(unsigned int)
-{
-	boost::shared_ptr<unsigned int> ptr;
-	return ptr;
+boost::shared_ptr<Sonicteam::SoX::Scenery::World> Sonicteam::DocMarathonImp::DocGetWorld(unsigned int index)
+{ 
+	return 	(*World)[index].lock();
 }
 
 std::vector<unsigned int>* Sonicteam::DocMarathonImp::DocGetDoculist()

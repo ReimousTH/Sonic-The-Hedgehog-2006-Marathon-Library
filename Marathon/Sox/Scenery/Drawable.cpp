@@ -72,7 +72,7 @@ std::string Sonicteam::SoX::Scenery::Drawable::SSSDGetDrawableName()
 	return 0;
 }
 
-void Sonicteam::SoX::Scenery::Drawable::SSSD08()
+void Sonicteam::SoX::Scenery::Drawable::ClearDrawable()
 {
 
 }
@@ -84,7 +84,7 @@ void Sonicteam::SoX::Scenery::Drawable::SSSD09()
 
 
 
-void Sonicteam::SoX::Scenery::Drawable::frameObserver::ObserveFrameStep(double a1)
+void Sonicteam::SoX::Scenery::Drawable::frameObserver::ObserveFrameStep(FrameObserverStepType)
 {
 
 }

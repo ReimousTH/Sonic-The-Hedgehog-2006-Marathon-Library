@@ -27,7 +27,7 @@ namespace Sonicteam{
 				virtual void SSSD05() override; //0x14
 				virtual void SSSD06() override; //0x18
 				virtual std::string SSSDGetDrawableName() override; //0x1C
-				virtual void SSSD08() override; //0x20
+				virtual void ClearDrawable() override; //0x20
 				virtual void SSSD09() override; //0x24
 
 				virtual void CEC01() override;

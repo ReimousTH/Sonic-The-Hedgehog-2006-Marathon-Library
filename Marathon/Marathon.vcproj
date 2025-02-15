@@ -655,6 +655,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Player\LTMJoint.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\LTMJoint.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Player\LuaInfoInit.cpp"
 				>
 			</File>
@@ -676,6 +684,14 @@
 			</File>
 			<File
 				RelativePath=".\Player\ObjectPlayer.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\OmegaLaser.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\OmegaLaser.h"
 				>
 			</File>
 			<File
@@ -1405,10 +1421,88 @@
 					RelativePath=".\Sox\Scenery\SPWorld.h"
 					>
 				</File>
+				<File
+					RelativePath=".\Sox\Scenery\World.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Profile|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Profile_FastCap|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release_LTCG|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="ReleaseHavok|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Sox\Scenery\World.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Scenery\WorldImp.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Scenery\WorldImp.h"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="Physics"
 				>
+				<File
+					RelativePath=".\Sox\Physics\Body.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Physics\Body.h"
+					>
+				</File>
 				<File
 					RelativePath=".\Sox\Physics\BoxShape.cpp"
 					>
@@ -1439,6 +1533,14 @@
 				</File>
 				<File
 					RelativePath=".\Sox\Physics\Entity.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Physics\OtherShape.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Physics\OtherShape.h"
 					>
 				</File>
 				<File
@@ -1477,6 +1579,14 @@
 					Name="Havok"
 					>
 					<File
+						RelativePath=".\Sox\Physics\Havok\BodyHavok.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Sox\Physics\Havok\BodyHavok.h"
+						>
+					</File>
+					<File
 						RelativePath=".\Sox\Physics\Havok\BoxShapeHavok.cpp"
 						>
 					</File>
@@ -1498,6 +1608,22 @@
 					</File>
 					<File
 						RelativePath=".\Sox\Physics\Havok\CylinderShapeHavok.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Sox\Physics\Havok\EntityHavok.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Sox\Physics\Havok\EntityHavok.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Sox\Physics\Havok\OtherShapeHavok.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Sox\Physics\Havok\OtherShapeHavok.h"
 						>
 					</File>
 					<File
@@ -1624,6 +1750,72 @@
 					>
 				</File>
 			</Filter>
+		</Filter>
+		<Filter
+			Name="GE1PE"
+			>
+			<File
+				RelativePath=".\GE1PE\RefCountObject.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Xbox 360"
+					>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile|Xbox 360"
+					>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Profile_FastCap|Xbox 360"
+					>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Xbox 360"
+					>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release_LTCG|Xbox 360"
+					>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="ReleaseHavok|Xbox 360"
+					>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\GE1PE\RefCountObject.h"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\Actor.cpp"

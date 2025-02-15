@@ -3,7 +3,11 @@
 #include <Sox/Memory/Destruction.h>
 
 #define REF_TYPE(Type) Sonicteam::SoX::RefCountObjContainer<Type>
+#define REF_TYPE_REF(Type) REF_TYPE(Type)& //use in fuction args, but not for RET_TYPE
+
+
 //#define REF_TYPE(Type) Type* // Use To Compile FOR IDB IMport
+#define REFCOUNTOBJCONTAINERUSEROPERATOR
 
 namespace Sonicteam{
 	namespace SoX{
@@ -13,6 +17,8 @@ namespace Sonicteam{
 
 		class RefCountObject;
 
+
+		#pragma optimize("", off)
 		template <typename T>
 		struct RefCountObjContainer {
 			T* param;
@@ -34,11 +40,9 @@ namespace Sonicteam{
 				}
 			}
 
-			// Conversion operator to allow implicit conversion to T*
-			operator T*() const { 
-				return param; 
-			}
 
+	
+		
 			// Copy constructor
 			RefCountObjContainer(const RefCountObjContainer& other) : param(other.param) {
 				if (param) {
@@ -59,12 +63,26 @@ namespace Sonicteam{
 				}
 				return *this;
 			}
+
+			#ifdef REFCOUNTOBJCONTAINERUSEROPERATOR
 			// Overloading operator->
+			/*
 			T* operator->() const {
 				return param; 
 			}
+			*/
+			T* get() const {
+				return param;
+			}
+			/*
+			T& operator*() const {
+				return *param;
+			}
+			*/ //does not work properly
 
+			#endif
 		};
+		#pragma optimize("", on)
 
 		class RefCountObject {
 		public:
@@ -86,6 +104,11 @@ namespace Sonicteam{
 				 referenceCount = 0; // No copying of reference count
 			}
 
+
+
+			unsigned int GetReferenceCount(){
+				return referenceCount;
+			}
 
 			//not sure, my custom for easier 
 			template <typename T>

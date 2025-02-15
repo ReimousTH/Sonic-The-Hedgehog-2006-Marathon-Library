@@ -13,6 +13,7 @@
 #include "Defs.h"
 
 
+#define FrameObserverStepType void*
 
 
 
@@ -29,7 +30,7 @@ namespace Sonicteam{
 				FrameObserver();
 				~FrameObserver(void);
 
-				virtual void ObserveFrameStep(double a1) = 0;
+				virtual void ObserveFrameStep(FrameObserverStepType) = 0;
 
 				DESTRUCTION_H;
 
