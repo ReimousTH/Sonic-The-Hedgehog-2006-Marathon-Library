@@ -511,6 +511,22 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Player\EntityContainer.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\EntityContainer.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\Homing.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\Homing.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Player\IDynamicLink.cpp"
 				>
 			</File>
@@ -636,6 +652,14 @@
 			</File>
 			<File
 				RelativePath=".\Player\IScore.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IStepablePost.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\IStepablePost.h"
 				>
 			</File>
 			<File
@@ -1875,6 +1899,10 @@
 		</File>
 		<File
 			RelativePath=".\DocMarathonImp.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Player\EntitiesContainer"
 			>
 		</File>
 		<File

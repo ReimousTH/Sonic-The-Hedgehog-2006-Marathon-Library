@@ -13,6 +13,7 @@
 namespace Sonicteam{
 
 
+
 	//Or SonicTeamSoxComponent
 	class CsdObject:public Sonicteam::SoX::RefCountObject,public Sonicteam::CsdLink
 		{

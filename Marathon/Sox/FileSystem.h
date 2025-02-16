@@ -32,10 +32,10 @@ namespace Sonicteam{
 			~FileSystem();
 
 
-			virtual std::string FileSystemGetFullPath(std::string& InputPath,int folder) = 0;
+			virtual std::string FileSystemGetFullPath(std::string InputPath,int folder) = 0;
 			//For Example (game:/win32/scripts/ -  lub) 
-			virtual unsigned int FileSystemIsExistsSpecificFiles(unsigned int unkptr,std::string& InputFolder,std::string& extension) = 0;
-			virtual unsigned int FileSystemIsFileExist(std::string& InputFile) = 0;
+			virtual unsigned int FileSystemIsExistsSpecificFiles(unsigned int unkptr,std::string InputFolder,std::string& extension) = 0;
+			virtual unsigned int FileSystemIsFileExist(std::string InputFile) = 0;
 			DESTRUCTION_H;
 
 			std::vector<std::string> FileSystemFolder; // game:\xenon\ ...

@@ -139,6 +139,7 @@ namespace Sonicteam{
 			Sonicteam::SoX::Engine::Task* DocCurrentDocMode; //MainMode (0x5C) But ... StateGamemode ..... (DocMode)
 			unsigned int DocMyGraphicDevice; //0x60
 			unsigned int DocSceneParamManager; //0x64
+			//either vector ptr or lost structure ? (max size = 0x20)
 			std::vector<boost::weak_ptr<Sonicteam::SoX::Scenery::World>>* World; //0x68;
 			unsigned int DocSceneCollection; //0x6c;
 			unsigned int Docuint0x70;

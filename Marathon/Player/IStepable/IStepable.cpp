@@ -8,3 +8,6 @@ IStepable::IStepable(void)
 IStepable::~IStepable(void)
 {
 }
+
+
+DESTRUCTION_CPP(IStepable);

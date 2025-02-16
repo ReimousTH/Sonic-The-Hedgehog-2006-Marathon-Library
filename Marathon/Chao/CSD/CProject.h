@@ -4,20 +4,21 @@
 #include <Sox/Memory/IDestructible.h>
 #include <Sox/Memory/DEFINITIONS.hpp>
 
+#include <Sox/Misc/MapExtension.h>
+
 #include <string>
 #include "Project.h"
 #include "RCObject.h"
 #include "CResourceBase.h"
 
 
+#include <Chao/CSD/CScene.h>
+#include <Chao/CSD/RCObject.h>
 
 
 
 
-#include <xtree>
-
-
-
+#include <map>
 
 
 namespace Chao{
@@ -56,28 +57,22 @@ namespace Chao{
 			unsigned int FCProject0xC;
 
 
-			SceneHead FCProject0x10; //HEAD 
-		//	unsigned int FCProject0x10;
-		//	unsigned int FCProject0x14;
-		//	unsigned int FCProject0x18;
-
-			SceneHead FCProject0x1C; //HEAD
-			//unsigned int FCProject0x1C;
-			//unsigned int FCProject0x20;
-			//unsigned int FCProject0x24;
+			// Chao::CSD::RCObject<Chao::CSD::CScene>
+			std::map<const char*,Chao::CSD::RCObject<Chao::CSD::CScene>*,STD_MAP_CONST_CHAR_PTR_COMPARATOR> CProjectScene; //later
+			std::map<void*,void*> CProjectMap0x1C; //later
 
 
 			unsigned int FCProject0x28;
 
 			// RCPtr<TexList>, later
-			RCObject<unsigned char> CPTexList;
+			RCObject<unsigned char> CPTexList; //0x2C
 			//
 			unsigned int FCProject0x30;
-			unsigned int FCProject0x34;
+			unsigned int FCProject0x34;// ?
 			unsigned int FCProject0x38;
 			unsigned int FCProject0x3C;
-			unsigned int FCProject0x40;
-			unsigned int FCProject0x44;
+			unsigned int FCProject0x40; // ?
+			unsigned int FCProject0x44; 
 		
 
 	};

@@ -8,6 +8,7 @@
 #include <XboxMath.h>
 
 #include <Sox/RefCountObject.h>
+#include <Sox/Scenery/Drawable.h>
 #include <Sox/Memory/Destruction.h>
 #include <boost/shared_ptr.hpp>
 
@@ -32,9 +33,9 @@ namespace Sonicteam{
 				//Set Camaera To Voxel Space?
 				virtual void WorldSetCamera(boost::shared_ptr<Sonicteam::SoX::Scenery::Camera>&) = 0;
 				virtual void WorldUnknown02(void*) = 0; //no idea  (void*, either boost ptr, or RefCount or just ref)
-				virtual void WorldAddClump(REF_TYPE(Sonicteam::SoX::Scenery::Drawable)) = 0;  // or drawable ,3D
- 				virtual void WorldAddDrawable(REF_TYPE(Sonicteam::SoX::Scenery::Drawable)) = 0;   //2D 0x14
-				virtual void WorldAddRefCountObj(REF_TYPE(Sonicteam::SoX::Scenery::Drawable)) = 0; //or  //0x18
+				virtual void WorldAddClump(REF_TYPE_REF(Sonicteam::SoX::Scenery::Drawable)) = 0;  // or drawable ,3D, does not add ref
+ 				virtual void WorldAddDrawable(REF_TYPE_REF(Sonicteam::SoX::Scenery::Drawable)) = 0;   //2D 0x14 does not add ref
+				virtual void WorldAddRefCountObj(REF_TYPE_REF(Sonicteam::SoX::Scenery::Drawable)) = 0; //or  //0x18  ,does not add ref
 				virtual void WorldUnknown06(void*) = 0;//no idea  (void*, either boost ptr, or RefCount or just ref) 0x1C
 				virtual void WorldGetLatestIndex(void*) ; //out,ptr  size 0x20 ;
 				virtual void WorldProcessDeltaEx(LARGE_INTEGER*,double) = 0; //use BOTH Deltas(second seems negative ) XD // yes large_integer, i see pointer to PerfomanceFraq, but not dirrect from return register

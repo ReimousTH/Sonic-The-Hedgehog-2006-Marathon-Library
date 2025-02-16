@@ -27,18 +27,25 @@ namespace Chao{
 
 
 		public:
-			void DestroyObject(unsigned int flag); 
+			virtual void DestroyObject(unsigned int flag); 
+			CType* get();
 
 		protected:
 			CType* CObject;
 			size_t RefCount;
-			void* m_pDealloctor; //https://github.com/blueskythlikesclouds/BlueBlur/blob/master/CSD/Manager/csdmRCObject.h
-			size_t m_eDealloctor; 
+			unsigned int unk0xC;
 			unsigned int CSE_TYPE;	
 
 
 
 	};
+
+	template <typename CType>
+	CType* Chao::CSD::RCObject<CType>::get()
+	{
+		return this->CObject;
+
+	}
 
 	template <typename CType>
 	void Chao::CSD::RCObject<CType>::DestroyObject(unsigned int flag)

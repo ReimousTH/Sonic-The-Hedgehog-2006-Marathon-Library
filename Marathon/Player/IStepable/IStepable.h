@@ -1,6 +1,7 @@
-#pragma once
+#ifndef SONICTEAM__PLAYER__ISTEPABLE
+#define SONICTEAM__PLAYER__ISTEPABLE
 
-
+#include <Sox/Memory/Destruction.h>
 
 namespace Sonicteam{
 	namespace Player{
@@ -9,7 +10,10 @@ namespace Sonicteam{
 		{
 		public:
 			IStepable(void);
-			virtual ~IStepable(void);
+			~IStepable(void);
+
+
+			DESTRUCTION_H;
 			virtual void OnStepable(float) = 0;
 
 		};
@@ -17,4 +21,4 @@ namespace Sonicteam{
 	}
 }
 
-
+#endif

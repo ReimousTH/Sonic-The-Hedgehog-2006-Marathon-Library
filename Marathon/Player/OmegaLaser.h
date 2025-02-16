@@ -22,6 +22,7 @@
 
 #include <Sox/Misc/LinkSoxNode.h>
 
+#include <Player/EntityContainer.h>
 
 
 namespace Sonicteam{
@@ -36,10 +37,7 @@ namespace Sonicteam{
 
 		//YES size is correct, huh weird huh
 		//weird, struct i think its bigger :| sadly vft lost
-		struct EntitiesContainer{
-			REF_TYPE(Sonicteam::SoX::Physics::Entity) Entity;
-			LinkSoxNode<Sonicteam::SoX::Physics::Entity> LinkEntities;
-		};
+	
 
 		class OmegaLaser:public Sonicteam::SoX::Engine::Task{
 
@@ -57,7 +55,7 @@ namespace Sonicteam{
 			float unk0x6C;
 			float unk0x70;
 			unsigned int unk0x74;
-			std::deque<EntitiesContainer> Entities; // 0x78
+			std::deque<EntityContainer> Entities; // 0x78
 			Sonicteam::Player::Effect::IParticle* EffectIParticle; //0x8C
 			Sonicteam::Player::ObjectPlayer* ObjectPlayer; //0x90
 			REF_TYPE(Sonicteam::Combo::AttackManager) AttackManager; //0x94

@@ -30,9 +30,19 @@ namespace Sonicteam{
 
 		class OmegaLaser;
 		class LockOn;
+		class Homing;
+
+		
+
+
+
+		//Move Later
+		
+
 
 	}
 	
 }
+class EntityContainer;
 
 #endif

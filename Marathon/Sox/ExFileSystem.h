@@ -19,11 +19,11 @@ namespace Sonicteam{
 
 
 
-			virtual std::string FileSystemGetFullPath(std::string& InputPath,int folder);
+			virtual std::string FileSystemGetFullPath(std::string InputPath,int folder);
 
-			virtual unsigned int FileSystemIsExistsSpecificFiles(unsigned int unkptr,std::string& InputFolder,std::string& extension);
+			virtual unsigned int FileSystemIsExistsSpecificFiles(unsigned int unkptr,std::string InputFolder,std::string& extension);
 
-			virtual unsigned int FileSystemIsFileExist(std::string& InputFile);
+			virtual unsigned int FileSystemIsFileExist(std::string InputFile);
 
 			DESTRUCTION_H;
 

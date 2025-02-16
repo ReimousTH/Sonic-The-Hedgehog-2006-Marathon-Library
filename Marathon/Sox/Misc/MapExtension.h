@@ -2,6 +2,7 @@
 #define MAPEXTENSION_H
 
 #include <Xboxmath.h>
+#include <string>
 
 struct STD_MAP_CONST_CHAR_PTR_COMPARATOR {
     bool operator()(const char* lhs, const char* rhs) const {
