@@ -1,24 +1,13 @@
 #pragma once
 #include "..\RefCountObject.h"
 #include <xtl.h>
+#include <Player/EntityContainer.h>
 
 namespace Sonicteam{
 	namespace SoX{
 		namespace Physics{
 
-			struct PLMessage{
-				unsigned int MessageInfo1; // (just number)
-				unsigned int MessageInfo2; // send message back  (here example 82206070)
-
-				PLMessage(unsigned int a1,unsigned int a2){
-					this->MessageInfo1 =a1;
-					this->MessageInfo2 =a2;
-				};
-
-
-			};
-
-
+		
 
 
 
@@ -30,9 +19,10 @@ namespace Sonicteam{
 				~PhantomListener(void);
 
 
-				virtual void PhLsProcessMessage1(PLMessage&) {};
-				virtual void PhLsProcessMessage2(PLMessage&) {};
-				virtual void PhLsProcessMessage3(PLMessage&) {};
+				//name not finish
+				virtual void PhantomListenerOnStart(EntityContainer) = 0;
+				virtual void PhantomListenerOnUpdate(EntityContainer) = 0;
+				virtual void PhantomListenerOnEnd(EntityContainer) = 0;
 
 				DESTRUCTION_H;
 

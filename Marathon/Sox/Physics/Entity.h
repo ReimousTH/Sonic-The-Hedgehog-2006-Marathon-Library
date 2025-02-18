@@ -20,7 +20,7 @@ namespace Sonicteam{
 
 
 
-			class Entity:Sonicteam::SoX::MessageReceiver,Sonicteam::SoX::RefCountObject
+			class Entity:Sonicteam::SoX::MessageReceiver,public Sonicteam::SoX::RefCountObject
 			{
 			public:
 				//size0x60

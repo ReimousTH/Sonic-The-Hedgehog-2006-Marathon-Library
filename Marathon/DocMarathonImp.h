@@ -232,8 +232,8 @@ namespace Sonicteam{
 			unsigned int DocPlayer3ControllerIndex2; //0x55C30
 			unsigned int DocPlayer4ControllerIndex2; //0x55C34	
 			unsigned int Unk0x55C38; //0x55C38 ,  index?
-			REF_TYPE(Sonicteam::SoX::IResource) ShaderArcHandle;
-			std::vector<REF_TYPE(Sonicteam::SoX::IResource)> ArcVector1;
+			REF_TYPE(Sonicteam::SoX::IResource) ShaderArcHandle; //0x55c3C
+			std::vector<REF_TYPE(Sonicteam::SoX::IResource)> ArcVector1; //0x55c40
 			void* PackageBinary;
 
 

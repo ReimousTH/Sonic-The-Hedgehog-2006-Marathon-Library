@@ -679,6 +679,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Player\LockOnListener.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player\LockOnListener.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Player\LTMJoint.cpp"
 				>
 			</File>
@@ -1366,6 +1374,10 @@
 				Name="Misc"
 				>
 				<File
+					RelativePath=".\Sox\Misc\Array.h"
+					>
+				</File>
+				<File
 					RelativePath=".\Sox\Misc\LinkSoxNode.h"
 					>
 				</File>
@@ -1841,6 +1853,42 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="Spanverse"
+			>
+			<File
+				RelativePath=".\Spanverse\ISpan.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Spanverse\ISpan.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Spanverse\SpanSPCM.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Spanverse\SpanSPCM.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Spanverse\SpanSPMS.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Spanverse\SpanSPMS.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Spanverse\SpanSPSB.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Spanverse\SpanSPSB.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Actor.cpp"
 			>
@@ -1902,15 +1950,19 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Player\EntitiesContainer"
-			>
-		</File>
-		<File
 			RelativePath=".\GameImp.cpp"
 			>
 		</File>
 		<File
 			RelativePath=".\GameImp.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Heap.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Heap.h"
 			>
 		</File>
 		<File
@@ -1991,6 +2043,22 @@
 		</File>
 		<File
 			RelativePath=".\MyPhysicsSystemFactory.h"
+			>
+		</File>
+		<File
+			RelativePath=".\SpanverseHeap.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SpanverseHeap.h"
+			>
+		</File>
+		<File
+			RelativePath=".\SpanverseMemory.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SpanverseMemory.h"
 			>
 		</File>
 	</Files>

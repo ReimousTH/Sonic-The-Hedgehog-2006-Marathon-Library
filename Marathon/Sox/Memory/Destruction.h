@@ -23,6 +23,14 @@
 	}
 
 
+#define DESTRUCTION_CPP(className,dealloc) \
+	void* className::DestroyObject(unsigned int flag) { \
+	className::~className(); /*  */ \
+	if ((flag & 1) != 0) { \
+	dealloc(this); /*  */ \
+	} \
+	return this;\
+	}
 
 #endif
 

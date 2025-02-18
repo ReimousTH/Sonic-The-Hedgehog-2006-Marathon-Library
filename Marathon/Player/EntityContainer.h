@@ -8,8 +8,13 @@
 
 
 struct EntityContainer{
+	EntityContainer();
+	~EntityContainer();
+
 	REF_TYPE(Sonicteam::SoX::Physics::Entity) Entity;
 	LinkSoxNode<Sonicteam::SoX::Physics::Entity> LinkEntities;
+
+
 };
 
 

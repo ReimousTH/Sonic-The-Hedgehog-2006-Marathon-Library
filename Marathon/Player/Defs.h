@@ -31,6 +31,7 @@ namespace Sonicteam{
 		class OmegaLaser;
 		class LockOn;
 		class Homing;
+		class LockOnListener;
 
 		
 

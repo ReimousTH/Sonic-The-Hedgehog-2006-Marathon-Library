@@ -3,6 +3,7 @@
 
 
 #define SSINGLETON(CLASS) SINGLETON(CLASS,Sonicteam::System::CreateStatic)
+#define SSINGLETON_INSTANCE(CLASS) (&(SINGLETON(CLASS,Sonicteam::System::CreateStatic)::getInstance()))
 #define SINGLETON(CLASS,CREATOR) Sonicteam::System::Singleton<CLASS,CREATOR<CLASS>>
 
 
@@ -25,7 +26,7 @@ namespace Sonicteam{
 	//		Singleton& operator=(const Singleton& obj) = delete;
 
 			static T& getInstance() {
-				if (m_instance == NULL) {
+				if (m_instance == 0) {
 					m_instance = Creator::Create();
 				}
 				return *m_instance;
@@ -36,16 +37,16 @@ namespace Sonicteam{
 			}
 
 			static void cleanup() {
-				if (m_instance != nullptr) {
+				if (m_instance != 0) {
 					delete m_instance;
-					m_instance = nullptr;
+					m_instance = 0;
 				}
 			}
 		};
 	
 
 		template <typename T, typename Creator>
-		T* Sonicteam::System::Singleton<T, Creator>::m_instance = nullptr;
+		T* Sonicteam::System::Singleton<T, Creator>::m_instance = 0;
 
 
 	};
