@@ -52,14 +52,14 @@ namespace Sonicteam{
 			XMFLOAT4 RFPosition0x100; //Position 0xF0
 
 
-			XMFLOAT4 RFForce0x110; //Force (Not Translated, Not Rotated)
+			XMFLOAT4 RootFrameForce; //Rotated //0x110
 			unsigned int RFUINTunkFlag0x120; // 01 00 00 00 = default
 			unsigned int RFUINTunkFlag0x124; // 
 			unsigned int RFUINTunkFlag0x128; // 
 			unsigned int RFUINTunkFlag0x12C; // 
 
-			float RFRotation0x130[4]; //Rotation (Why? Not Translated)
-			XMFLOAT4 RFRotation0x140; //Rotaion
+			XMFLOAT4 RootFrameRotation1; //Rotated //0x130
+			XMFLOAT4 RootFrameRotation2; //0x140
 			unsigned long long ExternalFlag; //0x150
 			
 

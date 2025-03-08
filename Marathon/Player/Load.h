@@ -1,4 +1,8 @@
-#pragma once
+#ifndef SONICTEAM__PLAYER__LOAD
+#define SONICTEAM__PLAYER__LOAD
+
+
+#include "Defs.h"
 #include <Sox/Graphics/Frame.h>
 #include <Sox/Memory/IDestructible.h>
 #include <Player/IPlugIn.h>
@@ -13,33 +17,21 @@
 
 #include <memory>
 #include <iostream>
+#include <deque>
 
+
+#include <Sox/RefCountObject.h>
+#include <boost/shared_ptr.hpp>
+#include <PackageBinary.h>
+#include <Player/AnimationScript.h>
 
 namespace Sonicteam{
 	namespace Player{
 
 
-		//UNK 
-		struct PLoadBodyPackage{
-			PLoadBodyPackage();
-			~PLoadBodyPackage();
 
 
-			char buffer[0x30];
 
-		};
-
-		struct PLoadHeadPackage{
-			PLoadHeadPackage();
-			~PLoadHeadPackage();
-	
-
-			char buffer[0x34];
-
-		};
-
-
-		
 		class Load:public ILoad
 		{
 		public:
@@ -50,15 +42,12 @@ namespace Sonicteam{
 			//YES IT IS  std::_Tree<std::_Tmap_traits< match 
 			DESTRUCTION_H override;
 
-			std::map<std::string,PLoadBodyPackage*> PackageBody;
-			std::map<std::string,PLoadHeadPackage*> PackageHead; //not sure
-			unsigned int unk0x38;
-			unsigned int unk0x40;
-			unsigned int unk0x44;
-			unsigned int unk0x48;
-			Sonicteam::SoX::Engine::Doc* EDoc;
-		
+			std::map<std::string,REF_TYPE(Sonicteam::PackageBinary)> PackageBinary;
+			std::map<std::string,boost::shared_ptr<Sonicteam::Player::AnimationScript>> PackageScript; //not sure
+			std::deque<REF_TYPE(Sonicteam::SoX::RefCountObject)> RefObjects0x38; //or que
+			Sonicteam::SoX::Engine::Doc* EDoc; //0x4C
 
+	
 			_MARATHON_DEFINE_CONSTRUCTOR_(Load,0x821E2C18,Sonicteam::SoX::Engine::Doc* doc);
 
 			virtual Sonicteam::SoX::RefCountObject LoadPackage(std::string* package_path);
@@ -87,13 +76,19 @@ namespace Sonicteam{
 
 			virtual void DocProcessThread(Sonicteam::SoX::StepableThread*);
 
-	
 
 
-		
+
+
 
 		};
 
 	}
 }
+
+
+
+
+#endif
+
 

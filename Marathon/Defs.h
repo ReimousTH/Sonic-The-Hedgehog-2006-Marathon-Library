@@ -28,6 +28,7 @@ namespace Sonicteam{
 	class MainMenuTask;
 	class MenuListener;
 	class MyPhysicsSystemFactory;
+	class CsdResource;
 
 
 };

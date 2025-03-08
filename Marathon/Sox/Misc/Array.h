@@ -1,9 +1,9 @@
 #ifndef SONICTEAM__SOX__ARRAY
 #define SONICTEAM__SOX__ARRAY
 
-#include <algorithm> // Required for std::for_each, std::sort, etc.
 
-template <typename Class, typename Count>
+
+template <typename Class, size_t Count>
 struct Array {
 	Class data[Count];
 

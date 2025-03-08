@@ -42,7 +42,10 @@ namespace Sonicteam{
 			unsigned int PostureFlag0x11C; // no info
 
 		};
-		class IPostureControl:public Sonicteam::Player::IVariable,public Sonicteam::Player::IDynamicLink,public Sonicteam::Player::Unit::ITestCase,public Sonicteam::Player::IFlagCommunicator
+		class IPostureControl:public Sonicteam::Player::IVariable,
+			public Sonicteam::Player::IDynamicLink,
+			public Sonicteam::Player::Unit::ITestCase,
+			public Sonicteam::Player::IFlagCommunicator
 		{
 		public:
 			IPostureControl(REF_TYPE(Sonicteam::Player::RootFrame) RootFrame,REF_TYPE(Sonicteam::SoX::Physics::Havok::WorldHavok) WorldHavok);

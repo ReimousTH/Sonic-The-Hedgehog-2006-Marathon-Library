@@ -23,7 +23,6 @@ Sonicteam::Player::Load::~Load(void)
 }
 
 
-DESTRUCTION_CPP(Load);
 
 Sonicteam::SoX::RefCountObject Sonicteam::Player::Load::LoadPackage(std::string* package_path)
 {
@@ -90,17 +89,6 @@ void Sonicteam::Player::Load::DocProcessThread(Sonicteam::SoX::StepableThread*)
 	throw std::logic_error("The method or operation is not implemented.");
 }
 
-Sonicteam::Player::PLoadBodyPackage::PLoadBodyPackage()
-{
 
-}
 
-Sonicteam::Player::PLoadHeadPackage::PLoadHeadPackage()
-{
-
-}
-
-Sonicteam::Player::PLoadHeadPackage::~PLoadHeadPackage()
-{
-
-}
+DESTRUCTION_CPP(Load);

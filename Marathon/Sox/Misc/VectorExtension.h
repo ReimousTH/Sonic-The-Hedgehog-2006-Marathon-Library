@@ -3,9 +3,17 @@
 
 #include <Xboxmath.h>
 
+struct XMVECTOR4X3{
+	XMVECTOR Vector1;
+	XMVECTOR Vector2;
+	XMVECTOR Vector3;
+};
+
+
+
 //821E8778 
 // Name :CreateRotationQuaternionFromXMVectors , not correct
-XMVECTOR CreateRotationQuaternionFromXMVectors(XMVECTOR quat2, XMVECTOR quat3, XMVECTOR quat4){
+static XMVECTOR CreateRotationQuaternionFromXMVectors(XMVECTOR quat2, XMVECTOR quat3, XMVECTOR quat4){
 
 	XMVECTOR cross_vector_1 =  XMVector3Cross(quat4,quat2);
 	XMVECTOR cross_vector_1_length = XMVector3Length(cross_vector_1);
@@ -35,7 +43,7 @@ XMVECTOR CreateRotationQuaternionFromXMVectors(XMVECTOR quat2, XMVECTOR quat3, X
 }
 
 
-XMVECTOR CreateRotationQuaternionFromVectorsAlternative(XMVECTOR quat2, XMVECTOR quat3, XMVECTOR quat4) {
+static XMVECTOR CreateRotationQuaternionFromVectorsAlternative(XMVECTOR quat2, XMVECTOR quat3, XMVECTOR quat4) {
 	// 1. Normalize the vectors (important for angle calculations)
 	quat2 = XMVector3Normalize(quat2);
 	quat3 = XMVector3Normalize(quat3);

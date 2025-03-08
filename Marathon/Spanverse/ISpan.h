@@ -8,8 +8,12 @@
 #include <SpanverseMemory.h>
 #include <new>
 
-#define SONICTEAM__SPANVERSE_HEADER__ISPAN 0x42415345
 
+
+
+
+
+#define SONICTEAM__SPANVERSE_HEADER__ISPAN 0x42415345
 namespace Sonicteam{
 	namespace Spanverse{
 		class ISpan{

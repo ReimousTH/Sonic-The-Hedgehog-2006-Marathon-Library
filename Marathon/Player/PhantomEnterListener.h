@@ -20,7 +20,7 @@ namespace Sonicteam{
 				PhantomEnterListener(boost::function<int()>);
 				~PhantomEnterListener(void);
 
-				virtual void PhLsProcessMessage2(Sonicteam::SoX::Physics::PLMessage&);
+				virtual void PhantomListenerOnUpdate(PhantomListenerEntityContainerType);
 
 				boost::function<int()> PELOnEnter;
 

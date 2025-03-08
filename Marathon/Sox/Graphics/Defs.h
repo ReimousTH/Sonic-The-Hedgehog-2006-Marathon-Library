@@ -9,6 +9,21 @@ namespace Sonicteam{
 			class Frame;
 			class FrameSynchronizer;
 			class FrameObserver;
+			class Model;
+
+
+			class Shader;
+			class Node;
+			class Device;
+			class FrameBufferObject;
+			class TechniqueFXL;
+			class DrawPrimitiveCache;
+			class VertexBuffer;
+			class ShaderCommon;
+			class Lights;
+			class RenderStates;
+			class TextureStages;
+			class Transform;
 		}
 	}
 }

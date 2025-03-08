@@ -2,20 +2,29 @@
 #define SONICTEAM__PLAYER__ENTITIESCONTAINER
 
 #include "Defs.h"
+
+
 #include <Sox/Misc/LinkSoxNode.h>
-#include <Sox/RefCountObject.h>
 #include <Sox/Physics/Entity.h>
+#include <Sox/IEntityContainer.h>
 
 
-struct EntityContainer{
+
+
+
+//in work still
+
+struct EntityContainer:public IEntityContainer<EntityContainer,Sonicteam::SoX::Physics::Entity>{
+
+public:
 	EntityContainer();
 	~EntityContainer();
-
-	REF_TYPE(Sonicteam::SoX::Physics::Entity) Entity;
-	LinkSoxNode<Sonicteam::SoX::Physics::Entity> LinkEntities;
-
+	EntityContainer(EntityContainer& other);
 
 };
+
+
+
 
 
 

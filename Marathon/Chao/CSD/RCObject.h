@@ -1,7 +1,14 @@
-#pragma once
+#ifndef CHAO__CSD_RCOBJECT
+#define CHAO__CSD_RCOBJECT
+
 
 #include <xtl.h>
 #include <CMemoryAllocMarathon.h>
+
+
+#include <Chao/CSD/Defs.h>
+
+
 
 
 //MB
@@ -69,3 +76,5 @@ namespace Chao{
 
 	};
 };
+
+#endif

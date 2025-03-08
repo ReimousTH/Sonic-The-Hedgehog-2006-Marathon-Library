@@ -22,7 +22,7 @@
 
 #include <Sox/Misc/LinkSoxNode.h>
 
-#include <Player/EntityContainer.h>
+#include <Sox/Physics/EntityContainer.h>
 
 
 namespace Sonicteam{

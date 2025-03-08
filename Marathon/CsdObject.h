@@ -7,7 +7,7 @@
 #include <Sox/RefCountObject.h>
 #include <CsdLink.h>
 #include <Chao/CSD/CProject.h>
-
+#include <CsdResource.h>
 
 
 namespace Sonicteam{
@@ -49,23 +49,11 @@ namespace Sonicteam{
 
 
 
+			unsigned int FCsdObject0x20; //count?
+			Chao::CSD::CProject* FCProject;// 0x24
+			REF_TYPE(Sonicteam::CsdResouce) CsdResouce; //0x28
 
 
-				
-
-
-			public:
-			unsigned int FCsdObject0x20;
-			Chao::CSD::CProject* FCProject;
-			unsigned int FCsdObject0x28;
-		
-
-
-		
-		
-
-
-	
 
 
 	};

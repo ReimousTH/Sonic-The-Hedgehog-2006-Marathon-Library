@@ -11,7 +11,7 @@ namespace Sonicteam{
 		class IPlugIn
 		{
 		public:
-			IPlugIn(char*);
+			IPlugIn(const char*);
 			~IPlugIn(void);
 
 			DESTRUCTION_H;

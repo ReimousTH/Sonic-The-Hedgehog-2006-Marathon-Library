@@ -7,6 +7,7 @@
 #define SINGLETON(CLASS,CREATOR) Sonicteam::System::Singleton<CLASS,CREATOR<CLASS>>
 
 
+
 namespace Sonicteam{
 	namespace System{
 

@@ -10,7 +10,7 @@ Sonicteam::Player::PhantomEnterListener::PhantomEnterListener(boost::function<in
 
 
 
-void Sonicteam::Player::PhantomEnterListener::PhLsProcessMessage2(Sonicteam::SoX::Physics::PLMessage&)
+void Sonicteam::Player::PhantomEnterListener::PhantomListenerOnUpdate(PhantomListenerEntityContainerType)
 {
 	this->PELOnEnter();
 }

@@ -4,9 +4,9 @@
 #include "Defs.h"
 
 
+#include <Sox/Physics/EntityContainer.h>
 #include <Sox/RefCountObject.h>
 #include <Sox/Misc/LinkSoxNode.h>
-
 #include <Player/IPlugIn.h>
 #include <Player/IPosturePlugIn.h>
 #include <Player/IFlagCommunicator.h>
@@ -14,15 +14,11 @@
 #include <Player/IStepablePost.h>
 #include <Player/IDynamicLink.h>
 #include <Player/IVariable.h>
-#include <Player/EntityContainer.h>
-
 #include <Sox/Physics/Shape.h>
 #include <Sox/Physics/Havok/ShapeHavok.h>
-
 #include <Combo/AttackManager.h>
-
-#include <boost/function.hpp>
 #include <Player/RootFrame.h>
+#include <boost/function.hpp>
 
 
 namespace Sonicteam{
@@ -38,9 +34,17 @@ namespace Sonicteam{
 			Homing();
 			~Homing();
 
-			unsigned int HomingStatePre; // == 2 enemy
-			unsigned int HomingStateAfter; // == 2 enemy
-			float HomingTime; //think?
+			virtual void SetFlag01(DWORD flag_value);
+
+			virtual void OnStepable(float);
+
+			virtual void OnStepablePost(float);
+
+			virtual void OnVarible(LuaSystem**);
+
+			unsigned int HomingStatePre; // == 2 enemy //0x38
+			unsigned int HomingStateAfter; // == 2 enemy //0x3C
+			float HomingTime; //think? //0x40
 			boost::shared_ptr<Sonicteam::Player::LockOn> LockOn; //0x44,0x48
 			boost::shared_ptr<Sonicteam::Player::LockOn> LockOnHoming; //0x4C,0x50
 			unsigned int Homing0x54;

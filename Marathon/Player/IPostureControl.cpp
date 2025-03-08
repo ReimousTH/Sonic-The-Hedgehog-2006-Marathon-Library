@@ -2,7 +2,7 @@
 using namespace Sonicteam::Player;
 
 
-Sonicteam::Player::IPostureControl::IPostureControl(REF_TYPE(Sonicteam::Player::RootFrame) RootFrame,REF_TYPE(Sonicteam::SoX::Physics::Havok::WorldHavok) WorldHavok)
+Sonicteam::Player::IPostureControl::IPostureControl(REF_TYPE(Sonicteam::Player::RootFrame) RootFrame,REF_TYPE(Sonicteam::SoX::Physics::Havok::WorldHavok) WorldHavok):Sonicteam::Player::Unit::ITestCase("posture")
 {
 	this->RootFrame = RootFrame;
 	this->RotationFixed = XMVectorSet(0,0,0,1);

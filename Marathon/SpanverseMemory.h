@@ -23,8 +23,16 @@ namespace Sonicteam{
 };
 
 
+#define spanafree(CLASS) SSINGLETON_INSTANCE(Sonicteam::SpanverseMemory)->HeapFree(CLASS)
+#define spanadelete(CLASS) \
+CLASS::~CLASS(); \
+SSINGLETON_INSTANCE(Sonicteam::SpanverseMemory)->HeapFree(CLASS);\
+
+
 #define spanalloc(CLASS,...) new(SSINGLETON_INSTANCE(Sonicteam::SpanverseMemory)->HeapAlloc(sizeof(CLASS),0))CLASS(__VA_ARGS__)
 #define spanalloc2(CLASS) new(SSINGLETON_INSTANCE(Sonicteam::SpanverseMemory)->HeapAlloc(sizeof(CLASS),0))CLASS(__VA_ARGS__)
+
+
 
 
 

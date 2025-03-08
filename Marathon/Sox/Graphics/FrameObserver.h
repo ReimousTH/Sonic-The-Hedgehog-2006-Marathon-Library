@@ -37,7 +37,7 @@ namespace Sonicteam{
 
 				LinkSoxNode<FrameObserver> LinkNode;
 				unsigned int FrameObserverFlag;
-	
+				//yep size x010
 
 				void OnRNodeHClear(); //
 

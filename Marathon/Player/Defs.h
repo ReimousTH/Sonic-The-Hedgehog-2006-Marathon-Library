@@ -32,6 +32,11 @@ namespace Sonicteam{
 		class LockOn;
 		class Homing;
 		class LockOnListener;
+		class Load;
+		class AnimationScript;
+
+
+
 
 		
 

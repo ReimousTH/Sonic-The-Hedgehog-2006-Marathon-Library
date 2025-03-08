@@ -1,4 +1,9 @@
-#pragma once				
+#ifndef SONICTEAM__SOX__REFCOUNTOBJECT
+#define SONICTEAM__SOX__REFCOUNTOBJECT
+
+
+
+#include "Defs.h"
 #include <SoX/Memory/IDestructible.h>
 #include <Sox/Memory/Destruction.h>
 
@@ -15,7 +20,6 @@ namespace Sonicteam{
 
 		
 
-		class RefCountObject;
 
 
 		#pragma optimize("", off)
@@ -135,3 +139,7 @@ namespace Sonicteam{
 
 	}
 }
+
+
+#endif
+

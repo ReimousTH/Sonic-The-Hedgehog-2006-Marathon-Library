@@ -1,16 +1,17 @@
 #ifndef SONICTEAM__SOX__PHYSICS__ENTITY
 #define SONICTEAM__SOX__PHYSICS__ENTITY
 
-#include <Sox/Misc/LinkSoxNode.h>
+#include "Defs.h"
 
+#include <Sox/Physics/EntityContainer.h>
+#include <Sox/Misc/LinkSoxNode.h>
 #include <Sox/MessageReceiver.h>
 #include <Sox/RefCountObject.h>
 
 #include <Actor.h>
 #include <xtl.h>
-
 #include <Sox/Physics/Shape.h>
-
+#include <Sox/Physics/EntityContainer.h>
 
 
 namespace Sonicteam{
@@ -29,7 +30,7 @@ namespace Sonicteam{
 
 
 				unsigned int EntityFlag; //0xC
-				LinkSoxNode<Entity> LinkEntity; //0x10,0x14,0x18
+				LinkSoxNode<EntityContainer> LinkEntity; //0x10,0x14,0x18
 
 
 				REF_TYPE(Sonicteam::SoX::RefCountObject) EntityRefObject; //0x1C

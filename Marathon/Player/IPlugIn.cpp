@@ -2,7 +2,7 @@
 
 using namespace Sonicteam::Player;
 
-IPlugIn::IPlugIn(char* plug_name)
+IPlugIn::IPlugIn(const char* plug_name)
 {
 	this->PluginName.assign(plug_name);
 }

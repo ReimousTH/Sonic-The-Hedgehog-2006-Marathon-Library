@@ -10,12 +10,11 @@ namespace Sonicteam {
 			class ITestCase {
 			public:  // Add public access specifier
 
-				ITestCase();
+				ITestCase(const char* CaseName);
 				~ITestCase(); // Make the destructor virtual
-				DESTRUCTION_HPP;
+				DESTRUCTION_H; // This defines the DestroyObject method
 			};
 		} // namespace Unit
-
 	} // namespace Player
 } // namespace Sonicteam
 

@@ -1,4 +1,8 @@
-#pragma once
+
+#ifndef CHAO__CSD__CREADFILE
+#define CHAO__CSD__CREADFILE
+
+#include <Chao/CSD/Defs.h>
 
 #include <xtl.h>
 #include <Sox/Memory/IDestructible.h>
@@ -13,9 +17,9 @@ namespace Chao{
 	namespace CSD{
 
 
-	 
-	//Or SonicTeamSoxComponent
-	class CReadFile
+
+		//Or SonicTeamSoxComponent
+		class CReadFile
 		{
 		public:
 			CReadFile(void);
@@ -32,13 +36,14 @@ namespace Chao{
 			std::string CFileName;	
 
 
-		
-		
 
 
-	
 
 
+
+
+
+		};
 	};
 };
-};
+#endif

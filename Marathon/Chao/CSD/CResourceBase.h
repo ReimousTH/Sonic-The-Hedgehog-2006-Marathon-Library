@@ -1,8 +1,11 @@
-#pragma once
 
-#include "Project.h"
-#include "RCObject.h"
-#include <Sox/Misc/List.h>
+#ifndef CHAOS__CSD__CRESOURCEBASE
+#define CHAOS__CSD__CRESOURCEBASE
+
+
+#include <Chao/CSD/Defs.h>
+#include <Chao/CSD/RCObject.h>
+#include <Sox/Memory/Destruction.h>
 
 
 
@@ -11,43 +14,39 @@ namespace Chao{
 	namespace CSD{
 
 
-	 
-	//No INFO so empty
-	template <typename T>
-	class CResourceBase	
+
+		//No INFO so empty
+		template <typename T>
+		class CResourceBase	
 		{
 		public:
 			CResourceBase(void);
 			~CResourceBase(void);
 
-			void DestroyObject(unsigned int flag);	
+			DESTRUCTION_HPP;
 			virtual void CResourceBase0x4(void*) = 0;
 
 			//https://github.com/blueskythlikesclouds/BlueBlur/blob/master/CSD/Manager/csdmResourceBase.h
-		protected:
+		//protected:
 			//i guess IT <T> at least should be
-			Chao::CSD::RCObject<unsigned char>* FCRBDATA; //  Chao::CSD::RCObject<unsigned char>
+			Chao::CSD::RCObject<unsigned char>* RCObject; //  Chao::CSD::RCObject<unsigned char>
 			unsigned int FCRB0x8; //Scene Data
+
+		};
+
+		template <typename T>
+		Chao::CSD::CResourceBase<T>::~CResourceBase(void)
+		{
+
+		}
+
+		template <typename T>
+		Chao::CSD::CResourceBase<T>::CResourceBase(void)
+		{
+
+		}
+
 	
 	};
-
-	template <typename T>
-	Chao::CSD::CResourceBase<T>::~CResourceBase(void)
-	{
-
-	}
-
-	template <typename T>
-	Chao::CSD::CResourceBase<T>::CResourceBase(void)
-	{
-
-	}
-
-	template <typename T>
-	void Chao::CSD::CResourceBase<T>::DestroyObject(unsigned int flag)
-	{
-		Sonicteam::SoX::Memory::IUDestructible::DestroyObject(this,flag);
-	}
-
-	};
 };
+#endif
