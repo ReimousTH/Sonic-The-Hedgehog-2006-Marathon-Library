@@ -10,7 +10,7 @@ Sonicteam::Player::IPostureControl::IPostureControl(REF_TYPE(Sonicteam::Player::
 	this->WorldHavok = WorldHavok;
 	this->PostureTask =0;
 	this->GravityDirection = XMVectorSet(0,-1,0,1);
-	this->GravityDirectionPower = 0;
+	this->GravityDownForce = 0;
 	this->NormalizedSurface = XMVectorSet(0,0,0,1);
 	this->Position = XMVectorSet(0,0,0,1);
 	this->Rotation = XMVectorSet(0,0,0,1);
@@ -30,13 +30,18 @@ Sonicteam::Player::IPostureControl::~IPostureControl(void)
 
 }
 
+void IPostureControl::IPostureControlOn()
+{
+
+}
+
 void Sonicteam::Player::IPostureControl::IPostureControlStep(double delta)
 {
 	if (Sonicteam::Player::State::ICommonContextIF* context =  this->IContextIF.get()){
 		this->ImpulseZX = context->GetTotalSpeedZ();
 		this->ImpulseY = context->GetTotalSpeedY();
 	}
-	if ((this->IPostureControlFlag0x114.PostureFlag0x114 &  0x8000) == 0){
+	if ((this->IPostureControlFlag0x114.PostureFlag0x114 &  0x8000) != 0){
 		this->IPostureControlImport(PlayerGetTransformData(),1.0);
 	}
 	else{
@@ -46,14 +51,17 @@ void Sonicteam::Player::IPostureControl::IPostureControlStep(double delta)
 		}
 		else{
 			Sonicteam::Player::Input::IListener* InputListener = this->InputListener.get();
-			this->IPostureControlImport(*InputListener->ListenerGetStickVector4(delta,0),delta);
+			this->IPostureControlImport(*InputListener->ListenerGetStickVector4(delta,0),InputListener->ListenerGetStickPower());
 		}
 	}
-	/* not implemented yet :)
+
 	if (Sonicteam::Player::Gravity* gravity = this->Gravity.get()){
-		gravity->
+	
+		this->GravityDirection = *(XMVECTOR*)gravity->GetGravityDirection();
+		this->GravityDownForce = gravity->GetGravityDownForce();
+		this->NormalizedSurface = XMVector4Normalize(XMVector3Dot(this->GravityDirection,XMVectorSet(0,1,0,1))); //
 	}
-	*/
+	
 }
 
 //custom 821F1B38

@@ -2,12 +2,52 @@
 #define VectorExtension_H
 
 #include <Xboxmath.h>
+#include <limits>
 
 struct XMVECTOR4X3{
 	XMVECTOR Vector1;
 	XMVECTOR Vector2;
 	XMVECTOR Vector3;
 };
+
+
+
+
+//  Calculates a normalized surface vector based on gravity direction. (821E8578)
+static XMVECTOR CreateRotationFromUpToDirection(const XMFLOAT3& inputDirection)
+{
+	const XMVECTOR upVector = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
+	const float epsilon = (XMVectorSplatEpsilon()).x;
+
+	// 1. Load and normalize input vector
+	XMVECTOR direction = XMLoadFloat3(&inputDirection);
+	XMVECTOR normDirection = XMVector3Normalize(direction);
+
+	// 2. Check for zero-length input
+	if(XMVector3NearEqual(normDirection, XMVectorZero(), XMVectorReplicate(epsilon)))
+	{
+		return XMQuaternionIdentity();
+	}
+
+	// 3. Calculate orthogonal basis
+	XMVECTOR cross = XMVector3Cross(upVector, normDirection);
+	XMVECTOR normCross = XMVector3Normalize(cross);
+
+	// 4. Check for colinear vectors
+	if(XMVector3NearEqual(normCross, XMVectorZero(), XMVectorReplicate(epsilon)))
+	{
+		return XMQuaternionIdentity();
+	}
+
+	// 5. Calculate angle components
+	XMVECTOR dot = XMVector3Dot(normDirection, upVector);
+	float cosAngle = (XMVectorClamp(dot, 
+		XMVectorReplicate(-1.0f), 
+		XMVectorReplicate(1.0f))).x;
+
+	// 6. Create rotation quaternion
+	return XMQuaternionRotationAxis(normCross, XMScalarACos(cosAngle));
+}
 
 
 

@@ -38,6 +38,7 @@
 #define  GAMEIMP_START_CGI_CUTSCENE 3
 #define  GAMEIMP_STOP_LEVEL 4
 #define  GAMEIMP_STOP_CUTSCENE 5
+#define  GAMEIMP_SAVEDATA 7
 #define  GAMEIMP_DESTROY_ALL 9
 
 
@@ -316,7 +317,7 @@ namespace Sonicteam{
 		//0x152C //_8216EDD8 _0x1DC (+-4)
 		struct{
 			//Base
-			Sonicteam::SoX::Thread* HavokRunnerThread; //0x1528 // or comp do -4, or they do it O_O
+			Sonicteam::SoX::Thread* HavokRunnerThread; //0x1528 // or comp do -4, 
 			//
 			std::string CameraParamLua; //placement/kdv/cameraparam_sonic_c.lua  //0x152C //0x0
 			std::string RenderScript; //scripts/render/stage/render_kdv_c.lua //  0x1548 - 0x1C, 

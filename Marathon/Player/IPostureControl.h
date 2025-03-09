@@ -9,6 +9,7 @@
 #include <Player/IDynamicLink.h>
 #include <Player/IFlagCommunicator.h>
 #include <player/RootFrame.h>
+#include <Player/Gravity.h>
 #include <Sox/Physics/Havok/WorldHavok.h>
 #include <boost/weak_ptr.hpp>
 #include <Player/IPosturePlugIn.h>
@@ -26,10 +27,11 @@
 #include <D3d9types.h>
 
 
+
 namespace Sonicteam{
 	namespace Player{
 		
-		class Gravity;
+		
 
 
 		struct IPostureControlFlag{
@@ -65,15 +67,15 @@ namespace Sonicteam{
 			boost::shared_ptr<Sonicteam::Player::IPosturePlugIn> IPosturePlugIn; // either weak_ptr or just PTR Path() no idea how to figure name (crash 0x821F15A8, snowboard can) //0x70
 			//next is guess (0x78)
 			XMVECTOR GravityDirection; /// I think since 0,-1,0,1 (0x80 since padding) (821F1FBC where it stores) (can be changed only from gravity modulke)
-			float GravityDirectionPower; //0x90
+			float GravityDownForce; //0x90
 			XMVECTOR NormalizedSurface; //0xA0  //821F0DC8 + when is nothing to collide GravityDirection used as normalizedsurface(but after normalie)
 			XMVECTOR Position; //0xB0
 			XMVECTOR Rotation; //0xC0
 			XMVECTOR unk0xD0; //0xD0
 			XMVECTOR unk0xE0; //maybe Vector Or NO	
 			unsigned int ImpulseFlag; //0xF0
-			unsigned int ImpulseZX; //0xF4
-			unsigned int ImpulseY; //0xF8
+			float ImpulseZX; //0xF4
+			float ImpulseY; //0xF8
 			//0x100
 			XMVECTOR ImpulseVectorUP; // 821FDFEC (here where it stores) 0x100
 			//INFO
@@ -94,6 +96,13 @@ namespace Sonicteam{
 			//01 00 00 A8 default + chainjump(on)
 			//01 00 00 E8 default + chainjump(action)
 			//01 00 04 80 default + grind
+
+			//0x40 - AIR 
+			//0x8 - Bound Flag
+			//0x80 - grind flag
+
+
+
 			IPostureControlFlag IPostureControlFlag0x114;
 
 		
@@ -101,7 +110,7 @@ namespace Sonicteam{
 
 			virtual void IPostureControlOn();// -- unk?>
 			virtual void IPostureControlStep(double); 
-			virtual void IPostureControlImport(XMVECTOR,double) = 0;
+			virtual void IPostureControlImport(XMVECTOR&,double) = 0;
 
 
 

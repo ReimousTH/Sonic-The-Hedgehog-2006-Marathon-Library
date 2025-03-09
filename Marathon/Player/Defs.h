@@ -35,6 +35,7 @@ namespace Sonicteam{
 		class Load;
 		class AnimationScript;
 
+		class IForce;
 
 
 
