@@ -51,7 +51,7 @@ XMVECTOR* Input::ListenerNormal::ListenerGetStickVector4(double delta,int flag)
 return 0;	
 }
 
-float Input::ListenerNormal::ListenerGetStickPower()
+float Input::ListenerNormal::ListenerGetStickPower(unsigned long long flag)
 {
 	return 0;
 }

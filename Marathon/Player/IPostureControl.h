@@ -35,7 +35,7 @@ namespace Sonicteam{
 
 
 		struct IPostureControlFlag{
-			unsigned int PostureFlag0x114; //0x114
+			unsigned int PostureRequestFlag; //0x114
 			//00 00 00 00 default
 			//00 00 00 40 run(moving?) on ground
 			//00 00 00 04 jump()
@@ -73,13 +73,13 @@ namespace Sonicteam{
 			XMVECTOR Rotation; //0xC0
 			XMVECTOR unk0xD0; //0xD0
 			XMVECTOR unk0xE0; //maybe Vector Or NO	
-			unsigned int ImpulseFlag; //0xF0
+			unsigned int IPosturePlugInFlag; //0xF0
 			float ImpulseZX; //0xF4
 			float ImpulseY; //0xF8
 			//0x100
 			XMVECTOR ImpulseVectorUP; // 821FDFEC (here where it stores) 0x100
 			//INFO
-			unsigned int PostureFlag0x110; //0x110
+			unsigned int ContextIFFlag; //0x110
 			//01 00 00 00 default or stand
 			//01 00 00 80 default + run
 			//01 00 00 C0 default + jump
@@ -97,9 +97,24 @@ namespace Sonicteam{
 			//01 00 00 E8 default + chainjump(action)
 			//01 00 04 80 default + grind
 
-			//0x40 - AIR 
+			//01 00 00 80 - after land from jump panel before any move
+
+			//01 00 00 E0 - Tails Fly
+
+			//01 00 40 C4 - tails roll air
+			//01 00 40 04 - tails roll gound
+
+
+			//01 00 00 E0 - tails fly
+
+			//0x80 | 0x40 = 0xC0
+			//0x40 - Air Flag
+
+			//0x20 - Tails Flag Fly Flag
+
 			//0x8 - Bound Flag
-			//0x80 - grind flag
+		
+			//0x400 - grind?
 
 
 

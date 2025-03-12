@@ -112,7 +112,7 @@ namespace Sonicteam{
 
 				virtual void ListenerOnUpdate(int,float) = 0;
 				virtual XMVECTOR* ListenerGetStickVector4(double delta,int flag) = 0;
-				virtual float ListenerGetStickPower() = 0; // Stick power
+				virtual float ListenerGetStickPower(unsigned long long flag = 0) = 0; // Stick power
 				virtual unsigned int ListenerGetResult() = 0; // Result Input Action (Pressed Holded and etc)
 				virtual int IsListenerEnabled() = 0; //always 1
 

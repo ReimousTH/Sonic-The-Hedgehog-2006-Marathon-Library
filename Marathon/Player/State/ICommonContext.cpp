@@ -36,7 +36,7 @@ float ICommonContext::GetTotalSpeedZ()
 	return this->base_speed_z + this->gimmick_speed_z;
 }
 
-void ICommonContext::ImportAnimationStateFlag(DWORD flag_value)
+void ICommonContext::ImportIModelAnimationFlag(DWORD flag_value)
 {
 	this->AnimationState = flag_value;
 }

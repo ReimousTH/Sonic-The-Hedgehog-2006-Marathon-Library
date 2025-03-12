@@ -42,7 +42,7 @@ namespace Sonicteam{
 
 
 				///IFlagCommunicator
-				virtual void ImportAnimationStateFlag(DWORD flag_value) override; //TODO FUNCTION sub_82208F58
+				virtual void ImportIModelAnimationFlag(DWORD flag_value) override; //TODO FUNCTION sub_82208F58
 				///
 
 

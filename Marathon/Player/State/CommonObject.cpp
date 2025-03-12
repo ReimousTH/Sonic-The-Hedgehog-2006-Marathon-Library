@@ -26,7 +26,7 @@ void CommonObject::Object2PreUpdateCmn(float)
 	unsigned __int64 v2; // r10
 
 	v1 = this->CObjContext;
-	v2 = v1->UnknownFlags0xC8;
+	v2 = v1->ExternalFlag;
 	if ( (v2 & 4) != 0 )
 		v1->IsInvulnerable2 = 1;
 	if ( (v2 & 8) != 0 )

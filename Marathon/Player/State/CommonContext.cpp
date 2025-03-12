@@ -184,10 +184,10 @@ void CommonContext::ICOnInputTick(float delta)
 	float result;
 
 	v5 = (this->FreeUnknownFlagsDC >> 2) & 1;
-	v6 = (this->UnknownFlags0xC8 & 0x40000000) != 0;
+	v6 = (this->ExternalFlag & 0x40000000) != 0;
 	this->GroundAirFlags = 0;
 	this->AnimationState = 0;
-	this->UnknownFlags0xC8 = 1;
+	this->ExternalFlag = 1;
 	this->UnknownFlags0xD0 = 0;
 	this->UnknownFlags0xD4 = 0;
 	this->FreeUnknownFlagsDC  = 0;

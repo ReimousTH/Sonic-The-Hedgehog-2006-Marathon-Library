@@ -90,7 +90,7 @@ namespace Sonicteam{
 				int UnkSomeTimer;
 				float AngleMoveDataMB;
 				unsigned int GroundAirFlags; //0xC4 (CC_??) FLAGS
-				unsigned long long UnknownFlags0xC8;
+				unsigned long long ExternalFlag;
 				int UnknownFlags0xD0;
 				int UnknownFlags0xD4;
 				int UnknownUnUsedFlagD8;

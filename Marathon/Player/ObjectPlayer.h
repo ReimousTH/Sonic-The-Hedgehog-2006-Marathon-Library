@@ -162,8 +162,8 @@ namespace Sonicteam{
 			unsigned int unk0x1F8; //0x1F4 == -1
 			unsigned int unk0x1FC; //0x1F4 == -1
 			unsigned long long PlayerExternalFlag; //0x200, removes after init i think
-			unsigned int unk0x208; //0x208
-			unsigned int PlayerPostureFlag; //0x20C
+			unsigned int PlayerICommonContextIFFlag; //0x208
+			unsigned int IPosturePlugInFlag; //0x20C
 			unsigned int PlayerUpgradeFlag; //0x210
 			unsigned int PlayerExportFlag2; //0x214
 			unsigned int PlayerCurrentGem; //0x218

@@ -3,9 +3,9 @@ using namespace Sonicteam::Player;
 
 Gravity::Gravity()
 {
-	this->Flag1 =0;
-	this->Flag2 = 0;
-	this->Flag3 = 0;
+	this->IPosturePlugInFlag =0;
+	this->ICommonContextIFFlag = 0;
+	this->PostureRequestFlag = 0;
 	this->ForceUP = false;
 	this->gravity = 0;
 	this->c_pass_fluid = 0;
@@ -31,21 +31,21 @@ void Gravity::OnVarible(IVARIABLETYPE var)
 
 void Gravity::OnStepable(float delta)
 {
-	this->GravityDownForce += gravity * delta;
+	this->GravityDownForce += gravity * delta; 
 	if (ForceUP){
 		this->GravityDownForce = 0;
 		this->ForceUP = false;
 	}
-	unsigned int Flag1 = this->Flag1;
+	unsigned int Flag1 = this->IPosturePlugInFlag;
 	if (  (Flag1 & 1) != 0  ) this->GravityDownForce = 0;
-	if (  (Flag1 & 0x400) != 0 && (this->Flag3 & 8) != 0   ) this->GravityDownForce = 0;
+	if (  (Flag1 & 0x400) != 0 && (this->PostureRequestFlag & 8) != 0   ) this->GravityDownForce = 0;
 
-	unsigned int Flag2 = this->Flag2;
+	unsigned int Flag2 = this->ICommonContextIFFlag;
 	if (  (Flag2 & 0x20) != 0  ) this->GravityDownForce = 0;
 	if (  (Flag2 & 0x200000) != 0  ) this->GravityDownForce = 0;
 	if (  (Flag1 & 0x800) != 0  ) this->c_pass_fluid;
-	this->Flag1 = 0;
-	this->Flag2 = 0; // weird they skipped Flag3 reset hmm
+	this->IPosturePlugInFlag = 0;
+	this->ICommonContextIFFlag = 0; // weird they skipped Flag3 reset hmm
 
 }
 

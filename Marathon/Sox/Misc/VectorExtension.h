@@ -12,6 +12,12 @@ struct XMVECTOR4X3{
 
 
 
+// Retrieve the gravity direction from the stored rotation quaternion
+static XMVECTOR GetOriginalGravityDirection(const XMVECTOR& normalizedSurfaceQuaternion) {
+
+	return normalizedSurfaceQuaternion;
+}
+
 
 //  Calculates a normalized surface vector based on gravity direction. (821E8578)
 static XMVECTOR CreateRotationFromUpToDirection(const XMFLOAT3& inputDirection)

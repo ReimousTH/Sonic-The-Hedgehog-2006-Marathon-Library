@@ -22,8 +22,8 @@ namespace Sonicteam{
 			{
 			public:
 
-				DWORD CurrentGemImage;
-				boost::shared_ptr<Sonicteam::Player::SonicGauge> GaugePlugin;
+				DWORD CurrentGemImage; //0x230
+				boost::shared_ptr<Sonicteam::Player::SonicGauge> GaugePlugin; //0x234
 				char HomingLockOn; //byte23C
 				char DisablePlayerMovement; // 0x23D They can still accrue speed/gravity and try to make inputs, but they'll be locked in place. Also stops rotation
 				char AntigravityHitbox; //0x23E

@@ -50,7 +50,7 @@ namespace Sonicteam{
 
 				virtual XMVECTOR* ListenerGetStickVector4(double delta,int flag);
 
-				virtual float ListenerGetStickPower();
+				virtual float ListenerGetStickPower(unsigned long long flag);
 
 				virtual unsigned int ListenerGetResult();
 

@@ -20,18 +20,18 @@ IForce::~IForce()
 
 
 
-void IForce::SetFlag01(DWORD flag_value)
+void IForce::ImportICommonContextIFFlag(DWORD flag_value)
 {
-		this->Flag2  =flag_value;
+		this->ICommonContextIFFlag  =flag_value;
 }
 
-void IForce::SetFlag02(DWORD flag_value)
+void IForce::ImportIPosturePlugInFlag(DWORD flag_value)
 {
-		this->Flag1  =flag_value;
+		this->IPosturePlugInFlag  =flag_value;
 }
 
-void IForce::SetFlag08(DWORD flag_value)
+void IForce::ImportPostureRequestFlag(DWORD flag_value)
 {
-	this->Flag3  =flag_value;
+	this->PostureRequestFlag  =flag_value;
 }
 DESTRUCTION_CPP(IForce);

@@ -15,12 +15,12 @@ Sonicteam::Player::IPostureControl::IPostureControl(REF_TYPE(Sonicteam::Player::
 	this->Position = XMVectorSet(0,0,0,1);
 	this->Rotation = XMVectorSet(0,0,0,1);
 	this->unk0xD0 = XMVectorSet(0,0,0,1);
-	this->ImpulseFlag = 1;
+	this->IPosturePlugInFlag = 1;
 	this->ImpulseZX = 0;
 	this->ImpulseY =0;
 	this->ImpulseVectorUP = XMVectorSet(0,1,0,1);
-	this->PostureFlag0x110 = 0;
-	this->IPostureControlFlag0x114.PostureFlag0x114 = 0;
+	this->ContextIFFlag = 0;
+	this->IPostureControlFlag0x114.PostureRequestFlag = 0;
 	this->IPostureControlFlag0x114.PostureFlag0x118 = 0;
 
 }
@@ -41,7 +41,7 @@ void Sonicteam::Player::IPostureControl::IPostureControlStep(double delta)
 		this->ImpulseZX = context->GetTotalSpeedZ();
 		this->ImpulseY = context->GetTotalSpeedY();
 	}
-	if ((this->IPostureControlFlag0x114.PostureFlag0x114 &  0x8000) != 0){
+	if ((this->IPostureControlFlag0x114.PostureRequestFlag &  0x8000) != 0){
 		this->IPostureControlImport(PlayerGetTransformData(),1.0);
 	}
 	else{

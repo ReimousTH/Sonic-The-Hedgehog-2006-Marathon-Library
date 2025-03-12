@@ -20,20 +20,20 @@ namespace Sonicteam{
 
 			DESTRUCTION_H;
 			
-			unsigned int Flag1; //24
-			unsigned int Flag2; //28
-			unsigned int Flag3; //2c
+			unsigned int IPosturePlugInFlag; //24
+			unsigned int ICommonContextIFFlag; //28
+			unsigned int PostureRequestFlag; //2c
 
 
 
 
-			virtual void SetFlag01(DWORD flag_value);
+			virtual void ImportICommonContextIFFlag(DWORD flag_value);
 
 
-			virtual void SetFlag02(DWORD flag_value);
+			virtual void ImportIPosturePlugInFlag(DWORD flag_value);
 
 
-			virtual void SetFlag08(DWORD flag_value);
+			virtual void ImportPostureRequestFlag(DWORD flag_value);
 
 		};
 
