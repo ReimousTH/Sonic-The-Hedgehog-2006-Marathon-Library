@@ -3,17 +3,18 @@
 
 using namespace Sonicteam::SoX;
 
-std::string Sonicteam::SoX::ExFileSystem::FileSystemGetFullPath(std::string InputPath,int folder)
+//later on
+std::string Sonicteam::SoX::ExFileSystem::FSGetPath(std::string InputPath,int folder)
 {
-	return InputPath + FileSystemFolder[folder];
+	return InputPath +  "\\" + FileSystemFolder[folder] + "\\";
 }
 
-unsigned int Sonicteam::SoX::ExFileSystem::FileSystemIsExistsSpecificFiles(unsigned int unkptr,std::string InputFolder,std::string& extension)
+unsigned int Sonicteam::SoX::ExFileSystem::FSDirectoryGetFiles(std::vector<std::string>& out,std::string& InputFolder,std::string& extension)
 {
 	return false; //for now
 }
 
-unsigned int Sonicteam::SoX::ExFileSystem::FileSystemIsFileExist(std::string InputFile)
+unsigned int Sonicteam::SoX::ExFileSystem::FSPathExist(std::string& inputpath)
 {
 	return false; //for now
 }

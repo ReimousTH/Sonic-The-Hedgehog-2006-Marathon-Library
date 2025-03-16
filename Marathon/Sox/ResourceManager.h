@@ -45,7 +45,7 @@ namespace Sonicteam{
 			std::map<int,HoldMGR> ManagerResouceMgr; //0x20
 			unsigned int unk0x2C;
 			std::map<const char*,int,STD_MAP_CONST_CHAR_PTR_COMPARATOR> ManagerRegistryIndex; //0x30 (ClassName, Index)
-			static Sonicteam::SoX::ResourceManager* MarathonInstance;
+
 
 			DESTRUCTION_H;
 

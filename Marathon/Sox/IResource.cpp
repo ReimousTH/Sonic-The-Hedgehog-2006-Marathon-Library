@@ -19,7 +19,7 @@ int IResource::ResouceUnk02()
 	return 0;
 }
 
-int IResource::ResourceUnk04()
+int IResource::ResourceType()
 {
 	return 1;
 }

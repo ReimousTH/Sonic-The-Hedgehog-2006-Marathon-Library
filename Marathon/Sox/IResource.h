@@ -21,7 +21,7 @@ namespace Sonicteam{
 			virtual int ResourceLoad(void* File,size_t size) = 0; // FileArrayPtr,FileSizeMb
 			virtual int ResouceUnk02(); //return 0
 			virtual std::string GetResourceName(std::string file_name) = 0;
-			virtual int ResourceUnk04(); //return 1
+			virtual int ResourceType(); //return 1
 
 
 

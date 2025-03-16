@@ -27,6 +27,13 @@ namespace Sonicteam{
 			IResourceMgr(void);
 			~IResourceMgr(void);
 
+			unsigned int MgrType; // -index
+			char Flag1; // 8
+			char Flag2; //9
+			unsigned int unk0xC; //0xC
+
+
+
 			DESTRUCTION_H;
 			//despite IResource (RefCountObj i should use REF_TYPE(), but there is none of code so )
 			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param);

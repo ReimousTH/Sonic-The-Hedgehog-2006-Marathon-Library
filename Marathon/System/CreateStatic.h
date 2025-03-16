@@ -10,7 +10,9 @@ namespace Sonicteam{
 		class CreateStatic {
 		public:
 			static T* Create() {	
-				return new T();
+
+				static T _value;
+				return &_value;
 			}
 		};
 
