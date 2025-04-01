@@ -23,14 +23,14 @@ namespace Sonicteam{
 			~ArcHandle();
 			DESTRUCTION_H;
 			LinkSoxNode<ArcHandle> LinkArcHandle; //0x64,0x68,0x6C
-			Sonicteam::SoX::ArcFile _ArcFile;
-			void* ArcFileBuffer; //loaded-data
+			Sonicteam::SoX::ArcFile _ArcFile; //0x70 
+			void* HandleBuffer; //loaded-data (0x88) (from start)
 			size_t unk0x8C;
 			char IsFixedArchive; 
 			char IsDownloadContent;
 			char unk0x92; //padding
 			char unk0x93; //padding
-			std::string ArcFilePath; // game:\common\Resources_scripts_4P.arc 0x94
+			std::string ArcFilePath; // game:\common\Resources_scripts_4P.arc 0x94  (+)
 			HANDLE ArcFileHandle; //0xB0(need close btw)
 		};
 	};

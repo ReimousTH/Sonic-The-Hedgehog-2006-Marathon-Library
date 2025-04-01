@@ -11,6 +11,7 @@ namespace Sonicteam{
 		class ArcFile;
 		class ArcHandle;
 		class FileSystemArc;
+		class FileLoaderARC;
 		class IFileLoader;
 		class IFileHandle;
 		template <typename T> struct RefCountObjContainer;

@@ -7,7 +7,7 @@
 #include <boost/function.hpp>	
 
 
-
+#define IFileHandle_BFUNCTION_TYPE boost::function<void*(void)>
 
 namespace Sonicteam{
 	namespace SoX{

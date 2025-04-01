@@ -1171,6 +1171,22 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Sox\FileHandleARC.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\FileHandleARC.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\FileLoaderARC.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\FileLoaderARC.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Sox\FileSystem.cpp"
 				>
 			</File>
@@ -1509,6 +1525,10 @@
 			<Filter
 				Name="Misc"
 				>
+				<File
+					RelativePath=".\Sox\Misc\Aligment.hpp"
+					>
+				</File>
 				<File
 					RelativePath=".\Sox\Misc\Array.h"
 					>

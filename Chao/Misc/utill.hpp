@@ -1,6 +1,7 @@
 #ifndef UTIL_HPP
 #define UTIL_HPP
 
+#include <iostream>
 
 
 
@@ -18,14 +19,36 @@ namespace Chao{
 
 	struct csize_t {
 		union {
-			unsigned long long full; 
+			unsigned __int64 full; 
 			struct {
-				unsigned int low;  
-				unsigned int high; 
+				unsigned __int64 low : 32;  
+				unsigned __int64 high : 32; 
 			};
 		};
-		csize_t(unsigned long long value = 0) : full(value) {}
+		csize_t(unsigned __int64 value = 0) : full(value) {}
+		operator size_t() const {
+			return static_cast<size_t>(full); 
+		}
+
+		csize_t& operator=(unsigned __int64 value) {
+			full = value;
+			return *this;
+		}
+
+		csize_t operator+(const csize_t& other) const {
+			return csize_t(static_cast<size_t>(*this) + static_cast<size_t>(other));
+		}
+
+		csize_t operator-(const csize_t& other) const {
+			return csize_t(static_cast<size_t>(*this) - static_cast<size_t>(other));
+		}
+
+		friend std::ostream& operator<<(std::ostream& os, const csize_t& obj) {
+			os << static_cast<size_t>(obj); // Print only the relevant bits
+			return os;
+		}
 	};
+
 
 
 	//ptr
