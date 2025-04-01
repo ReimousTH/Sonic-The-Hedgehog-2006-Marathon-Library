@@ -14,6 +14,14 @@ namespace Sonicteam{
 	
 
 
+				//XMemAlloc(only) probably D3D Structure //IDirect3DSurface9?
+				struct MSurface{
+					unsigned int Flag;
+					unsigned long ACount; //Interlocked/Increment/Decrement
+
+				};
+
+
 
 				//TODO Original Destructor 
 				class SurfaceXenon:public Sonicteam::SoX::IResource //Need Aditional Methods, FullClearLink()
@@ -26,7 +34,7 @@ namespace Sonicteam{
 					unsigned int SFlag1; //0x64
 					unsigned int SFlag2;  //0x68
 					void* unk0x6C; //0x6c
-					void* SurfaceRoot; //same as in TextureXenon(look at destructor) 0x70
+					void* SurfaceRoot; //same as in TextureXenon(look at destructor // IDirect3DTexture9 THEN?) 0x70
 					unsigned int unk0x74;
 					unsigned int unk0x78;
 					unsigned int unk0x7C;

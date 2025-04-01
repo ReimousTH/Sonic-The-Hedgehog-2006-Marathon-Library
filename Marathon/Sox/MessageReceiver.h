@@ -12,11 +12,9 @@ namespace Sonicteam{
 		
 		template <unsigned int T>
 		struct MessageTemplate {
-			unsigned int MessageID; // (just number)
-			//since ,start from 0x4, padded struct :)
 			char MessageData[T];
-			MessageTemplate(){}
-			MessageTemplate(unsigned int messageID) : MessageID(messageID) {}
+			MessageTemplate(){};
+			MessageTemplate(unsigned int value){this->SetValueAt(0,0x1300C);};
 
 			template <typename Y>
 			inline void SetValueAt(unsigned int pos, const Y& Value) {
@@ -33,10 +31,10 @@ namespace Sonicteam{
 
 		};
 
-		struct Message : MessageTemplate<20> {
+		struct Message : MessageTemplate<28> {
 			Message() {}
 
-			Message(unsigned int messageID) : MessageTemplate<20>(messageID) {}
+			Message(unsigned int messageID);
 
 			Message(unsigned int messageID, unsigned int data1);
 

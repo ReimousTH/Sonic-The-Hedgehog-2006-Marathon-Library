@@ -3,10 +3,9 @@
 #include "Defs.h"
 
 #include <string>
-#include "SoX/IResource2.h"
-#include "LuaSystemManager.h"
-#include "LuaNodeImp.h"
-
+#include <Sox/IResource2.h>
+#include <LuaSystemManager.h>
+#include <LuaNodeImp.h>
 #include <Sox/Object.h>
 
 
@@ -18,11 +17,11 @@ namespace Sonicteam{
 	
  
 		//TODO (STATIC CLASS)
-	   class LuaSystem:public LuaNodeImp,public Sonicteam::SoX::IResource2<LuaSystem,LuaSystemManager> // : LuaNode + (again hided in destructors omg)
+	class LuaSystem:public LuaNodeImp,public IResource2HR(Sonicteam::LuaSystem,Sonicteam::LuaSystemManager) // : LuaNode + (again hided in destructors omg)
 		{
 		public:
-			LuaSystem(void);
-			~LuaSystem(void);
+			LuaSystem();
+			~LuaSystem();
 
 
 			float GetFloatValue(std::string*);

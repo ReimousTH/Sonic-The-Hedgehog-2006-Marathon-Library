@@ -21,7 +21,8 @@ namespace Sonicteam{
 		{
 		public:
 		//	LuaNodeImp(lua_State*,char*);	
-			~LuaNode(void);
+			LuaNode();
+			~LuaNode();
 
 			DESTRUCTION_H;
 		//	

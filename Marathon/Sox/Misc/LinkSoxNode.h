@@ -15,6 +15,7 @@ public:
 	typedef LinkSoxNodeTemplateIterator<T> iterator;
 
 
+
 	iterator& operator++() {
 		return *static_cast<iterator*>(this->Next);
 	}

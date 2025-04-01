@@ -49,7 +49,7 @@ namespace Sonicteam{
 			//DESTRUCTION_H;
 
 			virtual void OnTaskUpdate(float);
-			virtual int OnMessageRecieved(Sonicteam::SoX::Message*); //824E9850
+			virtual int OnMessageRecieved(SoXMessageType) override; //824E9850
 			MMT_MST_Resources MMText; //0x54
 			unsigned int HMMCSDSpriteMainMenu; // float 20 //0x70
 			unsigned int HMMCSDSpriteMainMenu2; // DifferentInitParam .float 30 why //0x74

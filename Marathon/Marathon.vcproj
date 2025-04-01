@@ -234,7 +234,7 @@
 				Name="VCCLX360CompilerTool"
 				Optimization="3"
 				FavorSizeOrSpeed="2"
-				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost;..\Havok\Source"
+				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost;..\Havok\Source;..\"
 				PreprocessorDefinitions="_RELEASE;_XBOX;XBOX;_XENON;_WIN32;BOOST_DISABLE_THREADS"
 				StringPooling="true"
 				ExceptionHandling="1"
@@ -405,84 +405,12 @@
 			ReferencedProjectIdentifier="{24CAEC08-5ADD-4CAB-ADF1-7DF0BA63D1D6}"
 			RelativePathToProject=".\Sonic-The-Hedgehog-2006-Marathon-Library\Lua\LUA.vcproj"
 		/>
+		<ProjectReference
+			ReferencedProjectIdentifier="{4C447C2C-D842-4EDD-9042-D86627F63027}"
+			RelativePathToProject=".\Sonic-The-Hedgehog-2006-Marathon-Library\Chao\Chao.vcproj"
+		/>
 	</References>
 	<Files>
-		<Filter
-			Name="Chao"
-			>
-			<Filter
-				Name="CSD"
-				>
-				<File
-					RelativePath=".\Chao\CSD\CPlatform.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CPlatform.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CProject.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CProject.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CReadFile.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CReadFile.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CResourceBase.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CResourceBase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CScene.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CScene.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CTexList.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\CTexList.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\Defs.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\Project.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\Project.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\RCObject.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Chao\CSD\RCObject.h"
-					>
-				</File>
-			</Filter>
-		</Filter>
 		<Filter
 			Name="Combo"
 			>
@@ -1207,6 +1135,30 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Sox\ArcFile.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\ArcFile.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\ArcHandle.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\ArcHandle.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\ArcHandleMgr.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\ArcHandleMgr.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Sox\Component.cpp"
 				>
 			</File>
@@ -1219,14 +1171,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Sox\ExFileSystem.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Sox\ExFileSystem.h"
-				>
-			</File>
-			<File
 				RelativePath=".\Sox\FileSystem.cpp"
 				>
 			</File>
@@ -1235,11 +1179,43 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Sox\FileSystemARC.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\FileSystemARC.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\FileSystemXenon.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\FileSystemXenon.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Sox\IEntityContainer.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\Sox\IEntityContainer.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\IFileHandle.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\IFileHandle.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\IFileLoader.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sox\IFileLoader.h"
 				>
 			</File>
 			<File

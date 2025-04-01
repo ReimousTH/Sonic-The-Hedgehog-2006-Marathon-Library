@@ -6,7 +6,9 @@
 #include <Sox/Memory/IDestructible.h>
 #include <Sox/RefCountObject.h>
 #include <CsdLink.h>
-#include <Chao/CSD/CProject.h>
+
+#include <Chao/chao.h>
+
 #include <CsdResource.h>
 
 

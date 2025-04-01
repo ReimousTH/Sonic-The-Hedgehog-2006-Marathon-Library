@@ -13,13 +13,14 @@ namespace Sonicteam{
 
 		template <typename T, typename Creator>
 		class Singleton {
-		private:
+			public:
+
 			Singleton() {
 			}
 
 			~Singleton() {
 			}
-
+			private:
 			static T* m_instance;
 
 		public:

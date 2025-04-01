@@ -5,16 +5,18 @@ using namespace Sonicteam;
 
 
 //Complete Later
-LuaSystem::LuaSystem(void):LuaNodeImp(0,0),Sonicteam::SoX::IResource2<LuaSystem,LuaSystemManager>()
+LuaSystem::LuaSystem():LuaNodeImp(0,0),Sonicteam::SoX::IResource2<LuaSystem,LuaSystemManager>()
 {
 	
 
 }
 
-LuaSystem::~LuaSystem(void)
+LuaSystem::~LuaSystem()
 {
 
 }
+
+
 
 float Sonicteam::LuaSystem::GetFloatValue(std::string* nm)
 {

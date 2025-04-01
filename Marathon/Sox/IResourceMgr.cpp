@@ -13,8 +13,20 @@ Sonicteam::SoX::IResourceMgr::~IResourceMgr(void)
 }
 
 
+void IResourceMgr::IResourceMgr03impl()
+{
 
+}
 
+void IResourceMgr::IResourceMgr04impl()
+{
+
+}
+
+std::string IResourceMgr::GetMgrResourceName(std::string resouce)
+{
+	return resouce;
+}
 
 DESTRUCTION_CPP(IResourceMgr);
 

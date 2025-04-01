@@ -1,24 +1,22 @@
 #ifndef SONICTEAM__LUASYSTEMMANAGER
 #define SONICTEAM__LUASYSTEMMANAGER
-#include "Defs.h"
+#include <Defs.h>
+#include <Sox/IResourceMgr.h>
+#include <System/Singleton.h>
+#include <System/CreateStatic.h>
 
-#include <string>
-
-#include <boost/weak_ptr.hpp>
-#include <boost/shared_ptr.hpp>
 
 namespace Sonicteam{
 
 	
  
 		//TODO (STATIC CLASS)
-		class LuaSystemManager // : IResourceMGR + 
+		class LuaSystemManager:Sonicteam::SoX::IResourceMgr,SSINGLETON(LuaSystemManager) // : IResourceMGR + 
 		{
 		public:
 			LuaSystemManager(void);
 			~LuaSystemManager(void);
-		
-			
+
 		};
 
 }

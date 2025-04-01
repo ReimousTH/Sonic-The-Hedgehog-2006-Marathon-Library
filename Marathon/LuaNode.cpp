@@ -3,7 +3,12 @@
 
 using namespace Sonicteam;
 
-LuaNode::~LuaNode(void)
+LuaNode::~LuaNode()
+{
+
+}
+
+LuaNode::LuaNode()
 {
 
 }

@@ -15,7 +15,7 @@ void Sonicteam::HudMainMenu::OnTaskUpdate(float)
 	
 }
 
-int Sonicteam::HudMainMenu::OnMessageRecieved(Sonicteam::SoX::Message*)
+int Sonicteam::HudMainMenu::OnMessageRecieved(SoXMessageType)
 {
 	return 0;
 }

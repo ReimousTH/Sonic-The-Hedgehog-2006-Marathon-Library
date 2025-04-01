@@ -30,14 +30,18 @@ namespace Sonicteam{
 			unsigned int MgrType; // -index
 			char Flag1; // 8
 			char Flag2; //9
+			char Flag3; //A
+			char Flag4; //B
 			unsigned int unk0xC; //0xC
 
 
-
+	
 			DESTRUCTION_H;
 			//despite IResource (RefCountObj i should use REF_TYPE(), but there is none of code so )
 			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param);
 			virtual std::string GetMgrResourceName(std::string resouce);
+			virtual void IResourceMgr03impl();
+			virtual void IResourceMgr04impl();
 
 		};
 	}

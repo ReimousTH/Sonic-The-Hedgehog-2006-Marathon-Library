@@ -3,8 +3,16 @@
 
 namespace Sonicteam{
 	namespace SoX{
+
+
 		struct IEntityContainer;
 		class RefCountObject;
+		class ArcHandleMgr;
+		class ArcFile;
+		class ArcHandle;
+		class FileSystemArc;
+		class IFileLoader;
+		class IFileHandle;
 		template <typename T> struct RefCountObjContainer;
 	}
 }
