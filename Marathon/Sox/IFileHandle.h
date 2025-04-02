@@ -6,8 +6,7 @@
 #include <Sox/RefCountObject.h>
 #include <boost/function.hpp>	
 
-
-#define IFileHandle_BFUNCTION_TYPE boost::function<void*(void)>
+ 
 
 namespace Sonicteam{
 	namespace SoX{
@@ -15,7 +14,7 @@ namespace Sonicteam{
 
 		
 		//this is the best that i can think
-		class IFileHandle:Sonicteam::SoX::RefCountObject
+		class IFileHandle:public Sonicteam::SoX::RefCountObject
 		{
 
 		public:	

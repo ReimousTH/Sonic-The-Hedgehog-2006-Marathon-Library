@@ -11,5 +11,7 @@ ArcHandle::ArcHandle()
 
 ArcHandle::~ArcHandle()
 {
-
+	if (this->FileHandle != INVALID_HANDLE_VALUE) CloseHandle(this->FileHandle);
+	delete this->HandleBuffer;
+	this->LinkHandle.SafeDisconnect();
 }

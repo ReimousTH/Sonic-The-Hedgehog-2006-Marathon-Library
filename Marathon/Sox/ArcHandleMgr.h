@@ -26,17 +26,24 @@ namespace Sonicteam{
 			void* ResourceOffset; //8
 			size_t ResourceCompressedSize; //0xC;
 			size_t ResourceDecompressedSize; //0x10;
-			char IsDirectory;// i guess 0x14
+			char IsCompressed;// i guess 0x14
+			char IsDownloadContent; //0x15
 			Sonicteam::SoX::ArcHandle* Handle; //0x18
 		};
 	
-		class ArcHandleMgr:Sonicteam::SoX::IResourceMgr,SSINGLETON(ArcHandleMgr){
+		class ArcHandleMgr:Sonicteam::SoX::IResourceMgr,public SSINGLETON(ArcHandleMgr){
 		public:
 			ArcHandleMgr();
 			~ArcHandleMgr();
 			DESTRUCTION_H;
 			LinkSoxNode<Sonicteam::SoX::ArcHandle> LinkArcHandle; //0x10,0x14,0x18
 			std::string RootPath; //game:\ (0x1C)
+
+
+			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param);
+			virtual std::string GetMgrResourceName(std::string resouce);
+			virtual void IResourceMgr03impl();
+			virtual void IResourceMgr04impl();
 
 		};
 	};

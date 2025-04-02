@@ -7,7 +7,6 @@
 #include <boost/function.hpp>	
 
 
-#define IFileLoader_BFUNCTION_TYPE boost::function<void*(void)>
 
 namespace Sonicteam{
 	namespace SoX{
@@ -22,7 +21,7 @@ namespace Sonicteam{
 			IFileLoader();
 			~IFileLoader();
 			DESTRUCTION_H;
-			virtual REF_TYPE(Sonicteam::SoX::IFileHandle) LoadFile(std::string& filepath,IFileLoader_BFUNCTION_TYPE& function);
+			virtual REF_TYPE(Sonicteam::SoX::IFileHandle) LoadFile(std::string& filepath,IFileLoader_BFUNCTION_TYPE& function) = 0;
 		
 	
 		};

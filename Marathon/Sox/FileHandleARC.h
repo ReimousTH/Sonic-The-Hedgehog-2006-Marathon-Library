@@ -6,6 +6,8 @@
 #include <Sox/Misc/Aligment.hpp>
 #include <Sox/ArcHandleMgr.h>
 
+#include <iostream>
+#include <string>
 
 namespace Sonicteam{
 	namespace SoX{
@@ -13,7 +15,7 @@ namespace Sonicteam{
 	
 
 		//this is the best that i can think
-		alignas_4 class FileHandleARC:Sonicteam::SoX::IFileHandle
+		alignas_4 class FileHandleARC:public Sonicteam::SoX::IFileHandle
 		{
 
 		public:	
@@ -24,6 +26,16 @@ namespace Sonicteam{
 			virtual bool LoadHandle();
 			virtual unsigned __int64 GetHandleSize();
 			virtual void* GetHandleBuffer();
+			void LoadFileFromArc(Sonicteam::SoX::ArcHandleSearchResource& res);
+			bool SearchChunk(Sonicteam::SoX::ArcHandleMgr* mgr,std::string& search_path,Sonicteam::SoX::ArcHandleSearchResource& search_chunk);
+			size_t FileHandleARC::SearchChunkEntry(
+				Sonicteam::SoX::ArcHandle* handle,
+				Sonicteam::SoX::ArcFileChunk* Chunk,
+				size_t ChunkCount,
+				size_t index,
+				std::string& search_path,
+				std::string current_path,
+				size_t& find_index);
 			std::string filepath; //8 (game:\xenon\registry.lub)
 			char IsLoaded; //0x24
 			char IsProcess; //0x25

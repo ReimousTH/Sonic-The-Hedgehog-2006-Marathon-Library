@@ -41,7 +41,7 @@ namespace Sonicteam{
 			//saddress:82D3B264,CreatorFunction: 82581F00
 			static T& getInstance(void** saddress,void* CreatorFunction) {
 				if (*saddress == 0){
-					*saddress = ((T* (__fastcall *)(void))CreatorFunction)(void);
+					*saddress = ((T* (*)())CreatorFunction)();
 				}
 
 				if (!m_instance) m_instance = (T*)*saddress;

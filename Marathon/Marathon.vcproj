@@ -234,7 +234,7 @@
 				Name="VCCLX360CompilerTool"
 				Optimization="3"
 				FavorSizeOrSpeed="2"
-				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost;..\Havok\Source;..\"
+				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost;..\Havok\Source;..\;..\zlib"
 				PreprocessorDefinitions="_RELEASE;_XBOX;XBOX;_XENON;_WIN32;BOOST_DISABLE_THREADS"
 				StringPooling="true"
 				ExceptionHandling="1"

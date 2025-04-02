@@ -1,18 +1,23 @@
 #ifndef SONICTEAM__SOX__RESOURCEMANAGER
 #define SONICTEAM__SOX__RESOURCEMANAGER
 
+#include <map>
+#include <list>
+
 #include <Sox/RefCountObject.h>
 #include <Sox/Memory/Destruction.h>
 
 #include <Sox/IResource.h>
 #include <Sox/IResourceMgr.h>
 
-#include <map>
+
 #include <Sox/Misc/MapExtension.h>
 
-#include <list>
 
+#include <System/CreateStatic.h>
+#include <System/Singleton.h>
 
+#include <Sox/IResourceMgr.h>
 
 namespace Sonicteam{
 	namespace SoX{
@@ -27,9 +32,8 @@ namespace Sonicteam{
 		};
 	
 		
-		class ResourceManager{
+		class ResourceManager:public SSINGLETON(ResourceManager){
         public:
-
 
 
 

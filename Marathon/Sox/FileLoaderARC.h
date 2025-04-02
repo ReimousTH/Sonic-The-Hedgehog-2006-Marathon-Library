@@ -3,6 +3,9 @@
 
 #include <Sox/Defs.h>
 #include <Sox/IFileLoader.h>
+#include <Sox/FileHandleARC.h>
+#include <System/Singleton.h>
+#include <System/CreateStatic.h>
 
 namespace Sonicteam{
 	namespace SoX{
@@ -10,7 +13,7 @@ namespace Sonicteam{
 
 		
 		//this is the best that i can think
-		class FileLoaderARC:Sonicteam::SoX::IFileLoader
+		class FileLoaderARC:Sonicteam::SoX::IFileLoader,public SSINGLETON(FileLoaderARC)
 		{
 
 		public:	
@@ -18,6 +21,7 @@ namespace Sonicteam{
 			~FileLoaderARC();
 			DESTRUCTION_H;
 			virtual REF_TYPE(Sonicteam::SoX::IFileHandle) LoadFile(std::string& filepath,IFileLoader_BFUNCTION_TYPE& function);
+			
 
 		};
 

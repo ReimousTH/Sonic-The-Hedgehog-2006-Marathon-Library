@@ -3,7 +3,7 @@
 
 
 
-
+#include <Sox/Defs.h>
 #include <Sox/Memory/Destruction.h>
 #include <Sox/IResource.h>
 
@@ -38,7 +38,7 @@ namespace Sonicteam{
 	
 			DESTRUCTION_H;
 			//despite IResource (RefCountObj i should use REF_TYPE(), but there is none of code so )
-			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param);
+			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param) = 0;
 			virtual std::string GetMgrResourceName(std::string resouce);
 			virtual void IResourceMgr03impl();
 			virtual void IResourceMgr04impl();

@@ -10,7 +10,11 @@ IResource::IResource(void)
 
 IResource::~IResource(void)
 {
-
+	//remove-resource
+	if ((this->IResouceUnk60 & 0x01000000) != 0){
+		Sonicteam::SoX::ResourceManager* mgr =  &Sonicteam::SoX::ResourceManager::getInstance();
+		mgr->ResourceRegistryHandle[MgrRegistryIndex].erase(mgr->ResourceRegistryHandle[MgrRegistryIndex].find(this->ResourceStr1));
+	} 
 }
 
 int IResource::ResouceUnk02()

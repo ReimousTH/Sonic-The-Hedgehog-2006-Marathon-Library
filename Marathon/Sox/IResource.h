@@ -1,8 +1,12 @@
-#pragma once
+#ifndef SONICTEAM__SOX__IRESOURCE
+#define SONICTEAM__SOX__IRESOURCE
 
 #include <string>
+#include <Sox/Defs.h>
 #include <Sox/RefCountObject.h>
 #include <Sox/Memory/Destruction.h>
+#include <Sox/ResourceManager.h>
+
 
 namespace Sonicteam{
 	namespace SoX{
@@ -28,8 +32,8 @@ namespace Sonicteam{
 
 
 			//fields
-	
-			unsigned int MgrRegistryIndex; //
+
+			unsigned int MgrRegistryIndex; //8
 
 			std::string ResourceStr1; //0xC
 			std::string ResourceStr2; //0x28
@@ -37,9 +41,12 @@ namespace Sonicteam{
 
 			unsigned int IResouceUnk60; //or int
 
-		
 
-			
+
+
 		};
 	}
 }
+
+#endif
+
