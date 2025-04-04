@@ -11,7 +11,6 @@ struct XMVECTOR4X3{
 };
 
 
-
 // Retrieve the gravity direction from the stored rotation quaternion
 static XMVECTOR GetOriginalGravityDirection(const XMVECTOR& normalizedSurfaceQuaternion) {
 

@@ -19,7 +19,6 @@ namespace Sonicteam{
 	
 			IResource2();
 			~IResource2();
-
 			Manager* GetManager();
 
 		};

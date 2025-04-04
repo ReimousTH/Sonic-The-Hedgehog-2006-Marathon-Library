@@ -5,7 +5,7 @@ namespace Sonicteam{
 	namespace SoX{
 
 		#define IFileHandle_BFUNCTION_TYPE boost::function<void*(void*,unsigned __int64)>
-		#define IFileLoader_BFUNCTION_TYPE boost::function<void*(void*,unsigned __int64)>
+		#define IFileLoader_BFUNCTION_TYPE IFileHandle_BFUNCTION_TYPE
 
 		struct IEntityContainer;
 		class RefCountObject;

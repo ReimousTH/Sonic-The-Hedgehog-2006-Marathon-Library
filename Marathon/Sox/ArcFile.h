@@ -75,7 +75,7 @@ namespace Sonicteam{
 			ArcFileChunk* ChunkArray; //8 (array)
 			size_t ChunkArraySize; //C (not count)
 			void* ChunkStringOffset; //0x10
-			unsigned int unk0x14; //14
+			unsigned int RootIndex; //14
 
 			
 		};

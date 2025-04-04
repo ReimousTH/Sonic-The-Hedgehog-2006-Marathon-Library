@@ -14,7 +14,7 @@ namespace Sonicteam{
 
 		
 
-		class FileSystemXenon:Sonicteam::SoX::FileSystem,public SSINGLETON(FileSystemXenon)
+		class FileSystemXenon:public Sonicteam::SoX::FileSystem,public SSINGLETON(FileSystemXenon)
 		{
 		public:
 			FileSystemXenon();

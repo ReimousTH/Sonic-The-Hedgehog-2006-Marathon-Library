@@ -15,7 +15,7 @@ namespace Sonicteam{
 
 		
 
-		class FileSystemArc:Sonicteam::SoX::FileSystem,public SSINGLETON(FileSystemArc)
+		class FileSystemArc:public Sonicteam::SoX::FileSystem,public SSINGLETON(FileSystemArc)
 		{
 		public:
 			FileSystemArc();

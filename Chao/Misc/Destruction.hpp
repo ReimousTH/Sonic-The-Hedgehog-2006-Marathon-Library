@@ -14,6 +14,4 @@
 
 #define CDESTRUCTION_HPP(className) CDESTRUCTION_HPP_EX(className,::operator delete)
 
-
-
 #endif

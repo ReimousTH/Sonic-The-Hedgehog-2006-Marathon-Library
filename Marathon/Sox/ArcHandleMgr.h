@@ -29,6 +29,8 @@ namespace Sonicteam{
 			char IsCompressed;// i guess 0x14
 			char IsDownloadContent; //0x15
 			Sonicteam::SoX::ArcHandle* Handle; //0x18
+			void ArcHandleSearchResource::GetFromChunkFHandle(Sonicteam::SoX::ArcFileChunkF& chunkf,Sonicteam::SoX::ArcHandle* ahandle);
+
 		};
 	
 		class ArcHandleMgr:Sonicteam::SoX::IResourceMgr,public SSINGLETON(ArcHandleMgr){

@@ -31,15 +31,10 @@
 
 
 
-
-
 namespace Chao{
 	namespace CSD{
 
 		
-
-
-
 		class CMemoryAlloc{
 
 		public:
@@ -63,12 +58,8 @@ namespace Chao{
 			virtual void* FAllocMemoryB(size_t size);
 			virtual void FFreeMemoryB(void* pointer);
 
-
 		//Instance
 			static CMemoryAlloc* m_instance;
-
-
-
 
 		};
 

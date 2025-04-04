@@ -27,15 +27,15 @@ namespace Sonicteam{
 			virtual unsigned __int64 GetHandleSize();
 			virtual void* GetHandleBuffer();
 			void LoadFileFromArc(Sonicteam::SoX::ArcHandleSearchResource& res);
-			bool SearchChunk(Sonicteam::SoX::ArcHandleMgr* mgr,std::string& search_path,Sonicteam::SoX::ArcHandleSearchResource& search_chunk);
-			size_t FileHandleARC::SearchChunkEntry(
-				Sonicteam::SoX::ArcHandle* handle,
-				Sonicteam::SoX::ArcFileChunk* Chunk,
-				size_t ChunkCount,
-				size_t index,
-				std::string& search_path,
-				std::string current_path,
-				size_t& find_index);
+			
+
+
+	
+			static bool SearchChunk(Sonicteam::SoX::ArcHandleMgr* mgr,std::string& search_path,Sonicteam::SoX::ArcHandleSearchResource& search_chunk);
+			static std::string GetARCChunkPath(ArcHandleMgr* mgr,std::string& path);
+			static unsigned int SearchChunkEntryE1(Sonicteam::SoX::ArcFile* ArcFile, const char* path);
+			static void DecompressZChunk(void* out_buffer,size_t out_size,void* c_buffer,size_t c_size);
+
 			std::string filepath; //8 (game:\xenon\registry.lub)
 			char IsLoaded; //0x24
 			char IsProcess; //0x25
