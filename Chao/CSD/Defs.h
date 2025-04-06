@@ -16,11 +16,11 @@ namespace Chao{
 		class CSceneObserver;
 		class CTexList;
 		struct Project;
-		template <typename CType> class RCObject;;
+		template <typename CType> class RCObject;
 		struct Scene;
 		template <typename Observer,typename Node> class SubjectBase;	
-	}
-}
+	};
+};
 
 #endif
  

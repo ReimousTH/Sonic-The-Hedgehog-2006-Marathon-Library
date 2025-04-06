@@ -1338,15 +1338,15 @@
 				Name="Engine"
 				>
 				<File
+					RelativePath=".\Sox\Engine\Defs.h"
+					>
+				</File>
+				<File
 					RelativePath=".\Sox\Engine\Doc.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\Sox\Engine\Doc.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Sox\Engine\Engine.h"
 					>
 				</File>
 				<File

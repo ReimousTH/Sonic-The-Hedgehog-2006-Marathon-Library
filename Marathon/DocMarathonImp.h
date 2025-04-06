@@ -91,7 +91,7 @@ namespace Sonicteam{
 			virtual unsigned int DocCopy0x360(unsigned int); // copy element ptr
 			virtual unsigned int DocGetGameRuleContext(); //need complete struct ,index
 			virtual unsigned int DocSetGameRuleContext(unsigned int); //need complete struct ,index
-			virtual unsigned int DocGetNamedTasks(unsigned int); //need complete struct ,index
+			virtual Sonicteam::SoX::Engine::Task* DocGetTask(size_t);
 			virtual unsigned int DoGetcuint0xFC(); //need complete struct ,index
 			virtual unsigned int DoGetcuint0xF8(); //need complete struct ,index
 			virtual unsigned int DocChangeSpeedState(unsigned char); //need complete struct ,index
@@ -197,15 +197,29 @@ namespace Sonicteam{
 
 			unsigned int Docuint0x390;
 			unsigned int Docuint0x394;
-			unsigned int Docuint0x398;
-			unsigned int Docuint0x39c;
-			unsigned int Docuint0x3A0;
-			unsigned int Docuint0x3A4;
-			unsigned int Docuint0x3A8;
-			unsigned int Docuint0x3AC;
-			unsigned int Docuint0x3B0;
-			unsigned int Docuint0x3B4;
-			unsigned int DocUnkFlag02;
+
+
+
+			struct DocTaskType{
+				enum DocTaskTypeENUM{
+					RootTask,
+					TL_Debug,
+					TL_PrepareMain,
+					TL_Main,
+					TL_Particle,
+					TL_NonStopTask,
+					TL_HeadUpDisplay,
+					TL_PrepareRender
+				};
+				Sonicteam::SoX::Engine::Task*& operator[](int index){
+					return (value)[index];
+				}
+				Sonicteam::SoX::Engine::Task* value[8];
+			} DocTask; //0x398
+
+	
+
+			unsigned int DocUnkFlag02; //0x3B8
 			unsigned int Docuint0x3BC;
 
 

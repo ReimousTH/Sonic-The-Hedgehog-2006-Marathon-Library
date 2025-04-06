@@ -226,6 +226,7 @@
 			/>
 			<Tool
 				Name="VCCLX360CompilerTool"
+				Optimization="4"
 				AdditionalIncludeDirectories="..\;..\Chao"
 				PreprocessorDefinitions="_RELEASE;_XBOX;XBOX;_XENON;_WIN32"
 				RuntimeLibrary="2"
@@ -412,26 +413,30 @@
 					>
 				</File>
 			</Filter>
-		</Filter>
-		<Filter
-			Name="Misc"
-			>
-			<File
-				RelativePath=".\Misc\API_DEFS.h"
+			<Filter
+				Name="Misc"
 				>
-			</File>
-			<File
-				RelativePath=".\Misc\Destruction.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Misc\MapExtension.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Misc\utill.hpp"
-				>
-			</File>
+				<File
+					RelativePath=".\Misc\Allocation.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Misc\API_DEFS.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Misc\Destruction.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Misc\MapExtension.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Misc\utill.hpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<File
 			RelativePath=".\chao.cpp"

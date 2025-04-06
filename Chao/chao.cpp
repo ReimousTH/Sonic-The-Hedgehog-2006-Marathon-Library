@@ -1,5 +1,5 @@
 #include <chao.h>
-#define VOID_FILE
+//#define VOID_FILE
 
 #ifndef VOID_FILE
 
@@ -10,6 +10,11 @@ void main(){
 	CMFree(ptr);
 
 	Chao::CSD::CPlatform* platform;
+
+
+//	Chao::CSD::CScene* sc = new CM
+
+	
 
 
 	platform->DestroyObject(1);

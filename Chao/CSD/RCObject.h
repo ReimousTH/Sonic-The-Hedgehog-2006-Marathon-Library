@@ -12,16 +12,47 @@
 #define CCRCObjectDeallocUSE_STD 1
 #define CCRCObjectDeallocUSE_FUNC 3
 
+
+#define RCOBJREF(Type) RCObjectContainer<Type>
+
 namespace Chao{
 	namespace CSD{
 
 
 
-		//Replicate same as RefCountObjectContainer :)
+		template <typename CType>
+		class RCObjectContainer{
+			typedef Chao::CSD::RCObject<CType> RC;
+			typedef RCObjectContainer<CType> selfT;
+			RC* value;
+
+		public:
+			RCObjectContainer(RC* other){
+				value = other;
+				other->RCRef();
+			}
+			RC* get(){
+				return value;
+			}
+
+			RCObjectContainer(){
+			};
+			~RCObjectContainer(){
+				if (value) value->RCFree();
+			};
+		};
+
+
+
+
+
+
+
+		
 		template <typename CType>
 		class RCObject:Chao::CSD::CBase
 		{
-			public:
+		public:
 
 			CMADestuctionHPP(RCObject);
 
@@ -30,35 +61,46 @@ namespace Chao{
 
 
 			RCObject(CType* other) : CObject(other) {};
-			~RCObject() {
+			~RCObject() {};
+
+
+			void RCRef() { ++RefCount; };
+
+
+
+
+			void RCFree(){
+
 				RefCount--;
 				if (!RefCount){
 
 					//Probably static Method<T> +- 
 					if (CObject){
 						switch (DeallocatorFlag){
-							case 0:
-								CMFree(CObject);
-								break;
-							case 1:
-								::operator delete(CObject);
-								break;
-							case 2:
-								break;
-							case 3:
-								Deallocator(CObject);	
-								break;
-							default:
-								//More here supposed to be
-								CPDebugMessageA("Not inititalized m_eDealloctor");
-								break;
+						case 0:
+							CMFree(CObject);
 							break;
-						
+						case 1:
+							::operator delete(CObject);
+							break;
+						case 2:
+							break;
+						case 3:
+							Deallocator(CObject);	
+							break;
+						default:
+							//More here supposed to be
+							CPDebugMessageA("Not inititalized m_eDealloctor");
+							break;
+							break;
+
 						}
 					}
 					Deallocator = 0;
+					DestroyObject(1); //will be here 
+
 				}
-			};
+			}
 
 
 
@@ -84,22 +126,20 @@ namespace Chao{
 				return *CObject;
 			};
 
-
-
-
 		protected:
 			CType* CObject; // + 4   
 			size_t RefCount; // + ( 8
 			void(*Deallocator)(void* ptr); //c
 			size_t DeallocatorFlag; // 0x10
-
-
-
 		};
-
-
-
 	};
 };
+
+
+
+
+
+
+
 
 #endif

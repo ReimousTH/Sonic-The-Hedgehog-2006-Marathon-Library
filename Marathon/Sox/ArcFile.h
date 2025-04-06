@@ -28,6 +28,21 @@ namespace Sonicteam{
 
 
 
+
+		struct size_t_24 {
+			unsigned char bytes[3]; 
+			size_t to_size_t() const {
+				return (bytes[0] << 16) | (bytes[1] << 8) | bytes[2];
+			}
+			void from_size_t(size_t value) {
+				bytes[0] = static_cast<char>((value >> 16) & 0xFF); 
+				bytes[1] = static_cast<char>((value >> 8)  & 0xFF);
+				bytes[2] = static_cast<char>(value & 0xFF);         
+			}
+			operator size_t() const { return to_size_t(); }
+			size_t_24& operator=(size_t value) { from_size_t(value); return *this; }
+		};
+
 	
 		 union _ChunkInfo {
 			enum _ChunkInfo_Type:byte{
@@ -35,9 +50,8 @@ namespace Sonicteam{
 				Directory
 			};
 			struct {
-				_ChunkInfo_Type Type : 8;
-				char _padding_ : 8;
-				short NameOffset : 16;
+				_ChunkInfo_Type Type;
+				size_t_24 NameOffset;
 			};
 		};
 

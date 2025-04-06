@@ -16,6 +16,7 @@ namespace Chao{
 
 
 
+		//YEP
 		//No INFO so empty
 		template <typename Observer,typename Node>
 		class SubjectBase	
@@ -28,6 +29,9 @@ namespace Chao{
 
 			//NO IDEA ABOUT STRUCTURE MAYBE CUSTOM OR VERY WEIRD AT LEAST O_O , std::list maybe close no idea
 			std::list<Observer*> ÑSubjectObservers; //4,8,C  
+		//	char Flag1; //0xA;
+		//	char Flag2; //0xB;
+		//	char Flag3; //0xC;
 
 
 		

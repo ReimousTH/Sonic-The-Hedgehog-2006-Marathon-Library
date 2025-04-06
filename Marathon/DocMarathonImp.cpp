@@ -223,9 +223,9 @@ unsigned int Sonicteam::DocMarathonImp::DocSetGameRuleContext(unsigned int)
 return 0;
 }
 
-unsigned int Sonicteam::DocMarathonImp::DocGetNamedTasks(unsigned int)
+Sonicteam::SoX::Engine::Task* Sonicteam::DocMarathonImp::DocGetTask(size_t index)
 {
-return 0;
+	return this->DocTask[index]; 
 }
 
 unsigned int Sonicteam::DocMarathonImp::DoGetcuint0xFC()

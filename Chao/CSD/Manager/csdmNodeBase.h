@@ -23,7 +23,7 @@ namespace Chao{
 
 				CDESTRUCTION_HPP(csdmNodeBase); // operator delete here
 				virtual void SetRCObject(Chao::CSD::RCObject<unsigned char>* other,void* RawData) = 0; 
-				Chao::CSD::RCObject<unsigned char>* RCObject;
+				RCOBJREF(unsigned char) RCObject;
 				void* RCObjectRaw; 
 				unsigned int unk0xC;
 

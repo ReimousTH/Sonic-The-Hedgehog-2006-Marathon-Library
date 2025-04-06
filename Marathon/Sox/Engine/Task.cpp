@@ -9,10 +9,10 @@ static void ClearTaskFunc(Task* task){
 
 Task::Task(Sonicteam::SoX::Engine::Doc* doc):Component(0)
 {
-	this->Parent = 0;
-	this->Child = this;
-	this->DependencyIn = 0;
-	this->DependencyOut = 0;
+
+	//Later
+
+
 	this->TaskEngineDoc = doc;
 	this->TaskList.InitLink();
 }
@@ -20,19 +20,17 @@ Task::Task(Sonicteam::SoX::Engine::Doc* doc):Component(0)
 
 Sonicteam::SoX::Engine::Task::Task(Sonicteam::SoX::Engine::Task* task) :Component(task)
 {
-	this->Flag = 0;
-	this->custom = 0;
-		
-	this->DependencyIn = task; 
-	this->DependencyOut = 0;
+
 	this->TaskList.InitLink();
-
-	this->InitDependencyIn();
-	if (this->DependencyIn) this->TaskEngineDoc = task->TaskEngineDoc;
-
-
+	this->add_dependency(task);
+	this->TaskEngineDoc = task->TaskEngineDoc;
 }
 
+
+Task::Task():Component(0)
+{
+
+}
 
 Task::~Task(void)
 {

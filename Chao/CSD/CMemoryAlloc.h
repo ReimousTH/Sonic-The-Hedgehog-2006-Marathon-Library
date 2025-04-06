@@ -1,9 +1,10 @@
 #ifndef CHAOS__CSD__CMEMORYALLOC
 #define CHAOS__CSD__CMEMORYALLOC
 
-
-#include <Chao/Misc/Destruction.hpp> //Base Destruction
 #include <Chao/CSD/Defs.h>
+#include <Chao/Misc/Destruction.hpp> //Base Destruction
+#include <Chao/Misc/Allocation.hpp>
+
 
 
 
@@ -30,6 +31,11 @@
 #define CMADestuctionHPP(cname) CDESTRUCTION_HPP_EX(cname,CMDeAllocator)
 
 
+#define CMAAllocationNEWHPP CALLOCATION_HPP_NEW(CMAllocator)
+#define CMAAllocationDELETEHPP CALLOCATION_HPP_DELETE(CMDeAllocator)
+
+
+
 
 namespace Chao{
 	namespace CSD{
@@ -51,7 +57,7 @@ namespace Chao{
 
 		public:
 			//more like template to call Alloc,Free
-			virtual void* FAllocMemoryA(size_t size,const char* cpp_name,int padding); // "C++ file,padding?, not need because new[] 100% ir"
+			virtual void* FAllocMemoryA(size_t size,const char* cpp_name,int padding);
 			virtual void FFreeMemoryA(void* pointer);
 
 			//more like template to call Alloc,Free, yea once more

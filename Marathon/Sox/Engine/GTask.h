@@ -1,5 +1,7 @@
-#pragma once
+#ifndef SONICTEAM__SOX__ENGINE__GTASK
+#define SONICTEAM__SOX__ENGINE__GTASK
 
+#include <Sox/Engine/Defs.h>
 #include "../MessageReceiver.h"
 #include "../Component.h"
 
@@ -24,3 +26,4 @@ namespace Sonicteam{
 	};
 }
 }
+#endif

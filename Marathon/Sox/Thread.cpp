@@ -55,15 +55,8 @@ void Sonicteam::SoX::Thread::ThreadPerfomance()
 	WaitForSingleObject(this->EndEvent,-1);
 	unsigned __int64 T2 =  Sonicteam::SoX::PerformanceFrequency::getInstance().GetTimeBase();
 	unsigned __int64 T3 = T2-T1;
-
-
-
 	unsigned __int64 Delta =   T3/Sonicteam::SoX::PerformanceFrequency::getInstance().GetPerformanceFrequency().LowPart;
 	this->ThreadFrame = Delta;
-
-
-
-
 
 }
 

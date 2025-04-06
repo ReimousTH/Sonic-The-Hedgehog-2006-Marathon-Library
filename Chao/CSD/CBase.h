@@ -8,6 +8,7 @@
 
 
 
+
 namespace Chao{
 	namespace CSD{
 
@@ -18,6 +19,12 @@ namespace Chao{
 		public:
 			CBase(void);
 			~CBase(void);
+
+
+			CMAAllocationNEWHPP;
+			CMAAllocationDELETEHPP;
+
+
 
 		};
 	};
