@@ -31,8 +31,8 @@ namespace Chao{
 			virtual void CResourceBase0x4(void*);
 
 			unsigned int FCProject0xC;
-			std::map<const char*,Chao::CSD::RCObject<Chao::CSD::CScene>*,STD_MAP_CONST_CHAR_PTR_COMPARATOR> CProjectScene; //later 0x10
-			std::map<float,Chao::CSD::RCObject<Chao::CSD::CScene>*> CProjectSceneFloat; //later //0x1C
+			std::map<const char*,RCOBJREF(Chao::CSD::CScene),STD_MAP_CONST_CHAR_PTR_COMPARATOR> CProjectScene; //later 0x10
+			std::map<float,RCOBJREF(Chao::CSD::CScene)> CProjectSceneFloat; //later //0x1C
 
 			RCOBJREF(Chao::CSD::CTexList) CTexList; //0x28
 			Chao::CSD::Manager::csdmProject* CMProject; //0x2C

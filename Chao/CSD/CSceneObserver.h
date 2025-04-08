@@ -31,7 +31,6 @@ namespace Chao{
 			virtual void CSceneObserverimp6(); //?
 
 
-			CSCENE_OBSERVER_LIST_RC_TYPE(size_t,unsigned char) CSOx4; //4-8-C
 
 
 

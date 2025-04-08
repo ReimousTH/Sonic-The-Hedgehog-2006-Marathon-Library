@@ -32,8 +32,15 @@ namespace Chao{
 
 
 
+
+		struct CSceneMotionProject{
+			Chao::CSD::Manager::csdmProject First;
+//			Chao::CSD::Manager::csdmNodeBase Second;
+		};
+
+
 	
-		class CScene:Chao::CSD::CResourceBase<Chao::CSD::Scene>,Chao::CSD::SubjectBase<Chao::CSD::CSceneObserver,Chao::CSD::CScene>,Chao::CSD::CBase
+		class CScene:public Chao::CSD::CResourceBase<Chao::CSD::Scene>,public Chao::CSD::SubjectBase<Chao::CSD::CSceneObserver,Chao::CSD::CScene>,public Chao::CSD::CBase
 		{
 		public:
 			CScene(void);
@@ -55,29 +62,30 @@ namespace Chao{
 			Chao::CSD::Manager::csdmProject* CMProject2; //0x6C
 			Chao::CSD::Manager::csdmProject* CMProject3; //0x70
 
-			float CFramePre; //0x74
-			float CFramePost; //0x78 (changes)
-			float CFrameRate; // 1.0 = default 0x7C
+			float CKeyFramePre; //0x74
+			float CKeyFramePost; //0x78 
+			float CKeyFrameRate; // 1.0 = default 0x7C
 
 			size_t CFrameStart; //0x80
 			size_t CFrameEnd; //0x84
 
 			RCOBJREF(unsigned char) RC0x88;
 			RCOBJREF(unsigned char) RC0x8C;
-			size_t unk0x90;
+			size_t IsMotionEnd;
 			Chao::CSD::CSceneObserver CSCObserver; //CSceneMotionRepeat (later) 0x94
 
 			size_t CCSFlag1; //a4
-			size_t CCSFlag2; //a8
+			size_t MotionRepeatMode; //a8 (0-no repeat, 1 - repeat, 2 - reverse animation, 3 - remove after)
 			size_t CCSFlag3; //aC
-			size_t CCSFlag4; //B0 (
+			size_t MotionIndex; //B0 (
 			float CCSFlag6; //Out-Time??? 0xB4
 			std::map<size_t,RCOBJREF(unsigned char)> RCMap07; //0xB8-0xBC-0xC0
 			const char* CSName; //SceneName 0xC4
 			size_t CSS0xC8;
 
 			Chao::CSD::CProject* CSCProject; //0xCC
-			Chao::CSD::Manager::csdmProject* CSCSDMProject; //0xD0 (release method)
+			CSceneMotionProject* CSPMotion; //0xD0
+
 
 
 		};

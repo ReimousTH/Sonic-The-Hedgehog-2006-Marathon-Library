@@ -2,8 +2,6 @@
 #include <zlib.h>
 #include <cstring>
 
-#include <../2006DLL_REWORK/Core/Debug.h>
-#include <../2006DLL_REWORK/Hook/HookBase.h>
 
 using namespace Sonicteam::SoX;
 
@@ -39,6 +37,7 @@ FileHandleARC::~FileHandleARC()
 
 ///CHUNKS[END]
 
+//Not Finished
 void FileHandleARC::LoadFileFromArc(Sonicteam::SoX::ArcHandleSearchResource& res)
 {
 

@@ -417,11 +417,19 @@
 				Name="Misc"
 				>
 				<File
+					RelativePath=".\Misc\Aligment.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\Misc\Allocation.hpp"
 					>
 				</File>
 				<File
 					RelativePath=".\Misc\API_DEFS.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Misc\cstring.hpp"
 					>
 				</File>
 				<File

@@ -13,7 +13,7 @@
 #define CCRCObjectDeallocUSE_FUNC 3
 
 
-#define RCOBJREF(Type) RCObjectContainer<Type>
+#define RCOBJREF(Type) Chao::CSD::RCObjectContainer<Type>
 
 namespace Chao{
 	namespace CSD{
@@ -35,7 +35,9 @@ namespace Chao{
 				return value;
 			}
 
+
 			RCObjectContainer(){
+				value = 0;
 			};
 			~RCObjectContainer(){
 				if (value) value->RCFree();
