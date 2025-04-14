@@ -4,6 +4,7 @@
 
 #include <Chao/CSD/CBase.h>
 #include <Chao/CSD/CMemoryAlloc.h>
+#include <Chao/CSD/CNode.h>
 #include <Chao/CSD/Node.h>
 #include <Chao/CSD/CObserverBase.h>
 #include <Chao/CSD/CPlatform.h>

@@ -13,33 +13,36 @@
 #define CCRCObjectDeallocUSE_FUNC 3
 
 
-#define RCOBJREF(Type) Chao::CSD::RCObjectContainer<Type>
+#define RCOBJREF(Type) Chao::CSD::RCObjectContainerEX<Type,Chao::CSD::RCObject<Type>* __ptr32>
+
+#define RCOBJREF32(Type) Chao::CSD::RCObjectContainerEX<Type,Chao::CSD::RCObject<Type>* __ptr32>
+#define RCOBJREF64(Type) Chao::CSD::RCObjectContainerEX<Type,Chao::CSD::RCObject<Type>* __ptr64>
 
 namespace Chao{
 	namespace CSD{
 
 
 
-		template <typename CType>
-		class RCObjectContainer{
-			typedef Chao::CSD::RCObject<CType> RC;
-			typedef RCObjectContainer<CType> selfT;
-			RC* value;
+		//RC-should be PTR
+		template <typename CType,typename RC>
+		class RCObjectContainerEX{
+			typedef RCObjectContainerEX<CType,RC> selfT;
+			RC value;
 
 		public:
-			RCObjectContainer(RC* other){
+			RCObjectContainerEX(RC* other){
 				value = other;
 				other->RCRef();
 			}
-			RC* get(){
+			RC get(){
 				return value;
 			}
 
 
-			RCObjectContainer(){
+			RCObjectContainerEX(){
 				value = 0;
 			};
-			~RCObjectContainer(){
+			~RCObjectContainerEX(){
 				if (value) value->RCFree();
 			};
 		};
@@ -65,6 +68,11 @@ namespace Chao{
 			RCObject(CType* other) : CObject(other) {};
 			~RCObject() {};
 
+
+
+
+
+			size_t GetRefCount(){return RefCount;};
 
 			void RCRef() { ++RefCount; };
 
@@ -109,11 +117,7 @@ namespace Chao{
 			// copy lock
 			RCObject(const RCObject&);
 			RCObject& operator=(const RCObject&);
-			RCObject(RCObject** other) {
-				*other = this;
-				this->RefCount++;
-			};
-
+	
 
 
 

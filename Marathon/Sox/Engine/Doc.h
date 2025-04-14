@@ -7,7 +7,7 @@
 #include "../MessageReceiver.h"
 #include "GTask.h"
 #include <xtl.h>
-#include <Sox/ApplicationXenon.h>
+#include <Sox/Engine/Application.h>
 #include <Sox/Engine/Task.h>
 #include <Sox/RefCountObject.h>
 
@@ -65,7 +65,7 @@ namespace Sonicteam{
 				unsigned int DocCurrentMode; //CurrentMode (GameMode,MainMode)
 				RootTask* RTask; //0xC
 				RootGTask* RGTask;
-				Sonicteam::SoX::ApplicationXenon* DocCurrentApplication; //ApplicationMarathon (reference &)
+				Sonicteam::SoX::Engine::Application* DocCurrentApplication; //ApplicationMarathon (reference &)
 				unsigned int Duint0x18;
 				DocModeExecutor* DMExecutor;
 				unsigned int DRenderScheduler; //Sonicteam::SoX::Engine::RenderSchedule (RefCountObj Ok)

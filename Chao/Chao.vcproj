@@ -274,11 +274,35 @@
 				>
 			</File>
 			<File
+				RelativePath=".\CSD\CFontCollection.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CFontCollection.h"
+				>
+			</File>
+			<File
 				RelativePath=".\CSD\CMemoryAlloc.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\CSD\CMemoryAlloc.h"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CNode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CNode.h"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CNodeObserver.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CNodeObserver.h"
 				>
 			</File>
 			<File
@@ -343,6 +367,30 @@
 			</File>
 			<File
 				RelativePath=".\CSD\CTexList.h"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CTransform_1.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CTransform_1.h"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CTransform_2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CTransform_2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CTransform_3.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\CSD\CTransform_3.h"
 				>
 			</File>
 			<File

@@ -235,7 +235,7 @@
 				Optimization="3"
 				FavorSizeOrSpeed="2"
 				AdditionalIncludeDirectories="..\Marathon;..\Lua\src;..\Boost;..\Havok\Source;..\;..\zlib"
-				PreprocessorDefinitions="_RELEASE;_XBOX;XBOX;_XENON;_WIN32;BOOST_DISABLE_THREADS"
+				PreprocessorDefinitions="_RELEASE;_XBOX;XBOX;_XENON;_WIN32;BOOST_DISABLE_THREADS;_HAVOK"
 				StringPooling="true"
 				ExceptionHandling="1"
 				RuntimeLibrary="0"
@@ -1171,6 +1171,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Sox\ErrorMSG.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Sox\FileHandleARC.cpp"
 				>
 			</File>
@@ -1337,6 +1341,14 @@
 			<Filter
 				Name="Engine"
 				>
+				<File
+					RelativePath=".\Sox\Engine\Application.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Engine\Application.h"
+					>
+				</File>
 				<File
 					RelativePath=".\Sox\Engine\Defs.h"
 					>

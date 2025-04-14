@@ -10,27 +10,27 @@
 #include "Sox/Misc/List.h"
 #include <SoX/Memory/IDestructible.h>
 
+#include <System/Singleton.h>
+#include <System/CreateStatic.h>
+
 
 namespace Sonicteam {
 	namespace SoX {
-		class PerformanceFrequency {
-		private:
-		
-			PerformanceFrequency();
-
+		class PerformanceFrequency:public SSINGLETON(PerformanceFrequency){
 		public:
 
+			PerformanceFrequency();
+			~PerformanceFrequency();
 
-			LARGE_INTEGER PerformanceFrequencyOutput;
-
-
-			static PerformanceFrequency& getInstance() {
-				static PerformanceFrequency instance;
-				return instance;
-			}
-
-			 LARGE_INTEGER GetPerformanceFrequency();
-			 unsigned __int64 GetTimeBase();
+			LARGE_INTEGER LastFrequency;
+	
+			static void QueryFrequency();
+			static void QPerfomanceCounter(LARGE_INTEGER* counter);
+			static void QPerfomanceCounterEx(LARGE_INTEGER* counter);
+			static LARGE_INTEGER PerfomanceScale(LARGE_INTEGER* counter);
+			unsigned __int64 GetTimeBase();
+			LARGE_INTEGER GetPerformanceFrequency();
+	
 		};
 	};
 };

@@ -2,137 +2,132 @@
 #define SONICTEAM__SOX__APPLICATIONXENON
 
 
-#include <Sox/Object.h>
+
+#define MARATHON_APP_XENON_MESSAGE_D3D_SETTHREADOWNERSHIP 0
+#define MARATHON_APP_XENON_MESSAGE_D3D_2 1
+#define MARATHON_APP_XENON_MESSAGE_RESIGNIN 2
+#define MARATHON_APP_XENON_MESSAGE_3 3
+#define MARATHON_APP_XENON_MESSAGE_4 4
+#define MARATHON_APP_XENON_MESSAGE_GETSIGNINSTATE 5
+#define MARATHON_APP_XENON_MESSAGE_SIGNIN 6
+#define MARATHON_APP_XENON_MESSAGE_READ_PROFILESETTINGS 7
+#define MARATHON_APP_XENON_MESSAGE_SHOW_DEVICE_SELECTOR_UI 8
+#define MARATHON_APP_XENON_MESSAGE_GET_CONTENT_DEVICE_STATE 9
+#define MARATHON_APP_XENON_MESSAGE_GET_SAVE_CREATOR 0xA
+#define MARATHON_APP_XENON_MESSAGE_B 0xB
+#define MARATHON_APP_XENON_MESSAGE_C 0xC
+#define MARATHON_APP_XENON_MESSAGE_D 0xD
+#define MARATHON_APP_XENON_MESSAGE_RESET 0xE
+
+#include <Sox/Engine/Application.h>
+#include <Sox/Perfomance.h>
 #include <xtl.h>
+#include <xonline.h>
 
 
 
 namespace Sonicteam{
-	class DocMarathonImp;
+
 	namespace SoX{
 		//Sonicteam::SoX::Engine::Application
-		class ApplicationXenon:Sonicteam::SoX::Object,Sonicteam::SoX::IOObject
+		class ApplicationXenon:Sonicteam::SoX::Engine::Application
 		{
 		public:
 			ApplicationXenon(void);
-			virtual ~ApplicationXenon(void);
-			virtual char* GetObjectType();
+			~ApplicationXenon(void);
 
-			virtual void ApplicationXenonM1(void);
-			virtual void ApplicationConsoleMessages(unsigned int,unsigned int,unsigned int); //Get User Signing State and more 825B2400
-			virtual void ApplicationXenonD3DDevice_SetShaderGPRAllocation(void);
-			virtual void ApplicationXenonD3DDevice_SetShaderGPRAllocation_KickOFF(void);
-			virtual unsigned int ApplicationXenonM5(void); // *(unsigned __int8 *)(a1 + 0x126) | *(unsigned __int8 *)(a1 + 0x124) | *(unsigned __int8 *)(a1 + 0x122);
-			virtual unsigned int ApplicationXenonM6(void); //*(unsigned __int8 *)(a1 + 0x123);
-			virtual unsigned int ApplicationXenonGetFixedGameRegion(void); 
-			virtual unsigned int ApplicationXenonGetFixedGameRegion2(void); //*(unsigned __int8 *)(a1 + 0x123);
-			virtual unsigned int ApplicationXenonProcessSaveGameFile(const char* SaveFileName,byte* EndFileSaveBuffer,unsigned int EndFileSaveBufferSize ); //*(unsigned __int8 *)(a1 + 0x123);
-			virtual unsigned int ApplicationXenonProcessLoadGameFile(const char* SaveFileName,byte* LoadFileSaveBuffer,unsigned int EndFileSaveBufferSize ); //*(unsigned __int8 *)(a1 + 0x123);
-			virtual unsigned int ApplicationXenonProcessIsXamContentCreate(const char* SaveFileName);
-			virtual unsigned int ApplicationXenonProcessDLC(unsigned int); //PTR
-			virtual unsigned int ApplicationXenonMD()  = 0; //PTR
-			virtual unsigned int ApplicationXenonME()  = 0; //PTR
+			DESTRUCTION_H;
 
 
 
-			LARGE_INTEGER AXuai0x10;	
-			LARGE_INTEGER PerformanceFrequency; //Queary
-			unsigned int AXuint0x20;
-			unsigned int AXuint0x24;
-			unsigned int AXuint0x28;
-			unsigned int AXuint0x2C;
-			unsigned int AXuint0x30;
-			unsigned int AppD3DDevice;
-			unsigned int AXuint0x38;
-			unsigned int AXuint0x3C;
-			unsigned int AXuint0x40;
-			unsigned int AXuint0x44;
-			unsigned int AXuint0x48;
-			unsigned int AXuint0x4C;
-			unsigned int AXuint0x50;
-			unsigned int AXuint0x54;
-			unsigned int AXuint0x58;
-			unsigned int AXuint0x5C;
-			unsigned int AXuint0x60;
-			unsigned int AXuint0x64;
-			unsigned int AXuint0x68;
-			unsigned int AXuint0x6C;
-			unsigned int AXuint0x70;
-			unsigned int AXuint0x74;
-			unsigned int AXuint0x78;
-			unsigned int AXuint0x7C;
-			unsigned int AXuint0x80;
-			unsigned int AXuint0x84;
-			unsigned int AXuint0x88;
-			unsigned int AXuint0x8C;
-			unsigned int AXuint0x90;
-			unsigned int AXuint0x94;
-			unsigned int AXuint0x98;
-			unsigned int AXuint0x9C;
-			unsigned int AXuint0xA0;
-			unsigned int AXuint0xA4;
-			unsigned int AXuint0xA8;
-			unsigned int AXuint0xAC;
-			unsigned int AXuint0xB0;
-			unsigned int AXuint0xB4;
-			unsigned int AXuint0xB8;
-			unsigned int AXuint0xBC;
-			unsigned int AXuint0xC0;
-			unsigned int AXuint0xC4;
-			unsigned int AXuint0xCC;
-			unsigned int AXuint0xD0;
-			unsigned int AXuint0xD4;
-			unsigned int AXuint0xD8;
-			unsigned int AXuint0xDC;
-			unsigned long long AXuint0xE0;
-			unsigned long long AXuint0xE8;
-			unsigned int AXuint0xF0;
-			unsigned int AXuint0xF4;
-			unsigned int AXuint0xF8;
-			unsigned int AXuint0xFC;
-			unsigned int AXuint0x100;
-			unsigned int AXuint0x104;
-			unsigned int AXuint0x108;
-			unsigned int AXuint0x10C;
-			unsigned int AXuint0x110;
-			unsigned int AXuint0x114;
-			unsigned int AXuint0x118;
-			unsigned int AXuint0x11C;
+			virtual void Run();
+			virtual bool HandleMessage(size_t,size_t,size_t);
+			virtual bool D3DSetShaderGPRAllocation();
+			virtual void D3DRenderFrameAndSwapBuffers();
+			virtual char IsPause();
+			virtual char IsReturnToTitle();
+			virtual size_t GetLocale();
+			virtual size_t GetRegion();
 
-			unsigned int AXuint0x120;
-			unsigned int AXuint0x124;
-			unsigned int AXuint0x128;
-			unsigned int AXuint0x12C;
-			unsigned int AXuint0x130;
-			unsigned int AXuint0x134;
-			unsigned int AXuint0x138;
-			unsigned int AXuint0x13C;
-			unsigned int AXuint0x140;
-			unsigned int AXuint0x144;
-			unsigned int AXuint0x148;
-			unsigned int AXuint0x14C;
-			unsigned int AXuint0x150;
-			unsigned int AXuint0x154;
+			
+			virtual bool WriteSaveFile(const char* SaveFileName,void* SaveFileBuffer,size_t SaveFileSize);
+			virtual bool ReadSaveFile(const char* SaveFileName,void* ReadFileBuffer,size_t ReadFileSize);
+			virtual bool CreateContent(const char* ContentName);
+			virtual void GetDownloadContent(std::vector<std::string>& content);
+			virtual void AppUnk0x38();
+			virtual void OnDocAfter();
+			
 
-			unsigned int AXuint0x158;	
-			unsigned int AXuint0x15C;	
-			unsigned int AXuint0x160;	
-			unsigned int AXuint0x164;	
-			unsigned int AXuint0x168;
-			unsigned int AXuint0x16C;	
-			unsigned int AXuint0x170;	
-			unsigned int AXuint0x174;	
-			unsigned int AXuint0x178;	
-			unsigned int AXuint0x17C;	
-			Sonicteam::DocMarathonImp* DocMarathon;	 //APPLICATGION_MARATHON MOVE LATER (or DocMode, ???) DocMarathonState
-			//mb
+			//Extra
+
+			void ProcessDoc(double delta);
+			void ProcessXAM();
+			void ProcessXAM2();
+			void ProcessXAM3();
+		
+
+			//Xenon-Part
+			size_t unk0xC; //C
+			LARGE_INTEGER FisrtTimeBase; //0x10	
+			LARGE_INTEGER FirstPerformanceFrequency; //0x18	
+			size_t D3DDeviceState; //0x20
+			D3DDevice* D3DDevice; //0x24
+			size_t unk0x28; //0x28
+			size_t unk0x2C; //0x2C
+			size_t unk0x30; //0x30
+	
+
+			//later
+			LARGE_INTEGER PerfScalePre; //0xE0
+			LARGE_INTEGER PefScalePost; //0xE8
+
+			IDirect3DTexture9* DestTexture; //0xF8
+
+
+			DWORD ShaderVertexCount; // 0x114
+			DWORD PixelShaderCount; // 0x118
+			HANDLE HNotification; //0x11C
+
+
+			char Lock1; //0x122
+			char ToTitle; //0x123
+			char Lock2; //0x124
+			char IsUserSign; //0x125
+			char Lock3; //0x126
+
+			XUSER_SIGNIN_STATE LastSignInState; //0x128;
+			DWORD NotifyTargetSignInStateMSG; //0x12C
+
+
+			DWORD NotifyTargetSignInState; //0x148
+			DWORD DefaultUserContextPresence; //0x14C
+			DWORD DefaultUserContextValue[2]; //0x150
+
+			DWORD ConfirmMessageNotify1; //0x158
+			DWORD ConfirmMessageNotify2; //0x160
+			DWORD ConfirmMessageNotify3; //0x168
+			DWORD ConfirmMessageNotify4; //0x170
+
+			MESSAGEBOX_RESULT SignInStatusChangedMSGResult;
+
+			DWORD ConfirmMessageNotify5; //0x17C
+
+
+	
+
+			
+			
 
 
 
+			static DWORD SignInUserIndex; // TargetUserIndex (XamUserGetSigninState)
+			static DWORD XDeviceUI;
 			static ApplicationXenon*& ApplicationXenonMarathon;
+		
 			
 
-			
+	
+
 		};
 	}
 }

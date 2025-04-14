@@ -18,6 +18,12 @@ namespace Chao{
 		struct Project;
 		template <typename CType> class RCObject;
 		struct Scene;
+		class CNode;
+		struct Node;
+		class CNodeObserver;
+		class CFontCollection;
+		
+
 		template <typename Observer,typename Node> class SubjectBase;	
 	};
 };

@@ -47,6 +47,10 @@ namespace Sonicteam{
 				if (!m_instance) m_instance = (T*)*saddress;
 				return *m_instance;
 			}
+			static T& getInstanceQuick()
+			{
+				return *m_instance;
+			}
 		
 
 			static void cleanup() {

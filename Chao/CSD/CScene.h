@@ -12,8 +12,14 @@
 #include <Chao/CSD/CProject.h>
 #include <Chao/CSD/Manager/csdmProject.h>
 
+#include <Chao/CSD/CTransform_1.h>
+#include <Chao/CSD/CTransform_2.h>
+#include <Chao/CSD/CTransform_3.h>
+
 
 #include <map>
+
+
 
 
 
@@ -35,7 +41,7 @@ namespace Chao{
 
 		struct CSceneMotionProject{
 			Chao::CSD::Manager::csdmProject First;
-//			Chao::CSD::Manager::csdmNodeBase Second;
+//			Chao::CSD::Manager::csdmNodeBase Second; //0x20 (CTransform_1 also weird but how is it :))
 		};
 
 
@@ -49,6 +55,9 @@ namespace Chao{
 		public:
 			CMADestuctionHPP(CScene);
 
+			virtual void OnUpdateFirst(double);
+			virtual void OnUpdateSecond(size_t);
+
 
 			//Either std::map / std::list (size should be 0xC no idea)
 			CSCENE_DEFAULT_LIST_RC_TYPE(size_t,unsigned char) RCMap01; // 0x20-0x24-0x28
@@ -58,20 +67,24 @@ namespace Chao{
 			CSCENE_DEFAULT_LIST_RC_TYPE(size_t,unsigned char) RCMap05; // 0x50-0x54-0x58
 			CSCENE_DEFAULT_LIST_RC_TYPE(size_t,unsigned char) RCMap06; // 0x5C-0x60-0x64
 
-			Chao::CSD::Manager::csdmProject* CMProject1; //0x68
-			Chao::CSD::Manager::csdmProject* CMProject2; //0x6C
-			Chao::CSD::Manager::csdmProject* CMProject3; //0x70
 
-			float CKeyFramePre; //0x74
-			float CKeyFramePost; //0x78 
-			float CKeyFrameRate; // 1.0 = default 0x7C
+			//test
+			Chao::CSD::CTransform_1* CSMotionData; //0x68 (For Animation) (class new later:)) (825CB034-> where used to )
+			Chao::CSD::CTransform_2* CMTransform2; //0x6C
+			Chao::CSD::CTransform_3* CMTransform3; //0x70
 
-			size_t CFrameStart; //0x80
-			size_t CFrameEnd; //0x84
+
+			//(Continue INitialzation 825C9E38 )
+			float MotionKeyFramePre; //0x74
+			float MotionKeyFramePost; //0x78 
+			float MotionKeyFrameRate; // 1.0 = default 0x7C
+
+			size_t MotionKeyFrameStart; //0x80
+			size_t MotionKeyFrameEnd; //0x84
 
 			RCOBJREF(unsigned char) RC0x88;
 			RCOBJREF(unsigned char) RC0x8C;
-			size_t IsMotionEnd;
+			size_t IsMotionEnd; //0x90
 			Chao::CSD::CSceneObserver CSCObserver; //CSceneMotionRepeat (later) 0x94
 
 			size_t CCSFlag1; //a4
@@ -79,7 +92,7 @@ namespace Chao{
 			size_t CCSFlag3; //aC
 			size_t MotionIndex; //B0 (
 			float CCSFlag6; //Out-Time??? 0xB4
-			std::map<size_t,RCOBJREF(unsigned char)> RCMap07; //0xB8-0xBC-0xC0
+			std::map<size_t,RCOBJREF64(Chao::CSD::CNode)> CNodeMap; //0xB8-0xBC-0xC0  (CNode)
 			const char* CSName; //SceneName 0xC4
 			size_t CSS0xC8;
 

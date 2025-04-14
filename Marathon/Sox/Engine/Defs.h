@@ -14,7 +14,7 @@ namespace Sonicteam{
 			class Task;
 			class GTask;
 			class View;
-
+			class Application;
 
 		};
 	};

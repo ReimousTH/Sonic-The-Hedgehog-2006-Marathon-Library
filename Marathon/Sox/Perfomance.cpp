@@ -5,15 +5,44 @@ using namespace Sonicteam::SoX;
 
 Sonicteam::SoX::PerformanceFrequency::PerformanceFrequency()
 {
-	QueryPerformanceFrequency(&PerformanceFrequencyOutput);
+	QueryPerformanceFrequency(&LastFrequency);
 }
 
-LARGE_INTEGER Sonicteam::SoX::PerformanceFrequency::GetPerformanceFrequency()
+PerformanceFrequency::~PerformanceFrequency()
 {
-	return	this->PerformanceFrequencyOutput;
+
 }
 
- unsigned __int64 Sonicteam::SoX::PerformanceFrequency::GetTimeBase()
+void Sonicteam::SoX::PerformanceFrequency::QueryFrequency()
 {
-	return 	__mftb();
+	QueryPerformanceFrequency(&Sonicteam::SoX::PerformanceFrequency::getInstanceQuick().LastFrequency);
 }
+
+LARGE_INTEGER PerformanceFrequency::GetPerformanceFrequency()
+{
+	QueryPerformanceFrequency(&LastFrequency);
+	return LastFrequency;
+}
+
+unsigned __int64 PerformanceFrequency::GetTimeBase()
+{
+	return __mftb();
+}
+
+//replace to unsigned __int64 (if R3 != counter ) (r3 = is counter all okay ;)) (original have optimize or some?)
+LARGE_INTEGER PerformanceFrequency::PerfomanceScale(LARGE_INTEGER* counter)
+{
+	LARGE_INTEGER _return; _return.QuadPart = counter->QuadPart/Sonicteam::SoX::PerformanceFrequency::getInstanceQuick().LastFrequency.QuadPart;
+	return _return;
+}
+
+void PerformanceFrequency::QPerfomanceCounterEx(LARGE_INTEGER* counter)
+{
+	counter->QuadPart = __mftb();
+}
+
+void PerformanceFrequency::QPerfomanceCounter(LARGE_INTEGER* counter)
+{
+	QueryPerformanceCounter(counter);
+}
+

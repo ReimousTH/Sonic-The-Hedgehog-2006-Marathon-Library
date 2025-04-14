@@ -17,6 +17,19 @@ namespace Chao{
 		}
 	};
 
+	struct CColor {
+		union {
+			struct {
+				unsigned char r; 
+				unsigned char g; 
+				unsigned char b; 
+				unsigned char a; 
+			};
+			unsigned int color; // Combined color value (32 bits)
+		};
+	};
+
+
 	struct csize_t {
 		union {
 			unsigned __int64 full; 
