@@ -49,13 +49,13 @@ namespace Sonicteam{
 				//Mashine Fields
 				//unsigned int field_0x3C; // why did i even add this????????
 				std::vector<std::pair<int,StateConstructor>> MashineStates; //0x40
-				unsigned int PreState; // -1 (at constuctor)
-				unsigned int PostState;
+				unsigned int PreState; // -1 (at constuctor) //0x50
+				unsigned int PostState; //0x54
 						 byte MashineStateFlag1; //0x58
 						 byte MashineStateFlag2; //0x59
 						 byte MashineStateFlag3; //0x5A
 						 byte Unk0x5B; //0x5B
-				unsigned int Unk0x5C; //0x5C
+				unsigned int Unk0x5C; //0x5C //std::queue?
 				unsigned int Unk0x60; //0x60
 				unsigned int Unk0x64; //0x64
 				unsigned int Unk0x68; //0x68

@@ -43,7 +43,7 @@ namespace Sonicteam{
 
 
 			//ResourceMap1[ManagerRegistryIndex][STD::STRING FileName] = IResource(ResouceHandle)
-			std::map<int,std::map<std::string, REF_TYPE(Sonicteam::SoX::IResource)>> ResourceRegistryHandle; 
+			std::map<int,std::map<std::string, Sonicteam::SoX::IResource*>> ResourceRegistryHandle; 
 			unsigned int unk0x10;
 			std::list<REF_TYPE(Sonicteam::SoX::RefCountObject)> ResourceList; // Empty always?  0x14 i think it list :
 			std::map<int,HoldMGR> ManagerResouceMgr; //0x20

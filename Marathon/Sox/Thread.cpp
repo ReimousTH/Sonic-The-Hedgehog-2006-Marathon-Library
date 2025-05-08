@@ -30,7 +30,7 @@ LinkNode(this)
 	this->UseEvent = EventFlag;
 
 	this->m_Field4 = 0;
-	this->StepCounter = 0;
+	this->TPerfScale = 0;
 	this->StepElapsedTime  = 0;
 	this->m_ThreadName = ThreadName;
 	this->StartEvent = CreateEvent(0,0,0,0);
@@ -76,7 +76,7 @@ void Sonicteam::SoX::Thread::ThreadExecutor()
 			unsigned __int64 T3 = T2-T1;
 			unsigned __int64 Delta =   T3/Sonicteam::SoX::PerformanceFrequency::getInstance().GetPerformanceFrequency().LowPart;
 			this->StepElapsedTime  = Delta;
-			this->StepCounter++;
+			this->TPerfScale++;
 
 
 
@@ -90,7 +90,7 @@ void Sonicteam::SoX::Thread::ThreadExecutor()
 			unsigned __int64 T3 = T2-T1;
 			unsigned __int64 Delta =   T3/Sonicteam::SoX::PerformanceFrequency::getInstance().GetPerformanceFrequency().LowPart;
 			this->StepElapsedTime  = Delta;
-			this->StepCounter++;
+			this->TPerfScale++;
 
 		}
 	}

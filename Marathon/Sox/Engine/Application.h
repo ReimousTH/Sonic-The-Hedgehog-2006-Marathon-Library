@@ -44,7 +44,7 @@ namespace Sonicteam{
 				virtual void AppUnk0x38(); //empty
 				virtual void OnDocAfter(); //empty
 
-
+		
 		
 
 

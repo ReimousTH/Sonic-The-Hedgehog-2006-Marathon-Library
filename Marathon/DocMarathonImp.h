@@ -14,6 +14,9 @@
 #include <boost/weak_ptr.hpp>
 #include <boost/scoped_ptr.hpp>
 #include <Sox/IResource.h>
+#include <SceneCollection.h>
+#include <Sox/Thread.h>
+#include <boost/function.hpp>
 
 
 namespace Sonicteam{
@@ -140,8 +143,9 @@ namespace Sonicteam{
 			unsigned int DocMyGraphicDevice; //0x60
 			unsigned int DocSceneParamManager; //0x64
 			//either vector ptr or lost structure ? (max size = 0x20)
-			std::vector<boost::weak_ptr<Sonicteam::SoX::Scenery::World>>* World; //0x68;
-			unsigned int DocSceneCollection; //0x6c;
+
+			boost::shared_ptr<SceneCollection<Sonicteam::SoX::Scenery::World>> WorldCollection; //0x68-0x6C
+
 			unsigned int Docuint0x70;
 			unsigned int Docuint0x74;
 			unsigned int Docuint0x78;
@@ -169,7 +173,9 @@ namespace Sonicteam{
 			unsigned int DocUnkFlag01;
 			unsigned int Docuint0xF0;
 			unsigned int DocCurrentMessage; //maybe (F4)
-			unsigned int Docuint0xF8; //unk ptr to some
+
+			LinkSoxNode<Sonicteam::SoX::Thread>* LinkThreadRoot; //0xF8 :MyStepableThread, HavokRunnerThread YES LINKSOXNODE pointer manuall relese (full)
+
 			unsigned int Docuint0xFC;
 			unsigned int Docuint0x100;
 			unsigned int Docuint0x104;
@@ -181,9 +187,8 @@ namespace Sonicteam{
 			unsigned int DocGameRuleContext; //0x354
 			unsigned int Docuint0x358;
 			unsigned int Docuint0x35C;
-			unsigned int Docuint0x360;
-			unsigned int Docuint0x364;
-			unsigned int Docuint0x368;
+
+			boost::function<void(void*)> unk0x360;
 			unsigned int Docuint0x36C;
 			unsigned int Docuint0x370;
 			unsigned int Docuint0x374;

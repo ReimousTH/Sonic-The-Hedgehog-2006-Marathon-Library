@@ -5,7 +5,7 @@
 
 #define MARATHON_APP_XENON_MESSAGE_D3D_SETTHREADOWNERSHIP 0
 #define MARATHON_APP_XENON_MESSAGE_D3D_2 1
-#define MARATHON_APP_XENON_MESSAGE_RESIGNIN 2
+#define MARATHON_APP_XENON_MESSAGE_XAM_RESIGN 2
 #define MARATHON_APP_XENON_MESSAGE_3 3
 #define MARATHON_APP_XENON_MESSAGE_4 4
 #define MARATHON_APP_XENON_MESSAGE_GETSIGNINSTATE 5
@@ -30,7 +30,7 @@ namespace Sonicteam{
 
 	namespace SoX{
 		//Sonicteam::SoX::Engine::Application
-		class ApplicationXenon:Sonicteam::SoX::Engine::Application
+		class ApplicationXenon:public Sonicteam::SoX::Engine::Application
 		{
 		public:
 			ApplicationXenon(void);
@@ -64,6 +64,7 @@ namespace Sonicteam{
 			void ProcessXAM();
 			void ProcessXAM2();
 			void ProcessXAM3();
+			inline void _Run();
 		
 
 			//Xenon-Part
@@ -71,17 +72,31 @@ namespace Sonicteam{
 			LARGE_INTEGER FisrtTimeBase; //0x10	
 			LARGE_INTEGER FirstPerformanceFrequency; //0x18	
 			size_t D3DDeviceState; //0x20
-			D3DDevice* D3DDevice; //0x24
-			size_t unk0x28; //0x28
-			size_t unk0x2C; //0x2C
-			size_t unk0x30; //0x30
-	
+			D3DDevice* _D3DDevice; //0x24
+			size_t D3DDeviceStateEnd; //0x28
+			D3DDevice* _D3DDeviceOnEnd; //0x2C
 
-			//later
-			LARGE_INTEGER PerfScalePre; //0xE0
-			LARGE_INTEGER PefScalePost; //0xE8
+			_D3DSURFACE_PARAMETERS SurfaceParams1; //0x30-0x34-0x38
+			_D3DSURFACE_PARAMETERS SurfaceParams2; //0x3C-0x40-0x44
+			_D3DSURFACE_PARAMETERS SurfaceParams3; //0x48-0x4C-0x50
+			IDirect3DSurface9* Sample2SurfaceRef; //0x54
+			IDirect3DSurface9* Sample2DepthStencilSurfaceRef; //0x58
+			IDirect3DSurface9* Sample4SurfaceRef; //0x5C
+			IDirect3DSurface9* Sample4DepthStencilSurfaceRef; //0x60
+			D3DPRESENT_PARAMETERS D3DPresentParams; //0x64 -0xDC
 
-			IDirect3DTexture9* DestTexture; //0xF8
+
+			LARGE_INTEGER PerfScalePost; //0xE0
+			LARGE_INTEGER PefScalePre; //0xE8
+
+			alignas_8 char BufferInitialized; //0xF0
+			alignas_8 IDirect3DTexture9* FrontBufferTexture; //0xF8
+			IDirect3DSurface9* BackBufferSurface; //0xFC
+			IDirect3DSurface9* DepthStencilSurface; //0x100
+			IDirect3DSurface9* Sample2Surface; //0x104
+			IDirect3DSurface9* Sample2DepthStencilSurface; //0x108
+			IDirect3DSurface9* Sample4Surface; //0x10C
+			IDirect3DSurface9* Sample4DepthStencilSurface; //0x110	
 
 
 			DWORD ShaderVertexCount; // 0x114
@@ -89,34 +104,42 @@ namespace Sonicteam{
 			HANDLE HNotification; //0x11C
 
 
+			char unk0x120; //0x120
+			char unk0x121; //0x120
 			char Lock1; //0x122
 			char ToTitle; //0x123
 			char Lock2; //0x124
 			char IsUserSign; //0x125
 			char Lock3; //0x126
+			char unk0x127; //0x127
 
 			XUSER_SIGNIN_STATE LastSignInState; //0x128;
 			DWORD NotifyTargetSignInStateMSG; //0x12C
-
+			DWORD unk0x130; //0x130
+			DWORD unk0x134; //0x134
+			DWORD unk0x138; //0x138
+			DWORD unk0x13C; //0x13c
+			DWORD unk0x140; //0x140
+			DWORD unk0x144; //0x144
 
 			DWORD NotifyTargetSignInState; //0x148
 			DWORD DefaultUserContextPresence; //0x14C
 			DWORD DefaultUserContextValue[2]; //0x150
 
 			DWORD ConfirmMessageNotify1; //0x158
-			DWORD ConfirmMessageNotify2; //0x160
-			DWORD ConfirmMessageNotify3; //0x168
-			DWORD ConfirmMessageNotify4; //0x170
+			DWORD ConfirmMessageNotify2; //0x15C
+			DWORD ConfirmMessageNotify3; //0x160
+			DWORD ConfirmMessageNotify4; //0x164
+			DWORD ConfirmMessageNotify5; //0x168
+			DWORD ConfirmMessageNotify6; //0x16C
+			DWORD ConfirmMessageNotify7; //0x170
 
-			MESSAGEBOX_RESULT SignInStatusChangedMSGResult;
-
-			DWORD ConfirmMessageNotify5; //0x17C
+			MESSAGEBOX_RESULT SignInStatusChangedMSGResult; //0x174
+			DWORD ConfirmMessageNotify8; //0x17C
+			//End
 
 
 	
-
-			
-			
 
 
 

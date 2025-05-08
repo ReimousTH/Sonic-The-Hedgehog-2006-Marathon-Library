@@ -29,6 +29,8 @@ namespace Sonicteam{
 	class MenuListener;
 	class MyPhysicsSystemFactory;
 	class CsdResource;
+	class AppMarathon;
+	template <typename Element> class SceneCollection;
 
 
 };

@@ -25,9 +25,10 @@ namespace Sonicteam {
 			LARGE_INTEGER LastFrequency;
 	
 			static void QueryFrequency();
-			static void QPerfomanceCounter(LARGE_INTEGER* counter);
+			static LARGE_INTEGER* QPerfomanceCounter(LARGE_INTEGER* counter);
 			static void QPerfomanceCounterEx(LARGE_INTEGER* counter);
 			static LARGE_INTEGER PerfomanceScale(LARGE_INTEGER* counter);
+			static LARGE_INTEGER PerfomanceScaleEX(LARGE_INTEGER* counter);
 			unsigned __int64 GetTimeBase();
 			LARGE_INTEGER GetPerformanceFrequency();
 	

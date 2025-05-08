@@ -3,7 +3,7 @@
 #include <boost/weak_ptr.hpp>
 #include <boost/shared_ptr.hpp>
 #include <Sox/AI/State.h>
-
+#include <deque>
 
 namespace Sonicteam{
 	namespace SoX{
@@ -28,11 +28,7 @@ namespace Sonicteam{
 			public:
 				//FIELDS
 				boost::shared_ptr<Sonicteam::SoX::AI::State<T>> CurrentState; //0x4
-				unsigned int field0xC; //0xC
-				unsigned int field0x10; //0x10
-				unsigned int field0x14; //0x14
-				unsigned int field0x18; //0x18
-				unsigned int field0x1C; //0x1C
+				std::deque<boost::shared_ptr<Sonicteam::SoX::AI::State<T>>> StateDQueue; //0xC or queue cant figure 
 				//end- ->0x20
 
 

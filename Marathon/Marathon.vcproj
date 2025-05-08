@@ -1482,11 +1482,27 @@
 					>
 				</File>
 				<File
+					RelativePath=".\Sox\Graphics\Shader.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Graphics\Shader.h"
+					>
+				</File>
+				<File
 					RelativePath=".\Sox\Graphics\ShaderCommon.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\Sox\Graphics\ShaderCommon.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Graphics\ShaderMgr.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Graphics\ShaderMgr.h"
 					>
 				</File>
 				<Filter
@@ -2236,6 +2252,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\AppMarathon.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\AppMarathon.h"
+			>
+		</File>
+		<File
 			RelativePath=".\CMemoryAllocMarathon.cpp"
 			>
 		</File>
@@ -2277,6 +2301,14 @@
 		</File>
 		<File
 			RelativePath=".\DocMarathonImp.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Fixture.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Fixture.h"
 			>
 		</File>
 		<File
@@ -2385,6 +2417,14 @@
 		</File>
 		<File
 			RelativePath=".\PackageBinary.h"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneCollection.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneCollection.h"
 			>
 		</File>
 		<File

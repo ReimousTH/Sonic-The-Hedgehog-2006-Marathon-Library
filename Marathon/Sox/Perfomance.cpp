@@ -36,13 +36,21 @@ LARGE_INTEGER PerformanceFrequency::PerfomanceScale(LARGE_INTEGER* counter)
 	return _return;
 }
 
+LARGE_INTEGER PerformanceFrequency::PerfomanceScaleEX(LARGE_INTEGER* counter)
+{
+	LARGE_INTEGER _return; _return.QuadPart = (counter->QuadPart * 0x000F4240)/Sonicteam::SoX::PerformanceFrequency::getInstanceQuick().LastFrequency.QuadPart;
+	counter->QuadPart = _return.QuadPart;
+	return _return;
+}
+
 void PerformanceFrequency::QPerfomanceCounterEx(LARGE_INTEGER* counter)
 {
 	counter->QuadPart = __mftb();
 }
 
-void PerformanceFrequency::QPerfomanceCounter(LARGE_INTEGER* counter)
+LARGE_INTEGER* PerformanceFrequency::QPerfomanceCounter(LARGE_INTEGER* counter)
 {
 	QueryPerformanceCounter(counter);
+	return counter;
 }
 

@@ -42,8 +42,12 @@ struct ArrayPtr {
 	Class* data;
 	int Count;
 
+
+	ArrayPtr(){
+
+	}
 	// Constructor
-	Array(int count) {
+	ArrayPtr(int count) {
 		data  = new Class[count];
 	}
 

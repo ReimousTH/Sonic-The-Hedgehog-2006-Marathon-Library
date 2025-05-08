@@ -35,7 +35,7 @@ namespace Chao{
 			virtual void CPDrawPrimiteCache0x8(unsigned int) = 0;
 
 			virtual void CPSSetDrawPrimiteFlag0xC(unsigned int) = 0;
-			virtual void CPlatform0x10(unsigned int, unsigned int) = 0; 
+			virtual void CPlatformDrawBase(unsigned int, unsigned int) = 0; 
 			virtual void CPlatform0x14() = 0; 
 
 			virtual void CPSSetDrawPrimiteFlagA0x18(unsigned int) = 0;  

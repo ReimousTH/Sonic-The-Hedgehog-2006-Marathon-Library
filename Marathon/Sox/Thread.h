@@ -48,7 +48,7 @@ namespace Sonicteam{
 
 			float ThreadDelta; //Performance //0x24
 			int m_Field4; //0x28
-			int StepCounter; //0x2c
+			DWORD TPerfScale; //0x2c Perfomance scale * 0.00001 = delta time
 			const char* m_ThreadName;
 			int StepElapsedTime ; //0x34
 	

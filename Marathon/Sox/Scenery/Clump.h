@@ -12,7 +12,7 @@
 namespace Sonicteam{
 	namespace SoX{
 		namespace Scenery{
-			class Clump:Drawable{
+			class Clump:public Drawable{
 
 			public:
 				Clump();

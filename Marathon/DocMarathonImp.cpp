@@ -41,7 +41,7 @@ return DocAudioPlayerImp;
 
 boost::shared_ptr<Sonicteam::SoX::Scenery::World> Sonicteam::DocMarathonImp::DocGetWorld(unsigned int index)
 { 
-	return 	(*World)[index].lock();
+	return 	(*WorldCollection)[index].lock();
 }
 
 std::vector<unsigned int>* Sonicteam::DocMarathonImp::DocGetDoculist()

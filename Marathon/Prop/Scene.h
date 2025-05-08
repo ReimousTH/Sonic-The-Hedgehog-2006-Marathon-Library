@@ -45,7 +45,7 @@ namespace Sonicteam { namespace Prop {
 		LinkSoxNode<Scene> LinkScene1; //0x4-0xC (Other Scenes)
 		LinkSoxNode<Scene> LinkScene2; //0x10-0x18 (May linked to Head Somewhere, to iterrate )
 		REF_TYPE(Sonicteam::Prop::SceneData)* ScenePropData; // Sonicteam::Prop::SceneData: //0x1C
-		unsigned int ScenePropFile; // Pointer to .set file in memory  (right after BBINA padded 0x10) //0x20
+		size_t ScenePropFile; // Pointer to .set file in memory  (right after BBINA padded 0x10) //0x20
 		REF_TYPE(Sonicteam::Prop::AllocatedData) ScenePropAllocatedData; // Sonicteam::Prop::AllocatedData //0x24
 		std::vector<REF_TYPE(Sonicteam::Prop::Instance)> ScenePropInstance; // Sonicteam::Prop::Instance //0x28
 		std::vector<Sonicteam::Prop::Group*> ScenePropGroup;  // Sonicteam::Prop::Group //0x38

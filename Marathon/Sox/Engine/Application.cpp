@@ -95,3 +95,4 @@ void Application::OnDocAfter()
 
 
 DESTRUCTION_CPP(Application);
+

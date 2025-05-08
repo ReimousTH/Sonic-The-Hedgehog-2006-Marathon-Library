@@ -67,6 +67,9 @@ namespace Sonicteam{
 				}
 				return *this;
 			}
+			bool operator==(const RefCountObjContainer& other){
+				return other.param == this->param;
+			}
 
 			#ifdef REFCOUNTOBJCONTAINERUSEROPERATOR
 			// Overloading operator->

@@ -48,19 +48,19 @@ namespace Sonicteam { namespace Prop {
 
 	struct InstanceSetData{
 
-		const char* ObjectName;
-		const char* ObjectTypeName;
+		const char* ObjectName; //0
+		const char* ObjectTypeName; //4
 
 
-		char ObjectUnkFloatArray[3]; // 40 00 00
-		char StartInactive; //0
+		char ObjectUnkFloatArray[3]; // 40 00 00 //8
+		char StartInactive; //B
 
-		float ObjectUnkFloat2; //=0
-		float ObjectUnkFloat3; //=0
-		float ObjectUnkFloat4; //=0
-		XMFLOAT3 Position;
-		float DrawDistance; //40000
-		XMFLOAT4 Rotation;
+		float ObjectUnkFloat2; //=0 //C
+		float ObjectUnkFloat3; //=0 //10
+		float ObjectUnkFloat4; //=0 //14
+		XMFLOAT3 Position; //18
+		float DrawDistance; //40000 //0x24
+		XMFLOAT4 Rotation; //0x28 (HOW It bypass aligment HOW?)
 
 		unsigned int ParamsCount;
 		InstanceSetDataParams* Params;
@@ -83,8 +83,6 @@ namespace Sonicteam { namespace Prop {
 
 		Sonicteam::Prop::InstanceSetData* InstanceSetData;
 		REF_TYPE(Sonicteam::Prop::Class) InstanceClass;
-
-
 
 	};
 

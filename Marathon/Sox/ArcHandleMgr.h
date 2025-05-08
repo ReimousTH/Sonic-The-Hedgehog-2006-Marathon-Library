@@ -33,7 +33,7 @@ namespace Sonicteam{
 
 		};
 	
-		class ArcHandleMgr:Sonicteam::SoX::IResourceMgr,public SSINGLETON(ArcHandleMgr){
+		class ArcHandleMgr:public Sonicteam::SoX::IResourceMgr,public SSINGLETON(ArcHandleMgr){
 		public:
 			ArcHandleMgr();
 			~ArcHandleMgr();
