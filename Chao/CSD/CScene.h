@@ -79,8 +79,8 @@ namespace Chao{
 			float MotionKeyFramePost; //0x78 
 			float MotionKeyFrameRate; // 1.0 = default 0x7C
 
-			size_t MotionKeyFrameStart; //0x80
-			size_t MotionKeyFrameEnd; //0x84
+			float MotionKeyFrameStart; //0x80
+			float MotionKeyFrameEnd; //0x84
 
 			RCOBJREF(unsigned char) RC0x88;
 			RCOBJREF(unsigned char) RC0x8C;

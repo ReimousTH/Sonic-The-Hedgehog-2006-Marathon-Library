@@ -32,7 +32,7 @@ namespace Chao{
 			CMADestuctionHPP(CNode);
 
 			std::list<RCOBJREF(unsigned char)> unk0x20; // 0x20-0x24-0x28
-			void* unk0x2C; //sub_825D0388 constructor (figure type later) (type used to controll node, pattern ...
+			void* unk0x2C; //sub_825D0388 constructor (figure type later) (type used to controll node, pattern ... 
 			Chao::CSD::CFontCollection* FontCollection; //sub_825CA1D8 constructor (figure type later) (should be released but with flag 0) (req container type :| mb) (FontCollection) 0x30
 			const char* CNodeName; //custom_gem ? //0x34
 			Chao::CSD::CScene* PTScene; //Parent

@@ -90,7 +90,7 @@ namespace Sonicteam{
 				int UnkSomeTimer;
 				float AngleMoveDataMB;
 				unsigned int GroundAirFlags; //0xC4 (CC_??) FLAGS
-				unsigned long long ExternalFlag;
+				unsigned long long ExternalFlag; //0xC8
 				int UnknownFlags0xD0;
 				int UnknownFlags0xD4;
 				int UnknownUnUsedFlagD8;
@@ -105,8 +105,8 @@ namespace Sonicteam{
 				char IsGravityDisabled; //0xE7
 				char IsUnkE8;
 				char IsJumped_PostureVelocityYHandle; //0xE9
-				char IsInActionsRunJumpBound_MB; //0xEA
-				char IsUnkEB; //0xEB
+				char IsInActionsRunJumpBound_MB; //0xEA (IsRunning)
+				char IsUnkEB; //0xEB 
 				char IsUnkEC; //0xEC
 				char IsUnkED; //0xED
 				char IsUnkEE; //0xEE

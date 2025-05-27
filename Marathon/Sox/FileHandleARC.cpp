@@ -262,7 +262,6 @@ bool FileHandleARC::SearchChunk(Sonicteam::SoX::ArcHandleMgr* mgr,std::string& s
 		std::string fpath = Sonicteam::SoX::FileHandleARC::GetARCChunkPath(mgr,search_path);	
 		find_index = Sonicteam::SoX::FileHandleARC::SearchChunkEntryE1(&ahandle->_ArcFile,fpath.c_str());
 
-
 		if (find_index != -1){
 			Sonicteam::SoX::ArcFileChunkF chunkf = ahandle->_ArcFile.ChunkArray[find_index];
 			search_chunk.GetFromChunkFHandle(chunkf,ahandle);
