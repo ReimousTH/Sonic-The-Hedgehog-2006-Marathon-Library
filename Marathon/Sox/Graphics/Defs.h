@@ -11,6 +11,7 @@ namespace Sonicteam{
 			class FrameObserver;
 			class Model;
 
+			class ShaderFXL;
 			class ShaderMgr;
 			class Shader;
 			class Node;

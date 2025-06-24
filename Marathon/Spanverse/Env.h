@@ -2,13 +2,21 @@
 #define SONICTEAM__SPANVERSE__ENV
 
 
-#include <Spanverse/SpanSPSB.h>
-#include <Xboxmath.h>
-#include <Sox/Misc/VectorExtension.h>
-#include <DocMarathonImp.h>
-#include <Sox/Graphics/Device.h>
-#include <Spanverse/EnvInfo.h>
+#include <Spanverse/Defs.h>
+#include <Sox/Graphics/Defs.h>
+#include <Defs.h>
 
+
+#include <System/Singleton.h>
+#include <System/CreateStatic.h>
+#include <Sox/Memory/Destruction.h>
+
+
+
+#include <xtl.h>
+#include <Sox/Misc/VectorExtension.h>
+
+#include <Spanverse/SpanSPSB.h>
 
 
 namespace Sonicteam{

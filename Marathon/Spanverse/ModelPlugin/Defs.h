@@ -10,7 +10,6 @@ namespace Sonicteam{
 				class ModelInfo;
 				class ModelStandard;
 				class ModelStandardInfo;
-
 				class ModelMorphInfo;
 			};
 		};

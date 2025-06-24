@@ -14,6 +14,12 @@ namespace Sonicteam{
 
 				DESTRUCTION_H;
 
+				unsigned int unk0x64; // ?
+				unsigned int unk0x68; //?
+				unsigned int unk0x6C; //?
+
+
+
 
 
 			};

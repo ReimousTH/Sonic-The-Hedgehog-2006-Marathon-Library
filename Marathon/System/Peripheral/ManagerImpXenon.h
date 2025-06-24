@@ -8,7 +8,7 @@
 #define XENON_GAMEPAD_DPAD_DOWN         0x80
 #define XENON_GAMEPAD_DPAD_LEFT         0x100
 #define XENON_GAMEPAD_DPAD_RIGHT        0x200
-#define XENON_GAMEPAD_START             0x40
+#define XENON_GAMEPAD_START             0x400
 #define XENON_GAMEPAD_BACK              0x800
 #define XENON_GAMEPAD_LEFT_THUMB        0x10000
 #define XENON_GAMEPAD_RIGHT_THUMB       0x20000

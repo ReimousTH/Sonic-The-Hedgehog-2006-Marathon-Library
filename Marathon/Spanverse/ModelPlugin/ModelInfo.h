@@ -1,16 +1,16 @@
 #ifndef SONICTEAM__SPANVERSE__MODELPLUGIN__MODELINFO
 #define SONICTEAM__SPANVERSE__MODELPLUGIN__MODELINFO
 
-#include "Defs.h"
+
+
+#include <Spanverse/ModelPlugin/Defs.h>
+#include <Defs.h>
+
 #include <Sox/RefCountObject.h>
-#include <Sox/Memory/Destruction.h>
-
-
+#include <Sox/Graphics/Defs.h>
 #include <boost/shared_ptr.hpp>
-#include <DocMarathonImp.h>
 
-#include <Sox/Graphics/Model.h>
-#include <Spanverse/ModelPlugin/ModelInfo.h>
+//#include <Spanverse/ModelPlugin/ModelInfo.h>
 
 namespace Sonicteam{
 	namespace Spanverse{

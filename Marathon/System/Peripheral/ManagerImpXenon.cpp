@@ -45,9 +45,9 @@ int Sonicteam::System::Peripheral::ManagerImpXenon::MangerProcessInput(XINPUT_GA
 					}
 				}
 
-				if (_buffer_state.Gamepad.bLeftTrigger > 0x1Eu)
+				if (_buffer_state.Gamepad.bLeftTrigger > XINPUT_GAMEPAD_TRIGGER_THRESHOLD)
 					wbuttons |= 0x4000u;
-				if (_buffer_state.Gamepad.bRightTrigger > 0x1Eu)
+				if (_buffer_state.Gamepad.bRightTrigger > XINPUT_GAMEPAD_TRIGGER_THRESHOLD)
 					wbuttons |= 0x8000u;
 
 				sThumbLX = _buffer_state.Gamepad.sThumbLX;
@@ -80,9 +80,9 @@ int Sonicteam::System::Peripheral::ManagerImpXenon::MangerProcessInput(XINPUT_GA
 
 int Sonicteam::System::Peripheral::ManagerImpXenon::ManagerGetThumbstickValues(unsigned int index,short* buffer)
 {
-	buffer[0] = XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE;
-	buffer[1] = XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE;
-	buffer[2] = 0x5E0E;
-	buffer[3] = 0x5E0E;
+	buffer[0] = XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE; //LS
+	buffer[1] = XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE; //RS
+	buffer[2] = 0x5E0E; //LS (825D3A94 cause) it part 
+	buffer[3] = 0x5E0E; //RS
 	return 1;
 }

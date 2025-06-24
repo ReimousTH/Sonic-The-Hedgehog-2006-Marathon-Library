@@ -2,9 +2,13 @@
 #define SONICTEAM__SPANVERSE__ISPAN
 
 
+#include <Spanverse/Defs.h>
+#include <Sox/Memory/Destruction.h>
 #include <SpanverseHeap.h>
 #include <SpanverseMemory.h>
-#include <Sox/Memory/Destruction.h>
+
+
+
 
 #include <new>
 #include <map>

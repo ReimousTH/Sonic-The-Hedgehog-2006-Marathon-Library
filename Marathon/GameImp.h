@@ -121,9 +121,9 @@ namespace Sonicteam{
 		unsigned int				PrevState;
 		unsigned int				CurState;
 		//replace to State Later
-		Sonicteam::DocMarathonImp*	DocMarathon;
-		unsigned int				CurFlags;
-		UnkPointerStructGI*			UnkPointerStruct;
+		Sonicteam::DocMarathonImp*	DocMarathon; //c
+		unsigned int				CurFlags; //10
+		UnkPointerStructGI*			UnkPointerStruct; //14
 
 		unsigned int				UnkFlag0x18;
 		unsigned int				UnkFlag0x1C;
@@ -171,10 +171,7 @@ namespace Sonicteam{
 		Sonicteam::SoX::IResource* TextBook_msg_system; //0x11CC
 		unsigned int unk0x11D0;
 		unsigned int unk0x11D4;
-		unsigned int unk0x11D8;
-		unsigned int unk0x11DC;
-		unsigned int unk0x11E0;
-		unsigned int unk0x11E4;
+		std::vector<size_t> unk0x11D8; // unk0x11DC , unk0x11E0 , unk0x11E4
 		std::vector<boost::shared_ptr<unsigned int>> GameImpSceneryWorlds;  //Sonicteam::SoX::Scenery::WorldImp, ...glare,particle ... unk0x11E8
 		Sonicteam::Stage::Object StageObject; //0x11F8
 		std::string GameTerrain; //stage/wvo/a/ //0x1214
@@ -224,7 +221,7 @@ namespace Sonicteam{
 
 		//821826A8
 
-		boost::shared_ptr<Sonicteam::Prop::Scene> GameProp[6]; 	//0x135C boost::shared_ptr<Sonicteam::Prop::Scene>[] // 							
+		boost::shared_ptr<Sonicteam::Prop::Scene> GamePropScene[6]; 	//0x135C boost::shared_ptr<Sonicteam::Prop::Scene>[] // 							
 		boost::shared_ptr<unsigned int> GameKynapseSystem; //Sonicteam::KynapseSystem 		//0x138C 
 		Sonicteam::SoX::IResource* GameKyWorldDef; //Sonicteam::KyWorldDef //0x1394
 		unsigned int unk0x1398;

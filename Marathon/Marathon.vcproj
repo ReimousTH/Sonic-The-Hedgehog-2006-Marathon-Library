@@ -1498,6 +1498,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\Sox\Graphics\ShaderFXL.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Graphics\ShaderFXL.h"
+					>
+				</File>
+				<File
 					RelativePath=".\Sox\Graphics\ShaderMgr.cpp"
 					>
 				</File>
@@ -2139,6 +2147,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Spanverse\Defs.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Spanverse\Env.cpp"
 				>
 			</File>
@@ -2356,6 +2368,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\ISceneParam.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\ISceneParam.h"
+			>
+		</File>
+		<File
 			RelativePath=".\LuaNode.cpp"
 			>
 		</File>
@@ -2425,6 +2445,14 @@
 		</File>
 		<File
 			RelativePath=".\SceneCollection.h"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneLightParam.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneLightParam.h"
 			>
 		</File>
 		<File
