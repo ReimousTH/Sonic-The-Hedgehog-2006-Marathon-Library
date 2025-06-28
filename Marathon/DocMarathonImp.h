@@ -4,6 +4,8 @@
 
 
 
+
+
 #include <Sox/Scenery/World.h>
 #include <vector>
 #include <Sox/Engine/Doc.h>
@@ -17,6 +19,7 @@
 #include <SceneCollection.h>
 #include <Sox/Thread.h>
 #include <boost/function.hpp>
+#include <Sox/Input/Defs.h>
 
 
 namespace Sonicteam{
@@ -60,7 +63,7 @@ namespace Sonicteam{
 			virtual unsigned int GetPlayerInput(unsigned int); //need complete struct ,index
 			virtual DocMarathonImpVecFlags* GetDocImpFlag(); //need complete struct ,index
 			virtual unsigned int GSDocFrameSynchronizer(unsigned int); //need complete struct ,index
-			virtual DocMarathonPlayerInput DocGetPlayerInputCopy(unsigned int); //need complete struct ,index
+			virtual void QueueControllerInputByIndex(Sonicteam::SoX::Input::Listener* listener,size_t index); //need complete struct ,index
 			virtual unsigned int DocGetCurrentCase(); //need complete struct ,index
 			virtual unsigned int DocGetPreviousCase(); //need complete struct ,index
 			virtual unsigned int DocGetSFXAgent(); //need complete struct ,index
@@ -70,7 +73,7 @@ namespace Sonicteam{
 			virtual boost::shared_ptr<void*> DocGetAudioPlayerImp(); //need complete struct ,index
 			virtual unsigned int DocSetCurrentMode(unsigned int); //need complete struct ,index
 			virtual unsigned int DocGetDebug3DFont(); //need complete struct ,index
-			virtual unsigned int DocGetSceneParamManager(); //need complete struct ,index
+			virtual Sonicteam::SceneParamManager* DocGetSceneParamManager(); //need complete struct ,index
 			virtual unsigned int DocGetUnkManagers(); //need complete struct ,index
 			virtual unsigned int DocGetUnkGameResources(); //need complete struct ,index
 			virtual void DocNull01() {};
@@ -141,7 +144,7 @@ namespace Sonicteam{
 			//field
 			Sonicteam::SoX::Engine::Task* DocCurrentDocMode; //MainMode (0x5C) But ... StateGamemode ..... (DocMode)
 			unsigned int DocMyGraphicDevice; //0x60
-			unsigned int DocSceneParamManager; //0x64
+			Sonicteam::SceneParamManager* DocSceneParamManager; //0x64
 			//either vector ptr or lost structure ? (max size = 0x20)
 
 			boost::shared_ptr<SceneCollection<Sonicteam::SoX::Scenery::World>> WorldCollection; //0x68-0x6C
@@ -153,11 +156,14 @@ namespace Sonicteam{
 			//and soo onnn later
 			Sonicteam::SoX::Graphics::FrameSynchronizer DocFrameSynchronizer; //0x80
 
-			unsigned int Docuint0x9C;
-			boost::shared_ptr<unsigned int>* DocMarathonPlayerInputBostArray; // maybe boost???! A0
-			unsigned int Docuint0xA4;
-			unsigned int Docuint0xA8;
-			Sonicteam::SoX::Engine::View DocEngineView;
+
+
+			//Sonicteam::SoX::Input::Manager(no vft, finally usefull) 825863D8 (constructor) 
+
+			std::vector<boost::shared_ptr<Sonicteam::SoX::Input::Manager>> DMPlayerInputManager; //0x9C
+
+
+			Sonicteam::SoX::Engine::View DocEngineView; //AC
 			DocMarathonImpVecFlags DocImpFlag; //0xB8
 			boost::shared_ptr<void*> DocAudioPlayerImp; //PTR
 			unsigned char IsVFrameEnabled; //Frame skip

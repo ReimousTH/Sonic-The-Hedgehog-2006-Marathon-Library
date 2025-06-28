@@ -4,11 +4,18 @@
 
 #include <Sox/RefCountObject.h>
 #include <Sox/Misc/LinkSoxNode.h>
+#include <Defs.h>
+
+#define ISPApplyArg1 Sonicteam::ISPApplyArg
 
 namespace Sonicteam{
 
 
 
+	struct ISPApplyArg{
+		Sonicteam::DocMarathonImp* doc;
+		Sonicteam::SoX::Graphics::Device* device; //my_graphic device
+	};
 
 	class ISceneParam:public Sonicteam::SoX::RefCountObject{
 	public:
@@ -19,6 +26,10 @@ namespace Sonicteam{
 
 
 		DESTRUCTION_H;
+		virtual const char* GetParamName() = 0;
+		virtual void InitializeSceneParam(void* for_now);
+		virtual void ISceneParam0xC();
+		virtual void ApplySceneParam(ISPApplyArg1);
 	};
 
 };

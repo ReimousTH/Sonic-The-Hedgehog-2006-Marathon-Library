@@ -7,7 +7,10 @@
 
 
 namespace Sonicteam{
+	class SceneParamManager;
+	class ISceneParam;
 	class Actor;
+	class NamedActor;
 	class ActorManager;
 	class GameImp;
 	class Actor;
@@ -16,6 +19,8 @@ namespace Sonicteam{
 	class CPlatformMarathon;
 	class CsdLink;
 	class CsdObject;
+	class CsdManager;
+	class CsdResource;
 	class DocMarathonImp;
 	class GameImp;
 	class HUDMainMenu;
@@ -28,8 +33,10 @@ namespace Sonicteam{
 	class MainMenuTask;
 	class MenuListener;
 	class MyPhysicsSystemFactory;
-	class CsdResource;
 	class AppMarathon;
+	class KhronoControlInputListener;
+	class KhronoController;
+	
 	template <typename Element> class SceneCollection;
 
 

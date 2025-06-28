@@ -1,5 +1,6 @@
 #include "GameImp.h"
 
+#include <NamedActor.h>
 
 using namespace Sonicteam;
 
@@ -73,9 +74,9 @@ boost::shared_ptr<Sonicteam::Prop::Manager> Sonicteam::GameImp::GameGetPropManag
 	return this->GamePropManager;
 }
 
-Sonicteam::SoX::Engine::Task* Sonicteam::GameImp::GameGetPropTask(unsigned int index)
+Sonicteam::NamedActor* Sonicteam::GameImp::GameGetPropTask(unsigned int index)
 {
-	 Sonicteam::SoX::Engine::Task *result; // r3
+	Sonicteam::NamedActor *result; // r3
 	switch ( index )
 	{
 	case 1:

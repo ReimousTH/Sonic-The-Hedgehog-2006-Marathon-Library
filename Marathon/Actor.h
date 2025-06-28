@@ -29,7 +29,7 @@ namespace Sonicteam{
 		public:
 			~Actor();
 			 Actor();
-			 Actor(Sonicteam::Actor* other, boost::weak_ptr<unsigned int>& gameimp);
+			 Actor(Sonicteam::Actor* other, boost::weak_ptr<Sonicteam::GameImp> gameimp);
 
 			boost::weak_ptr<Sonicteam::GameImp> GameImp; //0x4C-0x50
 			unsigned int ActorID; //0x54

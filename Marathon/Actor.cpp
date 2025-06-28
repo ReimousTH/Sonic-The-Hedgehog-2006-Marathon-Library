@@ -12,7 +12,7 @@ Sonicteam::Actor::~Actor()
 
 
 
-Sonicteam::Actor::Actor(Sonicteam::Actor* other, boost::weak_ptr<unsigned int>& gameimp):Sonicteam::SoX::Engine::Task(other)
+Sonicteam::Actor::Actor(Sonicteam::Actor* other, boost::weak_ptr<Sonicteam::GameImp> gameimp):Sonicteam::SoX::Engine::Task(other)
 {
 
 }

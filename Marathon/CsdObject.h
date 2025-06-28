@@ -52,7 +52,7 @@ namespace Sonicteam{
 
 			unsigned int FCsdObject0x20; //count?
 			Chao::CSD::CProject* FCProject;// 0x24
-			REF_TYPE(Sonicteam::CsdResouce) CsdResouce; //0x28
+			REF_TYPE(Sonicteam::CsdResource) CsdResouce; //0x28
 
 
 

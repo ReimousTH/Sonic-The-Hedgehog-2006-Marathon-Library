@@ -1970,6 +1970,84 @@
 					</File>
 				</Filter>
 			</Filter>
+			<Filter
+				Name="Input"
+				>
+				<File
+					RelativePath=".\Sox\Input\Defs.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Input\Listener.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Input\Listener.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Sox\Input\Manager.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Profile|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Profile_FastCap|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release_LTCG|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="ReleaseHavok|Xbox 360"
+						>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				ObjectFile="$(IntDir)\$(InputName)1.obj"
+				XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+			/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Sox\Input\Manager.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Stage"
@@ -2296,11 +2374,27 @@
 			>
 		</File>
 		<File
+			RelativePath=".\CsdManager.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\CsdManager.h"
+			>
+		</File>
+		<File
 			RelativePath=".\CsdObject.cpp"
 			>
 		</File>
 		<File
 			RelativePath=".\CsdObject.h"
+			>
+		</File>
+		<File
+			RelativePath=".\CsdResource.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\CsdResource.h"
 			>
 		</File>
 		<File
@@ -2376,6 +2470,22 @@
 			>
 		</File>
 		<File
+			RelativePath=".\KhronoControlInputListener.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\KhronoControlInputListener.h"
+			>
+		</File>
+		<File
+			RelativePath=".\KhronoController.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\KhronoController.h"
+			>
+		</File>
+		<File
 			RelativePath=".\LuaNode.cpp"
 			>
 		</File>
@@ -2432,6 +2542,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\NamedActor.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\NamedActor.h"
+			>
+		</File>
+		<File
 			RelativePath=".\PackageBinary.cpp"
 			>
 		</File>
@@ -2448,11 +2566,35 @@
 			>
 		</File>
 		<File
+			RelativePath=".\SceneKhronosParam.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneKhronosParam.h"
+			>
+		</File>
+		<File
 			RelativePath=".\SceneLightParam.cpp"
 			>
 		</File>
 		<File
 			RelativePath=".\SceneLightParam.h"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneParamManager.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneParamManager.h"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneTimeLight.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneTimeLight.h"
 			>
 		</File>
 		<File

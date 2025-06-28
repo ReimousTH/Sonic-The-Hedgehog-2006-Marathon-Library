@@ -1,14 +1,19 @@
 #include "IListener.h"
-using namespace Sonicteam::Player;
+using namespace Sonicteam::Player::Input;
 
 
-Input::IListener::IListener(void):Object()
+IListener::IListener(void)
 {
 	
-	this->IL0x10= 1;
-	this->IL0x11 = 0;
+
 }
-Input::IListener::~IListener(void)
+IListener::~IListener(void)
 {
 
 }
+
+
+
+
+
+DESTRUCTION_CPP(IListener);

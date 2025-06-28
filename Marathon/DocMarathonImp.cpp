@@ -1,6 +1,9 @@
 #include "DocMarathonImp.h"
 
 
+#include <Sox/Input/Manager.h>
+#include <Sox/Input/Listener.h>
+
 using namespace Sonicteam;
 
 Sonicteam::DocMarathonImp::DocMarathonImp(unsigned int)
@@ -74,10 +77,13 @@ unsigned int Sonicteam::DocMarathonImp::GSDocFrameSynchronizer(unsigned int)
 return 0;
 }
 
-//REWORK REQUIRED
-Sonicteam::DocMarathonPlayerInput Sonicteam::DocMarathonImp::DocGetPlayerInputCopy(unsigned int index)
+//Updated 27.06.2025
+void Sonicteam::DocMarathonImp::QueueControllerInputByIndex(Sonicteam::SoX::Input::Listener* listener,size_t index)
 {
-return *(Sonicteam::DocMarathonPlayerInput*)(this->DocMarathonPlayerInputBostArray->get());
+
+	Sonicteam::SoX::Input::Manager* mgr = this->DMPlayerInputManager[index].get();
+	mgr->Listener.Connect(&listener->LinkInput);
+
 }
 
 unsigned int Sonicteam::DocMarathonImp::DocGetCurrentCase()

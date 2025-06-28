@@ -46,7 +46,9 @@ namespace Sonicteam{
 				ListenerNormal(unsigned int,unsigned int);
 				~ListenerNormal(void);
 
-				virtual void ListenerOnUpdate(int,float);
+				
+
+				virtual void UpdateListener(SOXLISTENER_ARGS);
 
 				virtual XMVECTOR* ListenerGetStickVector4(double delta,int flag);
 
@@ -56,23 +58,23 @@ namespace Sonicteam{
 
 				virtual int IsListenerEnabled();
 
-				virtual void OnVarible(LuaSystem**);
-
 				virtual void OnStepable(float);
+
+				virtual void OnVarible(IVARIABLETYPE);
 
 				unsigned int ptr0x40;
 				unsigned int ptr0x44;
 				unsigned int unk0x48;
-				float StickPower; 
-				XMFLOAT4 StickVector; //0x50 
+				float StickPower;  //0x4C
+				XMVECTOR StickVector; //0x50 
 
 				
 				//unsigned int ptr0x60; //???// type size with 0x14 (vector(no any about vector) std::list maybe )
 				//std::list<unsigned int> unkList0x60;
 
-				byte unkgap0x60[0x14];
 
-
+				//size=0x10? i guess
+				std::deque<size_t> unk0x60; 
 				float unkfloat0x74;
 
 				IListenerInputStruc02 ILISunk0x78; // A Button
@@ -92,6 +94,10 @@ namespace Sonicteam{
 
 
 	
+
+
+
+
 			};
 
 		}

@@ -49,7 +49,7 @@ int Sonicteam::System::Peripheral::ManagerImpXenon::MangerProcessInput(XINPUT_GA
 					wbuttons |= 0x4000u;
 				if (_buffer_state.Gamepad.bRightTrigger > XINPUT_GAMEPAD_TRIGGER_THRESHOLD)
 					wbuttons |= 0x8000u;
-
+	
 				sThumbLX = _buffer_state.Gamepad.sThumbLX;
 				if (_buffer_state.Gamepad.sThumbLX == 0xFFFF8000)
 					sThumbLX = 0x8001;

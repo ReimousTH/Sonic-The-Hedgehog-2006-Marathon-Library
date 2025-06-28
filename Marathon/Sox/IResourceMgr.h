@@ -2,10 +2,16 @@
 #define SONICTEAM__SOX__IRESOURCEMGR
 
 
-
 #include <Sox/Defs.h>
 #include <Sox/Memory/Destruction.h>
 #include <Sox/IResource.h>
+
+
+//:public Sonicteam::SoX::IResourceMgr,public SSINGLETON(ArcHandleMgr)
+#define  IResourceMgrHRS(MGR) public Sonicteam::SoX::IResourceMgr,public SSINGLETON(MGR)
+
+
+
 
 namespace Sonicteam{
 	namespace SoX{

@@ -251,14 +251,15 @@ namespace Sonicteam{
 		Sonicteam::SoX::RefCountObject* GameRingObjInfo; //  Sonicteam::RingObjInfo // 0x1404
 		std::vector<Sonicteam::SoX::RefCountObject*> GameCommonObjectInfo; // //Jump123ObjInfo, Spring.... //0x1408
 
-		Sonicteam::SoX::Engine::Task* GameRootTask; //0x1418
-		Sonicteam::SoX::Engine::Task* GameNamedActorDependGame; //0x141C
-		Sonicteam::SoX::Engine::Task* GameNamedActorEntities; //0x1420
-		Sonicteam::SoX::Engine::Task* GameNamedActorEnemyThread; //0x1424
-		Sonicteam::SoX::Engine::Task* GameNamedActorPlayers; //0x1428
-		Sonicteam::SoX::Engine::Task* GameNamedActorCameras; //0x142C
-		Sonicteam::SoX::Engine::Task* GameNamedActorSystemDependCameras; //0x1430
-		Sonicteam::SoX::Engine::Task* GameNamedActorDependCameras; //0x1434
+		//probably actor
+		Sonicteam::NamedActor* GameRootTask; //0x1418
+		Sonicteam::NamedActor* GameNamedActorDependGame; //0x141C
+		Sonicteam::NamedActor* GameNamedActorEntities; //0x1420
+		Sonicteam::NamedActor* GameNamedActorEnemyThread; //0x1424
+		Sonicteam::NamedActor* GameNamedActorPlayers; //0x1428
+		Sonicteam::NamedActor* GameNamedActorCameras; //0x142C
+		Sonicteam::NamedActor* GameNamedActorSystemDependCameras; //0x1430
+		Sonicteam::NamedActor* GameNamedActorDependCameras; //0x1434
 
 
 		struct StagePathVariant{
@@ -453,7 +454,7 @@ namespace Sonicteam{
 		virtual void GameActivateProp(Sonicteam::SoX::RefCountObject**);
 		virtual void GameImpUnk01();
 		virtual boost::shared_ptr<Sonicteam::Prop::Manager> GameGetPropManager();
-		virtual Sonicteam::SoX::Engine::Task* GameGetPropTask(unsigned int);
+		virtual Sonicteam::NamedActor* GameGetPropTask(unsigned int);
 		virtual boost::shared_ptr<Sonicteam::Player::Load> GameGetPlayerLoad();
 		virtual boost::shared_ptr<Sonicteam::SoX::RefCountObject*>* GameGetKeyFramedScene(unsigned int);
 		virtual std::string* GameGetCameraParamLua();

@@ -1,17 +1,12 @@
 #ifndef SONICTEAM__CSDRESOURCE
 #define SONICTEAM__CSDRESOURCE
+
 #include "Defs.h"
-
-
 #include <Sox/Memory/IDestructible.h>
-#include <Sox/IResource.h>
-#include <Sox/RefCountObject.h>
+#include <Sox/IResource2.h>
+#include <CsdManager.h>
 
-
-struct CSDFile{
-
-};
-
+struct CSDFile{};
 
 
 namespace Sonicteam{
@@ -19,13 +14,14 @@ namespace Sonicteam{
 
 
 	//Or SonicTeamSoxComponent
-	class CsdResouce:public Sonicteam::SoX::IResource
+	class CsdResource:public IResource2HR(Sonicteam::CsdResource,Sonicteam::CsdManager)
 		{
 		public:
-			CsdResouce(void);
-			~CsdResouce(void);
+			CsdResource(void);
+			~CsdResource(void);
 
-			CSDFile* CSDFile; // :)
+			CSDFile* _CSDFile; // :) 0x64   v13 = operator new[](a3 + 0x20); *(_DWORD *)(a1 + 0x64) = v13;
+			size_t _CSDSize; //0x68
 
 
 
@@ -33,6 +29,10 @@ namespace Sonicteam{
 			DESTRUCTION_H; //0x0 + 0x10
 
 
+
+
+			virtual int ResourceLoad(void* File,size_t size);
+			virtual std::string GetResourceName(std::string file_name);
 
 	};
 

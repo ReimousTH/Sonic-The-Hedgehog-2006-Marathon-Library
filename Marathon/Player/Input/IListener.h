@@ -1,18 +1,13 @@
-#pragma once
+#ifndef SONICTEAM__PLAYER__INPUT_ILISTENER
+#define SONICTEAM__PLAYER__INPUT_ILISTENER
 
 
-#include "../../Sox/Object.h"
+
 #include <xtl.h>
+#include <Sox/Input/Manager.h>
+#include <Sox/Input/Listener.h>
 
-#define SO_GAMEPAD_RAW_BUTTON_A 1
-#define SO_GAMEPAD_RAW_BUTTON_B 2
-#define SO_GAMEPAD_RAW_BUTTON_X 8
-#define SO_GAMEPAD_RAW_BUTTON_Y 0x10
 
-#define SO_GAMEPAD_RAW_BUTTON_DPAD_UP 0x40
-#define SO_GAMEPAD_RAW_BUTTON_DPAD_DOWN 0x80
-#define SO_GAMEPAD_RAW_BUTTON_DPAD_LEFT 0x100
-#define SO_GAMEPAD_RAW_BUTTON_DPAD_RIGHT 0x200
 
 namespace Sonicteam{
 	namespace Player{
@@ -21,28 +16,7 @@ namespace Sonicteam{
 
 		namespace Input{
 			//Root Scroll Node
-			struct IListenerInputStruc01{
-				unsigned int unk00; //0x0
-				Sonicteam::SoX::Object* PtrMyInputObj; //0xx4
-				Sonicteam::SoX::Object* PtrKhronoControlInputListener; //0x8
-				unsigned int unk0xC; //0xC
-				unsigned int wLastButtons; //Triggers & DPAD includ //0x10 :
-				unsigned int ComplementwLastButtons; //Binary One's Complement (in short = ~wLastButtons) //0x14
-
-				unsigned int unk18;
-				unsigned int unk1C;
-				
-				// Thumb stick values converted to range [-1,+1]
-				FLOAT      fX1;
-				FLOAT      fY1;
-				unsigned int fX1Y1Unk; // (0-2 Left,2-4 Right) fx1(y1) > 0   =  0x8001 , fx1(y1) < 0 = -0x8001 
-
-				// Thumb stick values converted to range [-1,+1]
-				FLOAT      fX2;
-				FLOAT      fY2;
-				unsigned int fX2Y2Unk; // (0-2 Left,2-4 Right) fx2(y2) > 0   =  0x8001 , fx2(y2) < 0 = -0x8001
-				//Next is Unk and not sure 
-			};
+		
 			struct IListenerInputStruc02{
 
 				float float0;
@@ -100,7 +74,7 @@ namespace Sonicteam{
 
 
 			//size 0x18
-			class IListener:Sonicteam::SoX::Object,Sonicteam::SoX::IOObject
+			class IListener:Sonicteam::SoX::Input::Listener
 			{
 			public:
 				IListener(void);
@@ -108,25 +82,21 @@ namespace Sonicteam{
 
 				//virtual char* GetObjectType() override;
 					
+				DESTRUCTION_H;
 				
 
-				virtual void ListenerOnUpdate(int,float) = 0;
+
+				virtual void UpdateListener(SOXLISTENER_ARGS) = 0;
 				virtual XMVECTOR* ListenerGetStickVector4(double delta,int flag) = 0;
 				virtual float ListenerGetStickPower(unsigned long long flag = 0) = 0; // Stick power
 				virtual unsigned int ListenerGetResult() = 0; // Result Input Action (Pressed Holded and etc)
 				virtual int IsListenerEnabled() = 0; //always 1
 
-				byte IL0x10;
-				byte IL0x11;
-				byte IL0x12;
-				byte IL0x13;
-				unsigned int IL0x14; //-0x18
-
-	
 			};
 
-		}
+		};
 		
-	}
-}
+	};
+};
 
+#endif

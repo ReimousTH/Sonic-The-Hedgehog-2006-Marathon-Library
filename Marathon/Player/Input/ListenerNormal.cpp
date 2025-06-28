@@ -13,7 +13,7 @@ Input::ListenerNormal::ListenerNormal(unsigned int a1, unsigned int a2):Sonictea
 	this->StickPower = StickPower;
 
 	this->unk0x48 = 0;
-	this->StickVector = 0;
+	this->StickVector = XMVectorZero();
 
 	this->unkfloat0x74 = 0;
 
@@ -41,10 +41,7 @@ Input::ListenerNormal::~ListenerNormal(void)
 
 }
 
-void Input::ListenerNormal::ListenerOnUpdate(int,float)
-{
-	
-}
+
 
 XMVECTOR* Input::ListenerNormal::ListenerGetStickVector4(double delta,int flag)
 {
@@ -88,3 +85,11 @@ void Input::ListenerNormal::OnStepable(float)
 {
 	
 }
+
+void Input::ListenerNormal::UpdateListener(SOXLISTENER_ARGSC)
+{
+	this->StickPower = 0;
+	this->unk0x48 = 0;
+	this->StickVector = XMVectorZero();
+}
+
