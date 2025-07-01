@@ -38,7 +38,7 @@ namespace Sonicteam{
 
 
 
-			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param);
+			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam* param);
 			virtual std::string GetMgrResourceName(std::string resouce);
 
 	};

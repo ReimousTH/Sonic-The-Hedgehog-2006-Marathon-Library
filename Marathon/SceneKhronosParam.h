@@ -14,7 +14,7 @@ namespace Sonicteam{
 		SceneKhronosParam();
 		~SceneKhronosParam();
 
-		float khrono_prm_time; //14
+		float khrono_prm_time; //0x14
 		float khrono_prm_normalized_time; //18
 		float unk0x1C;
 		float unk0x20;

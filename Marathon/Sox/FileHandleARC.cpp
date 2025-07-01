@@ -9,7 +9,7 @@ using namespace Sonicteam::SoX;
 
 FileHandleARC::FileHandleARC()
 {
-
+	delete this->HBuffer;
 }
 
 FileHandleARC::FileHandleARC(std::string& filepath,IFileHandle_BFUNCTION_TYPE func)

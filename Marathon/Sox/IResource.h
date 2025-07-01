@@ -30,6 +30,9 @@ namespace Sonicteam{
 
 
 
+			//used for boost::bind
+			void* ResourceLoadFinal(void* File,unsigned __int64 size);
+
 
 			//fields
 

@@ -33,7 +33,7 @@ namespace Sonicteam{
 			IResourceMgr(void);
 			~IResourceMgr(void);
 
-			unsigned int MgrType; // -index
+			unsigned int MgrType; // -index 4
 			char Flag1; // 8
 			char Flag2; //9
 			char Flag3; //A
@@ -44,10 +44,15 @@ namespace Sonicteam{
 	
 			DESTRUCTION_H;
 			//despite IResource (RefCountObj i should use REF_TYPE(), but there is none of code so )
-			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param) = 0;
+			virtual Sonicteam::SoX::IResource* GetMgrResource(Sonicteam::SoX::IResourceMgrParam* param) = 0;
 			virtual std::string GetMgrResourceName(std::string resouce);
 			virtual void IResourceMgr03impl();
 			virtual void IResourceMgr04impl();
+
+			//LoadFromArc(attempt #1)
+
+			
+			REF_TYPE(Sonicteam::SoX::IResource) LoadFromArc(std::string file_name,std::string file_name_2,int directory,bool show_errors);
 
 		};
 	}

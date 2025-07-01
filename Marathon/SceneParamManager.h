@@ -1,11 +1,12 @@
-#ifndef SONICTEAM__KHRONOCONTROLLER
-#define SONICTEAM__KHRONOCONTROLLER
+#ifndef SONICTEAM__SCENEPARAMMANAGER
+#define SONICTEAM__SCENEPARAMMANAGER
 
 
 #include <Defs.h>
 #include <string>
 #include <deque>
-
+#include <map>
+#include <Sox/RefCountObject.h>
 #include <Sox/Graphics/Defs.h>
 
 
@@ -28,7 +29,7 @@ namespace Sonicteam{
 
 
 		size_t unk0x24;
-		Sonicteam::SoX::Graphics::TechniqueFXL ShaderTechnique;
+		Sonicteam::SoX::Graphics::TechniqueFXL* ShaderTechnique;
 		std::string scene_stage; //0x2C //scripts/stage/kdv/scene_kdv_a.lua
 
 

@@ -1,14 +1,12 @@
 #include "SceneParamManager.h"
+#include <ISceneParam.h>
 
 using namespace Sonicteam;
 
 
 
 
-SceneParamManager::SceneParamManager()
-{
 
-}
 
 SceneParamManager::SceneParamManager(Sonicteam::DocMarathonImp* doc)
 {

@@ -11,17 +11,17 @@ ISceneParam::ISceneParam()
 
 ISceneParam::~ISceneParam()
 {
-	this->LinkArray.empty();
+	this->LinkArray.Empty();
 
 }
 
 
-void ISceneParam::InitializeSceneParam(void* for_now)
+void ISceneParam::InitializeSceneParam(ISPApplySPArg1 for_now)
 {
 
 }
 
-void ISceneParam::ISceneParam0xC()
+void ISceneParam::SceneParamUpdate(double delta)
 {
 
 }

@@ -50,6 +50,7 @@ namespace Sonicteam{
 		~SceneLightParam();
 		DESTRUCTION_H;
 
+		size_t unk0x14;
 		std::map<std::string,boost::shared_ptr<AmbientLight>> Global; // 0x18  first element is global for for  now
 		std::map<std::string,boost::shared_ptr<DirectionalLight>> MainSub; // 0x24  first element is main/sub for for  now
 		std::map<std::string,boost::shared_ptr<void*>> unk0x30; // 0x30  probably for animated objets???? or others stuff?
@@ -76,8 +77,6 @@ namespace Sonicteam{
 		//Sonicteam::`anonymous namespace'::CurrentDirectionalLight
 
 		//CurrentDirectionalLight size = 0x40 (why, cuz  825F8DD0)
-
-
 		std::vector<std::vector<boost::shared_ptr<CurrentDirectionalLight>>> _CurrentDirectionalLight;//0x64 CurrentDirectionalLight
 
 		LinkSoxNode<int> unk0x74; //no idea

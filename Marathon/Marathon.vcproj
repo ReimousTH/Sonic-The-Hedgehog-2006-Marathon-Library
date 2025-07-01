@@ -2558,6 +2558,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\SceneBloomParam.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneBloomParam.h"
+			>
+		</File>
+		<File
 			RelativePath=".\SceneCollection.cpp"
 			>
 		</File>
@@ -2579,6 +2587,14 @@
 		</File>
 		<File
 			RelativePath=".\SceneLightParam.h"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneOLSParam.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\SceneOLSParam.h"
 			>
 		</File>
 		<File

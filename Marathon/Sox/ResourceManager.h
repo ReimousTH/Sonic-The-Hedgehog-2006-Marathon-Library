@@ -19,13 +19,19 @@
 
 #include <Sox/IResourceMgr.h>
 
+#include <functional>
+
+
+
 namespace Sonicteam{
 	namespace SoX{
 
 	   
 		struct HoldMGR{
-			unsigned int Unk0;  //no idea 82 59 58 18
-			unsigned int Unk4; //no idea 82 63 15 00
+		
+
+			void ( *Unk0)(Sonicteam::SoX::IResourceMgr*);
+			void ( *Unk4)(Sonicteam::SoX::IResourceMgr*);
 			Sonicteam::SoX::IResourceMgr* Mgr;
 			unsigned short Flag01; //01  (enabled??)
 			unsigned short Flag02; //index?

@@ -14,7 +14,7 @@ ArcHandleMgr::~ArcHandleMgr()
 
 }
 
-Sonicteam::SoX::IResource* ArcHandleMgr::GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param)
+Sonicteam::SoX::IResource* ArcHandleMgr::GetMgrResource(Sonicteam::SoX::IResourceMgrParam* param)
 {
 	return 0;
 }

@@ -19,10 +19,12 @@ CsdManager::~CsdManager(void)
 
 }
 
-Sonicteam::SoX::IResource* CsdManager::GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param)
+Sonicteam::SoX::IResource* CsdManager::GetMgrResource(Sonicteam::SoX::IResourceMgrParam* param)
 {
 	return new Sonicteam::CsdResource();
 }
+
+
 
 std::string CsdManager::GetMgrResourceName(std::string resouce)
 {

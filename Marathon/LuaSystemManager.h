@@ -11,7 +11,7 @@ namespace Sonicteam{
 	
  
 		//TODO (STATIC CLASS)
-		class LuaSystemManager:Sonicteam::SoX::IResourceMgr,SSINGLETON(LuaSystemManager) // : IResourceMGR + 
+		class LuaSystemManager:public Sonicteam::SoX::IResourceMgr,public SSINGLETON(LuaSystemManager) // : IResourceMGR + 
 		{
 		public:
 			LuaSystemManager(void);

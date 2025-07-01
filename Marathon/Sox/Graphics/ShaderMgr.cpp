@@ -4,7 +4,7 @@ using namespace Sonicteam::SoX::Graphics;
 
 DESTRUCTION_CPP(ShaderMgr);
 
-Sonicteam::SoX::IResource* ShaderMgr::GetMgrResource(Sonicteam::SoX::IResourceMgrParam& param)
+Sonicteam::SoX::IResource* ShaderMgr::GetMgrResource(Sonicteam::SoX::IResourceMgrParam* param)
 {
 	return 0; // Req XenonFactory
 }

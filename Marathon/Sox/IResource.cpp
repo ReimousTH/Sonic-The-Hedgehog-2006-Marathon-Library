@@ -29,3 +29,10 @@ int IResource::ResourceType()
 }
 
 DESTRUCTION_CPP(IResource);
+
+
+void* IResource::ResourceLoadFinal(void* File,unsigned __int64 size)
+{
+	this->ResourceLoad(File,size);
+	return (void*)1;
+}

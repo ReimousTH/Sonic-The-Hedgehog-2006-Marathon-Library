@@ -134,9 +134,9 @@ unsigned int Sonicteam::DocMarathonImp::DocGetDebug3DFont()
 return 0;
 }
 
-unsigned int Sonicteam::DocMarathonImp::DocGetSceneParamManager()
+Sonicteam::SceneParamManager* Sonicteam::DocMarathonImp::DocGetSceneParamManager()
 {
-return 0;
+	return this->DocSceneParamManager;
 }
 
 unsigned int Sonicteam::DocMarathonImp::DocGetUnkManagers()
