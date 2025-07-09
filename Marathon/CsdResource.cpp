@@ -27,7 +27,7 @@ std::string CsdResource::GetResourceName(std::string file_name)
 
 
 
-int CsdResource::ResourceLoad(void* File,size_t size)
+bool CsdResource::ResourceLoad(void* File,size_t size)
 {
 	Sonicteam::CsdManager* mgr  =  this->GetManager();
 	const char* str3 =  this->ResourceStr3.c_str();

@@ -8,5 +8,5 @@
 *.dll
 *.exp
 *.xex
-bin
-Havok
+/bin
+/Havok

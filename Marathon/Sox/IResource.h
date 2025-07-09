@@ -22,7 +22,7 @@ namespace Sonicteam{
 
 
 			//bool	
-			virtual int ResourceLoad(void* File,size_t size) = 0; // FileArrayPtr,FileSizeMb
+			virtual bool ResourceLoad(void* File,size_t size) = 0; // FileArrayPtr,FileSizeMb
 			virtual int ResouceUnk02(); //return 0
 			virtual std::string GetResourceName(std::string file_name) = 0;
 			virtual int ResourceType(); //return 1
@@ -31,18 +31,25 @@ namespace Sonicteam{
 
 
 			//used for boost::bind
-			void* ResourceLoadFinal(void* File,unsigned __int64 size);
+			bool ResourceLoadFinal(void* File,unsigned __int64 size);
 
 
 			//fields
 
 			unsigned int MgrRegistryIndex; //8
 
-			std::string ResourceStr1; //0xC
-			std::string ResourceStr2; //0x28
-			std::string ResourceStr3; //0x44
+			std::string ResourceMgrName; //0xC .lua
+			std::string ResourceName; //0x28 .lua
+			std::string ResourceStr3; //0x44 .lua (ResourceArcName? After Load?)
 
-			unsigned int IResouceUnk60; //or int
+			char IsInResourceManager; //or int 0x60
+			char unk0x61;
+			char unk0x62;
+			char unk0x63;
+		
+
+
+			void SetResourceManagerMeta(unsigned int* i,std::string& m,std::string& r);
 
 
 

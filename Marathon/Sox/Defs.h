@@ -4,7 +4,7 @@
 namespace Sonicteam{
 	namespace SoX{
 
-		#define IFileHandle_BFUNCTION_TYPE boost::function<void*(void*,unsigned __int64)>
+		#define IFileHandle_BFUNCTION_TYPE boost::function<bool(void*,unsigned __int64)>
 		#define IFileLoader_BFUNCTION_TYPE IFileHandle_BFUNCTION_TYPE
 
 
@@ -21,8 +21,11 @@ namespace Sonicteam{
 		class IResource;
 		class IResourceMgr;
 		template <typename T> struct RefCountObjContainer;
-	}
-}
+
+		struct IResourceMgrParam;
+		class IResourceMgr;
+	};
+};
 
 
 #endif

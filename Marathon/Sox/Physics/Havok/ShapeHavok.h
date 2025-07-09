@@ -37,6 +37,9 @@
 #define HAVOK_SHAPE_SIMPLEPHANTOM_TYPE void
 #define HAVOK_SHAPE_BOX_CREATEDYNAMIC(width,height,length) malloc(4)
 #define HAVOK_SHAPE_BOX_HKMOPPBVTREESHAPE() malloc(4)
+
+
+
 #endif
 
 

@@ -11,9 +11,9 @@ IResource::IResource(void)
 IResource::~IResource(void)
 {
 	//remove-resource
-	if ((this->IResouceUnk60 & 0x01000000) != 0){
+	if (IsInResourceManager){
 		Sonicteam::SoX::ResourceManager* mgr =  &Sonicteam::SoX::ResourceManager::getInstance();
-		mgr->ResourceRegistryHandle[MgrRegistryIndex].erase(mgr->ResourceRegistryHandle[MgrRegistryIndex].find(this->ResourceStr1));
+		mgr->ResourceRegistryHandle[MgrRegistryIndex].erase(mgr->ResourceRegistryHandle[MgrRegistryIndex].find(this->ResourceMgrName));
 	} 
 }
 
@@ -31,8 +31,18 @@ int IResource::ResourceType()
 DESTRUCTION_CPP(IResource);
 
 
-void* IResource::ResourceLoadFinal(void* File,unsigned __int64 size)
+bool IResource::ResourceLoadFinal(void* File,unsigned __int64 size)
 {
-	this->ResourceLoad(File,size);
-	return (void*)1;
+	
+	return this->ResourceLoad(File,size);
 }
+
+void IResource::SetResourceManagerMeta(unsigned int* i,std::string& m,std::string& r)
+{ 
+
+	this->ResourceMgrName = m;
+	this->ResourceName = r;
+	this->MgrRegistryIndex = *i;
+	this->IsInResourceManager = 1;
+}
+

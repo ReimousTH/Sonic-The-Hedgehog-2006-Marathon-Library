@@ -52,7 +52,7 @@ namespace Sonicteam{
 			//LoadFromArc(attempt #1)
 
 			
-			REF_TYPE(Sonicteam::SoX::IResource) LoadFromArc(std::string file_name,std::string file_name_2,int directory,bool show_errors);
+		//	REF_TYPE(Sonicteam::SoX::IResource) LoadFromArc(std::string file_name,std::string file_name_2,int directory,bool show_errors);
 
 		};
 	}

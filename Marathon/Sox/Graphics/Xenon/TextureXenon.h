@@ -24,7 +24,7 @@ namespace Sonicteam{
 					TextureXenon();
 					~TextureXenon();
 					void* SurfaceRoot; //0x64 -- class data :) (no idea), i think helper or root data 
-					Array<REF_TYPE(Sonicteam::SoX::Graphics::Xenon::SurfaceXenon),6> Surface; //0x68
+					Array<Sonicteam::SoX::Graphics::Xenon::SurfaceXenon*,6> Surface; //0x68
 					unsigned int TFlag1;
 					unsigned int TFlag2;
 					Sonicteam::SoX::Graphics::Device* GDevice; //0x88

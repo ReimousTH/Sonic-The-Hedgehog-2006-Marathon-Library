@@ -31,7 +31,7 @@ namespace Sonicteam{
 
 
 
-			virtual int ResourceLoad(void* File,size_t size);
+			virtual bool ResourceLoad(void* File,size_t size);
 			virtual std::string GetResourceName(std::string file_name);
 
 	};
