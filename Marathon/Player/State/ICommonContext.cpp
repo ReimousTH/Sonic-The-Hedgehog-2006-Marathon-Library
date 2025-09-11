@@ -12,7 +12,7 @@ ICommonContext::~ICommonContext(void)
 
 void ICommonContext::ICCIF_01(float x,float z,float hold)
 {
-	this->LastVelocityX = x; //Forward 
+	this->LastVelocityY = x; //Forward 
 	this->LastVelocityZ = z; //Y 
 	this->LastLockInputTime = hold;
 

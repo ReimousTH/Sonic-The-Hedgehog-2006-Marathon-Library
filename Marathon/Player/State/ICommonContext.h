@@ -72,8 +72,8 @@ namespace Sonicteam{
 				DWORD CurrentAnimation; //0x40
 				float LockInputTime;
 
-				float LastVelocityX;
 				float LastVelocityZ;
+				float LastVelocityY;
 				float LastLockInputTime;
 				DWORD Input; // What button was pressed
 

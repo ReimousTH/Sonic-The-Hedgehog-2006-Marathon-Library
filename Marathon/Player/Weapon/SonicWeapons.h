@@ -23,8 +23,6 @@ namespace Sonicteam{
 
 
 
-
-
 				///FIELDS
 				unsigned int WorldHavokReference; // 820464EC ,0x34
 				unsigned int PlayerRootFrame; //8200D150 ,0x38

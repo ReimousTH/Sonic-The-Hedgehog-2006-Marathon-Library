@@ -3,6 +3,7 @@
 #include <xinputdefs.h>
 #include <iostream>
 #include <utility>
+#include <vector>
 
 #define XENON_GAMEPAD_DPAD_UP			0x40     
 #define XENON_GAMEPAD_DPAD_DOWN         0x80

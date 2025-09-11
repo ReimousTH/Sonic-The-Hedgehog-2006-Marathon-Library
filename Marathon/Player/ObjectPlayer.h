@@ -57,7 +57,7 @@ namespace Sonicteam{
 			XMVECTOR PlayerPosition;
 			int PlayerStartRingsCount;
 			void *player_based_on;
-			char player_unk_flag2;
+			char IsPlayer;
 		};
 		struct ObjectPlayerUpgrade{
 			unsigned int global_flag;
@@ -119,7 +119,7 @@ namespace Sonicteam{
 			REF_TYPE(Sonicteam::SoX::RefCountObject) SpawnSource; //0xC4
 			char IsPlayer; //0xC8
 			char IsPostureEnabled; //0xC9
-			char IsFlag0xCA; //0xCA //82196F78
+			char isAI; //0xCA //82196F78
 			char IsFlag0xCB; //0xCB //82196F78
 			REF_TYPE(Sonicteam::Player::RootFrame) RootFrame; //0xCC
 			REF_TYPE(Sonicteam::PackageBinary) PackageBinary; //0xD0
@@ -147,7 +147,7 @@ namespace Sonicteam{
 			unsigned int unk0x16C;
 			unsigned int unk0x170;
 			boost::shared_ptr<Sonicteam::Player::PathWaterSlider> PlayerPathWaterSlider; //0x174
-			unsigned int PlayerSpeedDelta; //0x17C
+			float PlayerSpeedDelta; //0x17C
 			XMMATRIX CameraMatrix; // 0x180
 			float unk0x1C0; // 0x1C0 ???
 			char unk1C4; //0x1C4

@@ -9,7 +9,7 @@
 #include "../Input/IListener.h"
 #include <xtl.h>
 
-//GroundAirFlags (Gordon Ramsay)
+//GroundAirFlags (Gordon Ramsay) //m_IPosturePlugInFlag
 #define CC_GROUND 0x1 //detects Ground 
 #define CC_WALLBRUSHING 0x8 // detects brushing against a wall
 #define CC_HEADONWALL 0x10 //detects head-on wall collision (will always be enabled w/ 2^3)
@@ -81,7 +81,7 @@ namespace Sonicteam{
 				int PComboAttackManager;
 				int ContextIFFlag; //0x9C
 				unsigned int ContextIFFlag3;
-				unsigned int ContextIFFlag2; //Export //0xA4
+				unsigned int ContextIFFlag2; //Export //0xA4  ContextIFFlag2
 				unsigned int ExportPostureRequestFlag;  //0xA8
 				unsigned int ExportWeaponRequestFlag; //0xAC
 				float DamageInvincibleTime;
@@ -89,10 +89,10 @@ namespace Sonicteam{
 				float SpeedUpTime;
 				int UnkSomeTimer;
 				float AngleMoveDataMB;
-				unsigned int GroundAirFlags; //0xC4 (CC_??) FLAGS
+				unsigned int GroundAirFlags; //0xC4 (CC_??) FLAGS GroundAirFlags -> //PostureFlag
 				unsigned long long ExternalFlag; //0xC8
-				int UnknownFlags0xD0;
-				int UnknownFlags0xD4;
+				int UnknownFlags0xD0; //ImportVehicleFlag
+				int UnknownFlags0xD4; //ImportAIIBaseFlag
 				int UnknownUnUsedFlagD8;
 				int FreeUnknownFlagsDC;
 				char IsSonicDead; //0xE0 ( IsSonicDead)

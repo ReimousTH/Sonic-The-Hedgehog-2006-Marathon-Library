@@ -11,7 +11,7 @@
 
 #define XenonFolder 0
 #define Win32Folder 1
-#define CommonFolder 1
+#define CommonFolder 2
 
 
 
@@ -38,7 +38,7 @@ namespace Sonicteam{
 			virtual unsigned int FSPathExist(std::string& inputpath) = 0;
 			DESTRUCTION_H;
 
-			std::vector<std::string> FileSystemFolder; // game:\xenon\ ...
+			std::vector<std::string> FileSystemFolder; // game:\xenon\ ... 4
 
 			//fields
 

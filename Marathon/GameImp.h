@@ -71,7 +71,7 @@ namespace Sonicteam{
 		XMVECTOR character_restart_position; //not working
 
 		XMMATRIX character_old_matrix_1;
-		char ShouldSpawnWithRings; //Usually First Byte (821748C8, SpawnWithRingsFlag)
+		char IsPlayer; //Usually First Byte (821748C8, SpawnWithRingsFlag)
 		char _pad_2;
 		char _pad_3;
 		char _pad_4;
@@ -85,15 +85,15 @@ namespace Sonicteam{
 	struct UnkPlayerData0xE40{
 		unsigned int ActorID; //0x0
 		unsigned int RingCount; //0x4
-		unsigned int unk0xC; //0x8
+		unsigned int TownRingCount; //0x8
 		unsigned int LifeCount; //0xC
 		unsigned int ScoreCount; //0x10
 		float AliveTime; // 0x14
 		float Time; //0x18
 		unsigned int unk0x1C; //0x1C
 		float SectionSaveTime; //0x20
-		float MaturityLevel; //0x24
-		float LastGaugeValue; // probably //0x28
+		float GaugeValue; //0x24
+		unsigned int MaturityLevel; // probably //0x28
 		float MaturityValue; //0x2C
 		unsigned int unk0x30; // probably //0x30
 		int unk0x34; //probably : //0x34
@@ -171,7 +171,7 @@ namespace Sonicteam{
 		Sonicteam::SoX::IResource* TextBook_msg_system; //0x11CC
 		unsigned int unk0x11D0;
 		unsigned int unk0x11D4;
-		std::vector<size_t> unk0x11D8; // unk0x11DC , unk0x11E0 , unk0x11E4
+		std::vector<size_t> unk0x11D8; // unk0x11DC , unk0x11E0 , unk0x11E4 // std::vector<std::vector<boost::shared_ptr<Cameraimp>>
 		std::vector<boost::shared_ptr<unsigned int>> GameImpSceneryWorlds;  //Sonicteam::SoX::Scenery::WorldImp, ...glare,particle ... unk0x11E8
 		Sonicteam::Stage::Object StageObject; //0x11F8
 		std::string GameTerrain; //stage/wvo/a/ //0x1214

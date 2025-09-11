@@ -12,7 +12,7 @@ namespace Sonicteam{
 	namespace SoX{	
 		namespace Physics{
 
-			struct __declspec(align(0x10)) EntityInfo{
+			struct __declspec(align(0x10)) EntityInfo	{
 				size_t hkrigidbody; // guess
 				Sonicteam::SoX::Physics::Havok::WorldHavok* hkworld;
 			};
@@ -34,7 +34,7 @@ namespace Sonicteam{
 					Sonicteam::SoX::Physics::EntityInfo EntityInfo;
 					XMVECTOR Rotation; //0x20 
 					XMVECTOR Translation; //0x30
-					LinkSoxNode<EntityContainer> EntityContainer; //0x40,0x44,0x48 ; // 825813F0 ref here (a2 == body havok)
+					LinkSoxNode<EntityContainer> EntityContainer; //0x40,0x44,0x48 ; // 825813F0 ref here (a2 == body havok), weird no destuctuor for it
 					
 
 					virtual void EntityHavokVFT01(double);

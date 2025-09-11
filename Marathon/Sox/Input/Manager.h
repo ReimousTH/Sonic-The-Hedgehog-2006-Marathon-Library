@@ -26,11 +26,11 @@ namespace Sonicteam{
 			//825863D8
 			struct MGamepad{
 
-				unsigned int wLastButtons; //Triggers & DPAD includ //0x10 :
-				unsigned int ComplementwLastButtons; //Binary One's Complement (in short = ~wLastButtons) //0x14
+				unsigned int LastButtons; //Triggers & DPAD includ //0x10 :
+				unsigned int InvertedLastButtons; //Binary One's Complement (in short = ~wLastButtons) //0x14
 
-				unsigned int unk18;
-				unsigned int unk1C;
+				unsigned int PressedButtons;
+				unsigned int ReleasedButtons;
 
 				// Thumb stick values converted to range [-1,+1]
 				float      fX1; //0x20

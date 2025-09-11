@@ -27,17 +27,17 @@ namespace Sonicteam{
 		struct RefCountObjContainer {
 			T* param;
 
-			// Default constructor
+
 			RefCountObjContainer() : param(NULL) {}
 
-			// Constructor taking a raw pointer
+
 			RefCountObjContainer(T* other) : param(other) {
 				if (param) {
 					param->AddReference(); // Increment reference count
 				}
 			}
 
-			// Destructor
+		
 			~RefCountObjContainer() {
 				if (param) {
 					param->Release(); // Decrement reference count

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8.00"
+	Version="8,00"
 	Name="zlib"
 	ProjectGUID="{536739DA-79F7-4797-A3EF-2058F7E31FEF}"
 	RootNamespace="zlib"
@@ -113,6 +113,94 @@
 			/>
 		</Configuration>
 		<Configuration
+			Name="DLL ASM Debug|Xbox 360"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="2"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			UseOfATL="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Win32_DLL_ASM_Debug/zlib.tlb"
+				HeaderFileName=""
+			/>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32;_DEBUG;ASMV;ASMINF"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=".\Win32_DLL_ASM_Debug/zlib.pch"
+				AssemblerListingLocation=".\Win32_DLL_ASM_Debug/"
+				ObjectFile=".\Win32_DLL_ASM_Debug/"
+				ProgramDataBaseFileName=".\Win32_DLL_ASM_Debug/"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCX360LinkerTool"
+				AdditionalDependencies="odbc32.lib odbccp32.lib"
+				OutputFile="Win32_DLL_ASM_Debug\zlib1d.dll"
+				LinkIncremental="2"
+				SuppressStartupBanner="true"
+				ModuleDefinitionFile="..\..\win32\zlib.def"
+				GenerateDebugInformation="true"
+				ProgramDatabaseFile=".\Win32_DLL_ASM_Debug/zlib1d.pdb"
+				ImportLibrary=".\Win32_DLL_ASM_Debug/zlib1d.lib"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCX360ImageTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Win32_DLL_ASM_Debug/zlib.bsc"
+			/>
+			<Tool
+				Name="VCX360DeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+			<DebuggerTool
+			/>
+		</Configuration>
+		<Configuration
 			Name="DLL Release|Win32"
 			OutputDirectory=".\Win32_DLL_Release"
 			IntermediateDirectory=".\Win32_DLL_Release"
@@ -207,6 +295,93 @@
 			/>
 		</Configuration>
 		<Configuration
+			Name="DLL Release|Xbox 360"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="2"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			UseOfATL="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Win32_DLL_Release/zlib.tlb"
+				HeaderFileName=""
+			/>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				PreprocessorDefinitions="WIN32;NDEBUG"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				PrecompiledHeaderFile=".\Win32_DLL_Release/zlib.pch"
+				AssemblerListingLocation=".\Win32_DLL_Release/"
+				ObjectFile=".\Win32_DLL_Release/"
+				ProgramDataBaseFileName=".\Win32_DLL_Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCX360LinkerTool"
+				AdditionalDependencies="odbc32.lib odbccp32.lib"
+				OutputFile="Win32_DLL_Release\zlib1.dll"
+				LinkIncremental="1"
+				SuppressStartupBanner="true"
+				ModuleDefinitionFile="..\..\win32\zlib.def"
+				ProgramDatabaseFile=".\Win32_DLL_Release/zlib1.pdb"
+				ImportLibrary=".\Win32_DLL_Release/zlib1.lib"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCX360ImageTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Win32_DLL_Release/zlib.bsc"
+			/>
+			<Tool
+				Name="VCX360DeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+			<DebuggerTool
+			/>
+		</Configuration>
+		<Configuration
 			Name="LIB ASM Debug|Win32"
 			OutputDirectory=".\Win32_LIB_ASM_Debug"
 			IntermediateDirectory=".\Win32_LIB_ASM_Debug"
@@ -277,6 +452,76 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="LIB ASM Debug|Xbox 360"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			UseOfATL="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32;_DEBUG;ASMV;ASMINF"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=".\Win32_LIB_ASM_Debug/zlib.pch"
+				AssemblerListingLocation=".\Win32_LIB_ASM_Debug/"
+				ObjectFile=".\Win32_LIB_ASM_Debug/"
+				ProgramDataBaseFileName=".\Win32_LIB_ASM_Debug/"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="Win32_LIB_ASM_Debug\zlibd.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Win32_LIB_ASM_Debug/zlib.bsc"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+			<DebuggerTool
 			/>
 		</Configuration>
 		<Configuration
@@ -374,6 +619,93 @@
 			/>
 		</Configuration>
 		<Configuration
+			Name="DLL ASM Release|Xbox 360"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="2"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			UseOfATL="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="true"
+				SuppressStartupBanner="true"
+				TargetEnvironment="1"
+				TypeLibraryName=".\Win32_DLL_ASM_Release/zlib.tlb"
+				HeaderFileName=""
+			/>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				PreprocessorDefinitions="WIN32;NDEBUG;ASMV;ASMINF"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				PrecompiledHeaderFile=".\Win32_DLL_ASM_Release/zlib.pch"
+				AssemblerListingLocation=".\Win32_DLL_ASM_Release/"
+				ObjectFile=".\Win32_DLL_ASM_Release/"
+				ProgramDataBaseFileName=".\Win32_DLL_ASM_Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCX360LinkerTool"
+				AdditionalDependencies="odbc32.lib odbccp32.lib"
+				OutputFile="Win32_DLL_ASM_Release\zlib1.dll"
+				LinkIncremental="1"
+				SuppressStartupBanner="true"
+				ModuleDefinitionFile="..\..\win32\zlib.def"
+				ProgramDatabaseFile=".\Win32_DLL_ASM_Release/zlib1.pdb"
+				ImportLibrary=".\Win32_DLL_ASM_Release/zlib1.lib"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCX360ImageTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Win32_DLL_ASM_Release/zlib.bsc"
+			/>
+			<Tool
+				Name="VCX360DeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+			<DebuggerTool
+			/>
+		</Configuration>
+		<Configuration
 			Name="LIB Debug|Win32"
 			OutputDirectory=".\Win32_LIB_Debug"
 			IntermediateDirectory=".\Win32_LIB_Debug"
@@ -444,6 +776,76 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="LIB Debug|Xbox 360"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			UseOfATL="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32;_DEBUG"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				PrecompiledHeaderFile=".\Win32_LIB_Debug/zlib.pch"
+				AssemblerListingLocation=".\Win32_LIB_Debug/"
+				ObjectFile=".\Win32_LIB_Debug/"
+				ProgramDataBaseFileName=".\Win32_LIB_Debug/"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="Win32_LIB_Debug\zlibd.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Win32_LIB_Debug/zlib.bsc"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+			<DebuggerTool
 			/>
 		</Configuration>
 		<Configuration
@@ -542,554 +944,6 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="LIB Release|Win32"
-			OutputDirectory=".\Win32_LIB_Release"
-			IntermediateDirectory=".\Win32_LIB_Release"
-			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
-			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="2"
-				InlineFunctionExpansion="1"
-				PreprocessorDefinitions="WIN32;NDEBUG"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				EnableFunctionLevelLinking="true"
-				PrecompiledHeaderFile=".\Win32_LIB_Release/zlib.pch"
-				AssemblerListingLocation=".\Win32_LIB_Release/"
-				ObjectFile=".\Win32_LIB_Release/"
-				ProgramDataBaseFileName=".\Win32_LIB_Release/"
-				WarningLevel="3"
-				SuppressStartupBanner="true"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-				OutputFile=".\Win32_LIB_Release\zlib.lib"
-				SuppressStartupBanner="true"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-				SuppressStartupBanner="true"
-				OutputFile=".\Win32_LIB_Release/zlib.bsc"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="LIB ASM Release|Win32"
-			OutputDirectory="..\bin\Build\$(ConfigurationName)\$(RootNameSpace)"
-			IntermediateDirectory="..\bin\Cache\$(ConfigurationName)\$(RootNameSpace)"
-			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
-			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="2"
-				InlineFunctionExpansion="1"
-				PreprocessorDefinitions="WIN32;NDEBUG;ASMV;ASMINF"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				EnableFunctionLevelLinking="true"
-				PrecompiledHeaderFile=".\Win32_LIB_ASM_Release/zlib.pch"
-				AssemblerListingLocation=".\Win32_LIB_ASM_Release/"
-				ObjectFile=".\Win32_LIB_ASM_Release/"
-				ProgramDataBaseFileName=".\Win32_LIB_ASM_Release/"
-				WarningLevel="3"
-				SuppressStartupBanner="true"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-				OutputFile=".\Win32_LIB_ASM_Release\zlib.lib"
-				SuppressStartupBanner="true"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-				SuppressStartupBanner="true"
-				OutputFile=".\Win32_LIB_ASM_Release/zlib.bsc"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="DLL ASM Debug|Xbox 360"
-			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="2"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
-			UseOfMFC="0"
-			UseOfATL="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				PreprocessorDefinitions="_DEBUG"
-				MkTypLibCompatible="true"
-				SuppressStartupBanner="true"
-				TargetEnvironment="1"
-				TypeLibraryName=".\Win32_DLL_ASM_Debug/zlib.tlb"
-				HeaderFileName=""
-			/>
-			<Tool
-				Name="VCCLX360CompilerTool"
-				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;ASMV;ASMINF"
-				MinimalRebuild="true"
-				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
-				PrecompiledHeaderFile=".\Win32_DLL_ASM_Debug/zlib.pch"
-				AssemblerListingLocation=".\Win32_DLL_ASM_Debug/"
-				ObjectFile=".\Win32_DLL_ASM_Debug/"
-				ProgramDataBaseFileName=".\Win32_DLL_ASM_Debug/"
-				WarningLevel="3"
-				SuppressStartupBanner="true"
-				DebugInformationFormat="4"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCX360LinkerTool"
-				AdditionalDependencies="odbc32.lib odbccp32.lib"
-				OutputFile="Win32_DLL_ASM_Debug\zlib1d.dll"
-				LinkIncremental="2"
-				SuppressStartupBanner="true"
-				ModuleDefinitionFile="..\..\win32\zlib.def"
-				GenerateDebugInformation="true"
-				ProgramDatabaseFile=".\Win32_DLL_ASM_Debug/zlib1d.pdb"
-				ImportLibrary=".\Win32_DLL_ASM_Debug/zlib1d.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCX360ImageTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-				SuppressStartupBanner="true"
-				OutputFile=".\Win32_DLL_ASM_Debug/zlib.bsc"
-			/>
-			<Tool
-				Name="VCX360DeploymentTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-			<DebuggerTool
-			/>
-		</Configuration>
-		<Configuration
-			Name="DLL Release|Xbox 360"
-			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="2"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
-			UseOfMFC="0"
-			UseOfATL="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				PreprocessorDefinitions="NDEBUG"
-				MkTypLibCompatible="true"
-				SuppressStartupBanner="true"
-				TargetEnvironment="1"
-				TypeLibraryName=".\Win32_DLL_Release/zlib.tlb"
-				HeaderFileName=""
-			/>
-			<Tool
-				Name="VCCLX360CompilerTool"
-				Optimization="2"
-				InlineFunctionExpansion="1"
-				PreprocessorDefinitions="WIN32;NDEBUG"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				EnableFunctionLevelLinking="true"
-				PrecompiledHeaderFile=".\Win32_DLL_Release/zlib.pch"
-				AssemblerListingLocation=".\Win32_DLL_Release/"
-				ObjectFile=".\Win32_DLL_Release/"
-				ProgramDataBaseFileName=".\Win32_DLL_Release/"
-				WarningLevel="3"
-				SuppressStartupBanner="true"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCX360LinkerTool"
-				AdditionalDependencies="odbc32.lib odbccp32.lib"
-				OutputFile="Win32_DLL_Release\zlib1.dll"
-				LinkIncremental="1"
-				SuppressStartupBanner="true"
-				ModuleDefinitionFile="..\..\win32\zlib.def"
-				ProgramDatabaseFile=".\Win32_DLL_Release/zlib1.pdb"
-				ImportLibrary=".\Win32_DLL_Release/zlib1.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCX360ImageTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-				SuppressStartupBanner="true"
-				OutputFile=".\Win32_DLL_Release/zlib.bsc"
-			/>
-			<Tool
-				Name="VCX360DeploymentTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-			<DebuggerTool
-			/>
-		</Configuration>
-		<Configuration
-			Name="LIB ASM Debug|Xbox 360"
-			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
-			UseOfMFC="0"
-			UseOfATL="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLX360CompilerTool"
-				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;ASMV;ASMINF"
-				MinimalRebuild="true"
-				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
-				PrecompiledHeaderFile=".\Win32_LIB_ASM_Debug/zlib.pch"
-				AssemblerListingLocation=".\Win32_LIB_ASM_Debug/"
-				ObjectFile=".\Win32_LIB_ASM_Debug/"
-				ProgramDataBaseFileName=".\Win32_LIB_ASM_Debug/"
-				WarningLevel="3"
-				SuppressStartupBanner="true"
-				DebugInformationFormat="4"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="Win32_LIB_ASM_Debug\zlibd.lib"
-				SuppressStartupBanner="true"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-				SuppressStartupBanner="true"
-				OutputFile=".\Win32_LIB_ASM_Debug/zlib.bsc"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-			<DebuggerTool
-			/>
-		</Configuration>
-		<Configuration
-			Name="DLL ASM Release|Xbox 360"
-			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="2"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
-			UseOfMFC="0"
-			UseOfATL="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				PreprocessorDefinitions="NDEBUG"
-				MkTypLibCompatible="true"
-				SuppressStartupBanner="true"
-				TargetEnvironment="1"
-				TypeLibraryName=".\Win32_DLL_ASM_Release/zlib.tlb"
-				HeaderFileName=""
-			/>
-			<Tool
-				Name="VCCLX360CompilerTool"
-				Optimization="2"
-				InlineFunctionExpansion="1"
-				PreprocessorDefinitions="WIN32;NDEBUG;ASMV;ASMINF"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				EnableFunctionLevelLinking="true"
-				PrecompiledHeaderFile=".\Win32_DLL_ASM_Release/zlib.pch"
-				AssemblerListingLocation=".\Win32_DLL_ASM_Release/"
-				ObjectFile=".\Win32_DLL_ASM_Release/"
-				ProgramDataBaseFileName=".\Win32_DLL_ASM_Release/"
-				WarningLevel="3"
-				SuppressStartupBanner="true"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCX360LinkerTool"
-				AdditionalDependencies="odbc32.lib odbccp32.lib"
-				OutputFile="Win32_DLL_ASM_Release\zlib1.dll"
-				LinkIncremental="1"
-				SuppressStartupBanner="true"
-				ModuleDefinitionFile="..\..\win32\zlib.def"
-				ProgramDatabaseFile=".\Win32_DLL_ASM_Release/zlib1.pdb"
-				ImportLibrary=".\Win32_DLL_ASM_Release/zlib1.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCX360ImageTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-				SuppressStartupBanner="true"
-				OutputFile=".\Win32_DLL_ASM_Release/zlib.bsc"
-			/>
-			<Tool
-				Name="VCX360DeploymentTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-			<DebuggerTool
-			/>
-		</Configuration>
-		<Configuration
-			Name="LIB Debug|Xbox 360"
-			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
-			UseOfMFC="0"
-			UseOfATL="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLX360CompilerTool"
-				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG"
-				MinimalRebuild="true"
-				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
-				PrecompiledHeaderFile=".\Win32_LIB_Debug/zlib.pch"
-				AssemblerListingLocation=".\Win32_LIB_Debug/"
-				ObjectFile=".\Win32_LIB_Debug/"
-				ProgramDataBaseFileName=".\Win32_LIB_Debug/"
-				WarningLevel="3"
-				SuppressStartupBanner="true"
-				DebugInformationFormat="4"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="Win32_LIB_Debug\zlibd.lib"
-				SuppressStartupBanner="true"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-				SuppressStartupBanner="true"
-				OutputFile=".\Win32_LIB_Debug/zlib.bsc"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-			<DebuggerTool
-			/>
-		</Configuration>
-		<Configuration
 			Name="DLL Debug|Xbox 360"
 			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
@@ -1178,6 +1032,79 @@
 			/>
 		</Configuration>
 		<Configuration
+			Name="LIB Release|Win32"
+			OutputDirectory=".\Win32_LIB_Release"
+			IntermediateDirectory=".\Win32_LIB_Release"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				PreprocessorDefinitions="WIN32;NDEBUG"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				PrecompiledHeaderFile=".\Win32_LIB_Release/zlib.pch"
+				AssemblerListingLocation=".\Win32_LIB_Release/"
+				ObjectFile=".\Win32_LIB_Release/"
+				ProgramDataBaseFileName=".\Win32_LIB_Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Win32_LIB_Release\zlib.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Win32_LIB_Release/zlib.bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
 			Name="LIB Release|Xbox 360"
 			OutputDirectory="..\bin\Build\$(ConfigurationName)\$(RootNameSpace)"
 			IntermediateDirectory="..\bin\Cache\$(ConfigurationName)\$(RootNameSpace)"
@@ -1248,6 +1175,79 @@
 			/>
 		</Configuration>
 		<Configuration
+			Name="LIB ASM Release|Win32"
+			OutputDirectory="..\bin\Build\$(ConfigurationName)\$(RootNameSpace)"
+			IntermediateDirectory="..\bin\Cache\$(ConfigurationName)\$(RootNameSpace)"
+			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				PreprocessorDefinitions="WIN32;NDEBUG;ASMV;ASMINF"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				PrecompiledHeaderFile=".\Win32_LIB_ASM_Release/zlib.pch"
+				AssemblerListingLocation=".\Win32_LIB_ASM_Release/"
+				ObjectFile=".\Win32_LIB_ASM_Release/"
+				ProgramDataBaseFileName=".\Win32_LIB_ASM_Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Win32_LIB_ASM_Release\zlib.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+				SuppressStartupBanner="true"
+				OutputFile=".\Win32_LIB_ASM_Release/zlib.bsc"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
 			Name="LIB ASM Release|Xbox 360"
 			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
@@ -1276,7 +1276,7 @@
 				Name="VCCLX360CompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				PreprocessorDefinitions="WIN32;NDEBUG;ASMV;ASMINF"
+				PreprocessorDefinitions="WIN32;NDEBUG;_XBOX;ASMV;ASMINF"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -1337,68 +1337,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -1409,12 +1361,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -1425,12 +1393,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -1441,12 +1425,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -1469,68 +1469,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -1541,12 +1493,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -1557,12 +1525,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -1573,12 +1557,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -1601,68 +1601,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -1673,12 +1625,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -1689,12 +1657,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -1705,12 +1689,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -1733,68 +1733,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -1805,12 +1757,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -1821,12 +1789,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -1837,12 +1821,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -1865,68 +1865,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -1937,12 +1889,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -1953,12 +1921,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -1969,12 +1953,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -1997,68 +1997,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -2069,12 +2021,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -2085,12 +2053,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -2101,12 +2085,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -2129,68 +2129,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -2201,12 +2153,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -2217,12 +2185,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -2233,12 +2217,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -2261,68 +2261,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -2333,12 +2285,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -2349,12 +2317,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -2365,12 +2349,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -2393,68 +2393,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -2465,12 +2417,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -2481,12 +2449,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -2497,12 +2481,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -2525,68 +2525,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -2597,12 +2549,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -2613,12 +2581,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -2629,12 +2613,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -2657,68 +2657,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -2729,12 +2681,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -2745,12 +2713,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -2761,12 +2745,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -2789,31 +2789,15 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="LIB Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB Debug|Win32"
 					ExcludedFromBuild="true"
 					>
 					<Tool
@@ -2829,7 +2813,23 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
 					ExcludedFromBuild="true"
 					>
 					<Tool
@@ -2857,68 +2857,20 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="DLL Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
 					Name="DLL ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -2929,12 +2881,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
@@ -2945,12 +2913,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DLL Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
@@ -2961,12 +2945,28 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					>
 			<Tool
 				Name="VCCLX360CompilerTool"
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -3041,6 +3041,16 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL ASM Debug|Xbox 360"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Assembling..."
+						CommandLine="ml.exe /nologo /c /coff /Cx /Zi /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="DLL Release|Win32"
 					ExcludedFromBuild="true"
 					>
@@ -3049,7 +3059,25 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL Release|Xbox 360"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Assembling..."
+						CommandLine="ml.exe /nologo /c /coff /Cx /Zi /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Debug|Xbox 360"
 					>
 					<Tool
 						Name="VCCustomBuildTool"
@@ -3069,7 +3097,25 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL ASM Release|Xbox 360"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Assembling..."
+						CommandLine="ml.exe /nologo /c /coff /Cx /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB Debug|Xbox 360"
 					ExcludedFromBuild="true"
 					>
 					<Tool
@@ -3085,7 +3131,23 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL Debug|Xbox 360"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB Release|Xbox 360"
 					ExcludedFromBuild="true"
 					>
 					<Tool
@@ -3100,68 +3162,6 @@
 						Description="Assembling..."
 						CommandLine="ml.exe /nologo /c /coff /Cx /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 						Outputs="$(IntDir)\$(InputName).obj"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Debug|Xbox 360"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Assembling..."
-						CommandLine="ml.exe /nologo /c /coff /Cx /Zi /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
-						Outputs="$(IntDir)\$(InputName).obj"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Release|Xbox 360"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Xbox 360"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Assembling..."
-						CommandLine="ml.exe /nologo /c /coff /Cx /Zi /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
-						Outputs="$(IntDir)\$(InputName).obj"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Xbox 360"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Assembling..."
-						CommandLine="ml.exe /nologo /c /coff /Cx /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
-						Outputs="$(IntDir)\$(InputName).obj"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Xbox 360"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Xbox 360"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Xbox 360"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -3188,6 +3188,15 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL ASM Debug|Xbox 360"
+					>
+			<Tool
+				Name="VCCLX360CompilerTool"
+				AdditionalIncludeDirectories="..\.."
+				PreprocessorDefinitions=""
+			/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="DLL Release|Win32"
 					ExcludedFromBuild="true"
 					>
@@ -3196,72 +3205,6 @@
 						AdditionalIncludeDirectories="..\.."
 						PreprocessorDefinitions=""
 					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories="..\.."
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories="..\.."
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories="..\.."
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories="..\.."
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories="..\.."
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories="..\.."
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Debug|Xbox 360"
-					>
-			<Tool
-				Name="VCCLX360CompilerTool"
-				AdditionalIncludeDirectories="..\.."
-				PreprocessorDefinitions=""
-			/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="DLL Release|Xbox 360"
@@ -3274,6 +3217,15 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="..\.."
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Xbox 360"
 					>
 			<Tool
@@ -3283,6 +3235,15 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="..\.."
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="DLL ASM Release|Xbox 360"
 					>
 			<Tool
@@ -3290,6 +3251,16 @@
 				AdditionalIncludeDirectories="..\.."
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="..\.."
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB Debug|Xbox 360"
@@ -3302,6 +3273,16 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="..\.."
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="DLL Debug|Xbox 360"
 					ExcludedFromBuild="true"
 					>
@@ -3312,6 +3293,16 @@
 			/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="LIB Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="..\.."
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Xbox 360"
 					ExcludedFromBuild="true"
 					>
@@ -3320,6 +3311,15 @@
 				AdditionalIncludeDirectories="..\.."
 				PreprocessorDefinitions=""
 			/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="..\.."
+						PreprocessorDefinitions=""
+					/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="LIB ASM Release|Xbox 360"
@@ -3345,6 +3345,16 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL ASM Debug|Xbox 360"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Assembling..."
+						CommandLine="ml.exe /nologo /c /coff /Cx /Zi /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="DLL Release|Win32"
 					ExcludedFromBuild="true"
 					>
@@ -3353,7 +3363,25 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL Release|Xbox 360"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB ASM Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Assembling..."
+						CommandLine="ml.exe /nologo /c /coff /Cx /Zi /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB ASM Debug|Xbox 360"
 					>
 					<Tool
 						Name="VCCustomBuildTool"
@@ -3373,7 +3401,25 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL ASM Release|Xbox 360"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Assembling..."
+						CommandLine="ml.exe /nologo /c /coff /Cx /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB Debug|Xbox 360"
 					ExcludedFromBuild="true"
 					>
 					<Tool
@@ -3389,7 +3435,23 @@
 					/>
 				</FileConfiguration>
 				<FileConfiguration
+					Name="DLL Debug|Xbox 360"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
 					Name="LIB Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="LIB Release|Xbox 360"
 					ExcludedFromBuild="true"
 					>
 					<Tool
@@ -3404,68 +3466,6 @@
 						Description="Assembling..."
 						CommandLine="ml.exe /nologo /c /coff /Cx /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 						Outputs="$(IntDir)\$(InputName).obj"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Debug|Xbox 360"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Assembling..."
-						CommandLine="ml.exe /nologo /c /coff /Cx /Zi /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
-						Outputs="$(IntDir)\$(InputName).obj"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Release|Xbox 360"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB ASM Debug|Xbox 360"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Assembling..."
-						CommandLine="ml.exe /nologo /c /coff /Cx /Zi /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
-						Outputs="$(IntDir)\$(InputName).obj"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL ASM Release|Xbox 360"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Assembling..."
-						CommandLine="ml.exe /nologo /c /coff /Cx /Fo&quot;$(IntDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
-						Outputs="$(IntDir)\$(InputName).obj"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Debug|Xbox 360"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="DLL Debug|Xbox 360"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="LIB Release|Xbox 360"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
 					/>
 				</FileConfiguration>
 				<FileConfiguration

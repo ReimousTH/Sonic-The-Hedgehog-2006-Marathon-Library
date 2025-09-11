@@ -68,8 +68,8 @@ namespace Sonicteam{
 			static unsigned int* InitializeManagerIndex(Sonicteam::SoX::IResourceMgr*);
 			std::map<std::string, Sonicteam::SoX::IResource*>::iterator FindResource(unsigned int*,std::string);
 			void RemoveResource(unsigned int*,std::string);
-			static REF_TYPE(Sonicteam::SoX::IResource) LoadResource(Sonicteam::SoX::IResourceMgr*,std::string file,bool*,Sonicteam::SoX::IResourceMgrParam*); //replace argument order to match original  82582380
-			static REF_TYPE(Sonicteam::SoX::IResource) LoadResourceFromArc(Sonicteam::SoX::IResourceMgr* mgr,std::string file,std::string file_in_arc,Sonicteam::SoX::IResourceMgrParam* params,bool CheckInFileSystem);
+			static REF_TYPE(Sonicteam::SoX::IResource) LoadResource(Sonicteam::SoX::IResourceMgr*,std::string& file,bool*,Sonicteam::SoX::IResourceMgrParam*); //replace argument order to match original  82582380
+			static REF_TYPE(Sonicteam::SoX::IResource) LoadResourceFromArc(Sonicteam::SoX::IResourceMgr* mgr,std::string& file,std::string& file_in_arc,Sonicteam::SoX::IResourceMgrParam* params,bool CheckInFileSystem);
 
 
 			

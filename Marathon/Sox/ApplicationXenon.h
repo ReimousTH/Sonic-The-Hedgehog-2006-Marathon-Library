@@ -73,9 +73,11 @@ namespace Sonicteam{
 			LARGE_INTEGER FirstPerformanceFrequency; //0x18	
 			size_t D3DDeviceState; //0x20
 			D3DDevice* _D3DDevice; //0x24
+
+			
+			//0x28->0x68 (pro more) ( struct , ref to it 82581E60)
 			size_t D3DDeviceStateEnd; //0x28
 			D3DDevice* _D3DDeviceOnEnd; //0x2C
-
 			_D3DSURFACE_PARAMETERS SurfaceParams1; //0x30-0x34-0x38
 			_D3DSURFACE_PARAMETERS SurfaceParams2; //0x3C-0x40-0x44
 			_D3DSURFACE_PARAMETERS SurfaceParams3; //0x48-0x4C-0x50
@@ -84,6 +86,7 @@ namespace Sonicteam{
 			IDirect3DSurface9* Sample4SurfaceRef; //0x5C
 			IDirect3DSurface9* Sample4DepthStencilSurfaceRef; //0x60
 			D3DPRESENT_PARAMETERS D3DPresentParams; //0x64 -0xDC
+			//probably end
 
 
 			LARGE_INTEGER PerfScalePost; //0xE0

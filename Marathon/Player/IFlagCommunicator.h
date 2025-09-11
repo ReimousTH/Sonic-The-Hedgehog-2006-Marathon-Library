@@ -15,7 +15,7 @@ namespace Sonicteam{
 			DESTRUCTION_H;
 
 			virtual void ImportICommonContextIFFlag(DWORD flag_value){}; // ContextFlags????// (ImportContextFlags) 0
-			virtual void ImportIPosturePlugInFlag(DWORD flag_value){}; //Set GroundAirData Flag (ImportPostureFlags) 4
+			virtual void ImportIPosturePlugInFlag(DWORD flag_value){}; //Set GroundAirData Flag (ImportPostureFlags) 4  = ImportIPostureFlag
 			virtual void IFlagCommunicator0xC(DWORD flag_value){}; //8
 			virtual void ImportExternalFlag(DWORD flag_value){}; //UnknownFlags0xC8(by context) c
 			virtual void ImportICommonContextIFFlag2(DWORD flag_value){}; //10

@@ -43,7 +43,7 @@ void ResourceManager::RemoveResource(unsigned int* index ,std::string resource)
 }
 
 //Sonicteam::SoX::IResourceMgrParam -> empty struct, defined for each MGR later on like , ArcHandleMgrParam:IResourceMgrParam{.....} etc
-REF_TYPE(Sonicteam::SoX::IResource) ResourceManager::LoadResourceFromArc(Sonicteam::SoX::IResourceMgr* mgr,std::string file,std::string file_in_arc,Sonicteam::SoX::IResourceMgrParam* params,bool CheckInFileSystem)
+REF_TYPE(Sonicteam::SoX::IResource) ResourceManager::LoadResourceFromArc(Sonicteam::SoX::IResourceMgr* mgr,std::string& file,std::string& file_in_arc,Sonicteam::SoX::IResourceMgrParam* params,bool CheckInFileSystem)
 {
 	
 	//PushBreakPoint(__FILE__,__LINE__," ResourceManager::LoadResourceFromArc,params : %x : %x : %x ",params,lr,lr1);
@@ -93,7 +93,7 @@ REF_TYPE(Sonicteam::SoX::IResource) ResourceManager::LoadResourceFromArc(Sonicte
 }
 
 // not 1:1 but close
-extern "C" REF_TYPE(Sonicteam::SoX::IResource) ResourceManager::LoadResource(Sonicteam::SoX::IResourceMgr* mgr,std::string file,bool* result ,Sonicteam::SoX::IResourceMgrParam* params)
+extern "C" REF_TYPE(Sonicteam::SoX::IResource) ResourceManager::LoadResource(Sonicteam::SoX::IResourceMgr* mgr,std::string& file,bool* result ,Sonicteam::SoX::IResourceMgrParam* params)
 {
 	unsigned int* index = ResourceManager::getInstance().InitializeManagerIndex(mgr);
 	std::string resource_f_name = mgr->GetMgrResourceName(file);
