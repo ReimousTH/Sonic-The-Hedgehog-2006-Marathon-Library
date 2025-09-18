@@ -21,7 +21,7 @@ namespace Sonicteam{
 				virtual void OnStateChange(boost::shared_ptr<Sonicteam::SoX::AI::State<T>>& NextState,T* context); // For now nothing
 				virtual void OnStateUnk(boost::shared_ptr<Sonicteam::SoX::AI::State<T>>& NextState,T* context); // For now nothing
 				virtual unsigned int Unk03(T* context) { return 0;}; // For now nothing
-				virtual unsigned int Unk04() { return 0;}; // For now nothing
+				virtual unsigned int Unk04() { return 0;}; // OnMessageRecieved, -_- argument is message, also bool return type (:8200BAC8 here for info)
 				virtual unsigned int Unk05() { return 0;}; // For now nothing
 				virtual unsigned int Unk06() { return 0;}; // For now nothing
 
